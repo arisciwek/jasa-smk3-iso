@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+
+const title = `Tentang Kami — ${site.company}`;
+const description = `Profil PT Konsultan K3 Utama — Perusahaan jasa konsultasi, audit, dan sertifikasi Sistem Manajemen K3 & ISO 45001 Terpercaya.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="content-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <header style="margin-bottom: 2.5rem;">
+        <div class="hero-tag">// PROFIL PERUSAHAAN</div>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Tentang PT Konsultan K3 Utama</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
+          Mitra strategis industri dalam menciptakan lingkungan kerja aman, sehat, dan memenuhi standar regulasi nasional & internasional.
+        </p>
+      </header>
+
+      <section style="margin-bottom: 3rem; line-height: 1.7; color: var(--text-muted);">
+        <h2 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Visi & Misi</h2>
+        <p style="margin-bottom: 1rem;"><strong>Visi:</strong> Menjadi lembaga konsultasi Sistem Manajemen K3 pilihan utama industri di Indonesia dengan keahlian presisi dan integritas tinggi.</p>
+        <p style="margin-bottom: 1.5rem;"><strong>Misi:</strong> Menyediakan layanan audit, penyusunan dokumen teknis, dan pelatihan K3 berkualitas untuk membantu mempercepat proses sertifikasi perusahaan mitra.</p>
+      </section>
+
+      <div style="text-align: center; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px;">
+        <h3 style="color: var(--text); margin-bottom: 1rem;">Butuh Pendampingan Onsite?</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Hubungi kantor kami atau chat konsultan via WhatsApp sekarang.</p>
+        <a href="/tentang/kontak/" class="cta-btn">Hubungi Kami</a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

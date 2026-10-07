@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMK3 & ISO 45001 Indonesia — Sistem Manajemen K3 & Sertifikasi</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #101216;
+      --surface: #181b20;
+      --border: rgba(255, 255, 255, 0.15);
+      --border-hover: rgba(255, 255, 255, 0.35);
+      --text: #ffffff;
+      --text-muted: rgba(255, 255, 255, 0.65);
+      --text-dim: rgba(255, 255, 255, 0.35);
+      --accent: #10b981; /* Safety Green */
+      --font-mono: 'Geist Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-mono);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Minimal Top Navigation */
+    header {
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .nav-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1rem 1.5rem;
+    }
+    .brand {
+      font-weight: 700; font-size: 1.1rem; color: var(--text); text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .brand span { color: var(--accent); }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav a {
+      color: var(--text-muted); text-decoration: none; font-size: 0.85rem;
+      text-transform: uppercase; letter-spacing: 1px;
+      transition: opacity 0.15s;
+    }
+    nav a:hover, nav a.active { color: var(--text); opacity: 0.8; }
+    .btn-mono {
+      background: var(--text); color: var(--bg);
+      border: none; padding: 0.6rem 1.25rem; font-family: var(--font-mono);
+      font-weight: 700; font-size: 0.8rem; text-transform: uppercase;
+      letter-spacing: 1px; text-decoration: none; cursor: pointer;
+    }
+    .btn-mono:hover { opacity: 0.85; }
+
+    /* Brutalist Hero */
+    .hero {
+      max-width: 1200px; margin: 0 auto; padding: 5rem 1.5rem 4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-code {
+      color: var(--accent); font-size: 0.85rem; margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 5.5vw, 4.2rem); font-weight: 300;
+      letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+    .hero p {
+      font-size: 1.1rem; color: var(--text-muted); max-width: 720px;
+      margin-bottom: 2rem; font-weight: 300;
+    }
+    .hero-btn-row { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-outline {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border); padding: 0.6rem 1.25rem;
+      font-family: var(--font-mono); font-size: 0.8rem; text-transform: uppercase;
+      letter-spacing: 1px; text-decoration: none;
+    }
+    .btn-outline:hover { border-color: var(--border-hover); }
+
+    /* Content Matrix Table Style */
+    .section { max-width: 1200px; margin: 0 auto; padding: 4rem 1.5rem; }
+    .section-head {
+      font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px;
+      color: var(--accent); margin-bottom: 1.5rem;
+    }
+    .matrix-table {
+      width: 100%; border-collapse: collapse; border: 1px solid var(--border);
+      margin-top: 1.5rem;
+    }
+    .matrix-table th, .matrix-table td {
+      border: 1px solid var(--border); padding: 1rem 1.25rem; text-align: left;
+      font-size: 0.9rem;
+    }
+    .matrix-table th {
+      background: var(--surface); color: var(--accent);
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .matrix-table tr:hover td { background: rgba(255, 255, 255, 0.03); }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border); background: var(--bg);
+      padding: 3rem 1.5rem; margin-top: 4rem;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: 0.8rem; color: var(--text-muted);
+    }
+  
+    /* Light Mode */
+    [data-theme="light"] {
+      --bg: #fafafa;
+      --surface: #ffffff;
+      --surface-card: #ffffff;
+      --border: rgba(0, 0, 0, 0.1);
+      --border-hover: rgba(0, 0, 0, 0.2);
+      --text: #171717;
+      --text-muted: #4d4d4d;
+      --text-dim: #666666;
+      --accent: #059669;
+      --accent-glow: rgba(5, 150, 105, 0.1);
+    }
+    [data-theme="light"] body {
+      color: var(--text);
+    }
+    [data-theme="light"] .hero h1 {
+      color: var(--text);
+    }
+    [data-theme="light"] .hero p {
+      color: var(--text-muted);
+    }
+    [data-theme="light"] .cta-btn {
+      color: #fff;
+    }
+    [data-theme="light"] .card {
+      background: #ffffff;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    [data-theme="light"] .section-title {
+      color: var(--accent);
+    }
+    [data-theme="light"] footer {
+      background: #f0f0f0;
+    }
+    [data-theme="light"] .footer-bottom {
+      color: var(--text-dim);
+    }
+    [data-theme="light"] .brand,
+    [data-theme="light"] .logo {
+      color: var(--text);
+    }
+    [data-theme="light"] nav a {
+      color: var(--text-muted);
+    }
+    [data-theme="light"] nav a:hover,
+    [data-theme="light"] nav a.active {
+      color: var(--text);
+    }
+    [data-theme="light"] .hero-tag {
+      background: var(--surface);
+      border-color: var(--border);
+    }
+    [data-theme="light"] .brand-icon {
+      background: var(--accent);
+      color: #fff;
+    }
+    [data-theme="light"] .terminal-box {
+      background: #1e1e1e;
+      border-color: rgba(255,255,255,0.1);
+    }
+    [data-theme="light"] .terminal-header {
+      background: #2d2d2d;
+      border-color: rgba(255,255,255,0.1);
+    }
+    [data-theme="light"] .terminal-body {
+      color: #d4d4d4;
+    }
+    [data-theme="light"] .hero-pill {
+      background: var(--accent-glow);
+      border-color: rgba(5, 150, 105, 0.3);
+    }
+    [data-theme="light"] .feature-card {
+      background: #ffffff;
+      border-color: var(--border);
+    }
+    [data-theme="light"] .feature-card:hover {
+      background: #fafafa;
+    }
+    [data-theme="light"] .cmd-badge {
+      background: #ffffff;
+      border-color: var(--border);
+    }
+    [data-theme="light"] .cmd-badge kbd {
+      background: #f0f0f0;
+      border-color: var(--border);
+    }
+    [data-theme="light"] .matrix-table th {
+      background: #f0f0f0;
+    }
+    [data-theme="light"] .matrix-table tr:hover td {
+      background: #f5f5f5;
+    }
+    [data-theme="light"] .hero-code {
+      color: var(--accent);
+    }
+    [data-theme="light"] .btn-mono {
+      background: var(--text);
+      color: #fff;
+    }
+    [data-theme="light"] .btn-outline {
+      border-color: var(--border);
+      color: var(--text);
+    }
+    [data-theme="light"] .btn-secondary {
+      background: #ffffff;
+      border-color: var(--border);
+    }
+    [data-theme="light"] .hero-pill {
+      background: var(--accent-glow);
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <a href="/" class="brand">[SMK3<span>-ISO</span>]</a>
+      <nav>
+        <ul>
+          <li><a href="/" class="active">/beranda</a></li>
+          <li><a href="/layanan/">/layanan</a></li>
+          <li><a href="/artikel/">/artikel</a></li>
+          <li><a href="/smk3/">/smk3</a></li>
+          <li><a href="/iso-45001/">/iso-45001</a></li>
+          <li><a href="/tentang/">/tentang</a></li>
+        </ul>
+      </nav>
+      <button onclick="toggleTheme()" data-toggle-theme aria-label="Toggle light/dark mode" style="background:transparent;border:1px solid var(--border);color:var(--text-muted);padding:0.4rem 0.6rem;border-radius:6px;cursor:pointer;font-size:0.85rem;font-family:var(--font-mono);transition:all 0.15s;" title="Ganti tema gelap/terang"></button>
+      <a href="/tentang/kontak/" class="btn-mono">KONSULTASI_</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-code">&gt; PERUSAHAAN_JASA_K3_TERDAFTAR_KEMENAKER_RI</div>
+      <h1>SISTEM MANAJEMEN K3 & SERTIFIKASI ISO 45001</h1>
+      <p>Referensi teknis lengkap & layanan pendampingan audit onsite. Penyusunan dokumen HIRADC, Manual K3, P2K3, hingga audit eksternal.</p>
+      <div class="hero-btn-row">
+        <a href="/layanan/" class="btn-mono">LIHAT_LAYANAN_K3 &rarr;</a>
+        <a href="/artikel/jasa-smk3-terdekat/" class="btn-outline">[JASA_SMK3_TERDEKAT]</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">// SERTIFIKASI_&_REGULASI_UTAMA</div>
+      <table class="matrix-table">
+        <thead>
+          <tr>
+            <th>STANDAR / SKEMA</th>
+            <th>DASAR HUKUM</th>
+            <th>CAKUPAN PROSES</th>
+            <th>LOKASI SERVIS</th>
+            <th>AKSI</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>SMK3 PP 50/2012</strong></td>
+            <td>PP No. 50 Th 2012 / Permenaker 5/2018</td>
+            <td>5 Elemen / 166 Kriteria Audit</td>
+            <td>Seluruh Kota P. Jawa (Banten s/d Jatim)</td>
+            <td><a href="/layanan/implementasi-smk3/" style="color: var(--accent); text-decoration: none;">[DETAIL]</a></td>
+          </tr>
+          <tr>
+            <td><strong>ISO 45001:2018</strong></td>
+            <td>SNI ISO 45001:2018 (KAN / IRCA)</td>
+            <td>Clause 4 s/d 10 (Siklus PDCA)</td>
+            <td>Nasional & Internasional</td>
+            <td><a href="/layanan/implementasi-iso45001/" style="color: var(--accent); text-decoration: none;">[DETAIL]</a></td>
+          </tr>
+          <tr>
+            <td><strong>JASA SMK3 TERDEKAT</strong></td>
+            <td>Deteksi Otomatis Perangkat / Kota</td>
+            <td>Konsultasi & Audit Onsite Cepat</td>
+            <td>Bandung, Jakarta, Semarang, Surabaya, dll</td>
+            <td><a href="/artikel/jasa-smk3-terdekat/" style="color: var(--accent); text-decoration: none;">[CEK_KOTA]</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 PT KONSULTAN K3 UTAMA // SYST_MODE: TEXTMODE_BRUTALIST</div>
+      <div>SERVED_VIA: SITUS-SMK3-ISO.LAN</div>
+    </div>
+  </footer>
+
+
+<script>
+(function() {
+  var saved = localStorage.getItem('smk3-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  updateToggleBtn();
+})();
+function toggleTheme() {
+  var html = document.documentElement;
+  var current = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', current);
+  localStorage.setItem('smk3-theme', current);
+  updateToggleBtn();
+}
+function updateToggleBtn() {
+  var btn = document.querySelector('[data-toggle-theme]');
+  if (!btn) return;
+  var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  btn.innerHTML = isDark ? '&#9788; Light' : '&#9790; Dark';
+}
+</script>
+
+
+</body>
+</html>

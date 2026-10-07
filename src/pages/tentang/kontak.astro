@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
+
+const title = `Hubungi Konsultan Kami — ${site.name}`;
+const description = `Hubungi PT Konsultan K3 Utama untuk pendaftaran sertifikasi SMK3 PP 50/2012, ISO 45001, dan penawaran audit onsite.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="content-section">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <header style="margin-bottom: 3rem; text-align: center;">
+        <div class="hero-tag">// HUBUNGI KAMI</div>
+        <h1 style="font-size: 2.8rem; margin-top: 0.5rem; margin-bottom: 1rem;">Mulai Konsultasi K3</h1>
+        <p style="color: var(--text-muted); font-size: 1.15rem; max-width: 600px; margin: 0 auto;">
+          Diskusikan kebutuhan Sistem Manajemen K3 & Sertifikasi ISO perusahaan Anda dengan tim Lead Auditor & Senior Consultant kami.
+        </p>
+      </header>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <!-- Contact Info -->
+        <div style="background: var(--surface); border: 1px solid var(--border); padding: 2rem; border-radius: 8px;">
+          <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 1px;">// INFO RESERVASI</h3>
+          
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">NAMA PERUSAHAAN</h4>
+            <p style="color: var(--text); font-weight: 500;">{site.company}</p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">TELEPON</h4>
+            <p style="color: var(--text); font-weight: 500;">{site.phone}</p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">EMAIL</h4>
+            <p style="color: var(--text); font-weight: 500;">{site.email}</p>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">ALAMAT KANTOR</h4>
+            <p style="color: var(--text); font-weight: 500; font-size: 0.95rem; line-height: 1.5;">{site.address}</p>
+          </div>
+
+          <div style="margin-top: 2rem;">
+            <a href={site.waLink()} target="_blank" class="cta-btn" style="width: 100%; text-align: center;">
+              Hubungi via WhatsApp (Fast Response)
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form (Netlify / Vercel-ready) -->
+        <div style="background: var(--surface-card); border: 1px solid var(--border); padding: 2rem; border-radius: 8px;">
+          <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 1px;">// FORMULIR HUBUNGKAN</h3>
+          
+          <form name="contact" method="POST" data-netlify="true" style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div>
+              <label style="display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; font-family: var(--font-mono);">Nama Lengkap</label>
+              <input type="text" name="name" required style="width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; color: var(--text); font-family: var(--font-sans); outline: none; transition: border-color 0.15s;" />
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; font-family: var(--font-mono);">Nama Perusahaan / Organisasi</label>
+              <input type="text" name="company" required style="width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; color: var(--text); font-family: var(--font-sans); outline: none;" />
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; font-family: var(--font-mono);">Kebutuhan Layanan</label>
+              <select name="service" style="width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; color: var(--text); font-family: var(--font-sans); outline: none;">
+                <option value="smk3">Sertifikasi SMK3 PP 50/2012</option>
+                <option value="iso">Sertifikasi ISO 45001:2018</option>
+                <option value="ims">Integrasi Sistem (IMS)</option>
+                <option value="audit">Audit Internal K3</option>
+                <option value="training">Pelatihan K3 / AK3 Umum</option>
+              </select>
+            </div>
+
+            <div>
+              <label style="display: block; font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase; margin-bottom: 0.5rem; font-family: var(--font-mono);">Pesan / Keterangan Tambahan</label>
+              <textarea name="message" rows="4" style="width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 0.75rem; color: var(--text); font-family: var(--font-sans); outline: none; resize: vertical;"></textarea>
+            </div>
+
+            <button type="submit" class="cta-btn" style="border: none; cursor: pointer; font-size: 0.9rem; padding: 0.75rem;">
+              Kirim Formulir Permohonan &rarr;
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

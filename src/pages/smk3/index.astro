@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = "Sistem Manajemen K3 (SMK3) PP No. 50 Tahun 2012";
+const description = "Referensi lengkap regulasi, dasar hukum, dan 5 elemen dasar Sistem Manajemen Keselamatan dan Kesehatan Kerja (SMK3).";
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="content-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <header style="margin-bottom: 2.5rem;">
+        <div class="hero-tag">// REGULASI INDONESIA</div>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Sistem Manajemen K3 (SMK3)</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
+          Pedoman dan implementasi wajib Sistem Manajemen K3 berdasarkan Peraturan Pemerintah No. 50 Tahun 2012.
+        </p>
+      </header>
+
+      <section style="margin-bottom: 3rem; line-height: 1.7; color: var(--text-muted);">
+        <h2 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">5 Elemen Dasar SMK3</h2>
+        <ol style="margin-left: 1.5rem; margin-bottom: 2rem;">
+          <li style="margin-bottom: 0.75rem;"><strong>Penetapan Kebijakan K3:</strong> Komitmen tertulis pimpinan puncak mengenai keselamatan kerja.</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Perencanaan K3:</strong> Identifikasi bahaya (HIRADC), regulasi hukum, dan target program.</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Pelaksanaan K3:</strong> Struktur organisasi K3 (P2K3), pelatihan, dan pengendalian operasional.</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Pemantauan & Evaluasi:</strong> Inspeksi kerja, pemantauan kesehatan, dan audit internal K3.</li>
+          <li style="margin-bottom: 0.75rem;"><strong>Peninjauan & Peningkatan Kinerja:</strong> Tinjauan manajemen berkelanjutan.</li>
+        </ol>
+      </section>
+
+      <div style="text-align: center; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px;">
+        <h3 style="color: var(--text); margin-bottom: 1rem;">Butuh Sertifikasi SMK3 Kemenaker RI?</h3>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Kami mendampingi proses audit eksternal dari penyiapan dokumen hingga sertifikat terbit.</p>
+        <a href="/tentang/kontak/" class="cta-btn">Mulai Konsultasi SMK3</a>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { cities } from '../../data/cities';
+
+export async function getStaticPaths() {
+  return cities.map((city) => ({
+    params: { slug: city.slug },
+    props: { city },
+  }));
+}
+
+const { city } = Astro.props;
+const title = `Jasa SMK3 di ${city.name} — Konsultan K3 Resmi`;
+const description = `Jasa SMK3 di ${city.name} : Layanan pendampingan sertifikasi & konsultan Jasa SMK3 PP 50/2012.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <main class="content-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <header style="margin-bottom: 1.5rem;">
+        <div class="hero-tag">// LAYANAN LOKAL K3</div>
+        <h1 style="font-size: 2.2rem; margin-top: 0; margin-bottom: 0.75rem;">Jasa SMK3 di {city.name}</h1>
+        <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6;">
+          Kami menyediakan jasa konsultasi, penyusunan dokumen HIRADC, Manual K3, hingga pendampingan audit eksternal sertifikasi SMK3 PP 50/2012 untuk wilayah <strong style="color: var(--text);">{city.name}</strong> dan sekitarnya.
+        </p>
+      </header>
+
+      <div style="background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+        <img src="/assets/images/icon-map.svg" alt={`Peta Lokasi Layanan SMK3 di ${city.name}`} width="64" height="64" />
+        <div style="flex: 1;">
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; line-height: 1.5;">
+            Layanan kami mencakup seluruh wilayah <strong>{city.name} ({city.region})</strong> dengan tim konsultan lokal yang siap diterjunkan langsung ke workshop/pabrik/proyek Anda.
+          </p>
+        </div>
+      </div>
+
+      <article style="line-height: 1.7; font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem;">
+        <h2 style="color: var(--text); font-size: 1.3rem; margin: 1rem 0 0.5rem 0;">Manfaat Layanan</h2>
+        <p style="margin-bottom: 1rem; line-height: 1.6;">
+          Kami menyediakan jasa konsultasi, penyusunan dokumen HIRADC, Manual K3, hingga pendampingan audit eksternal sertifikasi SMK3 PP 50/2012 untuk wilayah <strong>{city.name}</strong> dan sekitarnya.
+        </p>
+        <p style="margin-bottom: 1rem; line-height: 1.6;">
+          Implementasi Sistem Manajemen Keselamatan dan Kesehatan Kerja (SMK3) berdasarkan Peraturan Pemerintah No. 50 Tahun 2012 adalah kewajiban hukum bagi perusahaan dengan kriteria tertentu di Indonesia. Tim konsultan kami di {city.name} membantu Anda mempermudah proses ini dari nol hingga sertifikat Kemenaker terbit.
+        </p>
+      </article>
+    </div>
+  </main>
+</BaseLayout>
