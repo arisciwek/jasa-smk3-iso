@@ -2,6 +2,11 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { cities } from '../../data/cities';
 
+const cityContentFiles = import.meta.glob('../../data/city-content/*.json', {
+  eager: true,
+  import: 'default',
+});
+
 export async function getStaticPaths() {
   return cities.map((city) => ({
     params: { slug: city.slug },
@@ -10,6 +15,10 @@ export async function getStaticPaths() {
 }
 
 const { city } = Astro.props;
+const cityContent = cityContentFiles[`../../data/city-content/${city.slug}.json`] ?? {
+  lastmod: undefined,
+  paragraphs: [],
+};
 const title = `Jasa SMK3 di ${city.name} — Konsultan K3 Resmi`;
 const description = `Jasa SMK3 di ${city.name} : Layanan pendampingan sertifikasi & konsultan Jasa SMK3 PP 50/2012.`;
 const serviceSchema = {
@@ -20,6 +29,7 @@ const serviceSchema = {
   description,
   provider: { '@type': 'Organization', name: 'PT Konsultan K3 Utama' },
   areaServed: { '@type': 'City', name: city.name },
+  ...(cityContent.lastmod ? { dateModified: cityContent.lastmod } : {}),
   url: new URL(Astro.url.pathname, Astro.site ?? Astro.url).href,
 };
 ---
@@ -27,6 +37,7 @@ const serviceSchema = {
 <BaseLayout
   title={title}
   description={description}
+  lastmod={cityContent.lastmod}
   breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: `Jasa SMK3 di ${city.name}`, url: Astro.url.pathname }]}
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
@@ -58,6 +69,13 @@ const serviceSchema = {
           Implementasi Sistem Manajemen Keselamatan dan Kesehatan Kerja (SMK3) berdasarkan Peraturan Pemerintah No. 50 Tahun 2012 adalah kewajiban hukum bagi perusahaan dengan kriteria tertentu di Indonesia. Tim konsultan kami di {city.name} membantu Anda mempermudah proses ini dari nol hingga sertifikat Kemenaker terbit.
         </p>
       </article>
+
+      {cityContent.paragraphs.length > 0 && (
+        <section aria-label={`Konteks lokal ${city.name}`} style="line-height: 1.7; font-size: 1rem; color: var(--text-muted); margin-bottom: 2rem;">
+          <h2 style="color: var(--text); font-size: 1.3rem; margin: 1rem 0 0.5rem 0;">Konteks Lokal {city.name}</h2>
+          {cityContent.paragraphs.map((paragraph) => <p style="margin-bottom: 1rem; line-height: 1.6;">{paragraph.text}</p>)}
+        </section>
+      )}
     </div>
   </main>
 </BaseLayout>
