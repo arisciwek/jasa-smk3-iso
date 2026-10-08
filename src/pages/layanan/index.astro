@@ -1,9 +1,28 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FAQ from '../../components/FAQ.astro';
 import { site } from '../../data/site';
 
 const title = "Layanan Konsultasi & Pendampingan Sertifikasi K3";
 const description = "Layanan konsultan SMK3 PP 50/2012, ISO 45001:2018, audit internal, gap analysis, pelatihan K3, dan pendampingan sertifikasi.";
+const faqs = [
+  {
+    question: 'Apa saja layanan konsultasi K3 yang tersedia?',
+    answer: 'Layanan dapat mencakup gap analysis, penyusunan dokumen SMK3 atau ISO 45001, HIRADC, pelatihan, audit internal, dan pendampingan sertifikasi sesuai kebutuhan perusahaan.',
+  },
+  {
+    question: 'Apakah konsultasi dapat dilakukan secara onsite?',
+    answer: 'Pendampingan onsite dapat dibahas berdasarkan lokasi, proses kerja, risiko operasional, dan tahapan implementasi yang dibutuhkan perusahaan.',
+  },
+  {
+    question: 'Bagaimana proses konsultasi dimulai?',
+    answer: 'Proses dimulai dengan memahami kondisi perusahaan, dokumen yang sudah tersedia, prioritas risiko, dan target kepatuhan sebelum menyusun ruang lingkup kerja.',
+  },
+  {
+    question: 'Apakah perusahaan harus sudah memiliki dokumen K3?',
+    answer: 'Tidak. Dokumen yang sudah tersedia akan ditinjau, sedangkan kebutuhan yang belum ada dapat dipetakan dan disusun sebagai bagian dari rencana pendampingan.',
+  },
+];
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -51,6 +70,8 @@ const serviceSchema = {
         <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Konsultasi awal gratis & proposal penawaran resmi dalam 1x24 jam.</p>
         <a href="/tentang/kontak/" class="cta-btn" style="font-size: 0.9rem; padding: 0.75rem 2rem;">Hubungi Konsultan</a>
       </div>
+
+      <FAQ items={faqs} title="FAQ Layanan Konsultasi K3" eyebrow="// FAQ LAYANAN" />
     </div>
   </main>
 </BaseLayout>

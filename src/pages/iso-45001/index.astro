@@ -1,8 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FAQ from '../../components/FAQ.astro';
 
 const title = "ISO 45001:2018 — Sistem Manajemen Keselamatan Kerja Internasional";
 const description = "Referensi lengkap standar internasional K3 berbasis struktur High-Level Structure (HLS) dan PDCA.";
+const faqs = [
+  {
+    question: 'Apa itu ISO 45001:2018?',
+    answer: 'ISO 45001:2018 adalah standar sistem manajemen keselamatan dan kesehatan kerja yang membantu organisasi mengelola risiko serta meningkatkan kinerja K3 secara berkelanjutan.',
+  },
+  {
+    question: 'Apa perbedaan ISO 45001 dan SMK3?',
+    answer: 'SMK3 mengacu pada ketentuan nasional Indonesia, sedangkan ISO 45001 merupakan standar internasional. Keduanya sama-sama menggunakan pendekatan sistematis berbasis risiko.',
+  },
+  {
+    question: 'Apakah implementasi ISO 45001 harus dimulai dari nol?',
+    answer: 'Tidak selalu. Kondisi dan sistem yang sudah berjalan dapat dipetakan melalui gap analysis untuk menentukan bagian yang perlu diperkuat atau dilengkapi.',
+  },
+  {
+    question: 'Apa saja yang dibantu dalam persiapan sertifikasi ISO 45001?',
+    answer: 'Ruang lingkup dapat mencakup gap analysis, penyusunan atau penyesuaian dokumen, penerapan, audit internal, tinjauan manajemen, dan persiapan audit sertifikasi.',
+  },
+];
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -46,6 +65,8 @@ const serviceSchema = {
         <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Tim kami membantu gap analysis, penyusunan manual, hingga sukses audit sertifikasi.</p>
         <a href="/tentang/kontak/" class="cta-btn">Mulai Sertifikasi ISO 45001</a>
       </div>
+
+      <FAQ items={faqs} title="FAQ tentang ISO 45001" eyebrow="// FAQ ISO 45001" />
     </div>
   </main>
 </BaseLayout>

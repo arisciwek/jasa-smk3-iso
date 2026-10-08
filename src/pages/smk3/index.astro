@@ -1,8 +1,27 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FAQ from '../../components/FAQ.astro';
 
 const title = "Sistem Manajemen K3 (SMK3) PP No. 50 Tahun 2012";
 const description = "Referensi lengkap regulasi, dasar hukum, dan 5 elemen dasar Sistem Manajemen Keselamatan dan Kesehatan Kerja (SMK3).";
+const faqs = [
+  {
+    question: 'Apa itu SMK3?',
+    answer: 'SMK3 adalah sistem manajemen untuk mengendalikan risiko keselamatan dan kesehatan kerja secara terencana, terukur, dan berkelanjutan sesuai ketentuan yang berlaku.',
+  },
+  {
+    question: 'Apa saja elemen dasar SMK3?',
+    answer: 'Elemen dasarnya meliputi penetapan kebijakan, perencanaan, pelaksanaan, pemantauan dan evaluasi, serta peninjauan dan peningkatan kinerja.',
+  },
+  {
+    question: 'Apakah perusahaan wajib menerapkan SMK3?',
+    answer: 'Kewajiban penerapan SMK3 berlaku bagi perusahaan yang memenuhi kriteria tertentu sebagaimana diatur dalam PP No. 50 Tahun 2012.',
+  },
+  {
+    question: 'Apakah pendampingan SMK3 mencakup persiapan audit?',
+    answer: 'Pendampingan dapat mencakup peninjauan dokumen, kesiapan penerapan, audit internal, penyelesaian temuan, dan persiapan menghadapi proses penilaian.',
+  },
+];
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
@@ -43,6 +62,8 @@ const serviceSchema = {
         <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Kami mendampingi proses audit eksternal dari penyiapan dokumen hingga sertifikat terbit.</p>
         <a href="/tentang/kontak/" class="cta-btn">Mulai Konsultasi SMK3</a>
       </div>
+
+      <FAQ items={faqs} title="FAQ tentang SMK3" eyebrow="// FAQ SMK3" />
     </div>
   </main>
 </BaseLayout>
