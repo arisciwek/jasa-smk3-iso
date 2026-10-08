@@ -1,0 +1,13 @@
+# Robots policy for SMK3 & ISO 45001 Indonesia
+# Semua halaman, stylesheet, script, dan image publik boleh dirayapi.
+
+User-agent: *
+Allow: /
+
+# Area private/reserved jika suatu saat dibuat oleh aplikasi.
+Disallow: /admin/
+Disallow: /api/
+Disallow: /draft/
+Disallow: /drafts/
+
+Sitemap: http://situs-smk3-iso.lan/sitemap-index.xml
