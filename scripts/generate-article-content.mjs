@@ -1,4 +1,4 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const root = process.cwd();
@@ -9,7 +9,13 @@ const apiKey = process.env.AI_API_KEY;
 const baseUrl = (process.env.AI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
 const model = process.env.AI_MODEL || 'gpt-4o-mini';
 
-if (!idea) throw new Error('Tidak ada articleIdeas berstatus planned.');
+mkdirSync(join(root, 'automation-output'), { recursive: true });
+
+if (!idea) {
+  writeFileSync(join(root, 'automation-output', '.empty'), 'article-queue-empty\n');
+  console.log('Antrean artikel sudah habis; job city tetap berjalan.');
+  process.exit(0);
+}
 if (!apiKey) throw new Error('AI_API_KEY belum tersedia.');
 
 const prompt = `
@@ -82,4 +88,10 @@ idea.status = 'published';
 idea.publishedAt = today;
 idea.slug = slug;
 writeFileSync(planPath, `${JSON.stringify(plan, null, 2)}\n`);
+mkdirSync(join(root, 'automation-output', 'src/content/articles'), { recursive: true });
+copyFileSync(planPath, join(root, 'automation-output', 'content-plan.json'));
+copyFileSync(
+  join(root, 'src/content/articles', `${slug}.md`),
+  join(root, 'automation-output', 'src/content/articles', `${slug}.md`),
+);
 console.log(`Artikel dibuat: ${slug}`);

@@ -10,58 +10,107 @@ permissions:
   contents: write
 
 concurrency:
-  group: city-content-daily
+  group: daily-content-queue
   cancel-in-progress: false
 
 jobs:
-  content:
+  prepare:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    outputs:
+      tasks: ${{ steps.decide.outputs.tasks }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          fetch-depth: 1
+          node-version: 22
+      - id: decide
+        run: node scripts/decide-content.mjs
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+  create-article:
+    needs: prepare
+    if: needs.prepare.outputs.tasks == '1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Decide content task
-        id: decide
-        run: node scripts/decide-content.mjs
-
-      - name: Skip this schedule slot
-        if: steps.decide.outputs.tasks == '0'
-        run: echo "Tidak ada update pada slot ini (${{ steps.decide.outputs.reason }})."
-
-      - name: Generate article
-        if: steps.decide.outputs.task == 'create'
+      - run: npm ci
+      - name: Generate one planned article
         env:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_BASE_URL: ${{ vars.AI_BASE_URL }}
           AI_MODEL: ${{ vars.AI_MODEL }}
         run: node scripts/generate-article-content.mjs
+      - name: Upload article result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: create-article-result
+          path: automation-output/
+          if-no-files-found: ignore
 
+  update-city:
+    needs: prepare
+    if: needs.prepare.outputs.tasks == '1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - name: Update one city paragraph
-        if: steps.decide.outputs.task == 'update'
         env:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_BASE_URL: ${{ vars.AI_BASE_URL }}
           AI_MODEL: ${{ vars.AI_MODEL }}
         run: node scripts/generate-city-content.mjs
+      - name: Upload city result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: update-city-result
+          path: automation-output/
+          if-no-files-found: ignore
 
+  publish:
+    needs: [prepare, create-article, update-city]
+    if: always() && needs.prepare.outputs.tasks == '1' && (needs.create-article.result == 'success' || needs.update-city.result == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download article result
+        if: needs.create-article.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: create-article-result
+          path: automation-input/create
+        continue-on-error: true
+      - name: Download city result
+        if: needs.update-city.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: update-city-result
+          path: automation-input/update
+        continue-on-error: true
+      - name: Merge results
+        run: |
+          cp -a automation-input/create/. . 2>/dev/null || true
+          cp -a automation-input/update/. . 2>/dev/null || true
+          rm -rf automation-input automation-output
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
       - name: Build verification
-        if: steps.decide.outputs.tasks == '1'
         run: npm run build
-
-      - name: Commit and push
-        if: steps.decide.outputs.tasks == '1'
+      - name: Commit and push once
         run: |
           git config user.name "smk3-iso-content-bot"
           git config user.email "smk3-iso-content-bot@users.noreply.github.com"
@@ -70,5 +119,5 @@ jobs:
             echo "Tidak ada perubahan untuk di-commit."
             exit 0
           fi
-          git commit -m "content: update city paragraph"
+          git commit -m "content: daily article and city update"
           git push

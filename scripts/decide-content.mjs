@@ -1,8 +1,6 @@
-import { appendFileSync, readFileSync } from 'node:fs';
+import { appendFileSync } from 'node:fs';
 
 const outputFile = process.env.GITHUB_OUTPUT;
-const plan = JSON.parse(readFileSync('content-plan.json', 'utf8'));
-const pendingArticle = plan.articleIdeas.some((item) => item.status === 'planned');
 
 function output(name, value) {
   const line = `${name}=${value}\n`;
@@ -25,11 +23,9 @@ const inScheduleSlot = isManual || hour === targetHour;
 
 if (!inScheduleSlot) {
   output('tasks', '0');
-  output('task', 'none');
   output('reason', `waiting-${targetHour}:00-wib`);
   process.exit(0);
 }
 
 output('tasks', '1');
-output('task', pendingArticle ? 'create' : 'update');
-output('reason', pendingArticle ? 'article-queue' : 'city-fallback');
+output('reason', isManual ? 'manual' : `scheduled-${targetHour}:00-wib`);

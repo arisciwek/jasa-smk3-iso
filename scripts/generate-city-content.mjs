@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const root = process.cwd();
@@ -110,4 +110,9 @@ const updated = {
 
 mkdirSync(contentDir, { recursive: true });
 writeFileSync(join(contentDir, `${selected.city.slug}.json`), `${JSON.stringify(updated, null, 2)}\n`);
+mkdirSync(join(root, 'automation-output', 'src/data/city-content'), { recursive: true });
+copyFileSync(
+  join(contentDir, `${selected.city.slug}.json`),
+  join(root, 'automation-output', 'src/data/city-content', `${selected.city.slug}.json`),
+);
 console.log(`City diperbarui: ${selected.city.name} | topik: ${topic.id}`);
