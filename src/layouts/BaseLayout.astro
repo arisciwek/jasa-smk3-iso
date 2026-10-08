@@ -214,9 +214,26 @@ const {
         display: block;
       }
 
-      .desktop-nav ul,
-      .nav-actions {
+      .desktop-nav ul {
         display: none;
+      }
+
+      .nav-actions {
+        display: flex;
+        gap: 0.35rem;
+        margin-left: auto;
+      }
+
+      .theme-toggle-btn,
+      .nav-actions .cta-btn {
+        padding: 0.4rem 0.55rem;
+        font-size: 0.72rem;
+        white-space: nowrap;
+      }
+
+      .nav-actions .cta-btn {
+        font-family: var(--font-sans);
+        font-weight: 600;
       }
 
       .mobile-menu.active {
