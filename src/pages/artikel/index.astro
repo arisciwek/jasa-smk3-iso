@@ -12,7 +12,11 @@ const latestArticles = articles
   .slice(4, 9);
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }]}
+>
   <main class="content-section">
     <div style="max-width: 1000px; margin: 0 auto;">
       <header style="margin-bottom: 3rem; text-align: center;">

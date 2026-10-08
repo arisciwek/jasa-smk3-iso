@@ -21,7 +21,11 @@ const title = `${category} — Artikel K3`;
 const description = `Artikel ${category} tentang SMK3, ISO 45001, dan praktik keselamatan kerja.`;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: category, url: `/artikel/kategori/${Astro.params.category}/` }]}
+>
   <main class="content-section category-page">
     <header class="category-header">
       <div class="hero-tag">// {category.toUpperCase()}</div>

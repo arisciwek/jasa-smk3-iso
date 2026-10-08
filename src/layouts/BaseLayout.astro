@@ -1,12 +1,54 @@
 ---
-const { 
+import { site } from '../data/site';
+
+const {
   title = "SMK3 & ISO 45001 Indonesia — Konsultan K3 Terpercaya", 
   description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/2012 dan ISO 45001:2018 resmi Kemenaker RI & KAN.",
   lastmod,
+  breadcrumbs = [],
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
 const isActive = (path) => path === '/' ? currentPath === '/' : currentPath.startsWith(path);
+const siteUrl = new URL('/', Astro.site ?? Astro.url).href;
+const organizationId = `${siteUrl}#organization`;
+const websiteId = `${siteUrl}#website`;
+const globalSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': organizationId,
+      name: site.company,
+      url: siteUrl,
+      email: site.email,
+      telephone: site.phone,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: site.address,
+        addressCountry: 'ID',
+      },
+    },
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      name: site.name,
+      url: siteUrl,
+      publisher: { '@id': organizationId },
+      inLanguage: 'id-ID',
+    },
+  ],
+};
+const breadcrumbSchema = breadcrumbs.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbs.map((breadcrumb, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: breadcrumb.name,
+    item: new URL(breadcrumb.url, siteUrl).href,
+  })),
+} : null;
 ---
 
 <!DOCTYPE html>
@@ -17,6 +59,8 @@ const isActive = (path) => path === '/' ? currentPath === '/' : currentPath.star
   <title>{title}</title>
   <meta name="description" content={description}>
   {lastmod && <meta name="last-modified" content={lastmod} />}
+  <script type="application/ld+json" set:html={JSON.stringify(globalSchema)} />
+  {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style is:global>
     :root {

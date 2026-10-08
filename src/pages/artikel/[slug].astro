@@ -37,7 +37,12 @@ const articleSchema = {
 };
 ---
 
-<BaseLayout title={article.data.title} description={article.data.description} lastmod={lastmod}>
+<BaseLayout
+  title={article.data.title}
+  description={article.data.description}
+  lastmod={lastmod}
+  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: article.data.title, url: Astro.url.pathname }]}
+>
   <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <main class="content-section article-detail-page">
     <div class="article-detail-header">

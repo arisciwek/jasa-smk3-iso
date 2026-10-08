@@ -15,7 +15,7 @@ const serviceSchema = {
 };
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'ISO 45001', url: '/iso-45001/' }]}>
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">

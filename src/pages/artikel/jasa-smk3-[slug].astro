@@ -24,7 +24,11 @@ const serviceSchema = {
 };
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: `Jasa SMK3 di ${city.name}`, url: Astro.url.pathname }]}
+>
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">
