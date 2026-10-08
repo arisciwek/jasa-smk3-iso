@@ -1,7 +1,8 @@
 ---
 const { 
   title = "SMK3 & ISO 45001 Indonesia — Konsultan K3 Terpercaya", 
-  description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/2012 dan ISO 45001:2018 resmi Kemenaker RI & KAN." 
+  description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/2012 dan ISO 45001:2018 resmi Kemenaker RI & KAN.",
+  lastmod,
 } = Astro.props;
 
 const currentPath = Astro.url.pathname;
@@ -15,6 +16,7 @@ const isActive = (path) => path === '/' ? currentPath === '/' : currentPath.star
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{title}</title>
   <meta name="description" content={description}>
+  {lastmod && <meta name="last-modified" content={lastmod} />}
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style is:global>
     :root {

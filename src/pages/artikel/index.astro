@@ -2,9 +2,14 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Card from '../../components/Card.astro';
 import { cities, regions } from '../../data/cities';
+import { getCollection } from 'astro:content';
 
 const title = "Artikel & Panduan K3 — Rujukan Teknis SMK3 & ISO 45001";
 const description = "Pusat rujukan teknis, update regulasi, case study implementasi, dan tips praktis keselamatan kerja.";
+const articles = await getCollection('articles');
+const latestArticles = articles
+  .sort((a, b) => (b.data.lastmod || b.data.date).localeCompare(a.data.lastmod || a.data.date))
+  .slice(0, 3);
 ---
 
 <BaseLayout title={title} description={description}>
@@ -73,26 +78,17 @@ const description = "Pusat rujukan teknis, update regulasi, case study implement
           <a href="/artikel/" class="card-link">Lihat semua artikel &rarr;</a>
         </div>
         <div class="article-grid">
-          <Card
-            title="Update Peraturan Pemerintah No. 50 Tahun 2012"
-            description="Perubahan terbaru pada PP 50/2012 yang berlaku sejak 2025. Penyesuaian ketentuan mengenai penilaian risiko kerja, pembaruan standar PPE, dan penambahan modul pelatihan untuk sektor konstruksi."
-            date="2025-01-15"
-            category="Regulasi"
-            readTime="6 menit"
-            image="/assets/images/icon-smk3.svg"
-            imageAlt="Ilustrasi dokumen dan standar SMK3"
-            href="/artikel/jasa-smk3-pp-50-2012-update-2025/"
-          />
-          <Card
-            title="HIRADC Panduan Lengkap"
-            description="Panduan teknis menyusun Dokumen HIRADC sesuai metode terbaru. Termasuk elemen 5, identifikasi bahaya, dan evaluasi risiko."
-            date="2025-02-01"
-            category="Teknis"
-            readTime="8 menit"
-            image="/assets/images/icon-iso.svg"
-            imageAlt="Ilustrasi sistem manajemen dan analisis risiko K3"
-            href="/artikel/hiradc-panduan/"
-          />
+          {latestArticles.map((article) => (
+            <Card
+              title={article.data.title}
+              description={article.data.description}
+              date={article.data.lastmod || article.data.date}
+              category={article.data.category}
+              readTime={article.data.readTime}
+              image={article.data.image}
+              href={`/artikel/${article.id}/`}
+            />
+          ))}
         </div>
       </section>
     </div>

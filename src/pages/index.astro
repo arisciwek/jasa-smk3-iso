@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Card from '../components/Card.astro';
+import { getCollection } from 'astro:content';
 
 const title = "SMK3 & ISO 45001 Indonesia — Konsultan K3 Terpercaya";
 const description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/2012 dan ISO 45001:2018 resmi Kemenaker RI & KAN.";
+const articles = await getCollection('articles');
+const latestArticles = articles
+  .sort((a, b) => (b.data.lastmod || b.data.date).localeCompare(a.data.lastmod || a.data.date))
+  .slice(0, 3);
+const latestLastmod = latestArticles[0] ? (latestArticles[0].data.lastmod || latestArticles[0].data.date) : undefined;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} lastmod={latestLastmod}>
   <main>
     <header class="hero home-hero">
       <div class="hero-grid">
@@ -57,6 +64,26 @@ const description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/201
         <a href="/smk3/" class="service-item"><span>01</span><strong>SMK3 PP 50/2012</strong><em>Struktur, dokumen, dan kesiapan penilaian</em><b>&rarr;</b></a>
         <a href="/iso-45001/" class="service-item"><span>02</span><strong>ISO 45001:2018</strong><em>Sistem manajemen K3 berbasis risiko dan PDCA</em><b>&rarr;</b></a>
         <a href="/layanan/" class="service-item"><span>03</span><strong>Audit & pendampingan</strong><em>Menemukan gap dan membuat rencana perbaikan</em><b>&rarr;</b></a>
+      </div>
+    </section>
+
+    <section class="content-section latest-home-section">
+      <div class="section-heading-row">
+        <div><div class="section-title">// TERBARU</div><h2>Rujukan yang baru diperbarui</h2></div>
+        <a href="/artikel/" class="card-link">Semua artikel &rarr;</a>
+      </div>
+      <div class="article-grid">
+        {latestArticles.map((article) => (
+          <Card
+            title={article.data.title}
+            description={article.data.description}
+            date={article.data.lastmod || article.data.date}
+            category={article.data.category}
+            readTime={article.data.readTime}
+            image={article.data.image}
+            href={`/artikel/${article.id}/`}
+          />
+        ))}
       </div>
     </section>
 

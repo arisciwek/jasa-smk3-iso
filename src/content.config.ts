@@ -16,10 +16,12 @@ const articles = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.string(),
+    lastmod: z.string().optional(),
     author: z.string().default('Admin K3'),
     category: z.enum(['Regulasi', 'Teknis', 'Case Study', 'Tips & Panduan', 'Layanan Lokal']),
     tags: z.array(z.string()).default([]),
     readTime: z.string().optional(),
+    image: z.string().optional(),
   }),
 });
 
