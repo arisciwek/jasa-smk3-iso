@@ -1,6 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import FAQ from '../../components/FAQ.astro';
 import { cities } from '../../data/cities';
+import { getCityFaqs } from '../../data/faqs';
 
 const cityContentFiles = import.meta.glob('../../data/city-content/*.json', {
   eager: true,
@@ -19,6 +21,7 @@ const cityContent = cityContentFiles[`../../data/city-content/${city.slug}.json`
   lastmod: undefined,
   paragraphs: [],
 };
+const cityFaqs = [...getCityFaqs(city.name), ...(cityContent.faqs ?? [])];
 const title = `Jasa SMK3 di ${city.name} — Konsultan K3 Resmi`;
 const description = `Jasa SMK3 di ${city.name} : Layanan pendampingan sertifikasi & konsultan Jasa SMK3 PP 50/2012.`;
 const serviceSchema = {
@@ -76,6 +79,8 @@ const serviceSchema = {
           {cityContent.paragraphs.map((paragraph) => <p style="margin-bottom: 1rem; line-height: 1.6;">{paragraph.text}</p>)}
         </section>
       )}
+
+      <FAQ items={cityFaqs} title={`FAQ Jasa SMK3 di ${city.name}`} eyebrow={`// FAQ ${city.name.toUpperCase()}`} />
     </div>
   </main>
 </BaseLayout>

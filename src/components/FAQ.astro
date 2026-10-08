@@ -1,0 +1,125 @@
+---
+import type { FaqItem } from '../data/faqs';
+
+const { items = [], title = 'Pertanyaan yang sering diajukan', eyebrow = '// FAQ' } = Astro.props as {
+  items?: FaqItem[];
+  title?: string;
+  eyebrow?: string;
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: items.map(({ question, answer }) => ({
+    '@type': 'Question',
+    name: question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: answer,
+    },
+  })),
+};
+---
+
+{items.length > 0 && (
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+    <div class="faq-heading">
+      <div>
+        <div class="section-title">{eyebrow}</div>
+        <h2 id="faq-heading">{title}</h2>
+      </div>
+      <p>Jawaban singkat untuk membantu Anda menentukan langkah konsultasi berikutnya.</p>
+    </div>
+
+    <div class="faq-list">
+      {items.map((item) => (
+        <details class="faq-item">
+          <summary>{item.question}</summary>
+          <p>{item.answer}</p>
+        </details>
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .faq-section {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.65fr);
+    gap: 2rem;
+    align-items: end;
+    margin-bottom: 1.5rem;
+  }
+
+  .faq-heading h2 {
+    color: var(--text);
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    line-height: 1.2;
+  }
+
+  .faq-heading > p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .faq-list {
+    border-top: 1px solid var(--border);
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    cursor: pointer;
+    padding: 1rem 0;
+    color: var(--text);
+    font-size: 0.95rem;
+    font-weight: 600;
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary::after {
+    flex: 0 0 auto;
+    color: var(--accent);
+    content: '+';
+    font-family: var(--font-mono);
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+
+  .faq-item[open] summary::after {
+    content: '−';
+  }
+
+  .faq-item p {
+    max-width: 720px;
+    padding: 0 2rem 1.1rem 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.65;
+  }
+
+  @media (max-width: 768px) {
+    .faq-heading {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+  }
+</style>
