@@ -181,6 +181,26 @@ const isActive = (path) => path === '/' ? currentPath === '/' : currentPath.star
       font-size: 0.85rem; font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem;
     }
 
+    .article-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
+    .article-card {
+      display: block; overflow: hidden; border: 1px solid var(--border); border-radius: 10px;
+      background: var(--surface-card); color: var(--text); text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .article-card:hover { transform: translateY(-3px); border-color: var(--border-hover); box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16); }
+    .article-card-media { aspect-ratio: 16 / 8; overflow: hidden; display: grid; place-items: center; background: var(--surface); border-bottom: 1px solid var(--border); }
+    .article-card-media img { width: 100%; height: 100%; object-fit: cover; padding: 2rem; transition: transform 0.2s ease; }
+    .article-card:hover .article-card-media img { transform: scale(1.04); }
+    .article-card-body { padding: 1.25rem 1.35rem 1.4rem; }
+    .article-card-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 0.75rem; color: var(--text-dim); font-family: var(--font-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.6px; }
+    .article-card-meta span:first-child { color: var(--accent); }
+    .article-card h3 { margin: 0.7rem 0 0.6rem; font-size: 1.25rem; line-height: 1.25; letter-spacing: -0.2px; }
+    .article-card p { display: -webkit-box; overflow: hidden; margin-bottom: 1.1rem; color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
+    .article-card-link { display: inline-flex; gap: 0.35rem; color: var(--accent); font-family: var(--font-mono); font-size: 0.8rem; font-weight: 600; }
+    .article-card-link span { transition: transform 0.2s ease; }
+    .article-card:hover .article-card-link span { transform: translateX(3px); }
+    .latest-articles { margin-top: 4rem; }
+
     footer {
       border-top: 1px solid var(--border);
       margin-top: 5rem; padding: 3rem 1.5rem;
@@ -260,6 +280,7 @@ const isActive = (path) => path === '/' ? currentPath === '/' : currentPath.star
       .service-item, .resource-links a { grid-template-columns: 2.5rem 1fr 1.5rem; gap: 0.65rem; }
       .service-item em { grid-column: 2 / 3; }
       .resource-links a { grid-template-columns: 6.5rem 1fr 1.5rem; }
+      .article-grid { grid-template-columns: 1fr; }
 
       .mobile-menu-btn {
         display: block;

@@ -1,38 +1,38 @@
 ---
-// Reusable Card component for articles, services, or any list item.
-// Accepts: title, description, date (lastmod), href (optional link), and optional class overrides.
-const { title, description, date, href = '#', ...props } = Astro.props;
+// Reusable editorial card for one article.
+// Accepts title, description, date, category, readTime, image, imageAlt, href, and class.
+const {
+  title,
+  description,
+  date,
+  category = 'Artikel K3',
+  readTime,
+  image = '/assets/images/icon-smk3.svg',
+  imageAlt = '',
+  href = '#',
+  class: className = '',
+} = Astro.props;
 
-// Format date indonesian style if provided
 let formattedDate = '';
 if (date) {
-  const d = new Date(date);
-  const options = { year: 'numeric', month: 'long', day: 'numeric' };
-  formattedDate = d.toLocaleDateString('id-ID', options);
+  const parsedDate = new Date(date);
+  formattedDate = parsedDate.toLocaleDateString('id-ID', { year: 'numeric', month: 'long', day: 'numeric' });
 }
-
-// Default classes can be overridden via spread props
-const defaultClasses = 'group rounded-lg border border-[var(--border)] bg-[var(--surface)] p-6 hover:border-[var(--border-hover)] transition-colors cursor-pointer';
-const extraClasses = props.class || '';
-
 ---
-<a href={href} class={defaultClasses + ' ' + extraClasses} aria-label={title}>
-  <h3 class="text-xl font-medium text-[var(--text)] mb-2 line-clamp-2">{title}</h3>
 
-  {description && (
-    <p class="text-sm text-[var(--text-muted)] line-clamp-3 mb-4">{description}</p>
-  )}
-
-  {date && (
-    <div class="flex items-center gap-2 text-xs text-[var(--text-dim)]">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="12" cy="12" r="10"></circle>
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-      </svg>
-      <span>{formattedDate}</span>
+<a href={href} class={`article-card ${className}`} aria-label={title}>
+  <div class="article-card-media">
+    <img src={image} alt={imageAlt || `Ilustrasi ${title}`} loading="lazy" width="640" height="360" />
+  </div>
+  <div class="article-card-body">
+    <div class="article-card-meta">
+      <span>{category}</span>
+      {date && <time datetime={date}>{formattedDate}</time>}
+      {readTime && <span>{readTime}</span>}
     </div>
-  )}
-
-  {/* Slot for optional extra content (icon, badge, etc.) */}
+    <h3>{title}</h3>
+    {description && <p>{description}</p>}
+    <span class="article-card-link">Baca artikel <span aria-hidden="true">&rarr;</span></span>
+  </div>
   <slot />
 </a>

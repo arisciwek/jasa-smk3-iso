@@ -64,20 +64,33 @@ const description = "Pusat rujukan teknis, update regulasi, case study implement
         </div>
       </section>
 
-      {/* Bagian baru: Artikel Terbaru dengan Card component */}
-      <section class="mt-12">
-        <h2 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1.5rem;">Artikel Terbaru</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+      <section class="latest-articles">
+        <div class="section-heading-row">
+          <div>
+            <div class="section-title">// PILIHAN TERBARU</div>
+            <h2>Artikel Terbaru</h2>
+          </div>
+          <a href="/artikel/" class="card-link">Lihat semua artikel &rarr;</a>
+        </div>
+        <div class="article-grid">
           <Card
             title="Update Peraturan Pemerintah No. 50 Tahun 2012"
             description="Perubahan terbaru pada PP 50/2012 yang berlaku sejak 2025. Penyesuaian ketentuan mengenai penilaian risiko kerja, pembaruan standar PPE, dan penambahan modul pelatihan untuk sektor konstruksi."
             date="2025-01-15"
+            category="Regulasi"
+            readTime="6 menit"
+            image="/assets/images/icon-smk3.svg"
+            imageAlt="Ilustrasi dokumen dan standar SMK3"
             href="/artikel/jasa-smk3-pp-50-2012-update-2025/"
           />
           <Card
             title="HIRADC Panduan Lengkap"
             description="Panduan teknis menyusun Dokumen HIRADC sesuai metode terbaru. Termasuk elemen 5, identifikasi bahaya, dan evaluasi risiko."
             date="2025-02-01"
+            category="Teknis"
+            readTime="8 menit"
+            image="/assets/images/icon-iso.svg"
+            imageAlt="Ilustrasi sistem manajemen dan analisis risiko K3"
             href="/artikel/hiradc-panduan/"
           />
         </div>
