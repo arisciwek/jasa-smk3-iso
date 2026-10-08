@@ -13,6 +13,7 @@ const isActive = (path) => path === '/' ? currentPath === '/' : currentPath.star
 const siteUrl = new URL('/', Astro.site ?? Astro.url).href;
 const organizationId = `${siteUrl}#organization`;
 const websiteId = `${siteUrl}#website`;
+const organizationImage = new URL('/assets/images/organization-logo.svg', siteUrl).href;
 const globalSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -21,6 +22,7 @@ const globalSchema = {
       '@id': organizationId,
       name: site.company,
       url: siteUrl,
+      image: organizationImage,
       email: site.email,
       telephone: site.phone,
       address: {
