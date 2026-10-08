@@ -1,0 +1,34 @@
+---
+const { previous, next } = Astro.props;
+const label = (article) => article?.data.title;
+---
+
+{(previous || next) && (
+  <nav class="article-pagination" aria-label="Navigasi artikel">
+    {previous ? (
+      <a href={`/artikel/${previous.id}/`} class="article-pagination-link previous">
+        <span class="article-pagination-label">&larr; Artikel sebelumnya</span>
+        <strong>{label(previous)}</strong>
+      </a>
+    ) : <span></span>}
+    {next && (
+      <a href={`/artikel/${next.id}/`} class="article-pagination-link next">
+        <span class="article-pagination-label">Artikel berikutnya &rarr;</span>
+        <strong>{label(next)}</strong>
+      </a>
+    )}
+  </nav>
+)}
+
+<style>
+  .article-pagination { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--border); }
+  .article-pagination-link { display: flex; min-height: 6rem; flex-direction: column; justify-content: space-between; gap: 0.75rem; padding: 1rem; border: 1px solid var(--border); border-radius: 8px; color: var(--text); text-decoration: none; background: var(--surface); transition: border-color 0.2s, transform 0.2s; }
+  .article-pagination-link:hover { border-color: var(--border-hover); transform: translateY(-2px); }
+  .article-pagination-link.next { text-align: right; }
+  .article-pagination-label { color: var(--accent); font-family: var(--font-mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .article-pagination-link strong { font-size: 0.95rem; line-height: 1.35; }
+  @media (max-width: 600px) {
+    .article-pagination { grid-template-columns: 1fr; }
+    .article-pagination-link.next { text-align: left; }
+  }
+</style>

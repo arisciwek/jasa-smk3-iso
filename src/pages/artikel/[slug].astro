@@ -1,17 +1,24 @@
 ---
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import ArticlePagination from '../../components/ArticlePagination.astro';
 
 export async function getStaticPaths() {
-  const articles = await getCollection('articles');
+  const articles = (await getCollection('articles')).sort((a, b) =>
+    (a.data.lastmod || a.data.date).localeCompare(b.data.lastmod || b.data.date)
+  );
 
-  return articles.map((article) => ({
+  return articles.map((article, index) => ({
     params: { slug: article.id },
-    props: { article },
+    props: {
+      article,
+      previous: articles[index - 1],
+      next: articles[index + 1],
+    },
   }));
 }
 
-const { article } = Astro.props;
+const { article, previous, next } = Astro.props;
 const { Content } = await render(article);
 const lastmod = article.data.lastmod || article.data.date;
 const pageUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
@@ -43,7 +50,10 @@ const articleSchema = {
         {article.data.readTime && <span>{article.data.readTime}</span>}
       </div>
     </div>
-    <article class="article-prose"><Content /></article>
+    <article class="article-prose">
+      <Content />
+      <ArticlePagination previous={previous} next={next} />
+    </article>
   </main>
 </BaseLayout>
 
