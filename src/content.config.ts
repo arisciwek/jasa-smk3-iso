@@ -22,6 +22,7 @@ const articles = defineCollection({
     tags: z.array(z.string()).default([]),
     readTime: z.string().optional(),
     image: z.string().optional(),
+    imageAlt: z.string().optional(),
   }),
 });
 

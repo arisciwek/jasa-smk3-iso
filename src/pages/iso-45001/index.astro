@@ -3,9 +3,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const title = "ISO 45001:2018 — Sistem Manajemen Keselamatan Kerja Internasional";
 const description = "Referensi lengkap standar internasional K3 berbasis struktur High-Level Structure (HLS) dan PDCA.";
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Pendampingan ISO 45001:2018',
+  serviceType: 'Konsultasi dan sertifikasi ISO 45001',
+  description,
+  provider: { '@type': 'Organization', name: 'PT Konsultan K3 Utama' },
+  areaServed: { '@type': 'Country', name: 'Indonesia' },
+  url: new URL('/iso-45001/', Astro.site ?? Astro.url).href,
+};
 ---
 
 <BaseLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">
       <header style="margin-bottom: 2.5rem;">

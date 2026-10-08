@@ -1,11 +1,23 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { site } from '../../data/site';
 
 const title = "Layanan Konsultasi & Pendampingan Sertifikasi K3";
 const description = "Layanan konsultan SMK3 PP 50/2012, ISO 45001:2018, audit internal, gap analysis, pelatihan K3, dan pendampingan sertifikasi.";
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Layanan Konsultasi dan Pendampingan K3',
+  serviceType: 'Konsultasi SMK3 dan ISO 45001',
+  description,
+  provider: { '@type': 'Organization', name: site.company },
+  areaServed: { '@type': 'Country', name: 'Indonesia' },
+  url: new URL('/layanan/', Astro.site ?? Astro.url).href,
+};
 ---
 
 <BaseLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">
       <header style="margin-bottom: 2.5rem;">

@@ -10,6 +10,7 @@ tags:
   - smk3
 readTime: "5 menit"
 image: "/assets/images/icon-map.svg"
+imageAlt: "Ilustrasi dukungan layanan SMK3 berdasarkan lokasi"
 ---
 
 # Memilih Pendampingan SMK3 Berdasarkan Kebutuhan Lokasi

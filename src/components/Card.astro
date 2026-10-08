@@ -8,7 +8,7 @@ const {
   category = 'Artikel K3',
   readTime,
   image = '/assets/images/icon-smk3.svg',
-  imageAlt = '',
+  imageAlt = `Ilustrasi ${title}`,
   href = '#',
   class: className = '',
 } = Astro.props;
@@ -22,7 +22,7 @@ if (date) {
 
 <a href={href} class={`article-card ${className}`} aria-label={title}>
   <div class="article-card-media">
-    <img src={image} alt={imageAlt || `Ilustrasi ${title}`} loading="lazy" width="640" height="360" />
+    <img src={image} alt={imageAlt} loading="lazy" width="640" height="360" />
   </div>
   <div class="article-card-body">
     <div class="article-card-meta">

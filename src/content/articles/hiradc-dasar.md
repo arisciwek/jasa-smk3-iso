@@ -10,6 +10,7 @@ tags:
   - identifikasi-bahaya
 readTime: "6 menit"
 image: "/assets/images/icon-iso.svg"
+imageAlt: "Ilustrasi metode teknis HIRADC"
 ---
 
 # HIRADC: Cara Memulai Identifikasi Bahaya di Tempat Kerja

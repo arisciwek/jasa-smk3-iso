@@ -14,9 +14,24 @@ export async function getStaticPaths() {
 const { article } = Astro.props;
 const { Content } = await render(article);
 const lastmod = article.data.lastmod || article.data.date;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? Astro.url).href;
+const imageUrl = new URL(article.data.image || '/assets/images/icon-smk3.svg', Astro.site ?? Astro.url).href;
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: article.data.title,
+  description: article.data.description,
+  datePublished: article.data.date,
+  dateModified: lastmod,
+  author: { '@type': 'Person', name: article.data.author },
+  image: imageUrl,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+  publisher: { '@type': 'Organization', name: 'PT Konsultan K3 Utama' },
+};
 ---
 
 <BaseLayout title={article.data.title} description={article.data.description} lastmod={lastmod}>
+  <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />
   <main class="content-section article-detail-page">
     <div class="article-detail-header">
       <div class="hero-tag">// {article.data.category}</div>

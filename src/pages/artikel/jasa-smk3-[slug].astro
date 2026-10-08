@@ -12,9 +12,20 @@ export async function getStaticPaths() {
 const { city } = Astro.props;
 const title = `Jasa SMK3 di ${city.name} — Konsultan K3 Resmi`;
 const description = `Jasa SMK3 di ${city.name} : Layanan pendampingan sertifikasi & konsultan Jasa SMK3 PP 50/2012.`;
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: `Jasa SMK3 di ${city.name}`,
+  serviceType: 'Pendampingan SMK3 PP 50/2012',
+  description,
+  provider: { '@type': 'Organization', name: 'PT Konsultan K3 Utama' },
+  areaServed: { '@type': 'City', name: city.name },
+  url: new URL(Astro.url.pathname, Astro.site ?? Astro.url).href,
+};
 ---
 
 <BaseLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">
       <header style="margin-bottom: 1.5rem;">

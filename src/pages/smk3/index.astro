@@ -3,9 +3,20 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const title = "Sistem Manajemen K3 (SMK3) PP No. 50 Tahun 2012";
 const description = "Referensi lengkap regulasi, dasar hukum, dan 5 elemen dasar Sistem Manajemen Keselamatan dan Kesehatan Kerja (SMK3).";
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Pendampingan Implementasi SMK3 PP 50/2012',
+  serviceType: 'Konsultasi dan sertifikasi SMK3',
+  description,
+  provider: { '@type': 'Organization', name: 'PT Konsultan K3 Utama' },
+  areaServed: { '@type': 'Country', name: 'Indonesia' },
+  url: new URL('/smk3/', Astro.site ?? Astro.url).href,
+};
 ---
 
 <BaseLayout title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">
       <header style="margin-bottom: 2.5rem;">
