@@ -209,6 +209,44 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
     .resource-links span { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
 
     .content-section { max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .breadcrumb-nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 0;
+    }
+    .breadcrumb-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.35rem 0.5rem;
+      list-style: none;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.2px;
+    }
+    .breadcrumb-list li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      min-width: 0;
+    }
+    .breadcrumb-list li:not(:last-child)::after {
+      color: var(--text-dim);
+      content: '/';
+    }
+    .breadcrumb-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+    .breadcrumb-list a:hover { color: var(--accent); }
+    .breadcrumb-list [aria-current="page"] {
+      overflow: hidden;
+      color: var(--text);
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
     .section-title {
       font-family: var(--font-mono); font-size: 0.85rem; text-transform: uppercase;
       letter-spacing: 2px; color: var(--accent); margin-bottom: 0.5rem;
@@ -405,6 +443,22 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
       </div>
     </div>
   </header>
+
+  {breadcrumbs.length > 0 && (
+    <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+      <ol class="breadcrumb-list">
+        {breadcrumbs.map((breadcrumb, index) => (
+          <li>
+            {index === breadcrumbs.length - 1 ? (
+              <span aria-current="page">{breadcrumb.name}</span>
+            ) : (
+              <a href={breadcrumb.url}>{breadcrumb.name}</a>
+            )}
+          </li>
+        ))}
+      </ol>
+    </nav>
+  )}
 
   <slot />
 
