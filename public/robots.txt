@@ -1,13 +1,8 @@
 # Robots policy for SMK3 & ISO 45001 Indonesia
-# Semua halaman, stylesheet, script, dan image publik boleh dirayapi.
+# Situs masih dalam tahap development dan belum memakai custom domain publik.
+# Seluruh crawling diblokir sampai domain produksi siap.
 
 User-agent: *
-Allow: /
-
-# Area private/reserved jika suatu saat dibuat oleh aplikasi.
-Disallow: /admin/
-Disallow: /api/
-Disallow: /draft/
-Disallow: /drafts/
+Disallow: /
 
 Sitemap: http://situs-smk3-iso.lan/sitemap-index.xml
