@@ -1,0 +1,123 @@
+---
+const reasons = [
+  {
+    number: '01',
+    title: 'Mulai dari risiko yang nyata',
+    description: 'Kami membaca kondisi kerja, proses operasional, dan celah kepatuhan sebelum menyusun prioritas perbaikan.',
+  },
+  {
+    number: '02',
+    title: 'Sistem yang bisa dijalankan',
+    description: 'Dokumen dan prosedur disusun agar dipahami oleh orang yang bekerja di lapangan, bukan hanya rapi saat diperiksa.',
+  },
+  {
+    number: '03',
+    title: 'Bukti kerja yang terukur',
+    description: 'Setiap langkah diarahkan pada bukti penerapan yang jelas sehingga progres dapat ditinjau dan ditindaklanjuti.',
+  },
+];
+---
+
+<section class="why-choose-us content-section" aria-labelledby="why-choose-us-heading">
+  <div class="why-choose-us__heading">
+    <div>
+      <div class="section-title">// KENAPA PILIH KAMI?</div>
+      <h2 id="why-choose-us-heading">Pendampingan yang berangkat dari cara kerja Anda.</h2>
+    </div>
+    <p>
+      K3 yang kuat bukan sekadar kumpulan dokumen. Kami membantu tim Anda menghubungkan
+      persyaratan, keputusan operasional, dan praktik kerja sehari-hari.
+    </p>
+  </div>
+
+  <ol class="why-choose-us__list">
+    {reasons.map((reason) => (
+      <li>
+        <span class="why-choose-us__number" aria-hidden="true">{reason.number}</span>
+        <div>
+          <h3>{reason.title}</h3>
+          <p>{reason.description}</p>
+        </div>
+      </li>
+    ))}
+  </ol>
+</section>
+
+<style>
+  .why-choose-us {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .why-choose-us__heading {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.8fr);
+    gap: 5rem;
+    align-items: end;
+  }
+
+  .why-choose-us h2 {
+    max-width: 620px;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .why-choose-us__heading > p {
+    max-width: 520px;
+    color: var(--text-muted);
+    line-height: 1.65;
+  }
+
+  .why-choose-us__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin: 3rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .why-choose-us__list li {
+    display: grid;
+    grid-template-columns: 2.5rem 1fr;
+    gap: 1rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .why-choose-us__number {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    padding-top: 0.15rem;
+  }
+
+  .why-choose-us h3 {
+    margin-bottom: 0.55rem;
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+
+  .why-choose-us li p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
+  @media (max-width: 768px) {
+    .why-choose-us__heading,
+    .why-choose-us__list {
+      grid-template-columns: 1fr;
+    }
+
+    .why-choose-us__heading {
+      gap: 1.25rem;
+    }
+
+    .why-choose-us__list {
+      gap: 1.25rem;
+      margin-top: 2rem;
+    }
+  }
+</style>
