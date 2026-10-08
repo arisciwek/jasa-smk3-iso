@@ -44,6 +44,8 @@ const {
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
+  position: relative;
+  min-height: 100vh;
       background: var(--bg);
       color: var(--text);
       font-family: var(--font-sans);
@@ -176,7 +178,7 @@ const {
     /* Mobile menu overlay */
     .mobile-menu {
       display: none;
-      position: fixed;
+      position: absolute;
       inset: 0;
       background: rgba(0,0,0,0.5);
       backdrop-filter: blur(12px);
@@ -219,18 +221,29 @@ const {
   </style>
 </head>
 <body>
+    <!-- Mobile menu -->
+    <nav class="mobile-menu" id="mobile-menu">
+      <ul>
+        <li><a href="/">Beranda</a></li>
+        <li><a href="/layanan/">Layanan</a></li>
+        <li><a href="/artikel/">Artikel</a></li>
+        <li><a href="/smk3/">SMK3</a></li>
+        <li><a href="/iso-45001/">ISO 45001</a></li>
+        <li><a href="/tentang/">Tentang</a></li>
+      </ul>
+    </nav>
   <header>
     <div class="nav-container">
       <a href="/" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        SMK3-ISO
+      </a>
       <!-- Hamburger button for mobile -->
       <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Buka menu" aria-controls="mobile-menu" aria-expanded="false">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M3 6h18M3 12h18M3 18h18"></path>
         </svg>
       </button>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        SMK3-ISO
-      </a>
       <nav>
         <ul>
           <li><a href="/" class="active">Beranda</a></li>
@@ -247,17 +260,6 @@ const {
       </div>
     </div>
   </header>
-    <!-- Mobile menu -->
-    <nav class="mobile-menu" id="mobile-menu">
-      <ul>
-        <li><a href="/">Beranda</a></li>
-        <li><a href="/layanan/">Layanan</a></li>
-        <li><a href="/artikel/">Artikel</a></li>
-        <li><a href="/smk3/">SMK3</a></li>
-        <li><a href="/iso-45001/">ISO 45001</a></li>
-        <li><a href="/tentang/">Tentang</a></li>
-      </ul>
-    </nav>
 
   <slot />
 
