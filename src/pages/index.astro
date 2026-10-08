@@ -8,7 +8,7 @@ const description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/201
 const articles = await getCollection('articles');
 const latestArticles = articles
   .sort((a, b) => (b.data.lastmod || b.data.date).localeCompare(a.data.lastmod || a.data.date))
-  .slice(0, 3);
+  .slice(0, 4);
 const latestLastmod = latestArticles[0] ? (latestArticles[0].data.lastmod || latestArticles[0].data.date) : undefined;
 ---
 
