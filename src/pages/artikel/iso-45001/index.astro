@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+const title = 'Referensi ISO 45001:2018';
+const description = 'Referensi standar internasional keselamatan dan kesehatan kerja ISO 45001:2018, struktur klausul, dan pendekatan PDCA.';
+const referenceImage = '/assets/images/icon-iso.svg';
+const pageUrl = new URL('/artikel/iso-45001/', Astro.site ?? Astro.url).href;
+const referenceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  image: new URL(referenceImage, Astro.site ?? Astro.url).href,
+  url: pageUrl,
+};
+const faqs = [
+  { question: 'Apa itu ISO 45001:2018?', answer: 'ISO 45001:2018 adalah standar sistem manajemen keselamatan dan kesehatan kerja yang membantu organisasi mengelola risiko serta meningkatkan kinerja K3 secara berkelanjutan.' },
+  { question: 'Apa perbedaan ISO 45001 dan SMK3?', answer: 'SMK3 mengacu pada ketentuan nasional Indonesia, sedangkan ISO 45001 merupakan standar internasional. Keduanya sama-sama menggunakan pendekatan sistematis berbasis risiko.' },
+  { question: 'Apa pendekatan utama ISO 45001?', answer: 'ISO 45001 menggunakan pendekatan berbasis risiko dan siklus peningkatan berkelanjutan Plan, Do, Check, Act atau PDCA.' },
+];
+---
+
+<BaseLayout title={title} description={description} image={referenceImage} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: 'ISO 45001:2018', url: '/artikel/iso-45001/' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(referenceSchema)} />
+  <main class="content-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <header style="margin-bottom: 2.5rem;">
+        <div class="hero-tag">// REFERENSI STANDAR</div>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">ISO 45001:2018</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Referensi struktur dan pendekatan sistem manajemen keselamatan dan kesehatan kerja berstandar internasional.</p>
+      </header>
+
+      <img src={referenceImage} alt="Icon referensi ISO 45001:2018" width="100" height="100" style="display: block; width: 100px; height: 100px; margin-bottom: 2rem; border-radius: 8px;" />
+
+      <section style="margin-bottom: 3rem; line-height: 1.7; color: var(--text-muted);">
+        <h2 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Struktur Klausul ISO 45001</h2>
+        <p>ISO 45001 menggunakan High-Level Structure dan pendekatan PDCA pada Klausul 4 sampai 10, mencakup konteks organisasi, kepemimpinan, perencanaan, dukungan, operasi, evaluasi kinerja, serta peningkatan.</p>
+      </section>
+
+      <div style="text-align: center; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px;">
+        <h2 style="color: var(--text); font-size: 1.35rem; margin-bottom: 1rem;">Membutuhkan Pendampingan ISO 45001?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Pelajari ruang lingkup layanan implementasi dan persiapan sertifikasi.</p>
+        <a href="/layanan/iso-45001/" class="cta-btn">Lihat Layanan ISO 45001</a>
+      </div>
+
+      <FAQ items={faqs} title="FAQ ISO 45001" eyebrow="// FAQ ISO 45001" />
+    </div>
+  </main>
+</BaseLayout>

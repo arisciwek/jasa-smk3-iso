@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Audit Internal K3</title>
+  <desc id="desc">Ilustrasi checklist audit internal keselamatan dan kesehatan kerja.</desc>
+  <rect width="640" height="360" rx="24" fill="#141519"/>
+  <rect x="214" y="46" width="212" height="226" rx="12" fill="#0d0e10" stroke="#10b981" stroke-width="7"/>
+  <rect x="274" y="30" width="92" height="34" rx="10" fill="#10b981"/>
+  <g fill="none" stroke="#10b981" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m246 106 12 12 24-27M246 160l12 12 24-27M246 214l12 12 24-27"/>
+    <path d="M310 104h82M310 158h82M310 212h82" stroke="#8a8f98"/>
+  </g>
+  <circle cx="480" cy="222" r="42" fill="#10b981" fill-opacity=".12" stroke="#10b981" stroke-width="7"/>
+  <path d="m462 222 12 12 25-29" fill="none" stroke="#10b981" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f7f8f8" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="320" y="312" font-size="24" font-weight="700">AUDIT INTERNAL K3</text>
+    <text x="320" y="338" font-size="16" fill="#8a8f98">EVALUASI · TEMUAN · PERBAIKAN</text>
+  </g>
+</svg>

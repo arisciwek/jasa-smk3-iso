@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FAQ from '../../components/FAQ.astro';
-import { site } from '../../data/site';
 
 const title = "Layanan Konsultasi & Pendampingan Sertifikasi K3";
 const description = "Layanan konsultan SMK3 PP 50/2012, ISO 45001:2018, audit internal, gap analysis, pelatihan K3, dan pendampingan sertifikasi.";
@@ -29,13 +28,55 @@ const serviceSchema = {
   name: 'Layanan Konsultasi dan Pendampingan K3',
   serviceType: 'Konsultasi SMK3 dan ISO 45001',
   description,
-  provider: { '@type': 'Organization', name: site.company },
+  provider: { '@id': `${new URL('/', Astro.site ?? Astro.url).href}#organization` },
   areaServed: { '@type': 'Country', name: 'Indonesia' },
   url: new URL('/layanan/', Astro.site ?? Astro.url).href,
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Layanan Konsultasi dan Pendampingan K3',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Implementasi SMK3 PP 50/2012',
+          description: 'Pendampingan gap analysis, penyusunan dokumen 5 elemen SMK3, pelatihan P2K3, penerapan program K3, dan persiapan audit eksternal Kemenaker RI.',
+          image: new URL('/assets/images/service-smk3.svg', Astro.site ?? Astro.url).href,
+          url: new URL('/layanan/smk3/', Astro.site ?? Astro.url).href,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Pendampingan ISO 45001:2018',
+          description: 'Pendampingan gap analysis, penerapan sistem manajemen K3 berbasis PDCA, audit internal, dan persiapan audit sertifikasi ISO 45001:2018.',
+          image: new URL('/assets/images/service-iso-45001.svg', Astro.site ?? Astro.url).href,
+          url: new URL('/layanan/iso-45001/', Astro.site ?? Astro.url).href,
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Audit Internal K3',
+          description: 'Audit internal untuk mengevaluasi kesesuaian penerapan SMK3 dan ISO 45001 serta menyusun rencana tindakan perbaikan.',
+          image: new URL('/assets/images/service-audit-internal.svg', Astro.site ?? Astro.url).href,
+          url: new URL('/tentang/kontak/', Astro.site ?? Astro.url).href,
+        },
+      },
+    ],
+  },
 };
 ---
 
-<BaseLayout title={title} description={description} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  image="/assets/images/service-smk3.svg"
+  images={['/assets/images/service-iso-45001.svg', '/assets/images/service-audit-internal.svg']}
+  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }]}
+>
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">
@@ -49,19 +90,25 @@ const serviceSchema = {
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
         <div style="background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px;">
+          <img src="/assets/images/icon-smk3.svg" alt="Icon implementasi SMK3 PP 50/2012" width="100" height="100" loading="lazy" style="display: block; width: 72px; height: 72px; margin-bottom: 1.25rem; border-radius: 4px;" />
           <h3 style="color: var(--accent); margin-bottom: 0.75rem;">Implementasi SMK3 PP 50/2012</h3>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Penyusunan dokumen 5 elemen, pelatihan P2K3, persiapan audit eksternal Kemenaker RI.</p>
-          <a href="/artikel/kategori/regulasi/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Pelajari Regulasi &rarr;</a>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Pendampingan gap analysis, penyusunan dokumen 5 elemen SMK3, pelatihan P2K3, penerapan program K3, dan persiapan audit eksternal Kemenaker RI.</p>
+          <a href="/layanan/smk3/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Lihat Detail Layanan &rarr;</a>
+          <a href="/artikel/kategori/regulasi/" style="display: block; margin-top: 0.5rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">Baca Regulasi Terkait &rarr;</a>
         </div>
         <div style="background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px;">
+          <img src="/assets/images/icon-iso.svg" alt="Icon pendampingan ISO 45001:2018" width="100" height="100" loading="lazy" style="display: block; width: 72px; height: 72px; margin-bottom: 1.25rem; border-radius: 4px;" />
           <h3 style="color: var(--accent); margin-bottom: 0.75rem;">ISO 45001:2018</h3>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Standar internasional K3 berbasis PDCA (Clause 4-10) terintegrasi.</p>
-          <a href="/artikel/kategori/teknis/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Pelajari Teknis &rarr;</a>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Pendampingan gap analysis, penerapan sistem manajemen K3 berbasis PDCA, audit internal, dan persiapan audit sertifikasi ISO 45001:2018.</p>
+          <a href="/layanan/iso-45001/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Lihat Detail Layanan &rarr;</a>
+          <a href="/artikel/kategori/teknis/" style="display: block; margin-top: 0.5rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">Baca Panduan Teknis &rarr;</a>
         </div>
         <div style="background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px;">
+          <img src="/assets/images/icon-case-study.svg" alt="Icon audit internal K3" width="100" height="100" loading="lazy" style="display: block; width: 72px; height: 72px; margin-bottom: 1.25rem; border-radius: 4px;" />
           <h3 style="color: var(--accent); margin-bottom: 0.75rem;">Audit Internal K3</h3>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Audit internal SMK3 (PP 50/2012 Pasal 28) / ISO 45001 (Clause 9.2).</p>
-          <a href="/artikel/kategori/case-study/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Lihat Case Study &rarr;</a>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Audit internal untuk mengevaluasi kesesuaian penerapan SMK3 dan ISO 45001 serta menyusun rencana tindakan perbaikan.</p>
+          <a href="/tentang/kontak/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Konsultasikan Kebutuhan &rarr;</a>
+          <a href="/artikel/kategori/case-study/" style="display: block; margin-top: 0.5rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">Lihat Case Study &rarr;</a>
         </div>
       </div>
 

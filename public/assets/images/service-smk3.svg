@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-labelledby="title desc">
+  <title id="title">Implementasi SMK3 PP 50/2012</title>
+  <desc id="desc">Ilustrasi perisai keselamatan dengan lima tahap implementasi SMK3.</desc>
+  <rect width="640" height="360" rx="24" fill="#141519"/>
+  <path d="M320 48 462 96v88c0 74-56 112-142 132-86-20-142-58-142-132V96z" fill="#0d0e10" stroke="#10b981" stroke-width="8"/>
+  <path d="m320 88 92 31v64c0 48-34 74-92 90-58-16-92-42-92-90v-64z" fill="#10b981" fill-opacity=".12" stroke="#10b981" stroke-width="4"/>
+  <path d="m276 178 30 30 58-65" fill="none" stroke="#10b981" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f7f8f8" font-family="Arial, sans-serif" text-anchor="middle">
+    <text x="320" y="302" font-size="24" font-weight="700">IMPLEMENTASI SMK3</text>
+    <text x="320" y="330" font-size="16" fill="#8a8f98">PP 50/2012 · 5 ELEMEN</text>
+  </g>
+</svg>

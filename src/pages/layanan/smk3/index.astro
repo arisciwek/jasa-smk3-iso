@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+const title = 'Layanan Implementasi SMK3 PP 50/2012';
+const description = 'Pendampingan implementasi SMK3 PP 50/2012 mulai dari gap analysis, penyusunan dokumen 5 elemen, pelatihan P2K3, hingga persiapan audit eksternal Kemenaker RI.';
+const serviceImage = '/assets/images/service-smk3.svg';
+const siteUrl = Astro.site ?? Astro.url;
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: 'Implementasi Sistem Manajemen Keselamatan dan Kesehatan Kerja',
+  description,
+  image: new URL(serviceImage, siteUrl).href,
+  provider: { '@id': `${new URL('/', siteUrl).href}#organization` },
+  areaServed: { '@type': 'Country', name: 'Indonesia' },
+  url: new URL('/layanan/smk3/', siteUrl).href,
+};
+const faqs = [
+  { question: 'Apa saja yang termasuk layanan implementasi SMK3?', answer: 'Ruang lingkup dapat mencakup gap analysis, penyusunan dokumen 5 elemen SMK3, HIRADC, program kerja K3, pelatihan P2K3, audit internal, dan persiapan audit eksternal.' },
+  { question: 'Apakah layanan dapat dimulai dari kondisi perusahaan saat ini?', answer: 'Ya. Kami memetakan dokumen, penerapan, risiko operasional, dan target perusahaan terlebih dahulu untuk menyusun rencana pendampingan yang sesuai.' },
+  { question: 'Apakah pendampingan mencakup persiapan audit Kemenaker?', answer: 'Ya. Pendampingan dapat mencakup pemeriksaan kesiapan dokumen dan penerapan, simulasi audit, penyelesaian temuan, serta persiapan bukti objektif.' },
+];
+---
+
+<BaseLayout title={title} description={description} image={serviceImage} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: 'Implementasi SMK3', url: '/layanan/smk3/' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <main class="content-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <header style="margin-bottom: 2.5rem;">
+        <div class="hero-tag">// LAYANAN SMK3</div>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Implementasi SMK3 PP 50/2012</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Pendampingan terstruktur untuk membangun, menerapkan, dan menyiapkan perusahaan menghadapi penilaian SMK3.</p>
+      </header>
+
+      <img src={serviceImage} alt="Ilustrasi implementasi SMK3 PP 50/2012" width="640" height="360" style="display: block; width: 100%; height: auto; margin-bottom: 2.5rem; border-radius: 8px; border: 1px solid var(--border);" />
+
+      <section style="margin-bottom: 3rem; line-height: 1.7; color: var(--text-muted);">
+        <h2 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Ruang Lingkup Pendampingan</h2>
+        <ul style="margin-left: 1.5rem;">
+          <li>Gap analysis terhadap kondisi dan dokumen K3 yang sudah tersedia.</li>
+          <li>Penyusunan dokumen berdasarkan 5 elemen SMK3 dan kebutuhan perusahaan.</li>
+          <li>Penyusunan HIRADC, program kerja, prosedur, dan bukti penerapan K3.</li>
+          <li>Pembentukan serta pelatihan P2K3 dan penanggung jawab terkait.</li>
+          <li>Audit internal, perbaikan temuan, dan persiapan audit eksternal Kemenaker RI.</li>
+        </ul>
+      </section>
+
+      <div style="text-align: center; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px;">
+        <h2 style="color: var(--text); font-size: 1.35rem; margin-bottom: 1rem;">Siap Memulai Implementasi SMK3?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Konsultasikan kondisi dan target kepatuhan perusahaan Anda.</p>
+        <a href="/tentang/kontak/" class="cta-btn">Konsultasi Implementasi SMK3</a>
+      </div>
+
+      <FAQ items={faqs} title="FAQ Implementasi SMK3" eyebrow="// FAQ LAYANAN SMK3" />
+    </div>
+  </main>
+</BaseLayout>

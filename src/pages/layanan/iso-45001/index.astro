@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+const title = 'Layanan Pendampingan ISO 45001:2018';
+const description = 'Pendampingan implementasi ISO 45001:2018 mulai dari gap analysis, penerapan sistem berbasis PDCA, audit internal, hingga persiapan audit sertifikasi.';
+const serviceImage = '/assets/images/service-iso-45001.svg';
+const siteUrl = Astro.site ?? Astro.url;
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: 'Konsultasi dan sertifikasi ISO 45001',
+  description,
+  image: new URL(serviceImage, siteUrl).href,
+  provider: { '@id': `${new URL('/', siteUrl).href}#organization` },
+  areaServed: { '@type': 'Country', name: 'Indonesia' },
+  url: new URL('/layanan/iso-45001/', siteUrl).href,
+};
+const faqs = [
+  { question: 'Apa yang dibantu dalam implementasi ISO 45001?', answer: 'Pendampingan dapat mencakup gap analysis, konteks organisasi, identifikasi risiko dan peluang, penyusunan dokumen, penerapan, audit internal, tinjauan manajemen, dan persiapan audit sertifikasi.' },
+  { question: 'Apakah sistem K3 yang sudah ada dapat digunakan?', answer: 'Bisa. Sistem yang berjalan dipetakan terlebih dahulu agar bagian yang sudah sesuai dapat dipertahankan dan gap terhadap ISO 45001 dapat dilengkapi.' },
+  { question: 'Apakah pendampingan mencakup persiapan audit sertifikasi?', answer: 'Ya. Tim membantu menyiapkan bukti penerapan, melakukan simulasi audit, membahas temuan, dan menyusun tindakan korektif sebelum audit sertifikasi.' },
+];
+---
+
+<BaseLayout title={title} description={description} image={serviceImage} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: 'ISO 45001', url: '/layanan/iso-45001/' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <main class="content-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <header style="margin-bottom: 2.5rem;">
+        <div class="hero-tag">// LAYANAN ISO 45001</div>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Pendampingan ISO 45001:2018</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Pendampingan membangun sistem manajemen K3 berbasis risiko dan PDCA sampai siap menghadapi audit sertifikasi.</p>
+      </header>
+
+      <img src={serviceImage} alt="Ilustrasi pendampingan ISO 45001:2018" width="640" height="360" style="display: block; width: 100%; height: auto; margin-bottom: 2.5rem; border-radius: 8px; border: 1px solid var(--border);" />
+
+      <section style="margin-bottom: 3rem; line-height: 1.7; color: var(--text-muted);">
+        <h2 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Ruang Lingkup Pendampingan</h2>
+        <ul style="margin-left: 1.5rem;">
+          <li>Gap analysis terhadap sistem dan praktik K3 yang sudah berjalan.</li>
+          <li>Pemetaan konteks organisasi, pihak berkepentingan, risiko, dan peluang.</li>
+          <li>Penyusunan atau penyesuaian dokumen dan pengendalian operasional.</li>
+          <li>Pelatihan, penerapan, audit internal, dan tinjauan manajemen.</li>
+          <li>Persiapan audit sertifikasi dan pendampingan penyelesaian temuan.</li>
+        </ul>
+      </section>
+
+      <div style="text-align: center; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px;">
+        <h2 style="color: var(--text); font-size: 1.35rem; margin-bottom: 1rem;">Siap Menyiapkan ISO 45001?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Diskusikan tingkat kesiapan dan target sertifikasi perusahaan Anda.</p>
+        <a href="/tentang/kontak/" class="cta-btn">Konsultasi ISO 45001</a>
+      </div>
+
+      <FAQ items={faqs} title="FAQ ISO 45001" eyebrow="// FAQ LAYANAN ISO" />
+    </div>
+  </main>
+</BaseLayout>

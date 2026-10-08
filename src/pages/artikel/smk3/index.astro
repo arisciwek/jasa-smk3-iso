@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+const title = 'Referensi SMK3 PP 50/2012';
+const description = 'Referensi regulasi, dasar hukum, dan lima elemen Sistem Manajemen Keselamatan dan Kesehatan Kerja berdasarkan PP No. 50 Tahun 2012.';
+const referenceImage = '/assets/images/icon-smk3.svg';
+const pageUrl = new URL('/artikel/smk3/', Astro.site ?? Astro.url).href;
+const referenceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: title,
+  description,
+  image: new URL(referenceImage, Astro.site ?? Astro.url).href,
+  url: pageUrl,
+};
+const faqs = [
+  { question: 'Apa itu SMK3?', answer: 'SMK3 adalah sistem manajemen untuk mengendalikan risiko keselamatan dan kesehatan kerja secara terencana, terukur, dan berkelanjutan sesuai ketentuan yang berlaku.' },
+  { question: 'Apa saja elemen dasar SMK3?', answer: 'Elemen dasarnya meliputi penetapan kebijakan, perencanaan, pelaksanaan, pemantauan dan evaluasi, serta peninjauan dan peningkatan kinerja.' },
+  { question: 'Apakah perusahaan wajib menerapkan SMK3?', answer: 'Kewajiban penerapan SMK3 berlaku bagi perusahaan yang memenuhi kriteria tertentu sebagaimana diatur dalam PP No. 50 Tahun 2012.' },
+];
+---
+
+<BaseLayout title={title} description={description} image={referenceImage} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: 'SMK3 PP 50/2012', url: '/artikel/smk3/' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(referenceSchema)} />
+  <main class="content-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <header style="margin-bottom: 2.5rem;">
+        <div class="hero-tag">// REFERENSI REGULASI</div>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">SMK3 PP 50/2012</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Panduan memahami dasar hukum dan struktur Sistem Manajemen Keselamatan dan Kesehatan Kerja di Indonesia.</p>
+      </header>
+
+      <img src={referenceImage} alt="Icon referensi SMK3 PP 50/2012" width="100" height="100" style="display: block; width: 100px; height: 100px; margin-bottom: 2rem; border-radius: 8px;" />
+
+      <section style="margin-bottom: 3rem; line-height: 1.7; color: var(--text-muted);">
+        <h2 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">5 Elemen Dasar SMK3</h2>
+        <ol style="margin-left: 1.5rem;">
+          <li>Penetapan kebijakan K3.</li>
+          <li>Perencanaan K3, termasuk identifikasi bahaya dan peraturan hukum.</li>
+          <li>Pelaksanaan K3, termasuk organisasi, pelatihan, dan pengendalian operasional.</li>
+          <li>Pemantauan dan evaluasi melalui inspeksi serta audit internal.</li>
+          <li>Peninjauan dan peningkatan kinerja secara berkelanjutan.</li>
+        </ol>
+      </section>
+
+      <div style="text-align: center; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px;">
+        <h2 style="color: var(--text); font-size: 1.35rem; margin-bottom: 1rem;">Membutuhkan Pendampingan SMK3?</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Lihat ruang lingkup layanan implementasi SMK3 kami.</p>
+        <a href="/layanan/smk3/" class="cta-btn">Lihat Layanan Implementasi SMK3</a>
+      </div>
+
+      <FAQ items={faqs} title="FAQ tentang SMK3" eyebrow="// FAQ SMK3" />
+    </div>
+  </main>
+</BaseLayout>

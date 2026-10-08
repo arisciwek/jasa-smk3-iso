@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import FAQ from '../../../components/FAQ.astro';
+
+const title = 'Layanan Audit Internal K3';
+const description = 'Layanan audit internal K3 untuk mengevaluasi kesesuaian penerapan SMK3 dan ISO 45001, menemukan gap, serta menyusun tindakan perbaikan.';
+const serviceImage = '/assets/images/service-audit-internal.svg';
+const siteUrl = Astro.site ?? Astro.url;
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: title,
+  serviceType: 'Audit internal SMK3 dan ISO 45001',
+  description,
+  image: new URL(serviceImage, siteUrl).href,
+  provider: { '@id': `${new URL('/', siteUrl).href}#organization` },
+  areaServed: { '@type': 'Country', name: 'Indonesia' },
+  url: new URL('/layanan/audit-internal/', siteUrl).href,
+};
+const faqs = [
+  { question: 'Apa tujuan audit internal K3?', answer: 'Audit internal membantu menilai kesesuaian sistem dan penerapan K3, menemukan ketidaksesuaian, serta menentukan prioritas tindakan perbaikan sebelum audit eksternal.' },
+  { question: 'Audit internal dapat dilakukan untuk standar apa?', answer: 'Audit dapat disesuaikan untuk SMK3 PP 50/2012, ISO 45001:2018, atau integrasi keduanya sesuai ruang lingkup perusahaan.' },
+  { question: 'Apa hasil yang diterima setelah audit?', answer: 'Hasilnya dapat berupa rencana audit, daftar temuan dan bukti objektif, laporan audit, serta rekomendasi tindakan korektif dan pencegahan.' },
+];
+---
+
+<BaseLayout title={title} description={description} image={serviceImage} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: 'Audit Internal K3', url: '/layanan/audit-internal/' }]}>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+  <main class="content-section">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <header style="margin-bottom: 2.5rem;">
+        <div class="hero-tag">// LAYANAN AUDIT INTERNAL</div>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Audit Internal K3</h1>
+        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Evaluasi independen dan terstruktur untuk memastikan sistem K3 berjalan sesuai persyaratan serta siap menghadapi penilaian berikutnya.</p>
+      </header>
+
+      <img src={serviceImage} alt="Ilustrasi audit internal K3" width="640" height="360" style="display: block; width: 100%; height: auto; margin-bottom: 2.5rem; border-radius: 8px; border: 1px solid var(--border);" />
+
+      <section style="margin-bottom: 3rem; line-height: 1.7; color: var(--text-muted);">
+        <h2 style="color: var(--text); font-size: 1.5rem; margin-bottom: 1rem;">Ruang Lingkup Audit</h2>
+        <ul style="margin-left: 1.5rem;">
+          <li>Perencanaan audit berdasarkan ruang lingkup dan kriteria yang disepakati.</li>
+          <li>Pemeriksaan dokumen, wawancara, observasi, dan verifikasi bukti objektif.</li>
+          <li>Evaluasi penerapan SMK3 Pasal 28 atau ISO 45001 Klausul 9.2.</li>
+          <li>Laporan temuan, analisis gap, dan prioritas tindakan perbaikan.</li>
+          <li>Rapat penutupan dan pendampingan tindak lanjut sesuai kebutuhan.</li>
+        </ul>
+      </section>
+
+      <div style="text-align: center; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px;">
+        <h2 style="color: var(--text); font-size: 1.35rem; margin-bottom: 1rem;">Jadwalkan Audit Internal K3</h2>
+        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Kami bantu menentukan ruang lingkup dan jadwal audit yang sesuai.</p>
+        <a href="/tentang/kontak/" class="cta-btn">Konsultasikan Audit</a>
+      </div>
+
+      <FAQ items={faqs} title="FAQ Audit Internal K3" eyebrow="// FAQ AUDIT INTERNAL" />
+    </div>
+  </main>
+</BaseLayout>
