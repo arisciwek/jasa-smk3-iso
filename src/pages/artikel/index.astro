@@ -9,7 +9,7 @@ const description = "Pusat rujukan teknis, update regulasi, case study implement
 const articles = await getCollection('articles');
 const latestArticles = articles
   .sort((a, b) => (b.data.lastmod || b.data.date).localeCompare(a.data.lastmod || a.data.date))
-  .slice(4, 9);
+  .slice(4, 8);
 ---
 
 <BaseLayout
