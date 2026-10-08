@@ -7,41 +7,68 @@ const description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/201
 
 <BaseLayout title={title} description={description}>
   <main>
-    <header class="hero">
-      <div class="hero-tag">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-        Konsultan SMK3 PP 50/2012 & ISO 45001 Terpercaya
-      </div>
-      <h1>Sistem Manajemen K3 & Sertifikasi Internasional</h1>
-      <p>Pendampingan penuh implementasi, penyusunan dokumen HIRADC, audit internal, hingga penerbitan sertifikat SMK3 Kemenaker & ISO 45001.</p>
-      <div class="hero-actions">
-        <a href="/layanan/" class="cta-btn">Lihat Layanan Konsultasi &rarr;</a>
-        <a href="/artikel/" class="cta-btn btn-secondary">Lihat Artikel Terbaru</a>
+    <header class="hero home-hero">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-tag">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+            Konsultasi K3 untuk keputusan yang lebih terukur
+          </div>
+          <h1>Bangun sistem K3 yang dipakai, bukan hanya disertifikasi.</h1>
+          <p>Kami membantu perusahaan membaca risikonya, merapikan sistem kerja, dan menyiapkan bukti kepatuhan untuk SMK3 PP 50/2012 maupun ISO 45001:2018.</p>
+          <div class="hero-actions">
+            <a href="/tentang/kontak/" class="cta-btn">Bicarakan kebutuhan K3 &rarr;</a>
+            <a href="/layanan/" class="cta-btn btn-secondary">Lihat cara kami bekerja</a>
+          </div>
+          <p class="hero-note">Untuk tim K3, HR, operasional, dan manajemen yang ingin mulai dari kondisi nyata di lapangan.</p>
+        </div>
+
+        <aside class="hero-brief" aria-label="Ringkasan alur konsultasi">
+          <p class="brief-kicker">// LANGKAH PERTAMA</p>
+          <h2>Mulai dari kondisi perusahaan Anda.</h2>
+          <ol class="process-list">
+            <li><span>01</span><div><strong>Petakan risiko</strong><p>Identifikasi gap antara praktik kerja dan persyaratan yang berlaku.</p></div></li>
+            <li><span>02</span><div><strong>Susun prioritas</strong><p>Pilih perbaikan yang paling berdampak untuk operasi Anda.</p></div></li>
+            <li><span>03</span><div><strong>Siapkan bukti</strong><p>Bangun dokumen, kebiasaan, dan rekaman yang dapat dipertanggungjawabkan.</p></div></li>
+          </ol>
+        </aside>
       </div>
     </header>
 
-    <section class="content-section">
-      <div class="section-title">// KATEGORI ARTIKEL & PANDUAN</div>
-      <h2>Rujukan Teknis, Regulasi & Best Practice K3</h2>
-      <div class="grid-3">
-        <div class="card">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2'%3E%3Cpath d='M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z'/%3E%3Cpath d='M14 2v6h6M16 13H8M16 17H8M10 9H8'/%3E%3C/svg%3E" alt="Ikon Artikel Kategori Regulasi K3 - PP 50/2012 dan Permenaker" width="36" height="36" style="margin-bottom:1rem;">
-          <h3>Regulasi & Hukum K3</h3>
-          <p>Update UU, PP, Permenaker, dan SNI terkait Keselamatan & Kesehatan Kerja. Deadline kepatuhan.</p>
-          <a href="/artikel/kategori/regulasi/" class="card-link">Lihat Semua Regulasi &rarr;</a>
+    <section class="content-section editorial-section">
+      <div class="editorial-layout">
+        <div>
+          <div class="section-title">// KENAPA DIMULAI DARI KONDISI NYATA</div>
+          <h2>Dokumen yang baik harus membantu orang bekerja lebih aman.</h2>
         </div>
-        <div class="card">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2'%3E%3Cpath d='M12 20h9M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z'/%3E%3C/svg%3E" alt="Ikon Artikel Kategori Teknis - HIRADC, JSA, PTW, dan LOTO" width="36" height="36" style="margin-bottom:1rem;">
-          <h3>Teknis & Metode K3</h3>
-          <p>HIRADC, JSA, PTW, LOTO, PPE, Investigasi Insiden, P2K3. Panduan praktis implementasi.</p>
-          <a href="/artikel/kategori/teknis/" class="card-link">Lihat Semua Teknis &rarr;</a>
+        <div class="editorial-copy">
+          <p>Implementasi K3 bukan lomba mengumpulkan dokumen. Sistem baru berguna ketika dipahami oleh orang yang menjalankan pekerjaan, dipakai saat mengambil keputusan, dan meninggalkan jejak yang bisa diperiksa.</p>
+          <p>Kami menerjemahkan persyaratan regulasi dan standar menjadi langkah kerja yang masuk akal untuk organisasi Anda.</p>
         </div>
-        <div class="card">
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2'%3E%3Cpath d='M20 6L9 17l-5-5'/%3E%3C/svg%3E" alt="Ikon Artikel Kategori Case Study Implementasi SMK3" width="36" height="36" style="margin-bottom:1rem;">
-          <h3>Case Study Implementasi</h3>
-          <p>Tantangan, solusi, dan hasil proyek SMK3/ISO 45001 di sektor konstruksi, migas, manufaktur.</p>
-          <a href="/artikel/kategori/case-study/" class="card-link">Lihat Semua Case Study &rarr;</a>
-        </div>
+      </div>
+    </section>
+
+    <section class="content-section service-section">
+      <div class="section-heading-row">
+        <div><div class="section-title">// RUANG LINGKUP</div><h2>Yang bisa kami bantu</h2></div>
+        <a href="/layanan/" class="card-link">Semua layanan &rarr;</a>
+      </div>
+      <div class="service-list">
+        <a href="/smk3/" class="service-item"><span>01</span><strong>SMK3 PP 50/2012</strong><em>Struktur, dokumen, dan kesiapan penilaian</em><b>&rarr;</b></a>
+        <a href="/iso-45001/" class="service-item"><span>02</span><strong>ISO 45001:2018</strong><em>Sistem manajemen K3 berbasis risiko dan PDCA</em><b>&rarr;</b></a>
+        <a href="/layanan/" class="service-item"><span>03</span><strong>Audit & pendampingan</strong><em>Menemukan gap dan membuat rencana perbaikan</em><b>&rarr;</b></a>
+      </div>
+    </section>
+
+    <section class="content-section resource-section">
+      <div class="section-heading-row">
+        <div><div class="section-title">// RUJUKAN TERBUKA</div><h2>Baca sebelum mengambil keputusan</h2></div>
+        <a href="/artikel/" class="card-link">Buka semua artikel &rarr;</a>
+      </div>
+      <div class="resource-links">
+        <a href="/artikel/kategori/regulasi/"><span>Regulasi</span><strong>PP 50/2012, UU, dan aturan terkait</strong><b>&rarr;</b></a>
+        <a href="/artikel/kategori/teknis/"><span>Metode kerja</span><strong>HIRADC, JSA, LOTO, dan praktik lapangan</strong><b>&rarr;</b></a>
+        <a href="/artikel/kategori/case-study/"><span>Studi kasus</span><strong>Masalah implementasi dan cara membacanya</strong><b>&rarr;</b></a>
       </div>
     </section>
   </main>
