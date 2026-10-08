@@ -3,6 +3,9 @@ const {
   title = "SMK3 & ISO 45001 Indonesia — Konsultan K3 Terpercaya", 
   description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/2012 dan ISO 45001:2018 resmi Kemenaker RI & KAN." 
 } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+const isActive = (path) => path === '/' ? currentPath === '/' : currentPath.startsWith(path);
 ---
 
 <!DOCTYPE html>
@@ -73,12 +76,18 @@ const {
       border: 1px solid var(--accent); border-radius: 4px;
       padding: 0.15rem 0.5rem; font-size: 0.75rem;
     }
-    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav ul { display: flex; gap: 0.35rem; list-style: none; }
     nav a {
-      color: var(--text-muted); text-decoration: none; font-size: 0.9rem; font-weight: 500;
-      transition: color 0.15s;
+      color: var(--text-muted); text-decoration: none; font-size: 0.85rem; font-weight: 500;
+      transition: color 0.15s, background 0.15s, border-color 0.15s;
     }
-    nav a:hover, nav a.active { color: var(--text); }
+    .desktop-nav a {
+      display: inline-flex; align-items: center; min-height: 2.25rem;
+      padding: 0.35rem 0.65rem; border: 1px solid transparent; border-radius: 6px;
+    }
+    .desktop-nav a:hover { color: var(--text); background: var(--surface); border-color: var(--border); }
+    .desktop-nav a.active { color: var(--text); background: var(--accent-glow); border-color: rgba(16, 185, 129, 0.25); }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     .nav-actions { display: flex; align-items: center; gap: 1rem; }
     .theme-toggle-btn {
       background: transparent; border: 1px solid var(--border);
@@ -221,7 +230,7 @@ const {
     .mobile-menu ul {
       display: flex;
       flex-direction: column;
-      gap: 1.5rem;
+      gap: 0.35rem;
       max-width: 1200px;
       margin: 1rem auto 0;
       list-style: none;
@@ -229,14 +238,17 @@ const {
     }
 
     .mobile-menu a {
-      color: var(--text-muted);
-      font-size: 1.1rem;
+      display: flex; align-items: center; min-height: 3.25rem;
+      padding: 0.75rem 1rem; border: 1px solid transparent; border-radius: 8px;
+      color: var(--text-muted); font-size: 1.05rem;
       font-weight: 500;
     }
 
-    .mobile-menu a:hover,
+    .mobile-menu a:hover { color: var(--text); background: var(--surface); border-color: var(--border); }
     .mobile-menu a.active {
       color: var(--text);
+      background: var(--accent-glow);
+      border-color: rgba(16, 185, 129, 0.25);
     }
 
     /* Responsive styles */
@@ -289,12 +301,12 @@ const {
     <!-- Mobile menu -->
     <nav class="mobile-menu" id="mobile-menu">
       <ul>
-        <li><a href="/">Beranda</a></li>
-        <li><a href="/layanan/">Layanan</a></li>
-        <li><a href="/artikel/">Artikel</a></li>
-        <li><a href="/smk3/">SMK3</a></li>
-        <li><a href="/iso-45001/">ISO 45001</a></li>
-        <li><a href="/tentang/">Tentang</a></li>
+        <li><a href="/" class:list={{ active: isActive('/') }} aria-current={isActive('/') ? 'page' : undefined}>Beranda</a></li>
+        <li><a href="/layanan/" class:list={{ active: isActive('/layanan') }} aria-current={isActive('/layanan') ? 'page' : undefined}>Layanan</a></li>
+        <li><a href="/artikel/" class:list={{ active: isActive('/artikel') }} aria-current={isActive('/artikel') ? 'page' : undefined}>Artikel</a></li>
+        <li><a href="/smk3/" class:list={{ active: isActive('/smk3') }} aria-current={isActive('/smk3') ? 'page' : undefined}>SMK3</a></li>
+        <li><a href="/iso-45001/" class:list={{ active: isActive('/iso-45001') }} aria-current={isActive('/iso-45001') ? 'page' : undefined}>ISO 45001</a></li>
+        <li><a href="/tentang/" class:list={{ active: isActive('/tentang') }} aria-current={isActive('/tentang') ? 'page' : undefined}>Tentang</a></li>
       </ul>
     </nav>
   <header class="site-header">
@@ -311,12 +323,12 @@ const {
       </button>
       <nav class="desktop-nav" aria-label="Navigasi utama">
         <ul>
-          <li><a href="/" class="active">Beranda</a></li>
-          <li><a href="/layanan/">Layanan</a></li>
-          <li><a href="/artikel/">Artikel</a></li>
-          <li><a href="/smk3/">SMK3</a></li>
-          <li><a href="/iso-45001/">ISO 45001</a></li>
-          <li><a href="/tentang/">Tentang</a></li>
+          <li><a href="/" class:list={{ active: isActive('/') }} aria-current={isActive('/') ? 'page' : undefined}>Beranda</a></li>
+          <li><a href="/layanan/" class:list={{ active: isActive('/layanan') }} aria-current={isActive('/layanan') ? 'page' : undefined}>Layanan</a></li>
+          <li><a href="/artikel/" class:list={{ active: isActive('/artikel') }} aria-current={isActive('/artikel') ? 'page' : undefined}>Artikel</a></li>
+          <li><a href="/smk3/" class:list={{ active: isActive('/smk3') }} aria-current={isActive('/smk3') ? 'page' : undefined}>SMK3</a></li>
+          <li><a href="/iso-45001/" class:list={{ active: isActive('/iso-45001') }} aria-current={isActive('/iso-45001') ? 'page' : undefined}>ISO 45001</a></li>
+          <li><a href="/tentang/" class:list={{ active: isActive('/tentang') }} aria-current={isActive('/tentang') ? 'page' : undefined}>Tentang</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
