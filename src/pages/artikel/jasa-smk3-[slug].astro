@@ -58,7 +58,13 @@ const serviceSchema = {
       </header>
 
       <div style="background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
-        <svg class="city-service-image" viewBox="0 0 160 96" role="img" aria-label={`Ilustrasi layanan SMK3 onsite di ${city.name}, ${city.region}`}><title>{`Ilustrasi layanan SMK3 onsite di ${city.name}, ${city.region}`}</title><rect width="160" height="96" rx="8" fill="var(--surface-card)"/><path d="M80 16c-18 0-32 14-32 32 0 22 32 40 32 40s32-18 32-40c0-18-14-32-32-32Z" fill="none" stroke="var(--accent)" stroke-width="6"/><circle cx="80" cy="48" r="10" fill="none" stroke="var(--text)" stroke-width="5"/><path d="M18 80h34m56 0h34" stroke="var(--text-muted)" stroke-width="5" stroke-linecap="round"/></svg>
+        <img
+          src={`/assets/images/jasa-smk3-${city.slug}.svg`}
+          alt={`Ilustrasi layanan SMK3 onsite di ${city.name}, ${city.region}`}
+          width="160"
+          height="96"
+          loading="lazy"
+        />
         <div style="flex: 1;">
           <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.25rem; line-height: 1.5;">
             Layanan kami mencakup seluruh wilayah <strong>{city.name} ({city.region})</strong> dengan tim konsultan lokal yang siap diterjunkan langsung ke workshop/pabrik/proyek Anda.
@@ -85,6 +91,5 @@ const serviceSchema = {
 
       <FAQ items={cityFaqs} title={`FAQ Jasa SMK3 di ${city.name}`} eyebrow={`// FAQ ${city.name.toUpperCase()}`} />
     </div>
-  </main>
-  <style>.city-service-image { width: 160px; height: 96px; flex: 0 0 auto; border: 1px solid var(--border); border-radius: 8px; }</style>
+</main>
 </BaseLayout>
