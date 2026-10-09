@@ -79,7 +79,6 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={pageImage}>
-  {lastmod && <meta name="last-modified" content={lastmod} />}
   <script type="application/ld+json" set:html={JSON.stringify(globalSchema)} />
   {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -510,7 +509,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
           <li><a href="/layanan/smk3/">Implementasi SMK3</a></li>
           <li><a href="/layanan/iso-45001/">ISO 45001:2018</a></li>
           <li><a href="/layanan/audit-internal/">Audit Internal K3</a></li>
-          <li><a href="/layanan/pelatihan/">Pelatihan K3</a></li>
+              <li><a href="/layanan/">Semua layanan</a></li>
         </ul>
       </div>
       <div class="footer-col">

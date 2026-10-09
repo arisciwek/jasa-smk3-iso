@@ -7,20 +7,39 @@ const XSL_PI = '<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>';
 
 if (existsSync(FILE)) {
   let xml = readFileSync(FILE, 'utf8');
-  
-  // Format lastmod ke ISO 8601 bersih dengan offset +07:00 (Jakarta) tanpa milidetik
-  const lastmodStr = new Date().toISOString().split('.')[0] + '+07:00';
-  
-  // Ganti semua tag lastmod di sitemap-0.xml
-  xml = xml.replace(/<lastmod>.*?<\/lastmod>/g, `<lastmod>${lastmodStr}</lastmod>`);
-  
+
+  const getPageFile = (pathname) => {
+    const cleanPath = pathname.replace(/^\/+|\/+$/g, '');
+    return cleanPath ? path.join('dist', cleanPath, 'index.html') : path.join('dist', 'index.html');
+  };
+
+  const getDateModified = (pathname) => {
+    const pageFile = getPageFile(pathname);
+    if (!existsSync(pageFile)) return null;
+    const html = readFileSync(pageFile, 'utf8');
+    const matches = [...html.matchAll(/"dateModified":"(\d{4}-\d{2}-\d{2})"/g)];
+    return matches.at(-1)?.[1] ?? null;
+  };
+
+  // Tambahkan lastmod hanya jika dateModified nyata tersedia di halaman hasil build.
+  xml = xml.replace(/<url>([\s\S]*?)<\/url>/g, (urlBlock, inner) => {
+    const locMatch = inner.match(/<loc>([^<]+)<\/loc>/);
+    if (!locMatch || inner.includes('<lastmod>')) return urlBlock;
+
+    const pathname = new URL(locMatch[1]).pathname;
+    const dateModified = getDateModified(pathname);
+    return dateModified
+      ? `<url>${inner.replace('</loc>', `</loc><lastmod>${dateModified}</lastmod>`)}</url>`
+      : urlBlock;
+  });
+
   // Pastikan sitemap memiliki stylesheet style XSLT
   if (!xml.includes('xml-stylesheet')) {
     xml = xml.replace(/^<\?xml[^>]*\?>/, (pi) => `${pi}${XSL_PI}`);
   }
-  
+
   writeFileSync(FILE, xml);
-  console.log(`✓ sitemap-0.xml: stylesheet disisipkan & lastmod disamakan (${lastmodStr})`);
+  console.log('✓ sitemap-0.xml: stylesheet diperiksa & lastmod disinkronkan dari dateModified');
 } else {
   console.warn('sitemap-0.xml tidak ditemukan!');
 }

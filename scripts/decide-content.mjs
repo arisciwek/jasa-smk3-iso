@@ -16,6 +16,8 @@ const isManual = process.env.GITHUB_EVENT_NAME === 'workflow_dispatch';
 const now = new Date(Date.now() + (7 * 60 * 60 * 1000));
 const date = now.toISOString().slice(0, 10);
 const hour = now.getUTCHours();
+// Window operasional lokal: satu slot pseudo-acak dipilih per hari.
+// Pemilihan deterministik menjaga retry pada hari yang sama tetap idempotent.
 const firstHour = 8;
 const lastHour = 20;
 const targetHour = firstHour + (hash(date) % (lastHour - firstHour + 1));

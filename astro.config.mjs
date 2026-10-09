@@ -14,9 +14,6 @@ export default defineConfig({
         }
         return {
           ...item,
-          changefreq: 'weekly',
-          priority: item.url.includes('/artikel/jasa-smk3-') ? 0.8 : 0.9,
-          lastmod: new Date().toISOString().replace(/\.\d+Z$/, '+07:00')
         };
       },
     }),

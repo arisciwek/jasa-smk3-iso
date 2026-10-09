@@ -2,7 +2,7 @@ name: Daily content queue
 
 on:
   schedule:
-    # Script memilih satu jam secara deterministik setiap hari pada 08.00–20.00 WIB.
+    # Orchestrator memeriksa window 08.00–20.00 WIB; script memilih satu slot pseudo-acak per hari.
     - cron: '3 1-13 * * *'
   workflow_dispatch: {}
 
