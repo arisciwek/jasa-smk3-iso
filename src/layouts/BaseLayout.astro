@@ -177,6 +177,25 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
     }
     .btn-secondary:hover { border-color: var(--border-hover); }
 
+    .whatsapp-float {
+      position: fixed;
+      right: 1.25rem;
+      bottom: 1.25rem;
+      z-index: 1000;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 3.5rem;
+      height: 3.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 999px;
+      background: #25d366;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .whatsapp-float:hover { transform: translateY(-3px); box-shadow: 0 14px 30px rgba(0, 0, 0, 0.36); }
+    .whatsapp-float img { width: 2.25rem; height: 2.25rem; }
+
     .hero {
       max-width: 1200px; margin: 0 auto; padding: 5rem 1.5rem 3rem;
       text-align: center;
@@ -508,6 +527,10 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
       <div>&copy; 2026 PT Konsultan K3 Utama. Hak Cipta Dilindungi Undang-Undang.</div>
     </div>
   </footer>
+
+  <a class="whatsapp-float" href={site.waLink('Halo, saya ingin berkonsultasi mengenai layanan SMK3 dan ISO.')} aria-label="Hubungi PT. PEI Sinergi Indonesia melalui WhatsApp" target="_blank" rel="noopener noreferrer">
+    <img src="/assets/images/icon-whatsapp.svg" alt="Ikon WhatsApp" width="48" height="48" />
+  </a>
 
     <script is:inline>
       (function() {
