@@ -4,6 +4,8 @@ import { site } from '../../data/site';
 
 const title = `Hubungi Konsultan Kami — ${site.name}`;
 const description = `Hubungi ${site.company} untuk pendaftaran sertifikasi SMK3 PP 50/2012, ISO 45001, dan penawaran audit onsite.`;
+const phoneLink = `tel:${site.phone.replace(/[^\d+]/g, '')}`;
+const addressLines = site.address.split(';').map((line) => line.trim()).filter(Boolean);
 ---
 
 <BaseLayout title={title} description={description} image="/assets/images/page-contact.svg" breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Tentang', url: '/tentang/' }, { name: 'Kontak', url: '/tentang/kontak/' }]}>
@@ -29,7 +31,7 @@ const description = `Hubungi ${site.company} untuk pendaftaran sertifikasi SMK3 
 
           <div style="margin-bottom: 1.5rem;">
             <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">TELEPON</h4>
-            <p style="color: var(--text); font-weight: 500;">{site.phone}</p>
+            <p style="color: var(--text); font-weight: 500;"><a href={phoneLink}>{site.phone}</a></p>
           </div>
 
           <div style="margin-bottom: 1.5rem;">
@@ -39,7 +41,10 @@ const description = `Hubungi ${site.company} untuk pendaftaran sertifikasi SMK3 
 
           <div style="margin-bottom: 1.5rem;">
             <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">ALAMAT KANTOR</h4>
-            <p style="color: var(--text); font-weight: 500; font-size: 0.95rem; line-height: 1.5;">{site.address}</p>
+            <address style="color: var(--text); font-weight: 500; font-size: 0.95rem; line-height: 1.5; font-style: normal;">
+              {addressLines.map((line) => <div>{line}</div>)}
+              <div>{site.addressLocality}, {site.addressRegion} {site.postalCode}</div>
+            </address>
           </div>
 
           <div style="margin-top: 2rem;">
