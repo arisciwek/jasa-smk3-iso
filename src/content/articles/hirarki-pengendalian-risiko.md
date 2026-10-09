@@ -11,8 +11,6 @@ imageAlt: "Ilustrasi metode teknis hirarki pengendalian risiko"
 tags: [teknis, pengendalian-risiko]
 ---
 
-# Hirarki Pengendalian Risiko dalam Praktik
-
 Alat pelindung diri penting, tetapi biasanya berada di lapisan terakhir
 pengendalian. Mulailah dengan menghilangkan bahaya jika memungkinkan, mengganti
 material atau proses, lalu gunakan rekayasa, pengaturan kerja, dan APD sesuai

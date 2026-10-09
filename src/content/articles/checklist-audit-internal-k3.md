@@ -11,8 +11,6 @@ imageAlt: "Ilustrasi checklist persiapan audit internal K3"
 tags: [tips, audit-internal]
 ---
 
-# Checklist Persiapan Audit Internal K3
-
 Sebelum audit, tetapkan ruang lingkup, kriteria, jadwal, dan auditor yang
 independen dari aktivitas yang diperiksa. Siapkan daftar proses, rekaman
 insiden, hasil inspeksi, pelatihan, dan tindakan korektif.

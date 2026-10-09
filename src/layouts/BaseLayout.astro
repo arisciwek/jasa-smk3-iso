@@ -6,6 +6,12 @@ const {
   description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/2012 dan ISO 45001:2018 resmi Kemenaker RI & KAN.",
   image = '/assets/images/organization-logo.svg',
   images = [],
+  imageAlt = title,
+  imageWidth = 640,
+  imageHeight = 360,
+  ogType = 'website',
+  datePublished,
+  dateModified,
   lastmod,
   breadcrumbs = [],
 } = Astro.props;
@@ -18,6 +24,7 @@ const websiteId = `${siteUrl}#website`;
 const organizationImage = new URL('/assets/images/organization-logo.svg', siteUrl).href;
 const pageImages = [...new Set([image, ...images])].map((item) => new URL(item, siteUrl).href);
 const pageImage = pageImages[0];
+const imageMimeType = (item) => item.toLowerCase().endsWith('.svg') ? 'image/svg+xml' : undefined;
 const globalSchema = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -69,12 +76,23 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
   <title>{title}</title>
   <meta name="description" content={description}>
   <link rel="canonical" href={Astro.url.href}>
-  <meta property="og:type" content="website">
+  <meta property="og:type" content={ogType}>
+  <meta property="og:site_name" content={site.name}>
+  <meta property="og:locale" content="id_ID">
   <meta property="og:title" content={title}>
   <meta property="og:description" content={description}>
   <meta property="og:url" content={Astro.url.href}>
-  {pageImages.map((item) => <meta property="og:image" content={item} />)}
-  {pageImages.map(() => <meta property="og:image:alt" content={title} />)}
+  {pageImages.map((item) => (
+    <>
+      <meta property="og:image" content={item} />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="og:image:width" content={String(imageWidth)} />
+      <meta property="og:image:height" content={String(imageHeight)} />
+      {imageMimeType(item) && <meta property="og:image:type" content={imageMimeType(item)} />}
+    </>
+  ))}
+  {ogType === 'article' && datePublished && <meta property="article:published_time" content={datePublished} />}
+  {ogType === 'article' && dateModified && <meta property="article:modified_time" content={dateModified} />}
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content={title}>
   <meta name="twitter:description" content={description}>

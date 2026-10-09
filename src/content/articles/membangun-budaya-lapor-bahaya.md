@@ -11,8 +11,6 @@ imageAlt: "Ilustrasi kebiasaan melaporkan bahaya di tempat kerja"
 tags: [tips, budaya-k3]
 ---
 
-# Memulai Kebiasaan Melaporkan Bahaya
-
 Pelaporan bahaya tumbuh ketika pekerja melihat bahwa laporan mereka mendapat
 respons. Mulailah dengan format sederhana, respons cepat untuk risiko tinggi,
 dan umpan balik yang menjelaskan tindakan yang sudah diambil.

@@ -11,8 +11,6 @@ imageAlt: "Ilustrasi studi kasus komunikasi keselamatan kerja"
 tags: [case-study, komunikasi-k3]
 ---
 
-# Studi Kasus: Membuat Komunikasi K3 Lebih Dipakai
-
 Komunikasi K3 tidak harus panjang. Briefing singkat yang membahas bahaya utama,
 perubahan kondisi, dan pengendalian yang harus dipastikan sering kali lebih
 berguna daripada materi yang hanya dibaca saat pelatihan.

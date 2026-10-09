@@ -42,6 +42,12 @@ const articleSchema = {
   title={article.data.title}
   description={article.data.description}
   image={article.data.image || '/assets/images/page-articles.svg'}
+  imageAlt={article.data.imageAlt || `Ilustrasi ${article.data.title}`}
+  imageWidth={320}
+  imageHeight={200}
+  ogType="article"
+  datePublished={article.data.date}
+  dateModified={lastmod}
   lastmod={lastmod}
   breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: article.data.title, url: Astro.url.pathname }]}
 >
@@ -73,7 +79,6 @@ const articleSchema = {
   .article-detail-image { display: block; width: 100%; height: auto; margin-top: 1.5rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
   .article-detail-meta { display: flex; flex-wrap: wrap; gap: 0.75rem 1.25rem; margin-top: 1.5rem; color: var(--text-dim); font-family: var(--font-mono); font-size: 0.75rem; }
   .article-prose { max-width: 720px; padding: 2.5rem 0 4rem; color: var(--text-muted); line-height: 1.8; }
-  .article-prose :global(h1) { display: none; }
   .article-prose :global(h2) { margin: 2rem 0 0.75rem; color: var(--text); font-size: 1.5rem; line-height: 1.3; }
   .article-prose :global(p) { margin-bottom: 1rem; }
   .article-prose :global(ol), .article-prose :global(ul) { margin: 0 0 1rem 1.5rem; }

@@ -13,8 +13,6 @@ image: "/assets/images/article-lokasi-smk3.svg"
 imageAlt: "Ilustrasi dukungan layanan SMK3 berdasarkan lokasi"
 ---
 
-# Memilih Pendampingan SMK3 Berdasarkan Kebutuhan Lokasi
-
 Lokasi bukan satu-satunya penentu kebutuhan konsultasi. Jenis pekerjaan, jumlah
 tenaga kerja, risiko utama, dan kesiapan dokumen biasanya lebih menentukan bentuk
 pendampingan yang tepat.

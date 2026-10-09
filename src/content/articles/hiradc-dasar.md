@@ -13,8 +13,6 @@ image: "/assets/images/article-hiradc.svg"
 imageAlt: "Ilustrasi metode teknis HIRADC"
 ---
 
-# HIRADC: Cara Memulai Identifikasi Bahaya di Tempat Kerja
-
 HIRADC sebaiknya dimulai dari pekerjaan yang benar-benar dilakukan, bukan dari
 template. Catat urutan aktivitas, orang yang terlibat, alat yang digunakan, dan
 kondisi yang dapat berubah selama pekerjaan berlangsung.

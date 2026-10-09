@@ -11,8 +11,6 @@ imageAlt: "Ilustrasi membaca kewajiban SMK3 dan regulasi K3"
 tags: [regulasi, smk3]
 ---
 
-# Membaca Kewajiban SMK3 Sebelum Menyusun Dokumen
-
 Langkah awal bukan langsung membuat manual. Perusahaan perlu memetakan jenis
 usaha, proses kerja, jumlah tenaga kerja, serta risiko yang benar-benar ada di
 lapangan. Peta ini membantu menentukan dokumen dan pengendalian yang relevan.

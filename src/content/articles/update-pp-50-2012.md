@@ -12,8 +12,6 @@ tags:
   - pp-50-2012
 ---
 
-# Update PP 50/2012
-
 Peraturan Pemerintah No. 50 Tahun 2012 telah diperbarui pada tahun 2025. Perubahan utama meliputi:
 
 - Penyesuaian ketentuan mengenai penilaian risiko kerja.

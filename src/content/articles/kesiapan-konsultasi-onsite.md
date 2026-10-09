@@ -11,8 +11,6 @@ imageAlt: "Ilustrasi konsultasi SMK3 onsite di lokasi perusahaan"
 tags: [layanan-lokal, onsite]
 ---
 
-# Kesiapan Konsultasi SMK3 Onsite
-
 Kunjungan onsite akan lebih efektif jika perusahaan menyiapkan peta lokasi,
 daftar aktivitas utama, kontak penanggung jawab, dokumen K3 yang tersedia, dan
 target yang ingin dicapai.

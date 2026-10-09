@@ -11,8 +11,6 @@ imageAlt: "Ilustrasi studi kasus temuan audit K3 dan rencana perbaikan"
 tags: [case-study, audit]
 ---
 
-# Studi Kasus: Mengubah Temuan Audit Menjadi Rencana Kerja
-
 Temuan audit sering berhenti sebagai daftar masalah karena tidak memiliki
 pemilik dan batas waktu. Pendekatan yang lebih berguna adalah mengelompokkan
 temuan berdasarkan risiko, menetapkan penanggung jawab, dan menentukan bukti
