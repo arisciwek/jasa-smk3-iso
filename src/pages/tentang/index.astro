@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { site } from '../../data/site';
 
 const title = `Tentang Kami — ${site.company}`;
-const description = `Profil PT Konsultan K3 Utama — Perusahaan jasa konsultasi, audit, dan sertifikasi Sistem Manajemen K3 & ISO 45001 Terpercaya.`;
+const description = `Profil ${site.company} — Perusahaan jasa konsultasi, audit, dan sertifikasi Sistem Manajemen K3 & ISO 45001 Terpercaya.`;
 ---
 
 <BaseLayout title={title} description={description} image="/assets/images/page-about.svg" breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Tentang', url: '/tentang/' }]}>
@@ -11,7 +11,7 @@ const description = `Profil PT Konsultan K3 Utama — Perusahaan jasa konsultasi
     <div style="max-width: 800px; margin: 0 auto;">
       <header style="margin-bottom: 2.5rem;">
         <div class="hero-tag">// PROFIL PERUSAHAAN</div>
-        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Tentang PT Konsultan K3 Utama</h1>
+        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Tentang {site.company}</h1>
         <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
           Mitra strategis industri dalam menciptakan lingkungan kerja aman, sehat, dan memenuhi standar regulasi nasional & internasional.
         </p>

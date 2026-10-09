@@ -502,7 +502,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
     <div class="footer-container">
       <div class="footer-col">
         <h4>SMK3-ISO.LAN</h4>
-        <p style="font-size: 0.85rem; color: var(--text-muted);">PT Konsultan K3 Utama — Mitra Resmi Implementasi SMK3 & ISO 45001 Indonesia.</p>
+        <p style="font-size: 0.85rem; color: var(--text-muted);">{site.company} — Mitra Resmi Implementasi SMK3 & ISO 45001 Indonesia.</p>
       </div>
       <div class="footer-col">
         <h4>LAYANAN</h4>
@@ -524,11 +524,11 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2026 PT Konsultan K3 Utama. Hak Cipta Dilindungi Undang-Undang.</div>
+      <div>&copy; 2026 {site.company}. Hak Cipta Dilindungi Undang-Undang.</div>
     </div>
   </footer>
 
-  <a class="whatsapp-float" href={site.waLink('Halo, saya ingin berkonsultasi mengenai layanan SMK3 dan ISO.')} aria-label="Hubungi PT. PEI Sinergi Indonesia melalui WhatsApp" target="_blank" rel="noopener noreferrer">
+  <a class="whatsapp-float" href={site.waLink('Halo, saya ingin berkonsultasi mengenai layanan SMK3 dan ISO.')} aria-label={`Hubungi ${site.company} melalui WhatsApp`} target="_blank" rel="noopener noreferrer">
     <img src="/assets/images/icon-whatsapp.svg" alt="Ikon WhatsApp" width="48" height="48" />
   </a>
 

@@ -2,6 +2,7 @@
 import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticlePagination from '../../components/ArticlePagination.astro';
+import { site } from '../../data/site';
 
 export async function getStaticPaths() {
   const articles = (await getCollection('articles')).sort((a, b) =>
@@ -33,7 +34,7 @@ const articleSchema = {
   author: { '@type': 'Person', name: article.data.author },
   image: imageUrl,
   mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
-  publisher: { '@type': 'Organization', name: 'PT Konsultan K3 Utama' },
+  publisher: { '@type': 'Organization', name: site.company },
 };
 ---
 

@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import FAQ from '../../components/FAQ.astro';
 import { cities } from '../../data/cities';
 import { getCityFaqs } from '../../data/faqs';
+import { site } from '../../data/site';
 
 const cityContentFiles = import.meta.glob('../../data/city-content/*.json', {
   eager: true,
@@ -31,7 +32,7 @@ const serviceSchema = {
   serviceType: 'Pendampingan SMK3 PP 50/2012',
   description,
   image: new URL('/assets/images/article-lokasi-smk3.svg', Astro.site ?? Astro.url).href,
-  provider: { '@type': 'Organization', name: 'PT Konsultan K3 Utama' },
+  provider: { '@type': 'Organization', name: site.company },
   areaServed: { '@type': 'City', name: city.name },
   ...(cityContent.lastmod ? { dateModified: cityContent.lastmod } : {}),
   url: new URL(Astro.url.pathname, Astro.site ?? Astro.url).href,
