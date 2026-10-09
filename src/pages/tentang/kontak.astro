@@ -22,25 +22,25 @@ const addressLines = site.address.split(';').map((line) => line.trim()).filter(B
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
         <!-- Contact Info -->
         <div style="background: var(--surface); border: 1px solid var(--border); padding: 2rem; border-radius: 8px;">
-          <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 1px;">// INFO RESERVASI</h3>
+          <h2 style="color: var(--accent); margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 1px;">// INFO RESERVASI</h2>
           
           <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">NAMA PERUSAHAAN</h4>
+            <h3 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">NAMA PERUSAHAAN</h3>
             <p style="color: var(--text); font-weight: 500;">{site.company}</p>
           </div>
 
           <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">TELEPON</h4>
+            <h3 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">TELEPON</h3>
             <p style="color: var(--text); font-weight: 500;"><a href={phoneLink}>{site.phone}</a></p>
           </div>
 
           <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">EMAIL</h4>
+            <h3 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">EMAIL</h3>
             <p style="color: var(--text); font-weight: 500;">{site.email}</p>
           </div>
 
           <div style="margin-bottom: 1.5rem;">
-            <h4 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">ALAMAT KANTOR</h4>
+            <h3 style="font-size: 0.85rem; color: var(--text-dim); text-transform: uppercase; margin-bottom: 0.25rem;">ALAMAT KANTOR</h3>
             <address style="color: var(--text); font-weight: 500; font-size: 0.95rem; line-height: 1.5; font-style: normal;">
               {addressLines.map((line) => <div>{line}</div>)}
               <div>{site.addressLocality}, {site.addressRegion} {site.postalCode}</div>
@@ -56,7 +56,7 @@ const addressLines = site.address.split(';').map((line) => line.trim()).filter(B
 
         <!-- Contact Form (Netlify / Vercel-ready) -->
         <div style="background: var(--surface-card); border: 1px solid var(--border); padding: 2rem; border-radius: 8px;">
-          <h3 style="color: var(--accent); margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 1px;">// FORMULIR HUBUNGKAN</h3>
+          <h2 style="color: var(--accent); margin-bottom: 1.5rem; font-family: var(--font-mono); font-size: 1.1rem; letter-spacing: 1px;">// FORMULIR HUBUNGKAN</h2>
           
           <form name="contact" method="POST" data-netlify="true" style="display: flex; flex-direction: column; gap: 1.25rem;">
             <div>

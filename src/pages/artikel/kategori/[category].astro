@@ -41,20 +41,23 @@ const description = `Artikel ${category} tentang SMK3, ISO 45001, dan praktik ke
       <p>Artikel yang dikurasi untuk membantu memahami dan menjalankan sistem K3 dengan lebih jelas.</p>
     </header>
 
-    <div class="article-grid">
-      {articles.map((article) => (
-        <Card
-          title={article.data.title}
-          description={article.data.description}
-          date={article.data.lastmod || article.data.date}
-          category={article.data.category}
-          readTime={article.data.readTime}
-          image={article.data.image}
-          imageAlt={article.data.imageAlt}
-          href={`/artikel/${article.id}/`}
-        />
-      ))}
-    </div>
+    <section aria-labelledby="category-articles-heading">
+      <h2 id="category-articles-heading">Artikel dalam kategori {category}</h2>
+      <div class="article-grid">
+        {articles.map((article) => (
+          <Card
+            title={article.data.title}
+            description={article.data.description}
+            date={article.data.lastmod || article.data.date}
+            category={article.data.category}
+            readTime={article.data.readTime}
+            image={article.data.image}
+            imageAlt={article.data.imageAlt}
+            href={`/artikel/${article.id}/`}
+          />
+        ))}
+      </div>
+    </section>
   </main>
 </BaseLayout>
 
