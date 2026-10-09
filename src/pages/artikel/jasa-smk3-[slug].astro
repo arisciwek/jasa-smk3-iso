@@ -23,8 +23,8 @@ const cityContent = cityContentFiles[`../../data/city-content/${city.slug}.json`
   paragraphs: [],
 };
 const cityFaqs = [...getCityFaqs(city.name), ...(cityContent.faqs ?? [])];
-const title = `Jasa SMK3 di ${city.name} — Konsultan K3 Resmi`;
-const description = `Jasa SMK3 di ${city.name} : Layanan pendampingan sertifikasi & konsultan Jasa SMK3 PP 50/2012.`;
+const title = `Jasa SMK3 di ${city.name} - ${site.phone}`;
+  const description = `Layanan pendampingan sertifikasi SMK3 PP 50/2012 di ${city.name}. Konsultan K3 siap bantu gap analysis, dokumen HIRADC, Manual K3, hingga persiapan audit eksternal.`;
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
