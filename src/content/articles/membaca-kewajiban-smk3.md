@@ -6,7 +6,7 @@ lastmod: "2026-10-06"
 category: "Regulasi"
 author: "Tim Konsultan K3"
 readTime: "5 menit"
-image: "/assets/images/icon-regulasi.svg"
+image: "/assets/images/article-kewajiban-smk3.svg"
 imageAlt: "Ilustrasi membaca kewajiban SMK3 dan regulasi K3"
 tags: [regulasi, smk3]
 ---

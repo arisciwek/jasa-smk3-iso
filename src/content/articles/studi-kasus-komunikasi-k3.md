@@ -6,7 +6,7 @@ lastmod: "2026-10-03"
 category: "Case Study"
 author: "Tim Konsultan K3"
 readTime: "5 menit"
-image: "/assets/images/icon-case-study.svg"
+image: "/assets/images/article-komunikasi-k3.svg"
 imageAlt: "Ilustrasi studi kasus komunikasi keselamatan kerja"
 tags: [case-study, komunikasi-k3]
 ---

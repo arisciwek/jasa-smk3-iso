@@ -9,7 +9,7 @@ tags:
   - hiradc
   - identifikasi-bahaya
 readTime: "6 menit"
-image: "/assets/images/icon-iso.svg"
+image: "/assets/images/article-hiradc.svg"
 imageAlt: "Ilustrasi metode teknis HIRADC"
 ---
 

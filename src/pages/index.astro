@@ -13,7 +13,7 @@ const latestArticles = articles
 const latestLastmod = latestArticles[0] ? (latestArticles[0].data.lastmod || latestArticles[0].data.date) : undefined;
 ---
 
-<BaseLayout title={title} description={description} lastmod={latestLastmod}>
+<BaseLayout title={title} description={description} image="/assets/images/page-home.svg" lastmod={latestLastmod}>
   <main>
     <header class="hero home-hero">
       <div class="hero-grid">

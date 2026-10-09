@@ -9,7 +9,7 @@ tags:
   - layanan-lokal
   - smk3
 readTime: "5 menit"
-image: "/assets/images/icon-map.svg"
+image: "/assets/images/article-lokasi-smk3.svg"
 imageAlt: "Ilustrasi dukungan layanan SMK3 berdasarkan lokasi"
 ---
 

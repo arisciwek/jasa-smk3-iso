@@ -1,124 +1,53 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FAQ from '../../components/FAQ.astro';
+import { serviceCategories, services } from '../../data/services';
 
-const title = "Layanan Konsultasi & Pendampingan Sertifikasi K3";
-const description = "Layanan konsultan SMK3 PP 50/2012, ISO 45001:2018, audit internal, gap analysis, pelatihan K3, dan pendampingan sertifikasi.";
+const title = 'Layanan Konsultasi dan Pendampingan Sistem Manajemen';
+const description = 'Pendampingan SMK3, ISO, HACCP, akreditasi laboratorium, serta standar industri otomotif dan migas sesuai kebutuhan organisasi.';
+const siteUrl = Astro.site ?? Astro.url;
 const faqs = [
-  {
-    question: 'Apa saja layanan konsultasi K3 yang tersedia?',
-    answer: 'Layanan dapat mencakup gap analysis, penyusunan dokumen SMK3 atau ISO 45001, HIRADC, pelatihan, audit internal, dan pendampingan sertifikasi sesuai kebutuhan perusahaan.',
-  },
-  {
-    question: 'Apakah konsultasi dapat dilakukan secara onsite?',
-    answer: 'Pendampingan onsite dapat dibahas berdasarkan lokasi, proses kerja, risiko operasional, dan tahapan implementasi yang dibutuhkan perusahaan.',
-  },
-  {
-    question: 'Bagaimana proses konsultasi dimulai?',
-    answer: 'Proses dimulai dengan memahami kondisi perusahaan, dokumen yang sudah tersedia, prioritas risiko, dan target kepatuhan sebelum menyusun ruang lingkup kerja.',
-  },
-  {
-    question: 'Apakah perusahaan harus sudah memiliki dokumen K3?',
-    answer: 'Tidak. Dokumen yang sudah tersedia akan ditinjau, sedangkan kebutuhan yang belum ada dapat dipetakan dan disusun sebagai bagian dari rencana pendampingan.',
-  },
+  { question: 'Apa saja layanan yang tersedia?', answer: 'Kami menyediakan pendampingan SMK3, ISO, HACCP, akreditasi laboratorium, serta standar khusus untuk industri otomotif dan minyak dan gas.' },
+  { question: 'Apakah semua layanan berakhir dengan sertifikasi?', answer: 'Tidak selalu. Bentuk layanan disesuaikan dengan standar dan tujuan organisasi, misalnya pendampingan implementasi, kesiapan audit, atau akreditasi laboratorium.' },
+  { question: 'Bagaimana menentukan standar yang sesuai?', answer: 'Kami memulai dengan memahami proses bisnis, risiko, kewajiban, kebutuhan pelanggan, dan target organisasi sebelum merekomendasikan ruang lingkup pendampingan.' },
 ];
 const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  name: 'Layanan Konsultasi dan Pendampingan K3',
-  serviceType: 'Konsultasi SMK3 dan ISO 45001',
-  description,
-  provider: { '@id': `${new URL('/', Astro.site ?? Astro.url).href}#organization` },
-  areaServed: { '@type': 'Country', name: 'Indonesia' },
-  url: new URL('/layanan/', Astro.site ?? Astro.url).href,
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Layanan Konsultasi dan Pendampingan K3',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Implementasi SMK3 PP 50/2012',
-          description: 'Pendampingan gap analysis, penyusunan dokumen 5 elemen SMK3, pelatihan P2K3, penerapan program K3, dan persiapan audit eksternal Kemenaker RI.',
-          image: new URL('/assets/images/service-smk3.svg', Astro.site ?? Astro.url).href,
-          url: new URL('/layanan/smk3/', Astro.site ?? Astro.url).href,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Pendampingan ISO 45001:2018',
-          description: 'Pendampingan gap analysis, penerapan sistem manajemen K3 berbasis PDCA, audit internal, dan persiapan audit sertifikasi ISO 45001:2018.',
-          image: new URL('/assets/images/service-iso-45001.svg', Astro.site ?? Astro.url).href,
-          url: new URL('/layanan/iso-45001/', Astro.site ?? Astro.url).href,
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Audit Internal K3',
-          description: 'Audit internal untuk mengevaluasi kesesuaian penerapan SMK3 dan ISO 45001 serta menyusun rencana tindakan perbaikan.',
-          image: new URL('/assets/images/service-audit-internal.svg', Astro.site ?? Astro.url).href,
-          url: new URL('/tentang/kontak/', Astro.site ?? Astro.url).href,
-        },
-      },
-    ],
-  },
+  '@context': 'https://schema.org', '@type': 'Service', name: title,
+  serviceType: 'Konsultasi dan pendampingan sistem manajemen', description,
+  provider: { '@id': `${new URL('/', siteUrl).href}#organization` }, areaServed: { '@type': 'Country', name: 'Indonesia' }, url: new URL('/layanan/', siteUrl).href,
+  hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Katalog layanan sistem manajemen', itemListElement: services.map((service) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: service.name, serviceType: service.serviceType, description: service.description, image: new URL(service.image, siteUrl).href, provider: { '@id': `${new URL('/', siteUrl).href}#organization` }, areaServed: { '@type': 'Country', name: 'Indonesia' }, url: new URL(`/layanan/${service.slug}/`, siteUrl).href } })) },
 };
 ---
 
-<BaseLayout
-  title={title}
-  description={description}
-  image="/assets/images/service-smk3.svg"
-  images={['/assets/images/service-iso-45001.svg', '/assets/images/service-audit-internal.svg']}
-  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }]}
->
+<BaseLayout title={title} description={description} image="/assets/images/page-services.svg" images={['/assets/images/service-smk3.svg', '/assets/images/service-iso-45001.svg']} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }]}>
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
-  <main class="content-section">
-    <div style="max-width: 800px; margin: 0 auto;">
-      <header style="margin-bottom: 2.5rem;">
-        <div class="hero-tag">// LAYANAN K3</div>
-        <h1 style="font-size: 2.5rem; margin-top: 0.5rem; margin-bottom: 1rem;">Layanan Konsultasi & Pendampingan</h1>
-        <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">
-          Kami menyediakan solusi komprehensif untuk kepatuhan SMK3 PP 50/2012 dan sertifikasi ISO 45001:2018.
-        </p>
-      </header>
-
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-        <div style="background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px;">
-          <img src="/assets/images/icon-smk3.svg" alt="Icon implementasi SMK3 PP 50/2012" width="100" height="100" loading="lazy" style="display: block; width: 72px; height: 72px; margin-bottom: 1.25rem; border-radius: 4px;" />
-          <h3 style="color: var(--accent); margin-bottom: 0.75rem;">Implementasi SMK3 PP 50/2012</h3>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Pendampingan gap analysis, penyusunan dokumen 5 elemen SMK3, pelatihan P2K3, penerapan program K3, dan persiapan audit eksternal Kemenaker RI.</p>
-          <a href="/layanan/smk3/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Lihat Detail Layanan &rarr;</a>
-          <a href="/artikel/kategori/regulasi/" style="display: block; margin-top: 0.5rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">Baca Regulasi Terkait &rarr;</a>
-        </div>
-        <div style="background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px;">
-          <img src="/assets/images/icon-iso.svg" alt="Icon pendampingan ISO 45001:2018" width="100" height="100" loading="lazy" style="display: block; width: 72px; height: 72px; margin-bottom: 1.25rem; border-radius: 4px;" />
-          <h3 style="color: var(--accent); margin-bottom: 0.75rem;">ISO 45001:2018</h3>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Pendampingan gap analysis, penerapan sistem manajemen K3 berbasis PDCA, audit internal, dan persiapan audit sertifikasi ISO 45001:2018.</p>
-          <a href="/layanan/iso-45001/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Lihat Detail Layanan &rarr;</a>
-          <a href="/artikel/kategori/teknis/" style="display: block; margin-top: 0.5rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">Baca Panduan Teknis &rarr;</a>
-        </div>
-        <div style="background: var(--surface); border: 1px solid var(--border); padding: 1.5rem; border-radius: 6px;">
-          <img src="/assets/images/icon-case-study.svg" alt="Icon audit internal K3" width="100" height="100" loading="lazy" style="display: block; width: 72px; height: 72px; margin-bottom: 1.25rem; border-radius: 4px;" />
-          <h3 style="color: var(--accent); margin-bottom: 0.75rem;">Audit Internal K3</h3>
-          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">Audit internal untuk mengevaluasi kesesuaian penerapan SMK3 dan ISO 45001 serta menyusun rencana tindakan perbaikan.</p>
-          <a href="/tentang/kontak/" style="color: var(--accent); font-family: var(--font-mono); font-size: 0.85rem;">Konsultasikan Kebutuhan &rarr;</a>
-          <a href="/artikel/kategori/case-study/" style="display: block; margin-top: 0.5rem; color: var(--text-muted); font-family: var(--font-mono); font-size: 0.8rem;">Lihat Case Study &rarr;</a>
-        </div>
+  <main class="content-section services-page">
+    <header class="services-intro">
+      <div class="hero-tag">// RUANG LINGKUP LAYANAN</div>
+      <h1>Layanan yang mengikuti kebutuhan organisasi</h1>
+      <p>Mulai dari kepatuhan K3 hingga sistem manajemen khusus industri, kami membantu memetakan kebutuhan, membangun sistem, dan menyiapkan organisasi menghadapi proses penilaian yang relevan.</p>
+    </header>
+    <section aria-labelledby="service-catalog-heading">
+      <div class="section-heading-row"><div><div class="section-title">Katalog layanan</div><h2 id="service-catalog-heading">Standar yang kami dampingi</h2></div><span class="service-count">{services.length} layanan</span></div>
+      <div class="service-directory">
+        {serviceCategories.map((category) => (
+          <section class="service-directory-group" aria-labelledby={`category-${category.name}`}>
+            <div class="service-directory-heading"><h3 id={`category-${category.name}`}>{category.name}</h3><p>{category.description}</p></div>
+            <div class="service-directory-list">
+              {category.services.map((service) => (
+                <a href={`/layanan/${service.slug}/`} class="service-directory-item"><img src={service.image} alt={`Ilustrasi layanan ${service.name} untuk ${service.category}`} width="96" height="54" /><span><strong>{service.name}</strong><em>{service.summary}</em></span><b aria-hidden="true">→</b></a>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
-
-      <div style="text-align: center; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px;">
-        <h3 style="color: var(--text); margin-bottom: 1rem;">Butuh Layanan Khusus?</h3>
-        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Konsultasi awal gratis & proposal penawaran resmi dalam 1x24 jam.</p>
-        <a href="/tentang/kontak/" class="cta-btn" style="font-size: 0.9rem; padding: 0.75rem 2rem;">Hubungi Konsultan</a>
-      </div>
-
-      <FAQ items={faqs} title="FAQ Layanan Konsultasi K3" eyebrow="// FAQ LAYANAN" />
-    </div>
+    </section>
+    <section class="service-contact-panel" aria-labelledby="service-contact-heading"><div><div class="section-title">Ruang lingkup belum pasti?</div><h2 id="service-contact-heading">Kita mulai dari kondisi organisasi Anda.</h2><p>Konsultasi awal membantu menentukan standar, tahapan kerja, dan bukti penerapan yang benar-benar relevan.</p></div><a href="/tentang/kontak/" class="cta-btn">Konsultasikan Kebutuhan</a></section>
+    <FAQ items={faqs} title="FAQ Layanan" eyebrow="// PERTANYAAN UMUM" />
   </main>
+  <style>
+    .services-intro { max-width: 760px; margin-bottom: 4rem; } .services-intro h1 { max-width: 720px; margin: 0.75rem 0 1rem; font-size: clamp(2.2rem, 5vw, 3.5rem); line-height: 1.08; letter-spacing: -1.5px; } .services-intro p { max-width: 680px; color: var(--text-muted); font-size: 1.08rem; } .service-count { color: var(--text-dim); font-family: var(--font-mono); font-size: 0.75rem; }
+    .service-directory { display: grid; gap: 3rem; } .service-directory-group { display: grid; grid-template-columns: minmax(210px, 0.55fr) minmax(0, 1.45fr); gap: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); } .service-directory-heading h3 { font-size: 1.2rem; } .service-directory-heading p { margin-top: 0.45rem; color: var(--text-muted); font-size: 0.88rem; } .service-directory-list { border-top: 1px solid var(--border); } .service-directory-item { display: grid; grid-template-columns: 6rem minmax(0, 1fr) 1.5rem; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem 0; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); } .service-directory-item img { display: block; width: 6rem; height: 3.4rem; object-fit: cover; border: 1px solid var(--border); border-radius: 5px; background: var(--surface); } .service-directory-item strong, .service-directory-item em { display: block; } .service-directory-item strong { font-size: 1rem; } .service-directory-item em { margin-top: 0.15rem; color: var(--text-muted); font-size: 0.85rem; font-style: normal; } .service-directory-item b { color: var(--accent); font-size: 1.1rem; } .service-directory-item:hover strong { color: var(--accent); }
+    .service-contact-panel { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 4rem; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px; } .service-contact-panel h2 { margin: 0.35rem 0 0.5rem; font-size: 1.45rem; } .service-contact-panel p { max-width: 600px; color: var(--text-muted); } @media (max-width: 640px) { .service-directory-group { grid-template-columns: 1fr; gap: 1rem; } .service-directory-item { grid-template-columns: 4.5rem minmax(0, 1fr) 1rem; gap: 0.7rem; } .service-directory-item img { width: 4.5rem; height: 3rem; } .service-contact-panel { align-items: flex-start; flex-direction: column; } }
+  </style>
 </BaseLayout>

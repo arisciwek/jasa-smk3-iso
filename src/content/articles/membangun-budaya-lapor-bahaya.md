@@ -6,7 +6,7 @@ lastmod: "2026-10-01"
 category: "Tips & Panduan"
 author: "Tim Konsultan K3"
 readTime: "5 menit"
-image: "/assets/images/icon-tips.svg"
+image: "/assets/images/article-lapor-bahaya.svg"
 imageAlt: "Ilustrasi kebiasaan melaporkan bahaya di tempat kerja"
 tags: [tips, budaya-k3]
 ---

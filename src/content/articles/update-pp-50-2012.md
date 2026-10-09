@@ -5,7 +5,7 @@ date: "2025-01-15"
 lastmod: "2026-10-08"
 category: "Regulasi"
 author: "Tim Konsultan K3"
-image: "/assets/images/icon-regulasi.svg"
+image: "/assets/images/article-pp-50-2012.svg"
 imageAlt: "Ilustrasi regulasi dan dokumen PP 50/2012"
 tags:
   - regulasi

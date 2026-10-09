@@ -6,7 +6,7 @@ lastmod: "2026-10-05"
 category: "Teknis"
 author: "Tim Konsultan K3"
 readTime: "6 menit"
-image: "/assets/images/icon-teknis.svg"
+image: "/assets/images/article-hirarki-risiko.svg"
 imageAlt: "Ilustrasi metode teknis hirarki pengendalian risiko"
 tags: [teknis, pengendalian-risiko]
 ---

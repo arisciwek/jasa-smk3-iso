@@ -6,7 +6,7 @@ lastmod: "2026-09-30"
 category: "Layanan Lokal"
 author: "Tim Konsultan K3"
 readTime: "5 menit"
-image: "/assets/images/icon-lokal.svg"
+image: "/assets/images/article-konsultasi-onsite.svg"
 imageAlt: "Ilustrasi konsultasi SMK3 onsite di lokasi perusahaan"
 tags: [layanan-lokal, onsite]
 ---

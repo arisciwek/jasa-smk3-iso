@@ -74,6 +74,9 @@ Use `git diff --check` before committing. Do not commit generated `dist/` or `.a
 - Use `FAQ.astro` for visible question-and-answer sections.
 - Use `WhyChooseUs.astro` for the “Mengapa Memilih Kami?” numbered value proposition. It is currently used on the homepage; add it to service-focused pages only when the content will not be repetitive.
 - Keep Indonesian copy, accessible headings, meaningful image `alt` text, and semantic landmarks.
+- Every service, menu item that represents a destination, page, and content entry must have its own contextual image asset; do not reuse one generic image across different services or articles.
+- Keep service and content imagery in SVG format unless there is an explicit requirement for another format. Each image must have an `alt` attribute that names the subject and context specifically (for example, `Pendampingan sistem manajemen mutu ISO 9001:2015`), never a generic label such as `icon ISO`.
+- When adding a service or content entry, add its dedicated SVG asset, reference it in the data/frontmatter and structured data, and verify the generated asset URL exists in `dist/`.
 
 ## Documentation
 

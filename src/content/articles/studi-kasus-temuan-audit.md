@@ -6,7 +6,7 @@ lastmod: "2026-10-04"
 category: "Case Study"
 author: "Tim Konsultan K3"
 readTime: "7 menit"
-image: "/assets/images/icon-case-study.svg"
+image: "/assets/images/article-temuan-audit.svg"
 imageAlt: "Ilustrasi studi kasus temuan audit K3 dan rencana perbaikan"
 tags: [case-study, audit]
 ---
