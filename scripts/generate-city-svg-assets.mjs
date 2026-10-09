@@ -18,6 +18,15 @@ if (cityRows.length === 0) throw new Error('Daftar city tidak ditemukan dari src
 const outputDir = path.join(root, 'public/assets/images');
 fs.mkdirSync(outputDir, { recursive: true });
 
+const regionColors = {
+  'Banten': '#f59e0b',
+  'Jakarta & Sekitarnya': '#3b82f6',
+  'Jawa Barat': '#8b5cf6',
+  'Jawa Tengah': '#10b981',
+  'DI Yogyakarta': '#ef4444',
+  'Jawa Timur': '#f97316',
+};
+
 function escapeXml(str) {
   return str
     .replace(/&/g, '&amp;')
@@ -30,7 +39,8 @@ function escapeXml(str) {
 function buildCitySvg(city) {
   const name = escapeXml(city.name);
   const region = escapeXml(city.region);
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img"><title>Ilustrasi layanan SMK3 onsite di ${name}, ${region}</title><rect width="160" height="96" rx="8" fill="#141519" stroke="rgba(255,255,255,0.08)"/><path d="M80 16c-18 0-32 14-32 32 0 22 32 40 32 40s32-18 32-40c0-18-14-32-32-32Z" fill="none" stroke="#10b981" stroke-width="6"/><circle cx="80" cy="48" r="10" fill="none" stroke="#f7f8f8" stroke-width="5"/><path d="M18 80h34m56 0h34" stroke="#f7f8f8" stroke-width="5" stroke-linecap="round"/><text x="80" y="90" font-family="monospace" font-size="7" fill="#8a8f98" text-anchor="middle">${name} · ${region}</text></svg>`;
+  const color = regionColors[city.region] || '#10b981';
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img"><title>Ilustrasi layanan SMK3 onsite di ${name}, ${region}</title><rect width="160" height="96" rx="8" fill="#141519" stroke="rgba(255,255,255,0.08)"/><path d="M80 16c-18 0-32 14-32 32 0 22 32 40 32 40s32-18 32-40c0-18-14-32-32-32Z" fill="none" stroke="${color}" stroke-width="6"/><circle cx="80" cy="48" r="10" fill="none" stroke="${color}" stroke-width="5"/><path d="M18 80h34m56 0h34" stroke="${color}" stroke-width="5" stroke-linecap="round"/><text x="80" y="90" font-family="monospace" font-size="7" fill="#8a8f98" text-anchor="middle">${name} · ${region}</text></svg>`;
 }
 
 let count = 0;
