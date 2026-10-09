@@ -14,6 +14,7 @@ const faqs = [
 const serviceSchema = {
   '@context': 'https://schema.org', '@type': 'Service', name: title,
   serviceType: 'Konsultasi dan pendampingan sistem manajemen', description,
+  image: new URL('/assets/images/page-services.svg', siteUrl).href,
   provider: { '@id': `${new URL('/', siteUrl).href}#organization` }, areaServed: { '@type': 'Country', name: 'Indonesia' }, url: new URL('/layanan/', siteUrl).href,
   hasOfferCatalog: { '@type': 'OfferCatalog', name: 'Katalog layanan sistem manajemen', itemListElement: services.map((service) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: service.name, serviceType: service.serviceType, description: service.description, image: new URL(service.image, siteUrl).href, provider: { '@id': `${new URL('/', siteUrl).href}#organization` }, areaServed: { '@type': 'Country', name: 'Indonesia' }, url: new URL(`/layanan/${service.slug}/`, siteUrl).href } })) },
 };

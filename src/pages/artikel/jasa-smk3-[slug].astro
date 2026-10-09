@@ -30,6 +30,7 @@ const serviceSchema = {
   name: `Jasa SMK3 di ${city.name}`,
   serviceType: 'Pendampingan SMK3 PP 50/2012',
   description,
+  image: new URL('/assets/images/article-lokasi-smk3.svg', Astro.site ?? Astro.url).href,
   provider: { '@type': 'Organization', name: 'PT Konsultan K3 Utama' },
   areaServed: { '@type': 'City', name: city.name },
   ...(cityContent.lastmod ? { dateModified: cityContent.lastmod } : {}),
@@ -40,6 +41,7 @@ const serviceSchema = {
 <BaseLayout
   title={title}
   description={description}
+  image="/assets/images/article-lokasi-smk3.svg"
   lastmod={cityContent.lastmod}
   breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: `Jasa SMK3 di ${city.name}`, url: Astro.url.pathname }]}
 >
