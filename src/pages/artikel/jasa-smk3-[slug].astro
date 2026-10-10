@@ -45,6 +45,7 @@ const serviceSchema = {
   image="/assets/images/article-lokasi-smk3.svg"
   lastmod={cityContent.lastmod}
   breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }, { name: `Jasa SMK3 di ${city.name}`, url: Astro.url.pathname }]}
+  footerBrandDescription={`PT. PEI Sinergi Indonesia menyelenggarakan jasa SMK3 di ${city.name}`}
 >
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">

@@ -1,0 +1,155 @@
+---
+import { site } from '../data/site';
+
+export interface FooterLink {
+  label: string;
+  href: string;
+}
+
+export interface FooterColumn {
+  title: string;
+  items: FooterLink[];
+}
+
+interface Props {
+  /** Teks deskripsi brand di kolom pertama. Default mengikuti site.company. */
+  brandDescription?: string;
+  /** Nama brand di footer. Default: SMK3-ISO.LAN */
+  brandName?: string;
+  /** Kolom footer (selain kolom brand). */
+  columns?: FooterColumn[];
+  /** Tampilkan kolom brand? Default: true */
+  showBrand?: boolean;
+  /** Tampilkan footer-bottom (copyright)? Default: true */
+  showBottom?: boolean;
+}
+
+const {
+  brandDescription = `${site.company} — Mitra Resmi Implementasi SMK3 & ISO 45001 Indonesia.`,
+  brandName = 'SMK3-ISO.LAN',
+  columns = [],
+  showBrand = true,
+  showBottom = true,
+} = Astro.props;
+---
+
+<footer class="footer">
+  <div class="footer-container">
+    {showBrand && (
+      <div class="footer-col footer-col--brand">
+        <h2 class="footer-col__title">{brandName}</h2>
+        <p class="footer-col__desc">{brandDescription}</p>
+      </div>
+    )}
+    {columns.map((col) => (
+      <div class="footer-col footer-col--links">
+        <h2 class="footer-col__title">{col.title}</h2>
+        {col.items.length > 0 ? (
+          <ul class="footer-col__list">
+            {col.items.map((item) => (
+              <li>
+                <a class="footer-col__link" href={item.href}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p class="footer-col__empty">Tidak ada item</p>
+        )}
+      </div>
+    ))}
+  </div>
+
+  {showBottom && (
+    <div class="footer-bottom">
+      <p class="footer-bottom__copy">&copy; 2026 {site.company}. Hak Cipta Dilindungi Undang-Undang.</p>
+    </div>
+  )}
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    margin-top: 5rem;
+    padding: 3rem 1.5rem;
+    background: var(--surface);
+  }
+
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-col__title {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .footer-col__desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .footer-col__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .footer-col__link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: block;
+    transition: color 0.15s ease;
+  }
+
+  .footer-col__link:hover {
+    color: var(--accent);
+  }
+
+  .footer-col__empty {
+    color: var(--text-dim);
+    font-size: 0.85rem;
+    margin: 0;
+  }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 2rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-bottom__copy {
+    margin: 0;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      margin-top: 3rem;
+      padding: 2rem 1.25rem;
+    }
+  }
+</style>

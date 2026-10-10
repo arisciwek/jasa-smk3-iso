@@ -1,8 +1,10 @@
 ---
 import { site } from '../data/site';
+import Footer from '../components/Footer.astro';
+import type { FooterColumn } from '../components/Footer.astro';
 
 const {
-  title = "SMK3 & ISO 45001 Indonesia — Konsultan K3 Terpercaya", 
+  title = "SMK3 & ISO 45001 Indonesia — Konsultan K3 Terpercaya",
   description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/2012 dan ISO 45001:2018 resmi Kemenaker RI & KAN.",
   image = '/assets/images/organization-logo.svg',
   images = [],
@@ -14,7 +16,31 @@ const {
   dateModified,
   lastmod,
   breadcrumbs = [],
+  footerColumns = [] as FooterColumn[],
+  footerBrandDescription,
+  showFooter = true,
 } = Astro.props;
+
+const defaultFooterColumns: FooterColumn[] = [
+  {
+    title: 'LAYANAN',
+    items: [
+      { label: 'Implementasi SMK3', href: '/layanan/smk3/' },
+      { label: 'ISO 45001:2018', href: '/layanan/iso-45001/' },
+      { label: 'Audit Internal K3', href: '/layanan/audit-internal/' },
+      { label: 'Semua layanan', href: '/layanan/' },
+    ],
+  },
+  {
+    title: 'KATEGORI ARTIKEL',
+    items: [
+      { label: 'Regulasi & Hukum K3', href: '/artikel/kategori/regulasi/' },
+      { label: 'Teknis & Metode K3', href: '/artikel/kategori/teknis/' },
+      { label: 'Case Study Implementasi', href: '/artikel/kategori/case-study/' },
+      { label: 'Tips & Panduan', href: '/artikel/kategori/tips-panduan/' },
+    ],
+  },
+];
 
 const currentPath = Astro.url.pathname;
 const isActive = (path) => path === '/' ? currentPath === '/' : currentPath.startsWith(path);
@@ -343,24 +369,6 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
     .article-card:hover .article-card-link span { transform: translateX(3px); }
     .latest-articles { margin-top: 4rem; }
 
-    footer {
-      border-top: 1px solid var(--border);
-      margin-top: 5rem; padding: 3rem 1.5rem;
-      background: var(--surface);
-    }
-    .footer-container {
-      max-width: 1200px; margin: 0 auto;
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;
-    }
-    .footer-col h4 { font-family: var(--font-mono); font-size: 0.85rem; color: var(--text); margin-bottom: 1rem; }
-    .footer-col ul { list-style: none; }
-    .footer-col a { color: var(--text-muted); text-decoration: none; font-size: 0.85rem; display: block; margin-bottom: 0.5rem; }
-    .footer-col a:hover { color: var(--accent); }
-    .footer-bottom {
-      max-width: 1200px; margin: 2rem auto 0; padding-top: 1.5rem;
-      border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--text-dim);
-      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
-    }
     /* Mobile menu button */
     .mobile-menu-btn {
       display: none;
@@ -515,35 +523,12 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
 
   <slot />
 
-  <footer>
-    <div class="footer-container">
-      <div class="footer-col">
-        <h2>SMK3-ISO.LAN</h2>
-        <p style="font-size: 0.85rem; color: var(--text-muted);">{site.company} — Mitra Resmi Implementasi SMK3 & ISO 45001 Indonesia.</p>
-      </div>
-      <div class="footer-col">
-        <h2>LAYANAN</h2>
-        <ul>
-          <li><a href="/layanan/smk3/">Implementasi SMK3</a></li>
-          <li><a href="/layanan/iso-45001/">ISO 45001:2018</a></li>
-          <li><a href="/layanan/audit-internal/">Audit Internal K3</a></li>
-              <li><a href="/layanan/">Semua layanan</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h2>KATEGORI ARTIKEL</h2>
-        <ul>
-          <li><a href="/artikel/kategori/regulasi/">Regulasi & Hukum K3</a></li>
-          <li><a href="/artikel/kategori/teknis/">Teknis & Metode K3</a></li>
-          <li><a href="/artikel/kategori/case-study/">Case Study Implementasi</a></li>
-          <li><a href="/artikel/kategori/tips-panduan/">Tips & Panduan</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div>&copy; 2026 {site.company}. Hak Cipta Dilindungi Undang-Undang.</div>
-    </div>
-  </footer>
+  {showFooter && (
+    <Footer
+      columns={footerColumns.length > 0 ? footerColumns : defaultFooterColumns}
+      brandDescription={footerBrandDescription}
+    />
+  )}
 
   <a class="whatsapp-float" href={site.waLink('Halo, saya ingin berkonsultasi mengenai layanan SMK3 dan ISO.')} aria-label={`Hubungi ${site.company} melalui WhatsApp`} target="_blank" rel="noopener noreferrer">
     <img src="/assets/images/icon-whatsapp.svg" alt="Ikon WhatsApp" width="48" height="48" />
