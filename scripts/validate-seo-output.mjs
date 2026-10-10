@@ -28,7 +28,7 @@ for (const file of pages) {
   if (!html.includes('property="og:image:width"')) failures.push(`${route}: missing og:image:width`);
   if (!html.includes('property="og:image:height"')) failures.push(`${route}: missing og:image:height`);
   if (!html.includes('property="og:image:type"')) failures.push(`${route}: missing og:image:type`);
-  const isCityServicePage = route.startsWith('/artikel/jasa-smk3-');
+  const isCityServicePage = route.startsWith('/artikel/jasa-smk3-') || route.startsWith('/artikel/jasa-iso-');
   if (route.startsWith('/artikel/') && !isCityServicePage && !route.includes('/kategori/') && !['/artikel/', '/artikel/smk3/', '/artikel/iso-45001/'].includes(route) && !html.includes('property="og:type" content="article"')) {
     failures.push(`${route}: article page must use og:type=article`);
   }
@@ -40,16 +40,28 @@ for (const file of pages) {
 const citySource = readFileSync(join(root, 'src/data/cities.ts'), 'utf8');
 const cities = [...citySource.matchAll(/\['([^']+)', '([^']+)'\]/g)].map((match) => match[1].toLowerCase().replace(/\s+/g, '-'));
 for (const slug of cities) {
-  const file = join(root, 'src/data/jasa-smk3', `${slug}.json`);
-  if (!existsSync(file)) {
-    failures.push(`city/${slug}: missing content file`);
+  const fileSmk3 = join(root, 'src/data/jasa-smk3', `${slug}.json`);
+  if (!existsSync(fileSmk3)) {
+    failures.push(`city/${slug}: missing jasa-smk3 content file`);
     continue;
   }
-  const data = JSON.parse(readFileSync(file, 'utf8'));
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(data.lastmod || '')) failures.push(`city/${slug}: invalid lastmod`);
-  if (!Array.isArray(data.paragraphs) || data.paragraphs.length < 3) failures.push(`city/${slug}: fewer than 3 paragraphs`);
-  if ((data.paragraphs || []).some((paragraph) => typeof paragraph.text !== 'string' || paragraph.text.trim().length < 120)) {
-    failures.push(`city/${slug}: paragraph is too short`);
+  const dataSmk3 = JSON.parse(readFileSync(fileSmk3, 'utf8'));
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dataSmk3.lastmod || '')) failures.push(`city/${slug}: invalid jasa-smk3 lastmod`);
+  if (!Array.isArray(dataSmk3.paragraphs) || dataSmk3.paragraphs.length < 3) failures.push(`city/${slug}: fewer than 3 jasa-smk3 paragraphs`);
+  if ((dataSmk3.paragraphs || []).some((paragraph) => typeof paragraph.text !== 'string' || paragraph.text.trim().length < 120)) {
+    failures.push(`city/${slug}: jasa-smk3 paragraph is too short`);
+  }
+
+  const fileIso = join(root, 'src/data/jasa-iso', `${slug}.json`);
+  if (!existsSync(fileIso)) {
+    failures.push(`city/${slug}: missing jasa-iso content file`);
+    continue;
+  }
+  const dataIso = JSON.parse(readFileSync(fileIso, 'utf8'));
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(dataIso.lastmod || '')) failures.push(`city/${slug}: invalid jasa-iso lastmod`);
+  if (!Array.isArray(dataIso.paragraphs) || dataIso.paragraphs.length < 3) failures.push(`city/${slug}: fewer than 3 jasa-iso paragraphs`);
+  if ((dataIso.paragraphs || []).some((paragraph) => typeof paragraph.text !== 'string' || paragraph.text.trim().length < 120)) {
+    failures.push(`city/${slug}: jasa-iso paragraph is too short`);
   }
 }
 

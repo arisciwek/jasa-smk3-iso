@@ -10,6 +10,50 @@
     "publishAutomatically": true,
     "changeLastmodOnlyWhenContentChanges": true
   },
+  "isoTopics": [
+    {
+      "id": "karakteristik-lokal",
+      "label": "Karakteristik lokal",
+      "instruction": "Tambahkan satu paragraf yang menjelaskan konteks kota atau wilayah secara faktual dan relevan bagi pembaca lokal yang memerlukan sertifikasi ISO.",
+      "evidenceRequired": true,
+      "maxWords": 120
+    },
+    {
+      "id": "sektor-usaha-lokal",
+      "label": "Sektor usaha lokal",
+      "instruction": "Tambahkan satu paragraf tentang sektor usaha yang benar-benar tercatat di kota tersebut dan kebutuhan sertifikasi ISO yang relevan (ISO 9001, 14001, 45001, 27001, dll).",
+      "evidenceRequired": true,
+      "maxWords": 120
+    },
+    {
+      "id": "akses-layanan-lokal",
+      "label": "Akses layanan sertifikasi",
+      "instruction": "Tambahkan satu paragraf yang menjelaskan cakupan dan cara menghubungi layanan sertifikasi ISO untuk perusahaan di kota tersebut tanpa membuat klaim waktu atau jarak yang tidak terverifikasi.",
+      "evidenceRequired": false,
+      "maxWords": 100
+    },
+    {
+      "id": "tantangan-operasional",
+      "label": "Tantangan operasional sertifikasi",
+      "instruction": "Tambahkan satu paragraf tentang tantangan operasional yang relevan dengan konteks kota untuk penerapan sistem manajemen ISO berdasarkan sumber yang dapat diverifikasi.",
+      "evidenceRequired": true,
+      "maxWords": 120
+    },
+    {
+      "id": "pertanyaan-perusahaan-lokal",
+      "label": "Pertanyaan perusahaan lokal",
+      "instruction": "Tambahkan satu paragraf yang menjawab satu pertanyaan realistis dari perusahaan di kota tersebut tentang sertifikasi ISO, tanpa mengulang penjelasan umum tentang standar.",
+      "evidenceRequired": false,
+      "maxWords": 120
+    },
+    {
+      "id": "kesiapan-onsite",
+      "label": "Kesiapan pendampingan onsite",
+      "instruction": "Tambahkan satu paragraf tentang informasi yang perlu disiapkan perusahaan di kota tersebut sebelum meminta pendampingan sertifikasi ISO onsite.",
+      "evidenceRequired": false,
+      "maxWords": 100
+    }
+  ],
   "articleIdeas": [
     {
       "id": "audit-internal-vs-eksternal-smk3",
