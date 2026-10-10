@@ -59,31 +59,27 @@ const getDateModified = (pathname) => {
 };
 
 const getLastmodForPath = (pathname) => {
-  // 1. Try dateModified from HTML (most accurate for built pages)
-  const htmlDate = getDateModified(pathname);
-  if (htmlDate) return htmlDate; // Already full ISO from HTML
-
-  // 2. Service pages: use service-lastmod.json
+  // 1. Service pages: use service-lastmod.json (full UTC ISO 8601)
   if (pathname.startsWith('/layanan/')) {
     const serviceSlug = pathname.replace('/layanan/', '').replace('/', '');
     if (serviceLastmod[serviceSlug]?.lastmod) {
-      return serviceLastmod[serviceSlug].lastmod; // Full UTC ISO 8601
+      return serviceLastmod[serviceSlug].lastmod;
     }
   }
 
-  // 3. Article pages: use article frontmatter
+  // 2. Article pages: use article frontmatter (full UTC ISO 8601)
   if (pathname.startsWith('/artikel/') && !pathname.includes('/kategori/') && 
       !['/artikel/', '/artikel/smk3/', '/artikel/iso-45001/'].includes(pathname)) {
     const slug = pathname.replace('/artikel/', '').replace('/', '');
     if (articleDates[slug]?.lastmod) {
-      return articleDates[slug].lastmod; // Full UTC ISO 8601
+      return articleDates[slug].lastmod;
     }
     if (articleDates[slug]?.date) {
-      return articleDates[slug].date; // Full UTC ISO 8601
+      return articleDates[slug].date;
     }
   }
 
-  // 4. Category pages: find latest article in category
+  // 3. Category pages: find latest article in category
   if (pathname.includes('/kategori/')) {
     let latestDate = null;
     for (const [, data] of Object.entries(articleDates)) {
@@ -92,10 +88,10 @@ const getLastmodForPath = (pathname) => {
         latestDate = articleDate;
       }
     }
-    if (latestDate) return latestDate; // Full UTC ISO 8601
+    if (latestDate) return latestDate;
   }
 
-  // 5. Homepage: latest article overall
+  // 4. Homepage: latest article overall
   if (pathname === '/' || pathname === '') {
     let latestDate = null;
     for (const [, data] of Object.entries(articleDates)) {
@@ -104,10 +100,10 @@ const getLastmodForPath = (pathname) => {
         latestDate = articleDate;
       }
     }
-    if (latestDate) return latestDate; // Full UTC ISO 8601
+    if (latestDate) return latestDate;
   }
 
-  // 6. Service index page
+  // 5. Service index page
   if (pathname === '/layanan/') {
     let latestDate = null;
     for (const [, data] of Object.entries(serviceLastmod)) {
@@ -115,10 +111,10 @@ const getLastmodForPath = (pathname) => {
         latestDate = data.lastmod;
       }
     }
-    if (latestDate) return latestDate; // Full UTC ISO 8601
+    if (latestDate) return latestDate;
   }
 
-  // 7. Article index page
+  // 6. Article index page
   if (pathname === '/artikel/') {
     let latestDate = null;
     for (const [, data] of Object.entries(articleDates)) {
@@ -127,10 +123,22 @@ const getLastmodForPath = (pathname) => {
         latestDate = articleDate;
       }
     }
-    if (latestDate) return latestDate; // Full UTC ISO 8601
+    if (latestDate) return latestDate;
   }
 
-  // 8. Default fallback - use full UTC ISO 8601
+  // 7. Reference pages (/artikel/smk3/, /artikel/iso-45001/)
+  if (pathname === '/artikel/smk3/' || pathname === '/artikel/iso-45001/') {
+    let latestDate = null;
+    for (const [, data] of Object.entries(articleDates)) {
+      const articleDate = data.lastmod || data.date;
+      if (articleDate && (!latestDate || articleDate > latestDate)) {
+        latestDate = articleDate;
+      }
+    }
+    if (latestDate) return latestDate;
+  }
+
+  // 8. Default fallback - full UTC ISO 8601
   return '2026-10-10T07:00:00Z';
 };
 
