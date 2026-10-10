@@ -42,8 +42,8 @@ if (existsSync(articlesDir)) {
   }
 }
 
-// Default fallback date (today)
-const DEFAULT_DATE = '2026-10-10';
+// Default fallback date (today) - full UTC ISO 8601
+const DEFAULT_DATE = '2026-10-10T07:00:00Z';
 
 const getPageFile = (pathname) => {
   const cleanPath = pathname.replace(/^\/+|\/+$/g, '');
@@ -61,13 +61,13 @@ const getDateModified = (pathname) => {
 const getLastmodForPath = (pathname) => {
   // 1. Try dateModified from HTML (most accurate for built pages)
   const htmlDate = getDateModified(pathname);
-  if (htmlDate) return htmlDate;
+  if (htmlDate) return htmlDate; // Already full ISO from HTML
 
   // 2. Service pages: use service-lastmod.json
   if (pathname.startsWith('/layanan/')) {
     const serviceSlug = pathname.replace('/layanan/', '').replace('/', '');
     if (serviceLastmod[serviceSlug]?.lastmod) {
-      return serviceLastmod[serviceSlug].lastmod.split('T')[0]; // YYYY-MM-DD
+      return serviceLastmod[serviceSlug].lastmod; // Full UTC ISO 8601
     }
   }
 
@@ -76,10 +76,10 @@ const getLastmodForPath = (pathname) => {
       !['/artikel/', '/artikel/smk3/', '/artikel/iso-45001/'].includes(pathname)) {
     const slug = pathname.replace('/artikel/', '').replace('/', '');
     if (articleDates[slug]?.lastmod) {
-      return articleDates[slug].lastmod.split('T')[0];
+      return articleDates[slug].lastmod; // Full UTC ISO 8601
     }
     if (articleDates[slug]?.date) {
-      return articleDates[slug].date.split('T')[0];
+      return articleDates[slug].date; // Full UTC ISO 8601
     }
   }
 
@@ -92,7 +92,7 @@ const getLastmodForPath = (pathname) => {
         latestDate = articleDate;
       }
     }
-    if (latestDate) return latestDate.split('T')[0];
+    if (latestDate) return latestDate; // Full UTC ISO 8601
   }
 
   // 5. Homepage: latest article overall
@@ -104,7 +104,7 @@ const getLastmodForPath = (pathname) => {
         latestDate = articleDate;
       }
     }
-    if (latestDate) return latestDate.split('T')[0];
+    if (latestDate) return latestDate; // Full UTC ISO 8601
   }
 
   // 6. Service index page
@@ -115,7 +115,7 @@ const getLastmodForPath = (pathname) => {
         latestDate = data.lastmod;
       }
     }
-    if (latestDate) return latestDate.split('T')[0];
+    if (latestDate) return latestDate; // Full UTC ISO 8601
   }
 
   // 7. Article index page
@@ -127,11 +127,11 @@ const getLastmodForPath = (pathname) => {
         latestDate = articleDate;
       }
     }
-    if (latestDate) return latestDate.split('T')[0];
+    if (latestDate) return latestDate; // Full UTC ISO 8601
   }
 
-  // 8. Default fallback
-  return DEFAULT_DATE;
+  // 8. Default fallback - use full UTC ISO 8601
+  return '2026-10-10T07:00:00Z';
 };
 
 if (existsSync(FILE)) {
