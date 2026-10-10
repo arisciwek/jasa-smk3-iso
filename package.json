@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "node scripts/generate-jasa-smk3-svg-assets.mjs && astro build && node scripts/fix-sitemap-lastmod.mjs && node scripts/validate-seo-output.mjs",
+    "build": "astro build && node scripts/fix-sitemap-lastmod.mjs && node scripts/validate-seo-output.mjs",
     "preview": "astro preview",
     "astro": "astro"
   },

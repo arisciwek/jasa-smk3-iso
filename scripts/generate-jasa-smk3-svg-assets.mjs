@@ -77,12 +77,23 @@ function buildCitySvg(city) {
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 96" role="img"><title>Ilustrasi layanan SMK3 onsite di ${name}, ${region}</title><rect width="160" height="96" rx="8" fill="#141519" stroke="rgba(255,255,255,0.08)"/>${dots}<path d="M${pinX} ${pinY - 24}c-18 0-32 14-32 32 0 22 32 40 32 40s32-18 32-40c0-18-14-32-32-32Z" fill="none" stroke="${color}" stroke-width="6"/><circle cx="${pinX}" cy="${pinY}" r="10" fill="none" stroke="${color}" stroke-width="5"/><path d="${roadPaths}" stroke="${color}" stroke-width="5" stroke-linecap="round"/><text x="80" y="90" font-family="monospace" font-size="7" fill="#8a8f98" text-anchor="middle">${name} · ${region}</text></svg>`;
 }
 
-let count = 0;
+let generated = 0;
+let skipped = 0;
 for (const city of cityRows) {
   const fileName = `jasa-smk3-${city.slug}.svg`;
   const filePath = path.join(outputDir, fileName);
-  fs.writeFileSync(filePath, buildCitySvg(city) + '\n');
-  count++;
+  const expected = buildCitySvg(city) + '\n';
+
+  if (fs.existsSync(filePath)) {
+    const current = fs.readFileSync(filePath, 'utf8');
+    if (current === expected) {
+      skipped++;
+      continue;
+    }
+  }
+
+  fs.writeFileSync(filePath, expected);
+  generated++;
 }
 
-console.log(`SVG aset Jasa SMK3 generate: ${count} file di public/assets/images/jasa-smk3/`);
+console.log(`SVG aset Jasa SMK3: ${generated} di-generate, ${skipped} di-skip (sudah ada) di public/assets/images/jasa-smk3/`);
