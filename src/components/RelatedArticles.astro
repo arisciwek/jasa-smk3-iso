@@ -1,0 +1,94 @@
+---
+// Reusable component: displays up to 2 related articles for a given service slug.
+// Used on service detail pages to show cross-referenced content.
+
+import Card from './Card.astro';
+import { getCollection } from 'astro:content';
+
+interface Props {
+  serviceSlug: string;
+  eyebrow?: string;
+  title?: string;
+}
+
+const { serviceSlug, eyebrow = '// ARTIKEL TERKAIT', title = 'Artikel Terkait' } = Astro.props;
+
+const getRelatedArticles = async () => {
+  try {
+    const articles = await getCollection('articles');
+    const related = articles
+      .filter(article =>
+        article.data.serviceSlugs &&
+        Array.isArray(article.data.serviceSlugs) &&
+        article.data.serviceSlugs.includes(serviceSlug)
+      )
+      .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime())
+      .slice(0, 2);
+
+    return related.map(article => ({
+      title: article.data.title,
+      description: article.data.description,
+      slug: article.id,
+      image: article.data.image,
+      imageAlt: article.data.imageAlt,
+      date: article.data.date,
+      lastmod: article.data.lastmod,
+    }));
+  } catch (error) {
+    console.error('Error fetching related articles:', error);
+    return [];
+  }
+};
+
+const related = await getRelatedArticles();
+---
+
+{related.length > 0 && (
+  <section class="related-articles">
+    <div class="related-articles-header">
+      <div class="related-articles-eyebrow">{eyebrow}</div>
+      <h2 class="related-articles-title">{title}</h2>
+    </div>
+    <div class="article-grid">
+      {related.map(article => (
+        <Card
+          title={article.title}
+          description={article.description}
+          image={article.image}
+          imageAlt={article.imageAlt}
+          href={`/artikel/${article.slug}/`}
+          date={article.lastmod || article.date}
+        />
+      ))}
+    </div>
+  </section>
+)}
+
+<style>
+  .related-articles {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  .related-articles-header {
+    margin-bottom: 1.5rem;
+  }
+  .related-articles-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  .related-articles-title {
+    font-size: 1.5rem;
+    color: var(--text);
+    margin: 0;
+  }
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+</style>

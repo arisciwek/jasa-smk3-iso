@@ -23,6 +23,7 @@ const articles = defineCollection({
     readTime: z.string().optional(),
     image: z.string().optional(),
     imageAlt: z.string().optional(),
+    serviceSlugs: z.array(z.string()).default([]),
   }),
 });
 
