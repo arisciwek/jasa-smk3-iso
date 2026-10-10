@@ -45,7 +45,10 @@ const description = 'Peta halaman dan rujukan SMK3, ISO 45001, layanan konsultas
             <p>{region.blurb}</p>
             <ul>
               {citiesByRegion(region.name).map((city) => (
-                <li><a href={`/artikel/jasa-smk3-${city.slug}/`}>Jasa SMK3 {city.name}</a></li>
+                <>
+                  <li><a href={`/artikel/jasa-smk3-${city.slug}/`}>Jasa SMK3 {city.name}</a></li>
+                  <li><a href={`/artikel/jasa-iso-${city.slug}/`}>Jasa Sertifikasi ISO {city.name}</a></li>
+                </>
               ))}
             </ul>
           </section>
