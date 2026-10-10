@@ -100,7 +100,7 @@ Target utama:
 
 ```text
 src/data/cities.ts
-src/data/city-content/*.json
+src/data/jasa-smk3/*.json
 src/pages/artikel/jasa-smk3-[slug].astro
 ```
 

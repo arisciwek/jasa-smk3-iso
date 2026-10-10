@@ -47,7 +47,7 @@ Use `git diff --check` before committing. Do not commit generated `dist/` or `.a
 - Reusable UI: `src/components/`
 - Site/business data and environment defaults: `src/data/site.ts`
 - Article and page content: `src/content/`
-- City landing-page data: `src/data/cities.ts` and `src/data/city-content/`
+- City landing-page data: `src/data/cities.ts` and `src/data/jasa-smk3/`
 
 ## Navigation and responsive behavior
 
