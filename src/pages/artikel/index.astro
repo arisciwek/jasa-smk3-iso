@@ -6,9 +6,9 @@ import { getCollection } from 'astro:content';
 const title = "Artikel & Panduan K3 — Rujukan Teknis SMK3 & ISO 45001";
 const description = "Pusat rujukan teknis, update regulasi, case study implementasi, dan tips praktis keselamatan kerja.";
 const articles = await getCollection('articles');
-const latestArticles = articles
-  .sort((a, b) => (b.data.lastmod || b.data.date).localeCompare(a.data.lastmod || a.data.date))
-  .slice(4, 8);
+const sortedArticles = articles.sort((a, b) => (b.data.lastmod || b.data.date).localeCompare(a.data.lastmod || a.data.date));
+const latestArticles = sortedArticles.slice(4, 8);
+const latestLastmod = sortedArticles[0] ? (sortedArticles[0].data.lastmod || sortedArticles[0].data.date) : undefined;
 ---
 
 <BaseLayout
@@ -16,6 +16,7 @@ const latestArticles = articles
   description={description}
   image="/assets/images/page-articles.svg"
   breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Artikel', url: '/artikel/' }]}
+  lastmod={latestLastmod}
 >
   <main class="content-section">
     <div style="max-width: 1000px; margin: 0 auto;">

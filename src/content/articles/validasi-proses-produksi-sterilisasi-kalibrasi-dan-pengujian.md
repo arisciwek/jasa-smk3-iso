@@ -2,7 +2,7 @@
 title: "Validasi Proses Produksi: Sterilisasi, Kalibrasi, dan Pengujian"
 description: "Cara melakukan validasi proses produksi untuk perangkat medis, termasuk sterilisasi, kalibrasi, dan pengujian."
 date: "2026-10-10T07:00:00Z"
-lastmod: "2026-10-10T07:00:00Z"
+lastmod: "2026-10-10T14:01:47Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-13485", "validasi", "sterilisasi", "kalibrasi"]
@@ -13,6 +13,8 @@ serviceSlugs: ["iso-13485"]
 ---
 
 Validasi proses produksi adalah langkah penting dalam sistem manajemen mutu ISO 13485 untuk perangkat medis. Tanpa validasi proses produksi yang baik, organisasi dapat memproduksi perangkat medis yang tidak memenuhi standar. Validasi proses produksi yang baik membantu organisasi memastikan bahwa proses produksi memenuhi standar.
+
+Parameter validasi meliputi kualifikasi instalasi (IQ), kualifikasi operasional (OQ), dan kualifikasi kinerja (PQ) untuk setiap tahap kritis: sterilisasi, kalibrasi alat ukur, dan pengujian produk. Setiap parameter harus terdokumentasi dengan bukti objektif, data statistik, dan kesimpulan kesesuaian dengan spesifikasi produk serta persyaratan regulasi. Dokumentasi lengkap memudahkan audit internal, audit sertifikasi, dan peninjauan manajemen.
 
 ## Mengapa Validasi Penting?
 
