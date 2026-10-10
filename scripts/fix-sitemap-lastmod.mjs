@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const FILE = 'dist/sitemap-0.xml';
 const FILE_INDEX = 'dist/sitemap-index.xml';
-const XSL_PI = '<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>';
+// XSLT stylesheet removed - deprecated in browsers
 
 // Load service lastmod data
 const serviceLastmodPath = 'src/data/service-lastmod.json';
@@ -155,22 +155,18 @@ if (existsSync(FILE)) {
     return `<url>${inner.replace('</loc>', `</loc><lastmod>${lastmod}</lastmod>`)}</url>`;
   });
 
-  // Pastikan sitemap memiliki stylesheet style XSLT
-  if (!xml.includes('xml-stylesheet')) {
-    xml = xml.replace(/^<\?xml[^>]*\?>/, (pi) => `${pi}${XSL_PI}`);
-  }
-
   writeFileSync(FILE, xml);
-  console.log('✓ sitemap-0.xml: stylesheet diperiksa & lastmod disinkronkan untuk SEMUA halaman');
+  console.log('✓ sitemap-0.xml: lastmod disinkronkan untuk SEMUA halaman');
 } else {
   console.warn('sitemap-0.xml tidak ditemukan!');
 }
 
 if (existsSync(FILE_INDEX)) {
   let idx = readFileSync(FILE_INDEX, 'utf8');
-  if (!idx.includes('xml-stylesheet')) {
-    idx = idx.replace(/^<\?xml[^>]*\?>/, (pi) => `${pi}${XSL_PI}`);
+  // Remove any existing XSLT stylesheet reference
+  if (idx.includes('xml-stylesheet')) {
+    idx = idx.replace(/<\?xml-stylesheet[^>]*\?>\s*/, '');
   }
   writeFileSync(FILE_INDEX, idx);
-  console.log('✓ sitemap-index.xml: stylesheet disisipkan');
+  console.log('✓ sitemap-index.xml: lastmod disinkronkan');
 }
