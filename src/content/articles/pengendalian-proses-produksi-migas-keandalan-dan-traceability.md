@@ -1,18 +1,18 @@
 ---
 title: "Pengendalian Proses Produksi Migas: Keandalan dan Traceability"
 description: "Cara mengendalikan proses produksi migas untuk memastikan keandalan dan traceability."
-date: "2026-11-28"
-lastmod: "2026-11-28"
+date: "2026-12-01"
+lastmod: "2026-12-01"
 author: "Tim Konsultan K3"
 category: "Teknis"
-tags: ["api-q1", "produksi", "keandalan"]
+tags: ["api-q2", "produksi", "keandalan"]
 readTime: "6 menit"
 image: "/assets/images/article-hirarki-risiko.svg"
 imageAlt: "Ilustrasi pengendalian proses produksi migas"
-serviceSlugs: ["api-q1"]
+serviceSlugs: ["api-q2"]
 ---
 
-Pengendalian proses produksi migas adalah langkah penting dalam sistem manajemen mutu API Q1 untuk industri migas. Without pengendalian yang baik, organisasi dapat menghadapi proses produksi yang tidak memenuhi standar. Pengendalian yang baik membantu organisasi memastikan bahwa proses produksi memenuhi standar.
+Pengendalian proses produksi migas adalah langkah penting dalam sistem manajemen mutu API Q2 untuk industri migas. Without pengendalian yang baik, organisasi dapat menghadapi proses produksi yang tidak memenuhi standar. Pengendalian yang baik membantu organisasi memastikan bahwa proses produksi memenuhi standar.
 
 ## Mengapa Pengendalian Penting?
 

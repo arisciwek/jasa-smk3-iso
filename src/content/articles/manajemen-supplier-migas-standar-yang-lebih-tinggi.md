@@ -1,18 +1,18 @@
 ---
 title: "Manajemen Supplier Migas: Standar yang Lebih Tinggi"
 description: "Cara mengelola supplier migas dengan standar yang lebih tinggi."
-date: "2026-11-27"
-lastmod: "2026-11-27"
+date: "2026-11-30"
+lastmod: "2026-11-30"
 author: "Tim Konsultan K3"
 category: "Teknis"
-tags: ["api-q1", "supplier", "migas"]
+tags: ["api-q2", "supplier", "migas"]
 readTime: "6 menit"
 image: "/assets/images/article-hirarki-risiko.svg"
 imageAlt: "Ilustrasi manajemen supplier migas"
-serviceSlugs: ["api-q1"]
+serviceSlugs: ["api-q2"]
 ---
 
-Manajemen supplier migas adalah langkah penting dalam sistem manajemen mutu API Q1 untuk industri migas. Without manajemen yang baik, organisasi dapat menghadapi supplier yang tidak memenuhi standar. Manajemen yang baik membantu organisasi memastikan bahwa supplier memenuhi standar.
+Manajemen supplier migas adalah langkah penting dalam sistem manajemen mutu API Q2 untuk industri migas. Without manajemen yang baik, organisasi dapat menghadapi supplier yang tidak memenuhi standar. Manajemen yang baik membantu organisasi memastikan bahwa supplier memenuhi standar.
 
 ## Mengapa Manajemen Supplier Penting?
 
