@@ -1,8 +1,8 @@
 ---
 title: "Identifikasi Aspek dan Dampak Lingkungan: Metode Praktis untuk Pabrik dan Kantor"
 description: "Cara praktis mengidentifikasi aspek dan dampak lingkungan yang relevan dengan operasional organisasi, baik pabrik maupun kantor."
-date: "2026-10-24"
-lastmod: "2026-10-24"
+date: "2026-09-19T07:00:00Z"
+lastmod: "2026-09-19T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-14001", "aspek-lingkungan", "dampak-lingkungan"]

@@ -1,8 +1,8 @@
 ---
 title: "Inventarisasi dan Klasifikasi Aset: Hierarki Aset yang Mendukung Keputusan"
 description: "Cara menyusun inventaris aset dan mengklasifikasikannya menjadi hierarki yang membantu pengambilan keputusan."
-date: "2026-11-02"
-lastmod: "2026-11-02"
+date: "2026-09-25T07:00:00Z"
+lastmod: "2026-09-25T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-55001", "aset", "inventarisasi"]

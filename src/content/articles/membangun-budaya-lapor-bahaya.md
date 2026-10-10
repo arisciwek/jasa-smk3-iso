@@ -1,8 +1,8 @@
 ---
 title: "Memulai Kebiasaan Melaporkan Bahaya"
 description: "Langkah kecil untuk membangun budaya pelaporan bahaya tanpa menyalahkan orang yang menyampaikan masalah."
-date: "2026-10-01"
-lastmod: "2026-10-01"
+date: "2026-09-03T07:00:00Z"
+lastmod: "2026-09-03T07:00:00Z"
 category: "Tips & Panduan"
 author: "Tim Konsultan K3"
 readTime: "5 menit"

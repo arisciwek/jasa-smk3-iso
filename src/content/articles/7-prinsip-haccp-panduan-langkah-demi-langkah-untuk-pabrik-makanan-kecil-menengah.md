@@ -1,8 +1,8 @@
 ---
 title: "7 Prinsip HACCP: Panduan Langkah demi Langkah untuk Pabrik Makanan Kecil Menengah"
 description: "Panduan praktis menerapkan 7 prinsip HACCP untuk pabrik makanan kecil dan menengah."
-date: "2026-11-11"
-lastmod: "2026-11-11"
+date: "2026-10-09T07:00:00Z"
+lastmod: "2026-10-09T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["haccp", "keamanan-pangan", "pabrik-makanan"]

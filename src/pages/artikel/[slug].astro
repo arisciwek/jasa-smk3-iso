@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticlePagination from '../../components/ArticlePagination.astro';
 import { site } from '../../data/site';
+import { toDisplayDate, toJsonLdDate } from '../../utils/date';
 
 export async function getStaticPaths() {
   const articles = (await getCollection('articles')).sort((a, b) =>
@@ -29,8 +30,8 @@ const articleSchema = {
   '@type': 'Article',
   headline: article.data.title,
   description: article.data.description,
-  datePublished: article.data.date,
-  dateModified: lastmod,
+  datePublished: toJsonLdDate(article.data.date),
+  dateModified: toJsonLdDate(lastmod),
   author: { '@type': 'Person', name: article.data.author },
   image: imageUrl,
   mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
@@ -60,7 +61,7 @@ const articleSchema = {
       <img class="article-detail-image" src={article.data.image || '/assets/images/page-articles.svg'} alt={article.data.imageAlt || `Ilustrasi ${article.data.title}`} width="640" height="360" />
       <div class="article-detail-meta">
         <span>Oleh {article.data.author}</span>
-        <time datetime={lastmod}>Diperbarui {lastmod}</time>
+        <time datetime={toJsonLdDate(lastmod)}>Diperbarui {toDisplayDate(lastmod)}</time>
         {article.data.readTime && <span>{article.data.readTime}</span>}
       </div>
     </div>

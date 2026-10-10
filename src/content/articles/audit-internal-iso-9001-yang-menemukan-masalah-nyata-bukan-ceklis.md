@@ -1,8 +1,8 @@
 ---
 title: "Audit Internal ISO 9001 yang Menemukan Masalah Nyata, Bukan Ceklis"
 description: "Cara melakukan audit internal ISO 9001 yang benar-benar mengungkapkan kelemahan sistem, bukan hanya memeriksa kehadiran dokumen."
-date: "2026-10-21"
-lastmod: "2026-10-21"
+date: "2026-09-18T07:00:00Z"
+lastmod: "2026-09-18T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Tips & Panduan"
 tags: ["audit-internal", "iso-9001", "audit"]

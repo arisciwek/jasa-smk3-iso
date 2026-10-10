@@ -1,8 +1,8 @@
 ---
 title: "Manajemen Pascasarar: Pelaporan Kecelakaan dan Kepatuhan Regulasi"
 description: "Cara melakukan manajemen pascasarar untuk perangkat medis, termasuk pelaporan kecelakaan dan kepatuhan regulasi."
-date: "2026-11-16"
-lastmod: "2026-11-16"
+date: "2026-10-10T07:00:00Z"
+lastmod: "2026-10-10T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-13485", "pascasarar", "pelaporan-kecelakaan"]

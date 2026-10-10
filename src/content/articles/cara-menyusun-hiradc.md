@@ -1,8 +1,8 @@
 ---
 title: "Cara Menyusun HIRADC yang Dipakai di Lapangan"
 description: "Tunjukkan alur dari aktivitas kerja, bahaya, risiko, pengendalian, sampai verifikasi lapangan."
-date: "2026-10-18"
-lastmod: "2026-10-18"
+date: "2026-09-10T07:00:00Z"
+lastmod: "2026-09-10T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["hiradc", "identifikasi-bahaya"]

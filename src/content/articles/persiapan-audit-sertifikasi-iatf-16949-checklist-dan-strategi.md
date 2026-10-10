@@ -1,8 +1,8 @@
 ---
 title: "Persiapan Audit Sertifikasi IATF 16949: Checklist dan Strategi"
 description: "Cara mempersiapkan audit sertifikasi IATF 16949 dengan checklist dan strategi yang efektif."
-date: "2026-11-23"
-lastmod: "2026-11-23"
+date: "2026-10-10T07:00:00Z"
+lastmod: "2026-10-10T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iatf-16949", "audit", "otomotif"]

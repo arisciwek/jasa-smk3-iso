@@ -1,8 +1,8 @@
 ---
 title: "Studi Kasus: Membuat Komunikasi K3 Lebih Dipakai"
 description: "Pelajaran dari pendekatan sederhana untuk membuat informasi bahaya dan pengendalian lebih dekat dengan pekerjaan harian."
-date: "2026-10-03"
-lastmod: "2026-10-03"
+date: "2026-09-04T07:00:00Z"
+lastmod: "2026-09-04T07:00:00Z"
 category: "Case Study"
 author: "Tim Konsultan K3"
 readTime: "5 menit"

@@ -1,8 +1,8 @@
 ---
 title: "Kontrol Annex A 2022: Perubahan dari 2013 dan Implementasi Praktis"
 description: "Perbedaan utama antara kontrol Annex A edisi 2013 dan 2022, serta cara memilih dan menerapkannya secara praktis."
-date: "2026-10-28"
-lastmod: "2026-10-28"
+date: "2026-09-22T07:00:00Z"
+lastmod: "2026-09-22T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-27001", "annex-a", "kontrol-keamanan"]

@@ -1,8 +1,8 @@
 ---
 title: "Membaca Kewajiban SMK3 Sebelum Menyusun Dokumen"
 description: "Cara memetakan kebutuhan awal SMK3 berdasarkan aktivitas, risiko, dan tanggung jawab perusahaan."
-date: "2026-10-06"
-lastmod: "2026-10-06"
+date: "2026-09-06T07:00:00Z"
+lastmod: "2026-09-06T07:00:00Z"
 category: "Regulasi"
 author: "Tim Konsultan K3"
 readTime: "5 menit"

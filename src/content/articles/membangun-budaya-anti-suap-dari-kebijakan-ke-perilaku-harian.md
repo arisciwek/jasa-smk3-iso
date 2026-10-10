@@ -1,8 +1,8 @@
 ---
 title: "Membangun Budaya Anti-Suap: Dari Kebijakan ke Perilaku Harian"
 description: "Cara mengubah kebijakan anti-suap menjadi budaya yang benar-benar diikuti oleh semua level organisasi."
-date: "2026-11-01"
-lastmod: "2026-11-01"
+date: "2026-09-26T07:00:00Z"
+lastmod: "2026-09-26T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Case Study"
 tags: ["iso-37001", "budaya-anti-suap", "kebijakan"]

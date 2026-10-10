@@ -1,8 +1,8 @@
 ---
 title: "Pemetaan Proses Berbasis Risiko: Dari Flowchart ke Risk-Based Thinking"
 description: "Cara memetakan proses organisasi menjadi flowchart, mengidentifikasi risiko, dan menerapkan pemikiran berbasis risiko dalam sistem manajemen mutu."
-date: "2026-10-19"
-lastmod: "2026-10-19"
+date: "2026-09-15T07:00:00Z"
+lastmod: "2026-09-15T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["risk-based-thinking", "proses", "iso-9001"]

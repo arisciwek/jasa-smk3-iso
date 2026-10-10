@@ -1,8 +1,8 @@
 ---
 title: "Manajemen Siklus Hidup Aset: Dari Perencanaan hingga Penghapusan"
 description: "Cara mengelola aset sepanjang siklus hidupnya, dari perencanaan hingga penghapusan, untuk memaksimalkan nilai."
-date: "2026-11-04"
-lastmod: "2026-11-04"
+date: "2026-10-02T07:00:00Z"
+lastmod: "2026-10-02T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-55001", "siklus-hidup-aset", "manajemen-aset"]

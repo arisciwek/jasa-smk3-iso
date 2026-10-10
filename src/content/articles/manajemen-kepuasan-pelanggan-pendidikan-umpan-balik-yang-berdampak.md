@@ -1,8 +1,8 @@
 ---
 title: "Manajemen Kepuasan Pelanggan Pendidikan: Umpan Balik yang Berdampak"
 description: "Cara mengelola kepuasan pelanggan dalam organisasi pendidikan dengan umpan balik yang berdampak."
-date: "2026-11-20"
-lastmod: "2026-11-20"
+date: "2026-10-10T07:00:00Z"
+lastmod: "2026-10-10T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-21001", "kepuasan-pelanggan", "pendidikan"]

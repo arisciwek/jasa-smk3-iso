@@ -1,8 +1,8 @@
 ---
 title: "ISO 45001 vs SMK3 PP 50/2012: Mana yang Dulu Bisa Bersamaan?"
 description: "Perbandingan praktis antara ISO 45001 dan SMK3 PP 50/2012, termasuk bagaimana keduanya dapat dipertahankan secara bersamaan."
-date: "2026-10-22"
-lastmod: "2026-10-22"
+date: "2026-09-17T07:00:00Z"
+lastmod: "2026-09-17T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Regulasi"
 tags: ["iso-45001", "smk3", "pp-50-2012"]

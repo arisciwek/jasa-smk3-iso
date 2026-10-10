@@ -1,8 +1,8 @@
 ---
 title: "HACCP vs ISO 22000: Integrasi PRP, OPRP, dan CCP dalam Satu Sistem"
 description: "Perbedaan dan integrasi antara HACCP dan ISO 22000, termasuk bagaimana PRP, OPRP, dan CCP bekerja dalam satu sistem."
-date: "2026-11-08"
-lastmod: "2026-11-08"
+date: "2026-10-07T07:00:00Z"
+lastmod: "2026-10-07T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-22000", "haccp", "keamanan-pangan"]

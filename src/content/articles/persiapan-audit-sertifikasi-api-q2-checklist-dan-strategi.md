@@ -1,8 +1,8 @@
 ---
 title: "Persiapan Audit Sertifikasi API Q2: Checklist dan Strategi"
 description: "Cara mempersiapkan audit sertifikasi API Q2 dengan checklist dan strategi yang efektif."
-date: "2026-11-29"
-lastmod: "2026-11-29"
+date: "2026-10-10T07:00:00Z"
+lastmod: "2026-10-10T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["api-q2", "audit", "migas"]

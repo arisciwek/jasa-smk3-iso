@@ -1,8 +1,8 @@
 ---
 title: "Update Peraturan Pemerintah No. 50 Tahun 2012"
 description: "Perubahan terbaru pada PP 50/2012 yang berlaku sejak 2025."
-date: "2025-01-15"
-lastmod: "2026-10-08"
+date: "2026-09-08T07:00:00Z"
+lastmod: "2026-09-08T07:00:00Z"
 category: "Regulasi"
 author: "Tim Konsultan K3"
 image: "/assets/images/article-pp-50-2012.svg"

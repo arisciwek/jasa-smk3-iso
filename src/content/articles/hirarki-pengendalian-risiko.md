@@ -1,8 +1,8 @@
 ---
 title: "Hirarki Pengendalian Risiko dalam Praktik"
 description: "Mengapa pengendalian risiko perlu dimulai dari sumber bahaya, bukan hanya mengandalkan alat pelindung diri."
-date: "2026-10-05"
-lastmod: "2026-10-05"
+date: "2026-09-01T07:00:00Z"
+lastmod: "2026-09-01T07:00:00Z"
 category: "Teknis"
 author: "Tim Konsultan K3"
 readTime: "6 menit"

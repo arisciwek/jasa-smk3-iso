@@ -1,8 +1,8 @@
 ---
 title: "Kepatuhan Hukum Lingkungan: Membangun Legal Register yang Hidup"
 description: "Cara menyusun dan menjaga legal register kepatuhan hukum lingkungan yang selalu mencerminkan peraturan yang berlaku."
-date: "2026-10-25"
-lastmod: "2026-10-25"
+date: "2026-09-21T07:00:00Z"
+lastmod: "2026-09-21T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-14001", "kepatuhan-hukum", "legal-register"]

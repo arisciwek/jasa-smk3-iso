@@ -1,8 +1,8 @@
 ---
 title: "Manajemen Supplier Migas: Standar yang Lebih Tinggi"
 description: "Cara mengelola supplier migas dengan standar yang lebih tinggi."
-date: "2026-11-30"
-lastmod: "2026-11-30"
+date: "2026-10-10T07:00:00Z"
+lastmod: "2026-10-10T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["api-q2", "supplier", "migas"]

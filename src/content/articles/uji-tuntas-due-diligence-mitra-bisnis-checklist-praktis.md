@@ -1,8 +1,8 @@
 ---
 title: "Uji Tuntas (Due Diligence) Mitra Bisnis: Checklist Praktis"
 description: "Checklist praktis untuk melakukan due diligence mitra bisnis sebelum membangun kemitraan."
-date: "2026-10-31"
-lastmod: "2026-10-31"
+date: "2026-09-28T07:00:00Z"
+lastmod: "2026-09-28T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Tips & Panduan"
 tags: ["iso-37001", "due-diligence", "mitra-bisnis"]

@@ -1,8 +1,8 @@
 ---
 title: "Manajemen Kalibrasi Alat Ukur: Sistem yang Mendukung Keandalan Data"
 description: "Cara mengelola kalibrasi alat ukur untuk mendukung keandalan data dalam laboratorium."
-date: "2026-11-18"
-lastmod: "2026-11-18"
+date: "2026-10-10T07:00:00Z"
+lastmod: "2026-10-10T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-17025", "kalibrasi", "alat-ukur"]

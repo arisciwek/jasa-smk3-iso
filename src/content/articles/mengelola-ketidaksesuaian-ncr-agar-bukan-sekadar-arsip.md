@@ -1,8 +1,8 @@
 ---
 title: "Mengelola Ketidaksesuaian (NCR) agar Bukan Sekadar Arsip"
 description: "Cara menangani ketidaksesuaian dengan tindakan korektif yang terukur, bukan hanya mencatat dan mengarsipkan."
-date: "2026-10-20"
-lastmod: "2026-10-20"
+date: "2026-09-14T07:00:00Z"
+lastmod: "2026-09-14T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["ncr", "ketidaksesuaian", "tindakan-korektif"]

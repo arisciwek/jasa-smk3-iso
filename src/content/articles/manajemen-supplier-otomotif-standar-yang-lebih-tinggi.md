@@ -1,8 +1,8 @@
 ---
 title: "Manajemen Supplier Otomotif: Standar yang Lebih Tinggi"
 description: "Cara mengelola supplier otomotif dengan standar yang lebih tinggi."
-date: "2026-11-24"
-lastmod: "2026-11-24"
+date: "2026-10-10T07:00:00Z"
+lastmod: "2026-10-10T07:00:00Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iatf-16949", "supplier", "otomotif"]

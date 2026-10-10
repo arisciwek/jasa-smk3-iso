@@ -1,8 +1,8 @@
 ---
 title: "Memilih Pendampingan SMK3 Berdasarkan Kebutuhan Lokasi"
 description: "Panduan menyiapkan informasi lokasi, aktivitas kerja, risiko, dan dokumen sebelum memilih pendampingan SMK3 onsite atau jarak jauh."
-date: "2026-10-08"
-lastmod: "2026-10-09"
+date: "2026-09-09T07:00:00Z"
+lastmod: "2026-09-09T07:00:00Z"
 category: "Layanan Lokal"
 author: "Tim Konsultan K3"
 tags:
