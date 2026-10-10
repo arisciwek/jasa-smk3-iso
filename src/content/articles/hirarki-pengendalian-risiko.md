@@ -2,7 +2,7 @@
 title: "Hirarki Pengendalian Risiko dalam Praktik"
 description: "Mengapa pengendalian risiko perlu dimulai dari sumber bahaya, bukan hanya mengandalkan alat pelindung diri."
 date: "2026-09-01T07:00:00Z"
-lastmod: "2026-09-01T07:00:00Z"
+lastmod: "2026-10-10T14:52:59Z"
 category: "Teknis"
 author: "Tim Konsultan K3"
 readTime: "6 menit"
@@ -18,3 +18,5 @@ kebutuhan.
 
 Urutan ini membantu tim memilih tindakan yang lebih tahan terhadap perubahan
 perilaku dan tidak bergantung pada satu lapisan perlindungan saja.
+
+Pengendalian risiko tidak berhenti pada pemilihan hierarki. Perusahaan perlu meninjau efektivitas pengendalian yang dipasang secara berkala, mencatat hasil tinjauan, dan menyesuaikan langkah ketika kondisi kerja berubah. Dokumentasi tinjauan ini menjadi bukti bahwa sistem pengendalian benar-benar dijalankan, bukan sekadar tertulis.

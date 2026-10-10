@@ -82,6 +82,13 @@ const globalSchema = {
     },
   ],
 };
+const pageSchema = lastmod ? {
+  '@type': 'WebPage',
+  '@id': `${siteUrl}#webpage`,
+  url: Astro.url.href,
+  dateModified: new Date(lastmod).toISOString(),
+  isPartOf: { '@id': websiteId },
+} : null;
 const breadcrumbSchema = breadcrumbs.length > 0 ? {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
@@ -124,6 +131,7 @@ const breadcrumbSchema = breadcrumbs.length > 0 ? {
   <meta name="twitter:description" content={description}>
   <meta name="twitter:image" content={pageImage}>
   <script type="application/ld+json" set:html={JSON.stringify(globalSchema)} />
+  {pageSchema && <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />}
   {breadcrumbSchema && <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />}
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style is:global>
