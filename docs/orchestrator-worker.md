@@ -13,36 +13,36 @@ Tujuan utama arsitektur ini adalah:
 ## 1. Model Komponen
 
 ```text
-                         +----------------------+
-                         |      Orchestrator     |
-                         | schedule, queue, lock |
-                         +----------+-----------+
-                                    |
-          +-------------------------+-------------------------+
-          |                         |                         |
-          v                         v                         v
- +------------------+      +------------------+      +------------------+
-| Article Worker   |      | Jasa SMK3 Worker |      | Service Worker   |
-| artikel Markdown |      | halaman jasa SMK3|      | halaman layanan  |
- +------------------+      +------------------+      +------------------+
-          |                         |                         |
-          +-------------------------+-------------------------+
-                                    v
-                         +----------------------+
-                         |   SEO Validator      |
-                         | schema, link, content|
-                         +----------+-----------+
-                                    |
-                                    v
-                         +----------------------+
-                         | Review / Approval    |
-                         +----------+-----------+
-                                    |
-                                    v
-                         +----------------------+
-                         | Publish Worker       |
-                         | build, sitemap, test |
-                         +----------------------+
+                          +----------------------+
+                          |      Orchestrator     |
+                          | schedule, queue, lock |
+                          +----------+-----------+
+                                     |
+           +-------------------------+-------------------------+-------------------------+
+           |                         |                         |                         |
+           v                         v                         v                         v
+  +------------------+      +------------------+      +------------------+      +------------------+
+  | Article Worker   |      | Jasa SMK3 Worker |      | Jasa ISO Worker  |      | Service Worker   |
+  | artikel Markdown |      | halaman jasa SMK3|      | halaman jasa ISO |      | halaman layanan  |
+  +------------------+      +------------------+      +------------------+      +------------------+
+           |                         |                         |                         |
+           +-------------------------+-------------------------+-------------------------+
+                                     v
+                          +----------------------+
+                          |   SEO Validator      |
+                          | schema, link, content|
+                          +----------+-----------+
+                                     |
+                                     v
+                          +----------------------+
+                          | Review / Approval    |
+                          +----------+-----------+
+                                     |
+                                     v
+                          +----------------------+
+                          | Publish Worker       |
+                          | build, sitemap, test |
+                          +----------------------+
 ```
 
 ## 2. Tanggung Jawab Orchestrator
@@ -116,7 +116,29 @@ Tugas:
 
 Worker ini tidak boleh membuat halaman kota massal tanpa konteks lokal yang dapat diverifikasi.
 
-### 3.3. Service Worker
+### 3.3. Jasa ISO Worker
+
+Target utama:
+
+```text
+src/data/cities.ts
+src/data/jasa-iso/*.json
+src/pages/artikel/jasa-iso-[slug].astro
+```
+
+Tugas:
+
+* membuat atau memperbarui konten jasa sertifikasi ISO per kota;
+* memastikan kota benar-benar termasuk area layanan;
+* menambahkan konteks lokal yang substantif untuk sertifikasi ISO (ISO 45001, ISO 9001, ISO 14001, ISO 27001, dll);
+* mencegah halaman kota hanya mengganti nama kota pada template yang sama;
+* menetapkan `lastmod` pada data kota jika konten lokal berubah;
+* memastikan `dateModified` pada schema halaman kota menggunakan tanggal yang sama;
+* memastikan FAQ lokal sertifikasi ISO benar-benar terlihat pada halaman.
+
+Worker ini tidak boleh membuat halaman kota massal tanpa konteks lokal yang dapat diverifikasi.
+
+### 3.4. Service Worker
 
 Target utama:
 
@@ -181,6 +203,7 @@ Setiap jenis konten harus memiliki satu sumber tanggal pembaruan yang jelas:
 | --- | --- |
 | Artikel | `lastmod` pada frontmatter Markdown |
 | Jasa SMK3 | `lastmod` pada data kota JSON atau sumber data yang ditetapkan |
+| Jasa ISO | `lastmod` pada data kota JSON atau sumber data yang ditetapkan |
 | Layanan | `lastmod` pada data layanan atau frontmatter halaman |
 | Halaman agregasi | tanggal perubahan konten agregasi yang benar-benar terjadi |
 
@@ -228,6 +251,7 @@ Lock menggunakan kunci yang spesifik terhadap target:
 ```text
 article:update-pp-50-2012
 jasa-smk3:jakarta-barat
+jasa-iso:jakarta-barat
 service:smk3
 shared:site-data
 shared:base-layout
