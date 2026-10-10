@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import FAQ from '../../../components/FAQ.astro';
+import { getService } from '../../../data/services';
 
 const title = 'Layanan Implementasi SMK3 PP 50/2012';
 const description = 'Pendampingan implementasi SMK3 PP 50/2012 mulai dari gap analysis, penyusunan dokumen 5 elemen, pelatihan P2K3, hingga persiapan audit eksternal Kemenaker RI.';
@@ -24,7 +25,13 @@ const faqs = [
 ];
 ---
 
-<BaseLayout title={title} description={description} image={serviceImage} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: 'Implementasi SMK3', url: '/layanan/smk3/' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  image={serviceImage}
+  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: 'Implementasi SMK3', url: '/layanan/smk3/' }]}
+  footerBrandDescription={`PT. PEI Sinergi Indonesia menyelenggarakan jasa ${getService('smk3')?.name ?? 'SMK3 PP 50/2012'}`}
+>
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">

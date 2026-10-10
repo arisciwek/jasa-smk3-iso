@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import FAQ from '../../../components/FAQ.astro';
+import { getService } from '../../../data/services';
 
 const title = 'Layanan Pendampingan ISO 45001:2018';
 const description = 'Pendampingan implementasi ISO 45001:2018 mulai dari gap analysis, penerapan sistem berbasis PDCA, audit internal, hingga persiapan audit sertifikasi.';
@@ -27,7 +28,13 @@ const faqs = [
 ];
 ---
 
-<BaseLayout title={title} description={description} image={serviceImage} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: 'ISO 45001', url: '/layanan/iso-45001/' }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  image={serviceImage}
+  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: 'ISO 45001', url: '/layanan/iso-45001/' }]}
+  footerBrandDescription={`PT. PEI Sinergi Indonesia menyelenggarakan jasa ${getService('iso-45001')?.name ?? 'ISO 45001:2018'}`}
+>
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section">
     <div style="max-width: 800px; margin: 0 auto;">

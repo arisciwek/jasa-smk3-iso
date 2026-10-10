@@ -31,7 +31,13 @@ const faqs = service.slug === 'iso-9001' ? [
 ];
 ---
 
-<BaseLayout title={title} description={description} image={service.image} breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: service.name, url: `/layanan/${service.slug}/` }]}>
+<BaseLayout
+  title={title}
+  description={description}
+  image={service.image}
+  breadcrumbs={[{ name: 'Beranda', url: '/' }, { name: 'Layanan', url: '/layanan/' }, { name: service.name, url: `/layanan/${service.slug}/` }]}
+  footerBrandDescription={`PT. PEI Sinergi Indonesia menyelenggarakan jasa ${service.name}`}
+>
   <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
   <main class="content-section service-detail-page">
     <header class="service-detail-header"><div class="hero-tag">// {service.category.toUpperCase()}</div><h1>{service.name}</h1><p>{service.description}</p></header>
