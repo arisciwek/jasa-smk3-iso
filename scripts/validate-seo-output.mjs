@@ -65,6 +65,78 @@ for (const slug of cities) {
   }
 }
 
+// Validate service lastmod synchronization with articles
+const serviceLastmodPath = join(root, 'src/data/service-lastmod.json');
+if (existsSync(serviceLastmodPath)) {
+  const serviceLastmodData = JSON.parse(readFileSync(serviceLastmodPath, 'utf8'));
+  
+  // Read all article markdown files to find related articles
+  const articlesDir = join(root, 'src/content/articles');
+  if (existsSync(articlesDir)) {
+    const articleFiles = readdirSync(articlesDir).filter(file => file.endsWith('.md'));
+    
+    for (const [serviceSlug, serviceData] of Object.entries(serviceLastmodData)) {
+      if (!serviceData.lastmod) {
+        failures.push(`service/${serviceSlug}: missing lastmod`);
+        continue;
+      }
+      
+      // Find articles related to this service
+      const relatedArticles = [];
+      for (const file of articleFiles) {
+        const articlePath = join(articlesDir, file);
+        const articleContent = readFileSync(articlePath, 'utf8');
+        // Extract frontmatter
+        const frontmatterMatch = articleContent.match(/^---\n([\s\S]*?)\n---/);
+        if (frontmatterMatch) {
+          const frontmatterText = frontmatterMatch[1];
+          // Extract serviceSlugs, lastmod, and date from frontmatter
+          const serviceSlugsMatch = frontmatterText.match(/serviceSlugs:\s*\[([^\]]*)\]/);
+          const lastmodMatch = frontmatterText.match(/lastmod:\s*"([^"]*)"/);
+          const dateMatch = frontmatterText.match(/date:\s*"([^"]*)"/);
+          
+          let serviceSlugs = [];
+          if (serviceSlugsMatch) {
+            try {
+              serviceSlugs = JSON.parse(`[${serviceSlugsMatch[1]}]`);
+            } catch (e) {
+              // If JSON parsing fails, try to parse as comma-separated values
+              serviceSlugs = serviceSlugsMatch[1].split(',').map(s => s.trim().replace(/^["']|["']$/g, ''));
+            }
+          }
+          
+          const lastmod = lastmodMatch ? lastmodMatch[1] : null;
+          const date = dateMatch ? dateMatch[1] : null;
+          
+          if (serviceSlugs.includes(serviceSlug)) {
+            relatedArticles.push({
+              slug: file.replace('.md', ''),
+              lastmod: lastmod,
+              date: date
+            });
+          }
+        }
+      }
+      
+      if (relatedArticles.length > 0) {
+        // Find the most recent article
+        const latestArticle = relatedArticles.reduce((latest, article) => {
+          const articleDate = new Date(article.lastmod || article.date);
+          const latestDate = new Date(latest.lastmod || latest.date);
+          return articleDate > latestDate ? article : latest;
+        });
+        
+        const articleDate = new Date(latestArticle.lastmod || latestArticle.date);
+        const serviceDate = new Date(serviceData.lastmod);
+        
+        if (serviceDate < articleDate) {
+          failures.push(`service/${serviceSlug}: lastmod (${serviceData.lastmod}) is older than latest related article (${latestArticle.lastmod || latestArticle.date})`);
+        }
+      }
+    }
+  }
+}
+
 if (failures.length > 0) {
   console.error(`SEO validation failed (${failures.length} issue(s)):`);
   for (const failure of failures) console.error(`- ${failure}`);

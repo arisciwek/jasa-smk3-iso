@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import FAQ from '../../components/FAQ.astro';
+import Card from '../../components/Card.astro';
 import { services } from '../../data/services';
+import { getCollection } from 'astro:content';
 
 export function getStaticPaths() {
   return services.filter((service) => !['smk3', 'iso-45001'].includes(service.slug)).map((service) => ({ params: { slug: service.slug }, props: { service } }));
@@ -21,7 +23,7 @@ const faqs = service.slug === 'iso-9001' ? [
   { question: 'APA TUJUAN SERTIFIKASI ISO 9001:2015?', answer: 'Tujuannya adalah membantu organisasi membangun proses yang konsisten, memenuhi kebutuhan pelanggan, mengendalikan risiko dan peluang, memenuhi kewajiban yang relevan, serta menyediakan dasar untuk perbaikan berkelanjutan.' },
   { question: 'APA MANFAAT ISO 9001:2015?', answer: 'Manfaatnya dapat mencakup proses yang lebih terkendali, kepuasan pelanggan yang lebih baik, pembagian tanggung jawab yang lebih jelas, pengambilan keputusan berbasis bukti, pengurangan ketidaksesuaian, dan peningkatan kredibilitas organisasi.' },
   { question: 'PROSES SERTIFIKASI ISO 9001:2015', answer: 'Proses umumnya dimulai dari penentuan ruang lingkup dan tinjauan kesiapan, dilanjutkan penerapan sistem, audit internal, tinjauan manajemen, serta audit sertifikasi oleh lembaga sertifikasi yang dipilih. Temuan audit perlu ditangani dengan bukti tindakan korektif sesuai ketentuan lembaga sertifikasi.' },
-  { question: 'APA SAJA PERSYARATAN TAMBAHAN DALAM ISO 9001:2015 UNTUK SMM?', answer: 'ISO 9001:2015 menekankan konteks organisasi dan pihak berkepentingan, pemikiran berbasis risiko, pengendalian proses, kompetensi, informasi terdokumentasi, evaluasi kinerja, audit internal, dan peningkatan. Penerapannya disesuaikan dengan konteks, ukuran, serta kompleksitas organisasi.' },
+  { question: 'APA SAJA PERSYARATAN TAMBAHAN DALAM ISO 9001:2015 UNTUK SMM?', answer: 'ISO 9001:2015 menekankan konteks organisasi dan pihak berkebentingan, pemikiran berbasis risiko, pengendalian proses, kompetensi, informasi terdokumentasi, evaluasi kinerja, audit internal, dan peningkatan. Penerapannya disesuaikan dengan konteks, ukuran, serta kompleksitas organisasi.' },
   { question: 'PENILAIAN TERHADAP ISO 9001:2015', answer: 'Penilaian dapat mencakup tinjauan aplikasi dan ruang lingkup, audit tahap 1 untuk kesiapan, audit tahap 2 untuk penerapan, penutupan ketidaksesuaian, serta audit pengawasan setelah sertifikasi. Audit khusus atau perluasan ruang lingkup dapat dilakukan bila diperlukan.' },
   { question: 'BERAPA BIAYA AUDIT ISO 9001:2015?', answer: 'Biaya tidak dapat ditentukan dengan satu angka karena bergantung pada jumlah personel, lokasi, kompleksitas proses, ruang lingkup, jumlah hari audit, dan kebutuhan perjalanan atau akomodasi. Penawaran sebaiknya disusun setelah informasi organisasi dan ruang lingkup ditinjau.' },
 ] : [
@@ -29,6 +31,35 @@ const faqs = service.slug === 'iso-9001' ? [
   { question: 'Bagaimana tahap awal pendampingan?', answer: 'Pendampingan dimulai dengan memahami proses organisasi, kondisi penerapan, risiko, dokumen, dan target penilaian sebelum ruang lingkup kerja disepakati.' },
   { question: 'Apakah layanan dapat disesuaikan?', answer: 'Ya. Ruang lingkup pendampingan disesuaikan dengan ukuran organisasi, kompleksitas proses, lokasi, tingkat kesiapan, dan kebutuhan pelanggan.' },
 ];
+
+// Get related articles for this service (max 2)
+const getRelatedArticles = async () => {
+  try {
+    const articles = await getCollection('articles');
+    // Filter articles that have this service in their serviceSlugs frontmatter
+    const related = articles
+      .filter(article => 
+        article.data.serviceSlugs && 
+        Array.isArray(article.data.serviceSlugs) && 
+        article.data.serviceSlugs.includes(service.slug)
+      )
+      .sort((a, b) => new Date(b.data.date) - new Date(a.data.date)) // Newest first
+      .slice(0, 2); // Max 2 articles
+    
+    return related.map(article => ({
+      title: article.data.title,
+      description: article.data.description,
+      url: `/artikel/${article.slug}/`,
+      image: article.data.image,
+      imageAlt: article.data.imageAlt,
+      date: article.data.date,
+      lastmod: article.data.lastmod
+    }));
+  } catch (error) {
+    console.error('Error fetching related articles:', error);
+    return [];
+  }
+};
 ---
 
 <BaseLayout
@@ -53,11 +84,33 @@ const faqs = service.slug === 'iso-9001' ? [
     </div>
     <section class="service-next-step"><div><div class="section-title">Langkah berikutnya</div><h2>Petakan kebutuhan organisasi Anda.</h2><p>Kami membantu menerjemahkan kebutuhan standar menjadi rencana kerja yang dapat diterapkan.</p></div><a href="/tentang/kontak/" class="cta-btn">Konsultasikan Layanan</a></section>
     <FAQ items={faqs} title={`FAQ ${service.name}`} eyebrow="// PERTANYAAN UMUM" />
+    
+    <!-- Related Articles -->
+    <section class="related-articles">
+      <div class="section-title">Artikel Terkait</div>
+      <div class="article-grid">
+        {(await getRelatedArticles()).map(article => (
+          <Card
+            title={article.title}
+            description={article.description}
+            image={article.image}
+            imageAlt={article.imageAlt}
+            url={article.url}
+            date={article.lastmod || article.date}
+          />
+        ))}
+      </div>
+    </section>
   </main>
   <style>
     .service-detail-header { max-width: 800px; margin-bottom: 3rem; } .service-detail-header h1 { margin: 0.75rem 0 1rem; font-size: clamp(2.3rem, 5vw, 4rem); line-height: 1.05; letter-spacing: -1.5px; } .service-detail-header p { color: var(--text-muted); font-size: 1.1rem; }
     .service-detail-grid { display: grid; grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr); gap: 4rem; align-items: center; } .service-detail-grid img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); } .service-detail-grid h2 { margin: 0.4rem 0 1.25rem; font-size: 1.7rem; } .service-detail-grid ul { display: grid; gap: 0.9rem; padding-left: 1.2rem; color: var(--text-muted); } .service-detail-grid li::marker { color: var(--accent); }
     .service-detail-sections { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 4rem; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border); } .service-detail-sections h2 { margin: 0.35rem 0 0.8rem; font-size: 1.35rem; } .service-detail-sections p, .service-detail-sections li { color: var(--text-muted); } .service-detail-sections ul, .service-detail-sections ol { display: grid; gap: 0.65rem; padding-left: 1.2rem; } .service-detail-sections li::marker { color: var(--accent); }
     .service-next-step { display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-top: 4rem; padding: 2rem; background: var(--surface-card); border: 1px solid var(--border); border-radius: 8px; } .service-next-step h2 { margin: 0.35rem 0 0.5rem; font-size: 1.45rem; } .service-next-step p { color: var(--text-muted); } @media (max-width: 720px) { .service-detail-grid, .service-detail-sections, .service-next-step { grid-template-columns: 1fr; flex-direction: column; align-items: flex-start; } }
+    
+    /* Related Articles Styles */
+    .related-articles { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+    .related-articles .section-title { margin-bottom: 1.5rem; }
+    .article-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
   </style>
 </BaseLayout>

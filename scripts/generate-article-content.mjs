@@ -1,4 +1,4 @@
-import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const root = process.cwd();
@@ -78,6 +78,7 @@ const frontmatter = [
   `readTime: "${readTime}"`,
   `image: ${JSON.stringify(idea.image)}`,
   `imageAlt: ${JSON.stringify(idea.imageAlt)}`,
+  `serviceSlugs: ${JSON.stringify(idea.serviceSlugs || [])}`,
   '---',
   '',
 ].join('\n');
@@ -91,7 +92,27 @@ writeFileSync(planPath, `${JSON.stringify(plan, null, 2)}\n`);
 mkdirSync(join(root, 'automation-output', 'src/content/articles'), { recursive: true });
 copyFileSync(planPath, join(root, 'automation-output', 'content-plan.json'));
 copyFileSync(
-  join(root, 'src/content/articles', `${slug}.md`),
-  join(root, 'automation-output', 'src/content/articles', `${slug}.md`),
-);
-console.log(`Artikel dibuat: ${slug}`);
+    join(root, 'src/content/articles', `${slug}.md`),
+    join(root, 'automation-output', 'src/content/articles', `${slug}.md`),
+  );
+  
+  // Update service lastmod if article is related to services
+  if (idea.serviceSlugs && idea.serviceSlugs.length > 0) {
+    const serviceLastmodPath = join(root, 'src/data/service-lastmod.json');
+    if (existsSync(serviceLastmodPath)) {
+      const serviceLastmodData = JSON.parse(readFileSync(serviceLastmodPath, 'utf8'));
+      let updated = false;
+      for (const serviceSlug of idea.serviceSlugs) {
+        if (serviceLastmodData[serviceSlug] && serviceLastmodData[serviceSlug].lastmod < today) {
+          serviceLastmodData[serviceSlug].lastmod = today;
+          updated = true;
+        }
+      }
+      if (updated) {
+        writeFileSync(serviceLastmodPath, `${JSON.stringify(serviceLastmodData, null, 2)}\n`);
+        console.log(`Service lastmod updated for: ${idea.serviceSlugs.join(', ')}`);
+      }
+    }
+  }
+
+  console.log(`Artikel dibuat: ${slug}`);
