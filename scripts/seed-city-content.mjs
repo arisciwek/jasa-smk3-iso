@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 const root = process.cwd();
 const source = readFileSync(join(root, 'src/data/cities.ts'), 'utf8');
-const contentDir = join(root, 'src/data/city-content');
+const contentDir = join(root, 'src/data/jasa-smk3');
 const lastmod = process.env.CONTENT_LASTMOD || '2026-10-09';
 
 const cities = [...source.matchAll(/\['([^']+)', '([^']+)'\]/g)].map((match) => ({
@@ -58,7 +58,7 @@ for (const [index, city] of cities.entries()) {
     slug: city.slug,
     lastmod,
     nextTopic: 'editorial-review',
-    completedTopics: ['baseline-city-content'],
+    completedTopics: ['baseline-jasa-smk3'],
     paragraphs: [
       {
         topic: 'konteks-lokal',

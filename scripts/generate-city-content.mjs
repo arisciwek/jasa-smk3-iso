@@ -4,7 +4,7 @@ import { join } from 'node:path';
 const root = process.cwd();
 const plan = JSON.parse(readFileSync(join(root, 'content-plan.json'), 'utf8'));
 const citiesSource = readFileSync(join(root, 'src/data/cities.ts'), 'utf8');
-const contentDir = join(root, 'src/data/city-content');
+const contentDir = join(root, 'src/data/jasa-smk3');
 const apiKey = process.env.AI_API_KEY;
 const baseUrl = (process.env.AI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
 const model = process.env.AI_MODEL || 'gpt-4o-mini';
@@ -110,9 +110,9 @@ const updated = {
 
 mkdirSync(contentDir, { recursive: true });
 writeFileSync(join(contentDir, `${selected.city.slug}.json`), `${JSON.stringify(updated, null, 2)}\n`);
-mkdirSync(join(root, 'automation-output', 'src/data/city-content'), { recursive: true });
+mkdirSync(join(root, 'automation-output', 'src/data/jasa-smk3'), { recursive: true });
 copyFileSync(
   join(contentDir, `${selected.city.slug}.json`),
-  join(root, 'automation-output', 'src/data/city-content', `${selected.city.slug}.json`),
+  join(root, 'automation-output', 'src/data/jasa-smk3', `${selected.city.slug}.json`),
 );
 console.log(`City diperbarui: ${selected.city.name} | topik: ${topic.id}`);

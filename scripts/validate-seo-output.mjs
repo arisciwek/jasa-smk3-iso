@@ -40,7 +40,7 @@ for (const file of pages) {
 const citySource = readFileSync(join(root, 'src/data/cities.ts'), 'utf8');
 const cities = [...citySource.matchAll(/\['([^']+)', '([^']+)'\]/g)].map((match) => match[1].toLowerCase().replace(/\s+/g, '-'));
 for (const slug of cities) {
-  const file = join(root, 'src/data/city-content', `${slug}.json`);
+  const file = join(root, 'src/data/jasa-smk3', `${slug}.json`);
   if (!existsSync(file)) {
     failures.push(`city/${slug}: missing content file`);
     continue;

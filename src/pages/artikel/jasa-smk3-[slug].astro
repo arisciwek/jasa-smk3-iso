@@ -5,7 +5,7 @@ import { cities } from '../../data/cities';
 import { getCityFaqs } from '../../data/faqs';
 import { site } from '../../data/site';
 
-const cityContentFiles = import.meta.glob('../../data/city-content/*.json', {
+const cityContentFiles = import.meta.glob('../../data/jasa-smk3/*.json', {
   eager: true,
   import: 'default',
 });
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 }
 
 const { city } = Astro.props;
-const cityContent = cityContentFiles[`../../data/city-content/${city.slug}.json`] ?? {
+const cityContent = cityContentFiles[`../../data/jasa-smk3/${city.slug}.json`] ?? {
   lastmod: undefined,
   paragraphs: [],
 };
