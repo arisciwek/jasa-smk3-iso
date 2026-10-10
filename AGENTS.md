@@ -78,6 +78,15 @@ Use `git diff --check` before committing. Do not commit generated `dist/` or `.a
 - Keep service and content imagery in SVG format unless there is an explicit requirement for another format. Each image must have an `alt` attribute that names the subject and context specifically (for example, `Pendampingan sistem manajemen mutu ISO 9001:2015`), never a generic label such as `icon ISO`.
 - When adding a service or content entry, add its dedicated SVG asset, reference it in the data/frontmatter and structured data, and verify the generated asset URL exists in `dist/`.
 
+## SVG Image Guidelines
+
+- All SVG files in `public/assets/images/` must be valid XML.
+- **Never use unescaped `&` characters** in SVG text content — they cause `xmlParseEntityRef: no name` errors.
+- Replace `&` with `dan` (Indonesian for "and") in all text labels, or escape as `&` if the literal character is required.
+- Example: `<text>Area Muat & CCTV</text>` → `<text>Area Muat dan CCTV</text>` or `<text>Area Muat & CCTV</text>`
+- After adding/modifying SVG files, verify with `npm run build` — the build will fail if XML is invalid.
+- All 55 article images must have unique SVG assets; no duplicate images across articles.
+
 ## Documentation
 
 Full documentation: https://docs.astro.build
