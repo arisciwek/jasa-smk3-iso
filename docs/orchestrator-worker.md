@@ -22,8 +22,8 @@ Tujuan utama arsitektur ini adalah:
           |                         |                         |
           v                         v                         v
  +------------------+      +------------------+      +------------------+
- | Article Worker   |      | City Worker      |      | Service Worker   |
- | artikel Markdown |      | halaman kota     |      | halaman layanan  |
+| Article Worker   |      | Jasa SMK3 Worker |      | Service Worker   |
+| artikel Markdown |      | halaman jasa SMK3|      | halaman layanan  |
  +------------------+      +------------------+      +------------------+
           |                         |                         |
           +-------------------------+-------------------------+
@@ -94,7 +94,7 @@ Tugas:
 * memperbarui `lastmod` hanya jika isi utama atau metadata SEO penting berubah;
 * menyiapkan data yang akan menghasilkan `dateModified` pada schema `Article`.
 
-### 3.2. City Worker
+### 3.2. Jasa SMK3 Worker
 
 Target utama:
 
@@ -106,7 +106,7 @@ src/pages/artikel/jasa-smk3-[slug].astro
 
 Tugas:
 
-* membuat atau memperbarui konten kota;
+* membuat atau memperbarui konten jasa SMK3 per kota;
 * memastikan kota benar-benar termasuk area layanan;
 * menambahkan konteks lokal yang substantif;
 * mencegah halaman kota hanya mengganti nama kota pada template yang sama;
@@ -180,7 +180,7 @@ Setiap jenis konten harus memiliki satu sumber tanggal pembaruan yang jelas:
 | Jenis konten | Sumber tanggal |
 | --- | --- |
 | Artikel | `lastmod` pada frontmatter Markdown |
-| Kota | `lastmod` pada data kota JSON atau sumber data yang ditetapkan |
+| Jasa SMK3 | `lastmod` pada data kota JSON atau sumber data yang ditetapkan |
 | Layanan | `lastmod` pada data layanan atau frontmatter halaman |
 | Halaman agregasi | tanggal perubahan konten agregasi yang benar-benar terjadi |
 
@@ -227,7 +227,7 @@ Lock menggunakan kunci yang spesifik terhadap target:
 
 ```text
 article:update-pp-50-2012
-city:jakarta-barat
+jasa-smk3:jakarta-barat
 service:smk3
 shared:site-data
 shared:base-layout

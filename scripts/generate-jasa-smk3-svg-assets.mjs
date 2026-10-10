@@ -13,7 +13,7 @@ const cityRows = [...citiesSource.matchAll(/\['([^']+)', '([^']+)'\]/g)].map((ma
   slug: match[1].toLowerCase().replace(/\s+/g, '-'),
 }));
 
-if (cityRows.length === 0) throw new Error('Daftar city tidak ditemukan dari src/data/cities.ts.');
+if (cityRows.length === 0) throw new Error('Daftar kota tidak ditemukan dari src/data/cities.ts.');
 
 const outputDir = path.join(root, 'public/assets/images/jasa-smk3');
 fs.mkdirSync(outputDir, { recursive: true });
@@ -85,4 +85,4 @@ for (const city of cityRows) {
   count++;
 }
 
-console.log(`SVG aset kota generate: ${count} file di public/assets/images/jasa-smk3/`);
+console.log(`SVG aset Jasa SMK3 generate: ${count} file di public/assets/images/jasa-smk3/`);

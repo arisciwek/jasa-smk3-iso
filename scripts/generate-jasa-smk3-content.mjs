@@ -17,7 +17,7 @@ const cityRows = [...citiesSource.matchAll(/\['([^']+)', '([^']+)'\]/g)].map((ma
   slug: match[1].toLowerCase().replace(/\s+/g, '-'),
 }));
 
-if (cityRows.length === 0) throw new Error('Daftar city tidak ditemukan dari src/data/cities.ts.');
+if (cityRows.length === 0) throw new Error('Daftar kota tidak ditemukan dari src/data/cities.ts.');
 
 const files = new Map(
   readdirSync(contentDir)
@@ -115,4 +115,4 @@ copyFileSync(
   join(contentDir, `${selected.city.slug}.json`),
   join(root, 'automation-output', 'src/data/jasa-smk3', `${selected.city.slug}.json`),
 );
-console.log(`City diperbarui: ${selected.city.name} | topik: ${topic.id}`);
+console.log(`Jasa SMK3 diperbarui: ${selected.city.name} | topik: ${topic.id}`);

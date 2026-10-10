@@ -75,7 +75,7 @@ for (const [index, city] of cities.entries()) {
     ],
   };
   writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
-  console.log(`City content disiapkan: ${city.name}`);
+  console.log(`Konten Jasa SMK3 disiapkan: ${city.name}`);
 }
 
-console.log(`City content coverage: ${cities.length} kota diperiksa.`);
+console.log(`Konten Jasa SMK3 coverage: ${cities.length} kota diperiksa.`);
