@@ -42,8 +42,8 @@
 - **Status:** ✅ Semua properti unik per kota.
 
 ## 9. Image
-- **Serang:** `jasa-smk3-serang.svg` (amber, pin di x=69, 4 dots, 4 road segmen)
-- **Anyer:** `jasa-smk3-anyer.svg` (amber, pin di x=124, 2 dots, 2 road segmen)
+- **Serang:** `jasa-smk3/jasa-smk3-serang.svg` (amber, pin di x=69, 4 dots, 4 road segmen)
+- **Anyer:** `jasa-smk3/jasa-smk3-anyer.svg` (amber, pin di x=124, 2 dots, 2 road segmen)
 - **Status:** ✅ File berbeda, alt text berbeda, visual berbeda (85.52% unique).
 
 ## 10. URL

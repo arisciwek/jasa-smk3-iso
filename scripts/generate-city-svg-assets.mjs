@@ -15,7 +15,7 @@ const cityRows = [...citiesSource.matchAll(/\['([^']+)', '([^']+)'\]/g)].map((ma
 
 if (cityRows.length === 0) throw new Error('Daftar city tidak ditemukan dari src/data/cities.ts.');
 
-const outputDir = path.join(root, 'public/assets/images');
+const outputDir = path.join(root, 'public/assets/images/jasa-smk3');
 fs.mkdirSync(outputDir, { recursive: true });
 
 const regionColors = {
@@ -85,4 +85,4 @@ for (const city of cityRows) {
   count++;
 }
 
-console.log(`SVG aset kota generate: ${count} file di public/assets/images/`);
+console.log(`SVG aset kota generate: ${count} file di public/assets/images/jasa-smk3/`);
