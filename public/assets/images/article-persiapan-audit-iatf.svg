@@ -9,7 +9,7 @@
     <line x1="100" y1="190" x2="300" y2="190"/>
   </g>
   <circle cx="120" cy="137" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
-  <text x="140" y="141" font-family="system-ui" font-size="10" fill="#1e293b">CSR & Proses</text>
+  <text x="140" y="141" font-family="system-ui" font-size="10" fill="#1e293b">CSR dan Proses</text>
   <circle cx="120" cy="172" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
   <text x="140" y="176" font-family="system-ui" font-size="10" fill="#1e293b">Manajemen Risiko</text>
   <circle cx="120" cy="207" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>

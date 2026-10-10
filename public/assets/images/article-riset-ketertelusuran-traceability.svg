@@ -14,6 +14,6 @@
   <rect x="120" y="190" width="160" height="50" rx="8" fill="#fef3c7"/>
   <rect x="120" y="190" width="160" height="50" rx="8" stroke="#ca8a04" stroke-width="2" fill="none"/>
   <text x="200" y="215" text-anchor="middle" font-family="system-ui" font-size="11" fill="#ca8a04" font-weight="bold">Mock Recall Test</text>
-  <text x="200" y="230" text-anchor="middle" font-family="system-ui" font-size="9" fill="#64748b">Target Waktu & Prosedur</text>
+  <text x="200" y="230" text-anchor="middle" font-family="system-ui" font-size="9" fill="#64748b">Target Waktu dan Prosedur</text>
   <text x="200" y="270" text-anchor="middle" font-family="system-ui" font-size="13" fill="#1e293b" font-weight="bold">Traceability ISO 22000</text>
 </svg>

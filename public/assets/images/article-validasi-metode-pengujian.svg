@@ -13,6 +13,6 @@
   <circle cx="120" cy="172" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
   <text x="140" y="176" font-family="system-ui" font-size="10" fill="#1e293b">Linearitas</text>
   <circle cx="120" cy="207" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
-  <text x="140" y="211" font-family="system-ui" font-size="10" fill="#1e293b">Presisi & Akurasi</text>
+  <text x="140" y="211" font-family="system-ui" font-size="10" fill="#1e293b">Presisi dan Akurasi</text>
   <text x="200" y="255" text-anchor="middle" font-family="system-ui" font-size="13" fill="#1e293b" font-weight="bold">ISO 17025 Standarisasi</text>
 </svg>
