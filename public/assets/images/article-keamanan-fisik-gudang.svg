@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <rect x="50" y="50" width="300" height="180" rx="8" stroke="#dc2626" stroke-width="3" fill="white"/>
+  <rect x="70" y="70" width="60" height="60" rx="6" fill="#fef2f2"/>
+  <rect x="70" y="70" width="60" height="60" rx="6" stroke="#dc2626" stroke-width="2" fill="none"/>
+  <text x="100" y="105" text-anchor="middle" font-family="system-ui" font-size="20">🔒</text>
+  <text x="100" y="145" text-anchor="middle" font-family="system-ui" font-size="10" fill="#dc2626" font-weight="bold">Akses</text>
+  <rect x="170" y="70" width="60" height="60" rx="6" fill="#fef2f2"/>
+  <rect x="170" y="70" width="60" height="60" rx="6" stroke="#dc2626" stroke-width="2" fill="none"/>
+  <text x="200" y="105" text-anchor="middle" font-family="system-ui" font-size="20">📦</text>
+  <text x="200" y="145" text-anchor="middle" font-family="system-ui" font-size="10" fill="#dc2626" font-weight="bold">Gudang</text>
+  <rect x="270" y="70" width="60" height="60" rx="6" fill="#fef2f2"/>
+  <rect x="270" y="70" width="60" height="60" rx="6" stroke="#dc2626" stroke-width="2" fill="none"/>
+  <text x="300" y="105" text-anchor="middle" font-family="system-ui" font-size="20">🚛</text>
+  <text x="300" y="145" text-anchor="middle" font-family="system-ui" font-size="10" fill="#dc2626" font-weight="bold">Transport</text>
+  <rect x="120" y="160" width="160" height="40" rx="6" fill="#dc2626"/>
+  <text x="200" y="187" text-anchor="middle" font-family="system-ui" font-size="12" fill="white" font-weight="bold">Area Muat & CCTV</text>
+  <text x="200" y="255" text-anchor="middle" font-family="system-ui" font-size="13" fill="#1e293b" font-weight="bold">Keamanan Fisik ISO 28000</text>
+</svg>

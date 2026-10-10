@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <rect x="80" y="70" width="240" height="160" rx="8" stroke="#059669" stroke-width="3" fill="white"/>
+  <rect x="100" y="90" width="200" height="30" rx="4" fill="#059669"/>
+  <text x="200" y="112" text-anchor="middle" font-family="system-ui" font-size="14" fill="white" font-weight="bold">AUDIT INTERNAL</text>
+  <g stroke="#64748b" stroke-width="1.5">
+    <line x1="100" y1="140" x2="300" y2="140"/>
+    <line x1="100" y1="170" x2="300" y2="170"/>
+    <line x1="100" y1="200" x2="300" y2="200"/>
+  </g>
+  <circle cx="120" cy="155" r="6" stroke="#059669" stroke-width="2" fill="none"/>
+  <circle cx="120" cy="185" r="6" stroke="#059669" stroke-width="2" fill="none"/>
+  <circle cx="120" cy="215" r="6" stroke="#059669" stroke-width="2" fill="none"/>
+  <text x="200" y="255" text-anchor="middle" font-family="system-ui" font-size="14" fill="#1e293b">ISO 21001 Pendidikan</text>
+</svg>

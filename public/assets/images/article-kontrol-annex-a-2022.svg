@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <rect x="50" y="40" width="300" height="200" rx="8" stroke="#2563eb" stroke-width="2" fill="white"/>
+  <rect x="70" y="60" width="260" height="30" rx="4" fill="#2563eb"/>
+  <text x="200" y="82" text-anchor="middle" font-family="system-ui" font-size="12" fill="white" font-weight="bold">Annex A 2022: 93 Kontrol</text>
+  <g stroke="#64748b" stroke-width="1">
+    <line x1="70" y1="105" x2="330" y2="105"/>
+    <line x1="70" y1="140" x2="330" y2="140"/>
+    <line x1="70" y1="175" x2="330" y2="175"/>
+    <line x1="70" y1="210" x2="330" y2="210"/>
+  </g>
+  <text x="90" y="125" font-family="system-ui" font-size="10" fill="#1e293b">A.5 Kebijakan</text>
+  <text x="90" y="160" font-family="system-ui" font-size="10" fill="#1e293b">A.6 Organisasi</text>
+  <text x="90" y="195" font-family="system-ui" font-size="10" fill="#1e293b">A.7 Manusia</text>
+  <text x="90" y="230" font-family="system-ui" font-size="10" fill="#1e293b">A.8 Teknologi</text>
+  <circle cx="310" cy="125" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
+  <circle cx="310" cy="160" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
+  <circle cx="310" cy="195" r="6" stroke="#ca8a04" stroke-width="2" fill="#ca8a04"/>
+  <circle cx="310" cy="230" r="6" stroke="#dc2626" stroke-width="2" fill="#dc2626"/>
+  <text x="200" y="265" text-anchor="middle" font-family="system-ui" font-size="13" fill="#1e293b" font-weight="bold">ISO 27001:2022 Perubahan</text>
+</svg>

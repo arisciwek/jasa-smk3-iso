@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <rect x="80" y="50" width="240" height="180" rx="8" stroke="#2563eb" stroke-width="2" fill="white"/>
+  <rect x="100" y="70" width="200" height="35" rx="4" fill="#2563eb"/>
+  <text x="200" y="94" text-anchor="middle" font-family="system-ui" font-size="12" fill="white" font-weight="bold">Audit Internal ISO 9001</text>
+  <g stroke="#64748b" stroke-width="1">
+    <line x1="100" y1="120" x2="300" y2="120"/>
+    <line x1="100" y1="155" x2="300" y2="155"/>
+    <line x1="100" y1="190" x2="300" y2="190"/>
+  </g>
+  <circle cx="120" cy="137" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
+  <text x="140" y="141" font-family="system-ui" font-size="10" fill="#1e293b">Temuan Nyata</text>
+  <circle cx="120" cy="172" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
+  <text x="140" y="176" font-family="system-ui" font-size="10" fill="#1e293b">Bukan Ceklis</text>
+  <circle cx="120" cy="207" r="6" stroke="#16a34a" stroke-width="2" fill="#16a34a"/>
+  <text x="140" y="211" font-family="system-ui" font-size="10" fill="#1e293b">Tindakan Korektif</text>
+  <text x="200" y="255" text-anchor="middle" font-family="system-ui" font-size="13" fill="#1e293b" font-weight="bold">Audit Efektif</text>
+</svg>

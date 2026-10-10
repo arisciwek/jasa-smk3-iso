@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <path d="M50 150 Q150 80 200 150 Q250 220 350 150" stroke="#2563eb" stroke-width="3" fill="none"/>
+  <circle cx="50" cy="150" r="12" fill="#16a34a"/>
+  <text x="50" y="130" text-anchor="middle" font-family="system-ui" font-size="9" fill="#16a34a" font-weight="bold">Bahan Baku</text>
+  <circle cx="125" cy="110" r="12" fill="#2563eb"/>
+  <text x="125" y="90" text-anchor="middle" font-family="system-ui" font-size="9" fill="#2563eb" font-weight="bold">Produksi</text>
+  <circle cx="200" cy="150" r="12" fill="#059669"/>
+  <text x="200" y="175" text-anchor="middle" font-family="system-ui" font-size="9" fill="#059669" font-weight="bold">Kemasan</text>
+  <circle cx="275" cy="110" r="12" fill="#ca8a04"/>
+  <text x="275" y="90" text-anchor="middle" font-family="system-ui" font-size="9" fill="#ca8a04" font-weight="bold">Distribusi</text>
+  <circle cx="350" cy="150" r="12" fill="#dc2626"/>
+  <text x="350" y="130" text-anchor="middle" font-family="system-ui" font-size="9" fill="#dc2626" font-weight="bold">Konsumen</text>
+  <rect x="120" y="190" width="160" height="50" rx="8" fill="#fef3c7"/>
+  <rect x="120" y="190" width="160" height="50" rx="8" stroke="#ca8a04" stroke-width="2" fill="none"/>
+  <text x="200" y="215" text-anchor="middle" font-family="system-ui" font-size="11" fill="#ca8a04" font-weight="bold">Mock Recall Test</text>
+  <text x="200" y="230" text-anchor="middle" font-family="system-ui" font-size="9" fill="#64748b">Target Waktu & Prosedur</text>
+  <text x="200" y="270" text-anchor="middle" font-family="system-ui" font-size="13" fill="#1e293b" font-weight="bold">Traceability ISO 22000</text>
+</svg>

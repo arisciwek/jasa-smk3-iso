@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <rect x="30" y="100" width="80" height="80" rx="8" fill="#16a34a"/>
+  <text x="70" y="130" text-anchor="middle" font-family="system-ui" font-size="10" fill="white" font-weight="bold">Pabrik</text>
+  <text x="70" y="150" text-anchor="middle" font-family="system-ui" font-size="9" fill="white">Bahan Baku</text>
+  <g stroke="#16a34a" stroke-width="3" fill="none">
+    <path d="M110 140 Q150 120 190 140"/>
+  </g>
+  <rect x="160" y="100" width="80" height="80" rx="8" fill="#2563eb"/>
+  <text x="200" y="130" text-anchor="middle" font-family="system-ui" font-size="10" fill="white" font-weight="bold">Gudang</text>
+  <text x="200" y="150" text-anchor="middle" font-family="system-ui" font-size="9" fill="white">Penyimpanan</text>
+  <g stroke="#2563eb" stroke-width="3" fill="none">
+    <path d="M240 140 Q280 120 320 140"/>
+  </g>
+  <rect x="290" y="100" width="80" height="80" rx="8" fill="#dc2626"/>
+  <text x="330" y="130" text-anchor="middle" font-family="system-ui" font-size="10" fill="white" font-weight="bold">Transport</text>
+  <text x="330" y="150" text-anchor="middle" font-family="system-ui" font-size="9" fill="white">Pengiriman</text>
+  <g stroke="#dc2626" stroke-width="3" fill="none">
+    <path d="M370 140 Q390 120 410 140"/>
+  </g>
+  <rect x="360" y="100" width="80" height="80" rx="8" fill="#ca8a04"/>
+  <text x="400" y="130" text-anchor="middle" font-family="system-ui" font-size="10" fill="white" font-weight="bold">Pelanggan</text>
+  <text x="400" y="150" text-anchor="middle" font-family="system-ui" font-size="9" fill="white">Akhir</text>
+  <rect x="100" y="220" width="200" height="50" rx="8" fill="#fef2f2"/>
+  <rect x="100" y="220" width="200" height="50" rx="8" stroke="#dc2626" stroke-width="2" fill="none"/>
+  <text x="200" y="242" text-anchor="middle" font-family="system-ui" font-size="11" fill="#dc2626" font-weight="bold">Penilaian Risiko Setiap Tahap</text>
+  <text x="200" y="255" text-anchor="middle" font-family="system-ui" font-size="9" fill="#64748b">ISO 28000 Rantai Pasok</text>
+</svg>

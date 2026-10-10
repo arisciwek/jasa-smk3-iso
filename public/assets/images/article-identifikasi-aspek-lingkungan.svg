@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <circle cx="200" cy="150" r="90" stroke="#16a34a" stroke-width="2" fill="none" stroke-dasharray="8,4"/>
+  <g fill="#16a34a">
+    <circle cx="200" cy="60" r="12"/>
+    <circle cx="290" cy="110" r="12"/>
+    <circle cx="290" cy="190" r="12"/>
+    <circle cx="200" cy="240" r="12"/>
+    <circle cx="110" cy="190" r="12"/>
+    <circle cx="110" cy="110" r="12"/>
+  </g>
+  <text x="200" y="55" text-anchor="middle" font-family="system-ui" font-size="9" fill="#16a34a" font-weight="bold">Udara</text>
+  <text x="305" y="110" text-anchor="middle" font-family="system-ui" font-size="9" fill="#16a34a" font-weight="bold">Air</text>
+  <text x="305" y="190" text-anchor="middle" font-family="system-ui" font-size="9" fill="#16a34a" font-weight="bold">Tanah</text>
+  <text x="200" y="255" text-anchor="middle" font-family="system-ui" font-size="9" fill="#16a34a" font-weight="bold">Limbah</text>
+  <text x="95" y="190" text-anchor="middle" font-family="system-ui" font-size="9" fill="#16a34a" font-weight="bold">Bising</text>
+  <text x="95" y="110" text-anchor="middle" font-family="system-ui" font-size="9" fill="#16a34a" font-weight="bold">Radiasi</text>
+  <text x="200" y="150" text-anchor="middle" font-family="system-ui" font-size="14" fill="#1e293b" font-weight="bold">Aspek<br/>Lingkungan</text>
+</svg>

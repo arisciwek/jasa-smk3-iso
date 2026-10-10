@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <circle cx="200" cy="150" r="80" stroke="#2563eb" stroke-width="2" fill="none" stroke-dasharray="8,4"/>
+  <g fill="#2563eb">
+    <circle cx="200" cy="70" r="14"/>
+    <circle cx="280" cy="110" r="14"/>
+    <circle cx="280" cy="190" r="14"/>
+    <circle cx="200" cy="230" r="14"/>
+    <circle cx="120" cy="190" r="14"/>
+    <circle cx="120" cy="110" r="14"/>
+  </g>
+  <text x="200" y="65" text-anchor="middle" font-family="system-ui" font-size="9" fill="white" font-weight="bold">Perencanaan</text>
+  <text x="295" y="110" text-anchor="middle" font-family="system-ui" font-size="9" fill="white" font-weight="bold">Pengadaan</text>
+  <text x="295" y="190" text-anchor="middle" font-family="system-ui" font-size="9" fill="white" font-weight="bold">Operasional</text>
+  <text x="200" y="235" text-anchor="middle" font-family="system-ui" font-size="9" fill="white" font-weight="bold">Pemeliharaan</text>
+  <text x="105" y="190" text-anchor="middle" font-family="system-ui" font-size="9" fill="white" font-weight="bold">Penghapusan</text>
+  <text x="105" y="110" text-anchor="middle" font-family="system-ui" font-size="9" fill="white" font-weight="bold">Desain</text>
+  <g stroke="#2563eb" stroke-width="2" fill="none">
+    <path d="M200 84 Q240 90 266 104"/>
+    <path d="M266 124 Q290 150 266 176"/>
+    <path d="M266 186 Q240 210 200 216"/>
+    <path d="M134 186 Q90 210 134 176"/>
+    <path d="M134 124 Q90 150 134 104"/>
+    <path d="M134 94 Q90 90 200 84"/>
+  </g>
+  <text x="200" y="150" text-anchor="middle" font-family="system-ui" font-size="12" fill="#1e293b" font-weight="bold">Siklus Hidup</text>
+</svg>

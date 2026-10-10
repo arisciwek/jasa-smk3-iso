@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" fill="none">
+  <rect width="400" height="300" fill="#f0f4f8"/>
+  <rect x="150" y="30" width="100" height="40" rx="6" fill="#dc2626"/>
+  <text x="200" y="57" text-anchor="middle" font-family="system-ui" font-size="12" fill="white" font-weight="bold">Eliminasi</text>
+  <g stroke="#dc2626" stroke-width="2">
+    <line x1="200" y1="70" x2="200" y2="90"/>
+  </g>
+  <rect x="130" y="90" width="140" height="40" rx="6" fill="#ea580c"/>
+  <text x="200" y="117" text-anchor="middle" font-family="system-ui" font-size="12" fill="white" font-weight="bold">Substitusi</text>
+  <g stroke="#ea580c" stroke-width="2">
+    <line x1="200" y1="130" x2="200" y2="150"/>
+  </g>
+  <rect x="110" y="150" width="180" height="40" rx="6" fill="#ca8a04"/>
+  <text x="200" y="177" text-anchor="middle" font-family="system-ui" font-size="12" fill="white" font-weight="bold">Teknis</text>
+  <g stroke="#ca8a04" stroke-width="2">
+    <line x1="200" y1="190" x2="200" y2="210"/>
+  </g>
+  <rect x="90" y="210" width="220" height="40" rx="6" fill="#16a34a"/>
+  <text x="200" y="237" text-anchor="middle" font-family="system-ui" font-size="12" fill="white" font-weight="bold">Administratif</text>
+  <g stroke="#16a34a" stroke-width="2">
+    <line x1="200" y1="250" x2="200" y2="270"/>
+  </g>
+  <rect x="70" y="270" width="260" height="30" rx="4" fill="#2563eb"/>
+  <text x="200" y="291" text-anchor="middle" font-family="system-ui" font-size="11" fill="white" font-weight="bold">APD (Personal Protective Equipment)</text>
+</svg>
