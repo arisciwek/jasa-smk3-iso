@@ -55,18 +55,26 @@
     }
   ],
   "articleIdeas": [
-     {
-       "id": "audit-internal-vs-eksternal-smk3",
-       "type": "create",
-       "title": "Perbedaan Audit Internal dan Audit Eksternal SMK3",
-       "category": "Regulasi",
-       "status": "planned",
-       "image": "/assets/images/icon-regulasi.svg",
-       "imageAlt": "Ilustrasi audit internal dan audit eksternal SMK3",
-       "keywords": ["audit internal SMK3", "audit eksternal SMK3"],
-       "brief": "Jelaskan tujuan, pelaksana, bukti, dan waktu pelaksanaan kedua jenis audit secara praktis.",
-       "serviceSlugs": ["smk3", "iso-45001"]
-     },
+    {
+      "id": "audit-internal-vs-eksternal-smk3",
+      "type": "create",
+      "title": "Perbedaan Audit Internal dan Audit Eksternal SMK3",
+      "category": "Regulasi",
+      "status": "published",
+      "image": "/assets/images/icon-regulasi.svg",
+      "imageAlt": "Ilustrasi audit internal dan audit eksternal SMK3",
+      "keywords": [
+        "audit internal SMK3",
+        "audit eksternal SMK3"
+      ],
+      "brief": "Jelaskan tujuan, pelaksana, bukti, dan waktu pelaksanaan kedua jenis audit secara praktis.",
+      "serviceSlugs": [
+        "smk3",
+        "iso-45001"
+      ],
+      "publishedAt": "2026-10-10",
+      "slug": "audit-internal-vs-eksternal-smk3"
+    },
     {
       "id": "memahami-peran-p2k3",
       "type": "create",
@@ -75,7 +83,11 @@
       "status": "planned",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi peran P2K3 dalam pengelolaan keselamatan kerja",
-      "keywords": ["P2K3", "peran P2K3", "SMK3"],
+      "keywords": [
+        "P2K3",
+        "peran P2K3",
+        "SMK3"
+      ],
       "brief": "Jelaskan fungsi P2K3, hubungan dengan manajemen, dan contoh tanggung jawabnya di perusahaan."
     },
     {
@@ -86,7 +98,10 @@
       "status": "planned",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi dokumen persiapan penerapan SMK3",
-      "keywords": ["dokumen SMK3", "persiapan SMK3"],
+      "keywords": [
+        "dokumen SMK3",
+        "persiapan SMK3"
+      ],
       "brief": "Berikan peta dokumen berdasarkan fungsi, bukan sekadar daftar, dan jelaskan bukti penerapannya."
     },
     {
@@ -97,7 +112,10 @@
       "status": "planned",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi membaca hasil penilaian dan kepatuhan SMK3",
-      "keywords": ["penilaian SMK3", "hasil audit SMK3"],
+      "keywords": [
+        "penilaian SMK3",
+        "hasil audit SMK3"
+      ],
       "brief": "Jelaskan cara membaca temuan, tingkat pemenuhan, dan prioritas tindakan perbaikan."
     },
     {
@@ -108,7 +126,10 @@
       "status": "planned",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi perbandingan SMK3 dan ISO 45001",
-      "keywords": ["SMK3 dan ISO 45001", "perbedaan SMK3 ISO"],
+      "keywords": [
+        "SMK3 dan ISO 45001",
+        "perbedaan SMK3 ISO"
+      ],
       "brief": "Bandingkan konteks, tujuan, struktur, dan cara integrasi tanpa menyederhanakan persyaratan hukum."
     },
     {
@@ -119,7 +140,10 @@
       "status": "planned",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi matriks kepatuhan regulasi keselamatan kerja",
-      "keywords": ["matriks kepatuhan K3", "legal register K3"],
+      "keywords": [
+        "matriks kepatuhan K3",
+        "legal register K3"
+      ],
       "brief": "Jelaskan kolom penting, pemilik tindakan, status pemenuhan, dan cara menjaga matriks tetap hidup."
     },
     {
@@ -130,7 +154,10 @@
       "status": "planned",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi penyusunan HIRADC untuk pekerjaan lapangan",
-      "keywords": ["cara menyusun HIRADC", "identifikasi bahaya"],
+      "keywords": [
+        "cara menyusun HIRADC",
+        "identifikasi bahaya"
+      ],
       "brief": "Tunjukkan alur dari aktivitas kerja, bahaya, risiko, pengendalian, sampai verifikasi lapangan."
     },
     {
@@ -141,7 +168,11 @@
       "status": "planned",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi perbandingan JSA dan HIRADC",
-      "keywords": ["JSA", "HIRADC", "analisis risiko kerja"],
+      "keywords": [
+        "JSA",
+        "HIRADC",
+        "analisis risiko kerja"
+      ],
       "brief": "Jelaskan perbedaan ruang lingkup, tingkat detail, dan hubungan JSA dengan penilaian risiko."
     },
     {
@@ -152,7 +183,10 @@
       "status": "planned",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi hierarki pengendalian risiko di tempat kerja",
-      "keywords": ["hierarki pengendalian risiko", "pengendalian bahaya"],
+      "keywords": [
+        "hierarki pengendalian risiko",
+        "pengendalian bahaya"
+      ],
       "brief": "Gunakan satu skenario kerja untuk menunjukkan eliminasi, substitusi, rekayasa, administratif, dan APD."
     },
     {
@@ -163,7 +197,10 @@
       "status": "planned",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi inspeksi keselamatan kerja yang terstruktur",
-      "keywords": ["inspeksi K3", "checklist keselamatan kerja"],
+      "keywords": [
+        "inspeksi K3",
+        "checklist keselamatan kerja"
+      ],
       "brief": "Bahas tujuan inspeksi, kualitas checklist, pencatatan temuan, dan tindak lanjut yang terukur."
     },
     {
@@ -174,7 +211,11 @@
       "status": "planned",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi prosedur lockout tagout untuk energi berbahaya",
-      "keywords": ["LOTO", "lockout tagout", "energi berbahaya"],
+      "keywords": [
+        "LOTO",
+        "lockout tagout",
+        "energi berbahaya"
+      ],
       "brief": "Jelaskan tujuan LOTO, tahapan umum, otorisasi, dan verifikasi sebelum pekerjaan dimulai."
     },
     {
@@ -185,7 +226,10 @@
       "status": "planned",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi rencana tanggap darurat di tempat kerja",
-      "keywords": ["tanggap darurat", "rencana kedaruratan K3"],
+      "keywords": [
+        "tanggap darurat",
+        "rencana kedaruratan K3"
+      ],
       "brief": "Jelaskan skenario, peran, sarana, komunikasi, latihan, dan evaluasi program tanggap darurat."
     },
     {
@@ -196,7 +240,10 @@
       "status": "planned",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi analisis temuan audit K3 yang berulang",
-      "keywords": ["temuan audit K3", "tindakan korektif"],
+      "keywords": [
+        "temuan audit K3",
+        "tindakan korektif"
+      ],
       "brief": "Gunakan studi kasus anonim untuk membedakan koreksi, akar masalah, dan tindakan korektif."
     },
     {
@@ -207,7 +254,10 @@
       "status": "planned",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi kesenjangan antara dokumen K3 dan praktik kerja",
-      "keywords": ["implementasi dokumen K3", "budaya keselamatan"],
+      "keywords": [
+        "implementasi dokumen K3",
+        "budaya keselamatan"
+      ],
       "brief": "Analisis penyebab dokumen tidak digunakan dan perubahan kecil yang membuatnya relevan bagi pekerja."
     },
     {
@@ -218,7 +268,10 @@
       "status": "planned",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi komunikasi perubahan proses kerja yang aman",
-      "keywords": ["manajemen perubahan K3", "komunikasi risiko"],
+      "keywords": [
+        "manajemen perubahan K3",
+        "komunikasi risiko"
+      ],
       "brief": "Tunjukkan risiko ketika perubahan proses tidak dikomunikasikan dan bagaimana menutup celahnya."
     },
     {
@@ -229,7 +282,10 @@
       "status": "planned",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi koordinasi keselamatan kerja antara perusahaan dan kontraktor",
-      "keywords": ["K3 kontraktor", "manajemen kontraktor"],
+      "keywords": [
+        "K3 kontraktor",
+        "manajemen kontraktor"
+      ],
       "brief": "Bahas masalah umum koordinasi, induksi, izin kerja, dan evaluasi kinerja kontraktor."
     },
     {
@@ -240,7 +296,11 @@
       "status": "planned",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi pelaporan near miss untuk pencegahan kecelakaan kerja",
-      "keywords": ["near miss", "pelaporan bahaya", "investigasi K3"],
+      "keywords": [
+        "near miss",
+        "pelaporan bahaya",
+        "investigasi K3"
+      ],
       "brief": "Gunakan skenario anonim untuk menjelaskan alur laporan, analisis, umpan balik, dan tindakan."
     },
     {
@@ -251,7 +311,10 @@
       "status": "planned",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi evaluasi sistem K3 setelah insiden kerja",
-      "keywords": ["evaluasi insiden kerja", "investigasi kecelakaan"],
+      "keywords": [
+        "evaluasi insiden kerja",
+        "investigasi kecelakaan"
+      ],
       "brief": "Jelaskan pemeriksaan sistem, bukti, faktor organisasi, dan tindak lanjut tanpa menyalahkan korban."
     },
     {
@@ -262,7 +325,10 @@
       "status": "planned",
       "image": "/assets/images/icon-tips.svg",
       "imageAlt": "Ilustrasi checklist K3 mingguan yang praktis",
-      "keywords": ["checklist K3", "inspeksi mingguan"],
+      "keywords": [
+        "checklist K3",
+        "inspeksi mingguan"
+      ],
       "brief": "Berikan prinsip menyusun checklist singkat yang fokus pada risiko utama dan mudah ditindaklanjuti."
     },
     {
@@ -273,7 +339,10 @@
       "status": "planned",
       "image": "/assets/images/icon-tips.svg",
       "imageAlt": "Ilustrasi penulisan prosedur kerja yang mudah dipahami",
-      "keywords": ["prosedur kerja aman", "instruksi kerja K3"],
+      "keywords": [
+        "prosedur kerja aman",
+        "instruksi kerja K3"
+      ],
       "brief": "Jelaskan bahasa, urutan, visual, validasi pengguna, dan pengendalian perubahan prosedur."
     },
     {
@@ -284,7 +353,10 @@
       "status": "planned",
       "image": "/assets/images/icon-tips.svg",
       "imageAlt": "Ilustrasi rapat K3 yang fokus pada keputusan dan tindak lanjut",
-      "keywords": ["rapat K3", "komunikasi keselamatan"],
+      "keywords": [
+        "rapat K3",
+        "komunikasi keselamatan"
+      ],
       "brief": "Berikan format agenda, data yang dibawa, keputusan yang dicatat, dan pemantauan tindakan."
     },
     {
@@ -295,7 +367,10 @@
       "status": "planned",
       "image": "/assets/images/icon-tips.svg",
       "imageAlt": "Ilustrasi penentuan prioritas perbaikan keselamatan kerja",
-      "keywords": ["prioritas perbaikan K3", "rencana kerja K3"],
+      "keywords": [
+        "prioritas perbaikan K3",
+        "rencana kerja K3"
+      ],
       "brief": "Jelaskan cara mengurutkan tindakan berdasarkan risiko, kewajiban, dampak, dan kemampuan pelaksanaan."
     },
     {
@@ -306,7 +381,10 @@
       "status": "planned",
       "image": "/assets/images/icon-tips.svg",
       "imageAlt": "Ilustrasi kebiasaan inspeksi keselamatan kerja yang konsisten",
-      "keywords": ["kebiasaan inspeksi", "disiplin K3"],
+      "keywords": [
+        "kebiasaan inspeksi",
+        "disiplin K3"
+      ],
       "brief": "Bahas pembagian peran, waktu yang realistis, pencatatan sederhana, dan umpan balik."
     },
     {
@@ -317,7 +395,10 @@
       "status": "planned",
       "image": "/assets/images/icon-tips.svg",
       "imageAlt": "Ilustrasi persiapan konsultasi keselamatan kerja",
-      "keywords": ["konsultasi K3", "persiapan audit K3"],
+      "keywords": [
+        "konsultasi K3",
+        "persiapan audit K3"
+      ],
       "brief": "Buat daftar informasi, dokumen, lokasi, dan pertanyaan yang sebaiknya disiapkan sebelum konsultasi."
     },
     {
@@ -328,7 +409,10 @@
       "status": "planned",
       "image": "/assets/images/icon-lokal.svg",
       "imageAlt": "Ilustrasi layanan konsultasi SMK3 untuk perusahaan di Cilegon",
-      "keywords": ["jasa SMK3 Cilegon", "konsultan K3 Cilegon"],
+      "keywords": [
+        "jasa SMK3 Cilegon",
+        "konsultan K3 Cilegon"
+      ],
       "brief": "Jelaskan tanda kebutuhan pendampingan lokal tanpa mengarang sektor, jumlah perusahaan, atau kondisi kawasan."
     },
     {
@@ -339,7 +423,10 @@
       "status": "planned",
       "image": "/assets/images/icon-lokal.svg",
       "imageAlt": "Ilustrasi persiapan konsultasi K3 untuk perusahaan di Serang",
-      "keywords": ["jasa SMK3 Serang", "konsultan K3 Serang"],
+      "keywords": [
+        "jasa SMK3 Serang",
+        "konsultan K3 Serang"
+      ],
       "brief": "Berikan panduan persiapan konsultasi lokal yang praktis dan tidak mengulang halaman layanan city."
     },
     {
@@ -350,7 +437,10 @@
       "status": "planned",
       "image": "/assets/images/icon-lokal.svg",
       "imageAlt": "Ilustrasi pilihan pendampingan K3 untuk perusahaan di Tangerang",
-      "keywords": ["jasa SMK3 Tangerang", "pendampingan K3 Tangerang"],
+      "keywords": [
+        "jasa SMK3 Tangerang",
+        "pendampingan K3 Tangerang"
+      ],
       "brief": "Bandingkan konsultasi awal, gap assessment, penyusunan dokumen, dan pendampingan onsite secara proporsional."
     },
     {
@@ -361,7 +451,10 @@
       "status": "planned",
       "image": "/assets/images/icon-lokal.svg",
       "imageAlt": "Ilustrasi pertanyaan saat memilih konsultan K3 di Bandung",
-      "keywords": ["konsultan K3 Bandung", "konsultasi SMK3 Bandung"],
+      "keywords": [
+        "konsultan K3 Bandung",
+        "konsultasi SMK3 Bandung"
+      ],
       "brief": "Buat daftar pertanyaan untuk menilai ruang lingkup, metode kerja, bukti pengalaman, dan hasil pendampingan."
     },
     {
@@ -372,7 +465,10 @@
       "status": "planned",
       "image": "/assets/images/icon-lokal.svg",
       "imageAlt": "Ilustrasi persiapan audit K3 untuk perusahaan di Jakarta",
-      "keywords": ["audit K3 Jakarta", "jasa SMK3 Jakarta"],
+      "keywords": [
+        "audit K3 Jakarta",
+        "jasa SMK3 Jakarta"
+      ],
       "brief": "Fokus pada langkah persiapan yang bisa dilakukan perusahaan tanpa membuat klaim tentang karakteristik industri kota."
     },
     {
@@ -383,7 +479,10 @@
       "status": "planned",
       "image": "/assets/images/icon-lokal.svg",
       "imageAlt": "Ilustrasi persiapan konsultasi onsite K3 di Jawa Timur",
-      "keywords": ["konsultasi onsite K3 Jawa Timur", "jasa SMK3 Jawa Timur"],
+      "keywords": [
+        "konsultasi onsite K3 Jawa Timur",
+        "jasa SMK3 Jawa Timur"
+      ],
       "brief": "Jelaskan informasi lokasi, agenda kunjungan, kontak lapangan, dan bukti kerja yang perlu disiapkan."
     }
   ],
