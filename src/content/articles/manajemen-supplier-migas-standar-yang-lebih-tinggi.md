@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["api-q2", "supplier", "migas"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-manajemen-supplier-migas.svg"
 imageAlt: "Ilustrasi manajemen supplier migas"
 serviceSlugs: ["api-q2"]
 ---

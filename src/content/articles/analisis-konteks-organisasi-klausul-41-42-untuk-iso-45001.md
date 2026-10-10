@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-45001", "konteks-organisasi", "klausul-4", "klausul-5"]
 readTime: "5 menit"
-image: "/assets/images/article-reference-iso-45001.svg"
+image: "/assets/images/article-analisis-konteks-iso-45001.svg"
 imageAlt: "Ilustrasi analisis konteks organisasi Klausul 4 dan 5 ISO 45001"
 serviceSlugs: ["iso-45001"]
 ---

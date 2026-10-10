@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-55001", "pemeliharan", "rcm", "fmea"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-strategi-pemeliharaan-rcm.svg"
 imageAlt: "Ilustrasi strategi pemeliharan berbasis risiko"
 serviceSlugs: ["iso-55001"]
 ---

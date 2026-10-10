@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Regulasi"
 tags: ["iso-45001", "smk3", "pp-50-2012"]
 readTime: "6 menit"
-image: "/assets/images/article-reference-iso-45001.svg"
+image: "/assets/images/article-iso-45001-vs-smk3.svg"
 imageAlt: "Ilustrasi perbandingan ISO 45001 dan SMK3 PP 50/2012"
 serviceSlugs: ["iso-45001"]
 ---

@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["haccp", "batas-kritis", "keamanan-pangan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-penetapan-batas-kritis.svg"
 imageAlt: "Ilustrasi penetapan batas kritis berbasis data"
 serviceSlugs: ["haccp"]
 ---

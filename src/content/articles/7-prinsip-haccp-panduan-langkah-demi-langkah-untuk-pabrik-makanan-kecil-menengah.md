@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["haccp", "keamanan-pangan", "pabrik-makanan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-7-prinsip-haccp.svg"
 imageAlt: "Ilustrasi 7 prinsip HACCP"
 serviceSlugs: ["haccp"]
 ---

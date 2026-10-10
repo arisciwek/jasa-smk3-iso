@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-22000", "traceability", "mock-recall"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-riset-ketertelusuran-traceability.svg"
 imageAlt: "Ilustrasi riset ketertelusuran dan mock recall"
 serviceSlugs: ["iso-22000"]
 ---

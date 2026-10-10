@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Case Study"
 tags: ["iso-22000", "penarikan-produk", "alergen"]
 readTime: "6 menit"
-image: "/assets/images/icon-case-study.svg"
+image: "/assets/images/article-studi-kasus-penarikan-produk.svg"
 imageAlt: "Ilustrasi studi kasus penarikan produk kontaminasi alergen"
 serviceSlugs: ["iso-22000"]
 ---

@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iatf-16949", "produksi", "keandalan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-pengendalian-proses-otomotif.svg"
 imageAlt: "Ilustrasi pengendalian proses produksi otomotif"
 serviceSlugs: ["iatf-16949"]
 ---

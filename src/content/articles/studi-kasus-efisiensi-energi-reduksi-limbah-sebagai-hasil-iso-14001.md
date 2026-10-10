@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Case Study"
 tags: ["iso-14001", "efisiensi-energi", "reduksi-limbah"]
 readTime: "6 menit"
-image: "/assets/images/icon-case-study.svg"
+image: "/assets/images/article-studi-kasus-efisiensi-energi.svg"
 imageAlt: "Ilustrasi studi kasus efisiensi energi dan reduksi limbah"
 serviceSlugs: ["iso-14001"]
 ---

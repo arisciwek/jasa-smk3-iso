@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-17025", "audit", "laboratorium"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-persiapan-audit-lab-17025.svg"
 imageAlt: "Ilustrasi persiapan audit laboratorium standar ISO 17025"
 serviceSlugs: ["iso-17025"]
 ---

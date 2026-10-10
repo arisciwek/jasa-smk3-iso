@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-21001", "audit-internal", "pendidikan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-audit-internal-pendidikan.svg"
 imageAlt: "Ilustrasi audit internal organisasi pendidikan"
 serviceSlugs: ["iso-21001"]
 ---

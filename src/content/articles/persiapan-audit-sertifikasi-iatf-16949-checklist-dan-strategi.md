@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iatf-16949", "audit", "otomotif"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-persiapan-audit-iatf.svg"
 imageAlt: "Ilustrasi persiapan audit sertifikasi IATF 16949"
 serviceSlugs: ["iatf-16949"]
 ---

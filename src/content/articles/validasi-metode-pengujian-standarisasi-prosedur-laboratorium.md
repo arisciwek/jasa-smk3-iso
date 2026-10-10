@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-17025", "validasi", "metode-pengujian"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-validasi-metode-pengujian.svg"
 imageAlt: "Ilustrasi validasi metode pengujian"
 serviceSlugs: ["iso-17025"]
 ---

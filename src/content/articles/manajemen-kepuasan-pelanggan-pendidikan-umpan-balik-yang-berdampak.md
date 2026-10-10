@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-21001", "kepuasan-pelanggan", "pendidikan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-manajemen-kepuasan-pendidikan.svg"
 imageAlt: "Ilustrasi manajemen kepuasan pelanggan pendidikan"
 serviceSlugs: ["iso-21001"]
 ---

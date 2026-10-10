@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-13485", "pascasarar", "pelaporan-kecelakaan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-manajemen-pasca-pasar.svg"
 imageAlt: "Ilustrasi manajemen pascasarar untuk perangkat medis"
 serviceSlugs: ["iso-13485"]
 ---

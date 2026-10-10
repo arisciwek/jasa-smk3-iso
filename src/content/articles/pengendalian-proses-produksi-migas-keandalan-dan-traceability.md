@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["api-q2", "produksi", "keandalan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-pengendalian-proses-migas.svg"
 imageAlt: "Ilustrasi pengendalian proses produksi migas"
 serviceSlugs: ["api-q2"]
 ---

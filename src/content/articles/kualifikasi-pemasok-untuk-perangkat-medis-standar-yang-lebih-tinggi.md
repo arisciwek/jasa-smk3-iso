@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-13485", "pemasok", "perangkat-medis"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-kualifikasi-pemasok-medis.svg"
 imageAlt: "Ilustrasi kualifikasi pemasok untuk perangkat medis"
 serviceSlugs: ["iso-13485"]
 ---

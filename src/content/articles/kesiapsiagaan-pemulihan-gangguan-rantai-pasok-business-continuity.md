@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-28000", "kesiapsiagaan", "business-continuity"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-kesiapsiagaan-rantai-pasok.svg"
 imageAlt: "Ilustrasi kesiapsiagaan dan pemulihan gangguan rantai pasok"
 serviceSlugs: ["iso-28000"]
 ---

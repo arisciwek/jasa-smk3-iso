@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-28000", "rantai-pasok", "keamanan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-penilaian-risiko-rantai-pasok.svg"
 imageAlt: "Ilustrasi penilaian risiko keamanan rantai pasok"
 serviceSlugs: ["iso-28000"]
 ---

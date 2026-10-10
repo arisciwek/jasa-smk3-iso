@@ -6,7 +6,7 @@ lastmod: "2026-10-09"
 category: "Tips & Panduan"
 author: "Tim Konsultan K3"
 readTime: "4 menit"
-image: "/assets/images/article-checklist-audit.svg"
+image: "/assets/images/article-checklist-audit-k3.svg"
 imageAlt: "Ilustrasi checklist persiapan audit internal K3"
 tags: [tips, audit-internal]
 ---

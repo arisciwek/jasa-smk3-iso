@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Case Study"
 tags: ["iso-37001", "budaya-anti-suap", "kebijakan"]
 readTime: "6 menit"
-image: "/assets/images/icon-case-study.svg"
+image: "/assets/images/article-budaya-anti-suap.svg"
 imageAlt: "Ilustrasi pembangunan budaya anti-suap dari kebijakan ke perilaku harian"
 serviceSlugs: ["iso-37001"]
 ---

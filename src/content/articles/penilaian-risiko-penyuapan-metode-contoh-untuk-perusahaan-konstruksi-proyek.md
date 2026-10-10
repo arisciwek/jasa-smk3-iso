@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-37001", "penyuapan", "penilaian-risiko"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-penilaian-risiko-penyuapan.svg"
 imageAlt: "Ilustrasi penilaian risiko penyuapan untuk perusahaan konstruksi"
 serviceSlugs: ["iso-37001"]
 ---

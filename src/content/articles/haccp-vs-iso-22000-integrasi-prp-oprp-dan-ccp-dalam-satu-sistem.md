@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-22000", "haccp", "keamanan-pangan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-haccp-vs-iso22000.svg"
 imageAlt: "Ilustrasi integrasi HACCP dan ISO 22000"
 serviceSlugs: ["iso-22000"]
 ---

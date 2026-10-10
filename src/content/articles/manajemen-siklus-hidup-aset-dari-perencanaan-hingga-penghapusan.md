@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-55001", "siklus-hidup-aset", "manajemen-aset"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-manajemen-siklus-hidup-aset.svg"
 imageAlt: "Ilustrasi manajemen siklus hidup aset"
 serviceSlugs: ["iso-55001"]
 ---

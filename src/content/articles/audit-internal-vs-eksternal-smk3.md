@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Regulasi"
 tags: ["audit-internal", "audit-eksternal", "smk3"]
 readTime: "5 menit"
-image: "/assets/images/article-reference-smk3.svg"
+image: "/assets/images/article-audit-internal-vs-eksternal-smk3.svg"
 imageAlt: "Ilustrasi perbedaan audit internal dan audit eksternal SMK3"
 serviceSlugs: ["smk3", "iso-45001"]
 ---

@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-21001", "kepatuhan", "regulasi-pendidikan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-kepatuhan-regulasi-pendidikan.svg"
 imageAlt: "Ilustrasi kepatuhan regulasi pendidikan"
 serviceSlugs: ["iso-21001"]
 ---

@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-27001", "annex-a", "kontrol-keamanan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-kontrol-annex-a-2022.svg"
 imageAlt: "Ilustrasi kontrol Annex A 2022"
 serviceSlugs: ["iso-27001"]
 ---

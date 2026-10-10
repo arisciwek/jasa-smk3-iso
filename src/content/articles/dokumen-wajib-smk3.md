@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Regulasi"
 tags: ["dokumen-smk3", "persiapan-smk3"]
 readTime: "6 menit"
-image: "/assets/images/article-reference-smk3.svg"
+image: "/assets/images/article-dokumen-wajib-smk3.svg"
 imageAlt: "Ilustrasi dokumen persiapan penerapan SMK3"
 serviceSlugs: ["smk3"]
 ---

@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-14001", "aspek-lingkungan", "dampak-lingkungan"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-identifikasi-aspek-lingkungan.svg"
 imageAlt: "Ilustrasi identifikasi aspek dan dampak lingkungan"
 serviceSlugs: ["iso-14001"]
 ---

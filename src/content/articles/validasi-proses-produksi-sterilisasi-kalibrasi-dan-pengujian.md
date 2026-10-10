@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-13485", "validasi", "sterilisasi", "kalibrasi"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-validasi-proses-produksi-medis.svg"
 imageAlt: "Ilustrasi validasi proses produksi untuk perangkat medis"
 serviceSlugs: ["iso-13485"]
 ---

@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-14001", "kepatuhan-hukum", "legal-register"]
 readTime: "5 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-kepatuhan-hukum-lingkungan.svg"
 imageAlt: "Ilustrasi legal register kepatuhan hukum lingkungan"
 serviceSlugs: ["iso-14001"]
 ---

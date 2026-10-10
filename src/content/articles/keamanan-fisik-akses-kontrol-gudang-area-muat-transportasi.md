@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-28000", "keamanan-fisik", "gudang"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-keamanan-fisik-gudang.svg"
 imageAlt: "Ilustrasi keamanan fisik akses, gudang, area muat, dan transportasi"
 serviceSlugs: ["iso-28000"]
 ---

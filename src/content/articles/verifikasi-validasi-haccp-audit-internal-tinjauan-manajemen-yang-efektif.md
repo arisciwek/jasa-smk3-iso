@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["haccp", "verifikasi", "validasi", "audit-internal"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-verifikasi-validasi-haccp.svg"
 imageAlt: "Ilustrasi verifikasi dan validasi HACCP"
 serviceSlugs: ["haccp"]
 ---

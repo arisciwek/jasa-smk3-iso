@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-17025", "kalibrasi", "alat-ukur"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-manajemen-kalibrasi-alat.svg"
 imageAlt: "Ilustrasi manajemen kalibrasi alat ukur"
 serviceSlugs: ["iso-17025"]
 ---

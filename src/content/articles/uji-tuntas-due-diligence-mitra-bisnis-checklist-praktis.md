@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Tips & Panduan"
 tags: ["iso-37001", "due-diligence", "mitra-bisnis"]
 readTime: "5 menit"
-image: "/assets/images/article-checklist-audit.svg"
+image: "/assets/images/article-uji-tuntas-due-diligence.svg"
 imageAlt: "Ilustrasi checklist due diligence mitra bisnis"
 serviceSlugs: ["iso-37001"]
 ---

@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["api-q2", "audit", "migas"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-persiapan-audit-api-q2.svg"
 imageAlt: "Ilustrasi persiapan audit sertifikasi API Q2"
 serviceSlugs: ["api-q2"]
 ---

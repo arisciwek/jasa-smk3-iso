@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Tips & Panduan"
 tags: ["audit-internal", "iso-9001", "audit"]
 readTime: "5 menit"
-image: "/assets/images/article-checklist-audit.svg"
+image: "/assets/images/article-audit-internal-iso9001.svg"
 imageAlt: "Ilustrasi audit internal ISO 9001 yang mendalam"
 serviceSlugs: ["iso-9001"]
 ---

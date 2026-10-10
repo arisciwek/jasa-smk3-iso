@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Tips & Panduan"
 tags: ["iso-27001", "audit-sertifikasi", "persiapan-audit"]
 readTime: "5 menit"
-image: "/assets/images/article-checklist-audit.svg"
+image: "/assets/images/article-persiapan-audit-iso27001.svg"
 imageAlt: "Ilustrasi persiapan audit sertifikasi ISO 27001"
 serviceSlugs: ["iso-27001"]
 ---

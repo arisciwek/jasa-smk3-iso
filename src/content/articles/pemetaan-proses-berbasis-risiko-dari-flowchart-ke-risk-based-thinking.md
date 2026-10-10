@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["risk-based-thinking", "proses", "iso-9001"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-pemetaan-proses-risiko.svg"
 imageAlt: "Ilustrasi pemetaan proses berbasis risiko dari flowchart"
 serviceSlugs: ["iso-9001"]
 ---

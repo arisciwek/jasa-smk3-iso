@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iatf-16949", "supplier", "otomotif"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-manajemen-supplier-otomotif.svg"
 imageAlt: "Ilustrasi manajemen supplier otomotif"
 serviceSlugs: ["iatf-16949"]
 ---

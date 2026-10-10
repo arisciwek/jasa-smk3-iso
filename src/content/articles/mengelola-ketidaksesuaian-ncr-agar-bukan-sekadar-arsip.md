@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["ncr", "ketidaksesuaian", "tindakan-korektif"]
 readTime: "5 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-mengelola-ketidaksesuaian-ncr.svg"
 imageAlt: "Ilustrasi penanganan ketidaksesuaian dan tindakan korektif"
 serviceSlugs: ["iso-9001"]
 ---

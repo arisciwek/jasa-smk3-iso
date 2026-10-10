@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-55001", "aset", "inventarisasi"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-inventarisasi-klasifikasi-aset.svg"
 imageAlt: "Ilustrasi inventarisasi dan klasifikasi aset"
 serviceSlugs: ["iso-55001"]
 ---

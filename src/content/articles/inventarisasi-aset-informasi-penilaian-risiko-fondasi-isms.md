@@ -7,7 +7,7 @@ author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-27001", "aset-informasi", "penilaian-risiko"]
 readTime: "6 menit"
-image: "/assets/images/article-hirarki-risiko.svg"
+image: "/assets/images/article-inventarisasi-aset-informasi.svg"
 imageAlt: "Ilustrasi inventarisasi aset informasi dan penilaian risiko"
 serviceSlugs: ["iso-27001"]
 ---
