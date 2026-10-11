@@ -42,8 +42,8 @@ jobs:
           INTERVAL_HOURS: 24
           TRIGGER_TYPE: ${{ github.event_name }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
-          AI_BASE_URL: ${{ variables.AI_BASE_URL }}
-          AI_MODEL: ${{ variables.AI_MODEL }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
         run: node scripts/run-if-interval-elapsed.mjs
       - name: Commit and push
         if: always()
