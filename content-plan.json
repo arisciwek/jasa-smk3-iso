@@ -147,14 +147,16 @@
       "type": "create",
       "title": "Menyusun Matriks Kepatuhan K3 yang Dapat Dipakai Tim",
       "category": "Regulasi",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi matriks kepatuhan regulasi keselamatan kerja",
       "keywords": [
         "matriks kepatuhan K3",
         "legal register K3"
       ],
-      "brief": "Jelaskan kolom penting, pemilik tindakan, status pemenuhan, dan cara menjaga matriks tetap hidup."
+      "brief": "Jelaskan kolom penting, pemilik tindakan, status pemenuhan, dan cara menjaga matriks tetap hidup.",
+      "publishedAt": "2026-10-11T13:47:57Z",
+      "slug": "menyusun-matriks-kepatuhan-k3"
     },
     {
       "id": "cara-menyusun-hiradc",
