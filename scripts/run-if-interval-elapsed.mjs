@@ -125,17 +125,6 @@ function main() {
     state[workflowType] = timestamp;
     saveState(state);
     console.log(`Updated last-run for ${workflowType}: ${timestamp}`);
-
-    try {
-      execSync('git config user.name "smk3-iso-content-bot"', { stdio: 'ignore', cwd: root });
-      execSync('git config user.email "smk3-iso-content-bot@users.noreply.github.com"', { stdio: 'ignore', cwd: root });
-      execSync(`git add ${stateFile}`, { stdio: 'ignore', cwd: root });
-      execSync(`git commit -m "chore: update last-run for ${workflowType}"`, { stdio: 'ignore', cwd: root });
-      execSync('git push', { stdio: 'ignore', cwd: root });
-      console.log('State committed and pushed');
-    } catch (e) {
-      console.warn('Failed to commit state (may be no changes or push failed):', e.message);
-    }
   } else {
     console.error('Generator failed, state not updated');
     process.exit(1);

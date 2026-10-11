@@ -41,10 +41,40 @@ jobs:
           WORKFLOW_TYPE: article-create
           INTERVAL_HOURS: 48
         run: node scripts/run-if-interval-elapsed.mjs
-      - name: Upload artifact
+      - name: Commit and push
         if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: article-create-result
-          path: automation-output/
-          if-no-files-found: ignore
+        run: |
+          git config user.name "smk3-iso-content-bot"
+          git config user.email "smk3-iso-content-bot@users.noreply.github.com"
+          
+          # Stage relevant files
+          git add src/content/articles/ content-plan.json automation-state/last-run.json
+          
+          # Check if there are changes
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan untuk di-commit."
+            exit 0
+          fi
+          
+          # Get the created article title from automation-output or src
+          # Since generator creates the file, we can check src/content/articles/ for new files
+          # But easier: the generator writes to automation-output/src/content/articles/
+          # Let's check what's in automation-output from the previous step
+          # Actually, the generator already ran and updated the files, so we can just get the title from the generated file
+          
+          # Find the most recently created/modified article file in src/content/articles/
+          latest_article=$(find src/content/articles -name "*.md" -type f -printf '%T@ %p\n' 2>/dev/null | sort -n | tail -1 | cut -d' ' -f2-)
+          
+          if [ -n "$latest_article" ]; then
+            # Extract title from frontmatter
+            title=$(grep -m1 '^title:' "$latest_article" | sed 's/^title: *//' | sed 's/^"//' | sed 's/"$//')
+            if [ -n "$title" ]; then
+              git commit -m "create: artikel: $title"
+              git push
+              exit 0
+            fi
+          fi
+          
+          # Fallback if we can't get title
+          git commit -m "create: artikel"
+          git push
