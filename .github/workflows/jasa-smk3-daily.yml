@@ -26,7 +26,7 @@ jobs:
       - id: decide
         run: node scripts/decide-content.mjs
 
-  create-article:
+  article-worker:
     needs: prepare
     if: needs.prepare.outputs.tasks == '1'
     runs-on: ubuntu-latest
@@ -47,11 +47,11 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: create-article-result
+          name: article-worker-result
           path: automation-output/
           if-no-files-found: ignore
 
-  update-city:
+  jasa-smk3-worker:
     needs: prepare
     if: needs.prepare.outputs.tasks == '1'
     runs-on: ubuntu-latest
@@ -62,46 +62,79 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - name: Update one city paragraph
+      - name: Update one SMK3 city paragraph
         env:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_BASE_URL: ${{ vars.AI_BASE_URL }}
           AI_MODEL: ${{ vars.AI_MODEL }}
         run: node scripts/generate-jasa-smk3-content.mjs
-      - name: Upload city result
+      - name: Upload SMK3 city result
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: update-city-result
+          name: jasa-smk3-worker-result
+          path: automation-output/
+          if-no-files-found: ignore
+
+  jasa-iso-worker:
+    needs: prepare
+    if: needs.prepare.outputs.tasks == '1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Update one ISO city paragraph
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+        run: node scripts/generate-jasa-iso-content.mjs
+      - name: Upload ISO city result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jasa-iso-worker-result
           path: automation-output/
           if-no-files-found: ignore
 
   publish:
-    needs: [prepare, create-article, update-city]
-    if: always() && needs.prepare.outputs.tasks == '1' && (needs.create-article.result == 'success' || needs.update-city.result == 'success')
+    needs: [prepare, article-worker, jasa-smk3-worker, jasa-iso-worker]
+    if: always() && needs.prepare.outputs.tasks == '1' && (needs.article-worker.result == 'success' || needs.jasa-smk3-worker.result == 'success' || needs.jasa-iso-worker.result == 'success')
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Download article result
-        if: needs.create-article.result == 'success'
+        if: needs.article-worker.result == 'success'
         uses: actions/download-artifact@v4
         with:
-          name: create-article-result
-          path: automation-input/create
+          name: article-worker-result
+          path: automation-input/article
         continue-on-error: true
-      - name: Download city result
-        if: needs.update-city.result == 'success'
+      - name: Download SMK3 city result
+        if: needs.jasa-smk3-worker.result == 'success'
         uses: actions/download-artifact@v4
         with:
-          name: update-city-result
-          path: automation-input/update
+          name: jasa-smk3-worker-result
+          path: automation-input/jasa-smk3
+        continue-on-error: true
+      - name: Download ISO city result
+        if: needs.jasa-iso-worker.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: jasa-iso-worker-result
+          path: automation-input/jasa-iso
         continue-on-error: true
       - name: Merge results
         run: |
-          cp -a automation-input/create/. . 2>/dev/null || true
-          cp -a automation-input/update/. . 2>/dev/null || true
+          cp -a automation-input/article/. . 2>/dev/null || true
+          cp -a automation-input/jasa-smk3/. . 2>/dev/null || true
+          cp -a automation-input/jasa-iso/. . 2>/dev/null || true
           rm -rf automation-input automation-output
       - uses: actions/setup-node@v4
         with:
@@ -114,10 +147,10 @@ jobs:
         run: |
           git config user.name "smk3-iso-content-bot"
           git config user.email "smk3-iso-content-bot@users.noreply.github.com"
-          git add content-plan.json src/content/articles src/data/jasa-smk3
+          git add content-plan.json src/content/articles src/data/jasa-smk3 src/data/jasa-iso
           if git diff --cached --quiet; then
             echo "Tidak ada perubahan untuk di-commit."
             exit 0
           fi
-          git commit -m "content: daily article and city update"
+          git commit -m "content: daily article, SMK3 city, and ISO city update"
           git push

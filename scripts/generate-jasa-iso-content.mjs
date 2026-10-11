@@ -31,7 +31,7 @@ const files = new Map(
 const stateFor = (city) => files.get(city.slug)?.data || {
   slug: city.slug,
   lastmod: null,
-  nextTopic: plan.isoTopics?.[0]?.id || plan.cityTopics[0].id,
+  nextTopic: plan.cityTopics[0].id,
   completedTopics: [],
   paragraphs: [],
 };
@@ -45,14 +45,13 @@ const candidates = cityRows
   });
 
 const selected = candidates[0];
-const topicList = plan.isoTopics?.length ? plan.isoTopics : plan.cityTopics;
-const topicIndex = Math.max(0, topicList.findIndex((topic) => topic.id === selected.state.nextTopic));
-const topic = topicList[topicIndex] || topicList[0];
+const topicIndex = Math.max(0, plan.cityTopics.findIndex((topic) => topic.id === selected.state.nextTopic));
+const topic = plan.cityTopics[topicIndex] || plan.cityTopics[0];
 const existing = selected.state.paragraphs.map((paragraph) => paragraph.text).join('\n');
 const facts = [`Nama kota: ${selected.city.name}`, `Wilayah administratif yang tercatat: ${selected.city.region}`].join('\n');
 
 const prompt = `
-Anda adalah editor konten lokal berbahasa Indonesia untuk layanan sertifikasi ISO. Buat tepat satu paragraf baru untuk halaman layanan sertifikasi ISO per kota.
+Anda adalah editor konten lokal berbahasa Indonesia. Buat tepat satu paragraf baru untuk halaman layanan lokal kota.
 
 Kota: ${selected.city.name}
 Wilayah: ${selected.city.region}
@@ -67,7 +66,7 @@ ${existing || '(belum ada)'}
 Aturan ketat:
 - keluarkan hanya satu paragraf teks biasa, tanpa judul, markdown, bullet, atau awalan angka;
 - 60-${topic.maxWords} kata;
-- fokus pada konteks kota untuk sertifikasi ISO (ISO 45001, ISO 9001, ISO 14001, ISO 27001, dll), bukan penjelasan umum standar;
+- fokus pada konteks kota, bukan penjelasan umum ISO, sertifikasi, atau regulasi;
 - jangan mengarang kawasan industri, perusahaan, jarak, waktu tempuh, jumlah industri, atau fakta lokal lain;
 - jika fakta tidak cukup untuk membuat klaim spesifik, gunakan bahasa yang hati-hati dan umum;
 - jangan mengulang kalimat atau ide dari paragraf lama.
@@ -83,7 +82,7 @@ const response = await fetch(`${baseUrl}/chat/completions`, {
     model,
     temperature: 0.45,
     messages: [
-      { role: 'system', content: 'Tulis konten lokal sertifikasi ISO yang faktual, ringkas, dan tidak berlebihan.' },
+      { role: 'system', content: 'Tulis konten lokal yang faktual, ringkas, dan tidak berlebihan.' },
       { role: 'user', content: prompt },
     ],
   }),
@@ -97,12 +96,16 @@ if (!text || text.split(/\s+/).length < 20 || text.includes('\n')) {
   throw new Error('AI tidak menghasilkan tepat satu paragraf yang valid.');
 }
 
-const today = new Date().toISOString().slice(0, 10);
-const nextTopic = topicList[(topicIndex + 1) % topicList.length].id;
+const hour = String(Math.floor(Math.random() * 24)).padStart(2, '0');
+const minute = String(Math.floor(Math.random() * 60)).padStart(2, '0');
+const second = String(Math.floor(Math.random() * 60)).padStart(2, '0');
+const now = new Date().toISOString().split('T')[0] + `T${hour}:${minute}:${second}Z`;
+const today = now.slice(0, 10);
+const nextTopic = plan.cityTopics[(topicIndex + 1) % plan.cityTopics.length].id;
 const updated = {
   ...selected.state,
   slug: selected.city.slug,
-  lastmod: today,
+  lastmod: now,
   lastUpdatedTopic: topic.id,
   nextTopic,
   completedTopics: [...new Set([...selected.state.completedTopics, topic.id])],
