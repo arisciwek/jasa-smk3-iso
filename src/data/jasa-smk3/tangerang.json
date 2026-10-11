@@ -1,9 +1,10 @@
 {
   "slug": "tangerang",
-  "lastmod": "2026-10-09T00:44:12Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-11T21:35:54Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Tangerang dapat diarahkan pada pemeriksaan hasil inspeksi, pelaporan bahaya, dan tindak lanjutnya. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Tangerang, yang termasuk dalam wilayah administratif Jakarta & Sekitarnya, berperan sebagai kota pendukung dengan dinamika urban yang signifikan. Keberadaannya di dekat Jakarta memberikan keuntungan aksesibilitas, sementara perkembangan lokal menciptakan kebutuhan akan layanan yang responsif terhadap konteks setempat. Untuk pembaca lokal, pemahaman tentang karakteristik kota seperti integrasi dengan kawasan metropolitan dapat membantu dalam merencanakan pendekatan yang tepat."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
