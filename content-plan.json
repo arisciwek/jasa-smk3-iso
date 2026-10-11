@@ -130,14 +130,16 @@
       "type": "create",
       "title": "Perbedaan SMK3 dan ISO 45001 yang Perlu Dipahami Perusahaan",
       "category": "Regulasi",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi perbandingan SMK3 dan ISO 45001",
       "keywords": [
         "SMK3 dan ISO 45001",
         "perbedaan SMK3 ISO"
       ],
-      "brief": "Bandingkan konteks, tujuan, struktur, dan cara integrasi tanpa menyederhanakan persyaratan hukum."
+      "brief": "Bandingkan konteks, tujuan, struktur, dan cara integrasi tanpa menyederhanakan persyaratan hukum.",
+      "publishedAt": "2026-10-11",
+      "slug": "perbedaan-smk3-dan-iso-45001"
     },
     {
       "id": "menyusun-matriks-kepatuhan-k3",
