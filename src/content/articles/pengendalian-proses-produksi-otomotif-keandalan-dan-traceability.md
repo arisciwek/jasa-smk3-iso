@@ -1,8 +1,8 @@
 ---
 title: "Pengendalian Proses Produksi Otomotif: Keandalan dan Traceability"
 description: "Cara mengendalikan proses produksi otomotif untuk memastikan keandalan dan traceability."
-date: "2026-10-10T07:00:00Z"
-lastmod: "2026-10-10T07:00:00Z"
+date: "2026-10-10T18:07:31Z"
+lastmod: "2026-10-10T18:07:31Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iatf-16949", "produksi", "keandalan"]

@@ -1,8 +1,8 @@
 ---
 title: "Audit Internal Organisasi Pendidikan: Mengukur Efektivitas Sistem"
 description: "Cara melakukan audit internal untuk mengukur efektivitas sistem dalam organisasi pendidikan."
-date: "2026-09-29T07:00:00Z"
-lastmod: "2026-09-29T07:00:00Z"
+date: "2026-09-29T20:53:01Z"
+lastmod: "2026-09-29T20:53:01Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-21001", "audit-internal", "pendidikan"]

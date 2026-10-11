@@ -1,8 +1,8 @@
 ---
 title: "Validasi Metode Pengujian: Standarisasi Prosedur Laboratorium"
 description: "Cara melakukan validasi metode pengujian untuk standarisasi prosedur laboratorium."
-date: "2026-10-10T07:00:00Z"
-lastmod: "2026-10-10T13:43:00Z"
+date: "2026-10-10T18:28:51Z"
+lastmod: "2026-10-10T18:28:51Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-17025", "validasi", "metode-pengujian"]

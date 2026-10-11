@@ -1,8 +1,8 @@
 ---
 title: "Keamanan Fisik: Akses, Kontrol Gudang, Area Muat, dan Transportasi"
 description: "Cara mengelola keamanan fisik pada akses, gudang, area muat, dan transportasi untuk menjaga keamanan rantai pasok."
-date: "2026-10-04T07:00:00Z"
-lastmod: "2026-10-04T07:00:00Z"
+date: "2026-10-04T06:12:48Z"
+lastmod: "2026-10-04T06:12:48Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-28000", "keamanan-fisik", "gudang"]

@@ -1,8 +1,8 @@
 ---
 title: "Persiapan Audit Laboratorium Standar ISO 17025: Checklist dan Strategi"
 description: "Cara mempersiapkan audit laboratorium standar ISO 17025 dengan checklist dan strategi yang efektif."
-date: "2026-10-10T07:00:00Z"
-lastmod: "2026-10-10T07:00:00Z"
+date: "2026-10-10T12:35:41Z"
+lastmod: "2026-10-10T12:35:41Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-17025", "audit", "laboratorium"]

@@ -1,8 +1,8 @@
 ---
 title: "Riset Ketertelusuran (Traceability): Mock Recall, Prosedur, dan Target Waktu"
 description: "Cara membangun sistem ketertelusuran yang efektif, termasuk mock recall, prosedur, dan target waktu."
-date: "2026-10-06T07:00:00Z"
-lastmod: "2026-10-06T07:00:00Z"
+date: "2026-10-06T15:21:14Z"
+lastmod: "2026-10-06T15:21:14Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-22000", "traceability", "mock-recall"]

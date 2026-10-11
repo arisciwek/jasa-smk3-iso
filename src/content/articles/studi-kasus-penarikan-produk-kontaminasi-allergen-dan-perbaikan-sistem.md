@@ -1,8 +1,8 @@
 ---
 title: "Studi Kasus: Penarikan Produk Kontaminasi Alergen dan Perbaikan Sistem"
 description: "Cerita nyata tentang bagaimana organisasi menangani penarikan produk akibat kontaminasi alergen dan memperbaiki sistem."
-date: "2026-10-08T07:00:00Z"
-lastmod: "2026-10-08T07:00:00Z"
+date: "2026-10-08T19:53:43Z"
+lastmod: "2026-10-08T19:53:43Z"
 author: "Tim Konsultan K3"
 category: "Case Study"
 tags: ["iso-22000", "penarikan-produk", "alergen"]

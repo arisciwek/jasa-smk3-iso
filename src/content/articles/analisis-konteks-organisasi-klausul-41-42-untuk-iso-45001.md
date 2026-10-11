@@ -1,8 +1,8 @@
 ---
 title: "Analisis Konteks Organisasi: Klausul 4 dan 5 ISO 45001"
 description: "Cara memahami konteks organisasi, pihak berkepentingan, dan persyaratan K3 yang relevan untuk memenuhi Klausul 4 dan 5 ISO 45001."
-date: "2026-09-16T07:00:00Z"
-lastmod: "2026-09-16T07:00:00Z"
+date: "2026-09-16T22:27:56Z"
+lastmod: "2026-09-16T22:27:56Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-45001", "konteks-organisasi", "klausul-4", "klausul-5"]

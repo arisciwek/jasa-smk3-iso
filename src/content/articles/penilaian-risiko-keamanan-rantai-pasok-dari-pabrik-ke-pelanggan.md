@@ -1,8 +1,8 @@
 ---
 title: "Penilaian Risiko Keamanan Rantai Pasok: Dari Pabrik ke Pelanggan"
 description: "Cara praktis menilai risiko keamanan sepanjang rantai pasok, dari bahan baku hingga pengiriman ke pelanggan."
-date: "2026-10-03T07:00:00Z"
-lastmod: "2026-10-03T07:00:00Z"
+date: "2026-10-03T23:49:51Z"
+lastmod: "2026-10-03T23:49:51Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-28000", "rantai-pasok", "keamanan"]

@@ -1,8 +1,8 @@
 ---
 title: "Penetapan Batas Kritis (Critical Limits): Berbasis Data, Bukan Asumsi"
 description: "Cara menetapkan batas kritis yang berbasis data, bukan asumsi, untuk mengendalikan bahaya pangan."
-date: "2026-10-09T07:00:00Z"
-lastmod: "2026-10-09T07:00:00Z"
+date: "2026-10-09T16:27:02Z"
+lastmod: "2026-10-09T16:27:02Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["haccp", "batas-kritis", "keamanan-pangan"]

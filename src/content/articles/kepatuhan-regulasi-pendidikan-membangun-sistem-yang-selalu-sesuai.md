@@ -1,8 +1,8 @@
 ---
 title: "Kepatuhan Regulasi Pendidikan: Membangun Sistem yang Selalu Sesuai"
 description: "Cara membangun sistem yang selalu sesuai dengan regulasi pendidikan."
-date: "2026-09-30T07:00:00Z"
-lastmod: "2026-09-30T07:00:00Z"
+date: "2026-09-30T16:32:50Z"
+lastmod: "2026-09-30T16:32:50Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-21001", "kepatuhan", "regulasi-pendidikan"]

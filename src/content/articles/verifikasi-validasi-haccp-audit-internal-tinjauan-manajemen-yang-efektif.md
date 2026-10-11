@@ -1,8 +1,8 @@
 ---
 title: "Verifikasi dan Validasi HACCP: Audit Internal dan Tinjauan Manajemen yang Efektif"
 description: "Cara melakukan verifikasi dan validasi HACCP melalui audit internal dan tinjauan manajemen yang efektif."
-date: "2026-10-09T07:00:00Z"
-lastmod: "2026-10-09T07:00:00Z"
+date: "2026-10-09T09:55:25Z"
+lastmod: "2026-10-09T09:55:25Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["haccp", "verifikasi", "validasi", "audit-internal"]

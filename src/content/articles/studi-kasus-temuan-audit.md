@@ -1,8 +1,8 @@
 ---
 title: "Studi Kasus: Mengubah Temuan Audit Menjadi Rencana Kerja"
 description: "Pendekatan praktis untuk mengubah temuan audit K3 menjadi tindakan korektif yang memiliki pemilik dan batas waktu."
-date: "2026-09-05T07:00:00Z"
-lastmod: "2026-09-05T07:00:00Z"
+date: "2026-09-05T03:06:18Z"
+lastmod: "2026-09-05T03:06:18Z"
 category: "Case Study"
 author: "Tim Konsultan K3"
 readTime: "7 menit"

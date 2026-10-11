@@ -1,8 +1,8 @@
 ---
 title: "Kesiapan Konsultasi SMK3 Onsite"
 description: "Hal yang perlu disiapkan sebelum kunjungan konsultan K3 agar waktu onsite menghasilkan temuan dan rencana yang jelas."
-date: "2026-09-07T07:00:00Z"
-lastmod: "2026-09-07T07:00:00Z"
+date: "2026-09-07T21:53:29Z"
+lastmod: "2026-09-07T21:53:29Z"
 category: "Layanan Lokal"
 author: "Tim Konsultan K3"
 readTime: "5 menit"

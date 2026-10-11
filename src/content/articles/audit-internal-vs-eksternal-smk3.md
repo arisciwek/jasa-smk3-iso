@@ -1,8 +1,8 @@
 ---
 title: "Perbedaan Audit Internal dan Audit Eksternal SMK3"
 description: "Jelaskan tujuan, pelaksana, bukti, dan waktu pelaksanaan kedua jenis audit secara praktis."
-date: "2026-10-10"
-lastmod: "2026-10-10T00:00:00Z"
+date: "2026-10-10T18:10:57Z"
+lastmod: "2026-10-10T18:10:57Z"
 author: "Admin K3"
 category: "Regulasi"
 tags: ["audit internal SMK3","audit eksternal SMK3"]

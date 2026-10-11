@@ -1,8 +1,8 @@
 ---
 title: "Penilaian Risiko Penyuapan: Metode dan Contoh untuk Perusahaan Konstruksi Proyek"
 description: "Cara praktis melakukan penilaian risiko penyuapan untuk perusahaan konstruksi, dengan contoh penerapan dalam proyek."
-date: "2026-09-27T07:00:00Z"
-lastmod: "2026-09-27T07:00:00Z"
+date: "2026-09-27T09:51:11Z"
+lastmod: "2026-09-27T09:51:11Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-37001", "penyuapan", "penilaian-risiko"]

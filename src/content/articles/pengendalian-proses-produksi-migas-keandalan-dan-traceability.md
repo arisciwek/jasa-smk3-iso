@@ -1,8 +1,8 @@
 ---
 title: "Pengendalian Proses Produksi Migas: Keandalan dan Traceability"
 description: "Cara mengendalikan proses produksi migas untuk memastikan keandalan dan traceability."
-date: "2026-10-10T07:00:00Z"
-lastmod: "2026-10-10T07:00:00Z"
+date: "2026-10-10T00:45:19Z"
+lastmod: "2026-10-10T00:45:19Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["api-q2", "produksi", "keandalan"]

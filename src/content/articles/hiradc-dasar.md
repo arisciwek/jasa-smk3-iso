@@ -1,8 +1,8 @@
 ---
 title: "HIRADC: Cara Memulai Identifikasi Bahaya di Tempat Kerja"
 description: "Langkah awal menyusun HIRADC yang dapat dipakai tim operasional untuk mengenali bahaya dan menentukan pengendalian."
-date: "2026-09-02T07:00:00Z"
-lastmod: "2026-09-02T07:00:00Z"
+date: "2026-09-02T16:25:25Z"
+lastmod: "2026-09-02T16:25:25Z"
 category: "Teknis"
 author: "Tim Konsultan K3"
 tags:

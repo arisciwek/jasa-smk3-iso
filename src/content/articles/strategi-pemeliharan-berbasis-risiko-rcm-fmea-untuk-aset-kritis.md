@@ -1,8 +1,8 @@
 ---
 title: "Strategi Pemeliharan Berbasis Risiko: RCM dan FMEA untuk Aset Kritis"
 description: "Cara memilih strategi pemeliharan berbasis risiko menggunakan RCM dan FMEA untuk aset kritis."
-date: "2026-10-01T07:00:00Z"
-lastmod: "2026-10-01T07:00:00Z"
+date: "2026-10-01T09:17:05Z"
+lastmod: "2026-10-01T09:17:05Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-55001", "pemeliharan", "rcm", "fmea"]

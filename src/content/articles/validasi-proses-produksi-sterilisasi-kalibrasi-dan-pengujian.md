@@ -1,8 +1,8 @@
 ---
 title: "Validasi Proses Produksi: Sterilisasi, Kalibrasi, dan Pengujian"
 description: "Cara melakukan validasi proses produksi untuk perangkat medis, termasuk sterilisasi, kalibrasi, dan pengujian."
-date: "2026-10-10T07:00:00Z"
-lastmod: "2026-10-10T14:01:47Z"
+date: "2026-10-10T21:42:29Z"
+lastmod: "2026-10-10T21:42:29Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-13485", "validasi", "sterilisasi", "kalibrasi"]

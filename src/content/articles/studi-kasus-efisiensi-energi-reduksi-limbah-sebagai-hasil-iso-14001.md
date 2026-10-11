@@ -1,8 +1,8 @@
 ---
 title: "Studi Kasus: Efisiensi Energi dan Reduksi Limbah sebagai Hasil ISO 14001"
 description: "Cerita nyata tentang bagaimana organisasi menggunakan ISO 14001 untuk mengurangi konsumsi energi dan limbah, serta hasil yang dicapai."
-date: "2026-09-20T07:00:00Z"
-lastmod: "2026-09-20T07:00:00Z"
+date: "2026-09-20T06:41:47Z"
+lastmod: "2026-09-20T06:41:47Z"
 author: "Tim Konsultan K3"
 category: "Case Study"
 tags: ["iso-14001", "efisiensi-energi", "reduksi-limbah"]

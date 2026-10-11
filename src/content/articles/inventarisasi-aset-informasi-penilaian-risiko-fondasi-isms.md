@@ -1,8 +1,8 @@
 ---
 title: "Inventarisasi Aset Informasi dan Penilaian Risiko: Fondasi ISMS"
 description: "Cara menyusun inventaris aset informasi dan melakukan penilaian risiko yang become dasar bagi sistem manajemen keamanan informasi."
-date: "2026-09-24T07:00:00Z"
-lastmod: "2026-09-24T07:00:00Z"
+date: "2026-09-24T04:10:56Z"
+lastmod: "2026-09-24T04:10:56Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-27001", "aset-informasi", "penilaian-risiko"]

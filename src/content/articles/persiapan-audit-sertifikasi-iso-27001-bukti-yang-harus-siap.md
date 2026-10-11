@@ -1,8 +1,8 @@
 ---
 title: "Persiapan Audit Sertifikasi ISO 27001: Bukti yang Harus Siap"
 description: "Daftar bukti yang perlu disiapkan sebelum audit sertifikasi ISO 27001, agar proses audit berjalan lancar."
-date: "2026-09-23T07:00:00Z"
-lastmod: "2026-09-23T07:00:00Z"
+date: "2026-09-23T11:47:55Z"
+lastmod: "2026-09-23T11:47:55Z"
 author: "Tim Konsultan K3"
 category: "Tips & Panduan"
 tags: ["iso-27001", "audit-sertifikasi", "persiapan-audit"]

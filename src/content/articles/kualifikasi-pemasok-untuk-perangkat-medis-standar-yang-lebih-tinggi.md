@@ -1,8 +1,8 @@
 ---
 title: "Kualifikasi Pemasok untuk Perangkat Medis: Standar yang Lebih Tinggi"
 description: "Cara melakukan kualifikasi pemasok untuk perangkat medis dengan standar yang lebih tinggi."
-date: "2026-10-10T07:00:00Z"
-lastmod: "2026-10-10T07:00:00Z"
+date: "2026-10-10T12:50:14Z"
+lastmod: "2026-10-10T12:50:14Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-13485", "pemasok", "perangkat-medis"]

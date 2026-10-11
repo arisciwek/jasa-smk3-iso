@@ -1,8 +1,8 @@
 ---
 title: "Kesiapsiagaan dan Pemulihan Gangguan Rantai Pasok (Business Continuity)"
 description: "Cara menyiapkan rencana kesiapsiagaan dan pemulihan untuk gangguan pada rantai pasok."
-date: "2026-10-05T07:00:00Z"
-lastmod: "2026-10-05T07:00:00Z"
+date: "2026-10-05T17:43:05Z"
+lastmod: "2026-10-05T17:43:05Z"
 author: "Tim Konsultan K3"
 category: "Teknis"
 tags: ["iso-28000", "kesiapsiagaan", "business-continuity"]

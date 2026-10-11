@@ -1,8 +1,8 @@
 ---
 title: "Checklist Persiapan Audit Internal K3"
 description: "Checklist praktis untuk menyiapkan ruang lingkup, bukti, wawancara, dan tindak lanjut sebelum audit internal K3 dimulai."
-date: "2026-09-13T07:00:00Z"
-lastmod: "2026-09-13T07:00:00Z"
+date: "2026-09-13T14:24:05Z"
+lastmod: "2026-09-13T14:24:05Z"
 category: "Tips & Panduan"
 author: "Tim Konsultan K3"
 readTime: "4 menit"
