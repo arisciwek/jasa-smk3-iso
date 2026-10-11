@@ -2,26 +2,14 @@ name: Jasa ISO Update
 
 on:
   schedule:
-    - cron: '0 1 * * *'
-    - cron: '0 2 * * *'
-    - cron: '0 3 * * *'
-    - cron: '0 4 * * *'
-    - cron: '0 5 * * *'
-    - cron: '0 6 * * *'
-    - cron: '0 7 * * *'
-    - cron: '0 8 * * *'
-    - cron: '0 9 * * *'
-    - cron: '0 10 * * *'
-    - cron: '0 11 * * *'
-    - cron: '0 12 * * *'
-    - cron: '0 13 * * *'
+    - cron: '10 1-13 * * *'
   workflow_dispatch: {}
 
 permissions:
   contents: write
 
 concurrency:
-  group: jasa-iso-update
+  group: content-write
   cancel-in-progress: false
 
 jobs:
@@ -50,6 +38,17 @@ jobs:
         run: |
           git config user.name "smk3-iso-content-bot"
           git config user.email "smk3-iso-content-bot@users.noreply.github.com"
+          push_retry() {
+            for attempt in 1 2 3 4 5; do
+              if git pull --rebase --autostash origin main && git push origin main; then
+                return 0
+              fi
+              echo "push attempt $attempt failed; retrying in 5s..."
+              sleep 5
+            done
+            echo "push failed after 5 attempts"
+            return 1
+          }
           
           # Stage relevant files
           git add src/data/jasa-iso/ automation-state/last-run.json
@@ -76,15 +75,15 @@ jobs:
             
             if [ -n "$city_name" ] && [ -n "$topic" ]; then
               git commit -m "update: jasa ISO: $city_name: $topic"
-              git push
+              push_retry
               exit 0
             elif [ -n "$city_name" ]; then
               git commit -m "update: jasa ISO: $city_name"
-              git push
+              push_retry
               exit 0
             fi
           fi
           
           # Fallback if we can't get details
           git commit -m "update: jasa ISO"
-          git push
+          push_retry
