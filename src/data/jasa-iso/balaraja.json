@@ -1,9 +1,10 @@
 {
   "slug": "balaraja",
-  "lastmod": "2026-10-09T00:30:39Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-11T13:55:51Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Balaraja dapat diarahkan pada pengukuran kemajuan penerapan agar rencana kerja dapat diperiksa kembali. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Balaraja adalah sebuah kecamatan yang berada dalam wilayah administrasi Provinsi Banten, terletak di bagian barat Pulau Jawa. Wilayah ini dikenal sebagai salah satu pusat pertumbuhan di daerah pinggiran metropolitan, dengan campuran aktivitas pertanian, perumahan, dan kegiatan usaha kecil menengah yang berkembang seiring dengan peningkatan infrastruktur di sekitarnya. Masyarakat Balaraja cenderung menjaga tradisi lokal sambil mengikuti perubahan yang terjadi di sekitar provinsi Banten."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
