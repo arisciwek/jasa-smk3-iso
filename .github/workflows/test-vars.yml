@@ -1,0 +1,10 @@
+name: Test Vars
+on:
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env:
+      MY_VAR: ${{ vars.AI_BASE_URL }}
+    steps:
+      - run: echo "MY_VAR=$MY_VAR"
