@@ -4,7 +4,7 @@ import { join } from 'node:path';
 const root = process.cwd();
 const source = readFileSync(join(root, 'src/data/cities.ts'), 'utf8');
 const contentDir = join(root, 'src/data/jasa-smk3');
-const lastmod = process.env.CONTENT_LASTMOD || '2026-10-09';
+const lastmod = process.env.CONTENT_LASTMOD || '2026-10-09T00:00:00Z';
 
 const cities = [...source.matchAll(/\['([^']+)', '([^']+)'\]/g)].map((match) => ({
   name: match[1],

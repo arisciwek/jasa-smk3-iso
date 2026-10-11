@@ -69,12 +69,7 @@ const body = result.choices?.[0]?.message?.content?.trim();
   }
 
   const slug = idea.slug || idea.id;
-  const baseDate = new Date().toISOString().split('T')[0];
-  const hour = String(Math.floor(Math.random() * 24)).padStart(2, '0');
-  const minute = String(Math.floor(Math.random() * 60)).padStart(2, '0');
-  const second = String(Math.floor(Math.random() * 60)).padStart(2, '0');
-  const now = `${baseDate}T${hour}:${minute}:${second}Z`;
-  const today = baseDate;
+  const now = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
   const wordCount = body.split(/\s+/).length;
   const readTime = `${Math.max(3, Math.ceil(wordCount / 180))} menit`;
 
@@ -91,7 +86,7 @@ const frontmatter = [
   '---',
   `title: ${JSON.stringify(idea.title)}`,
   `description: ${JSON.stringify(idea.brief)}`,
-  `date: "${today}"`,
+  `date: "${now}"`,
   `lastmod: "${now}"`,
   'author: "Admin K3"',
   `category: ${JSON.stringify(idea.category)}`,
@@ -107,7 +102,7 @@ const frontmatter = [
 writeFileSync(join(root, 'src/content/articles', `${slug}.md`), `${frontmatter}${body}\n`);
 
 idea.status = 'published';
-idea.publishedAt = today;
+idea.publishedAt = now;
 idea.slug = slug;
 writeFileSync(planPath, `${JSON.stringify(plan, null, 2)}\n`);
 mkdirSync(join(root, 'automation-output', 'src/content/articles'), { recursive: true });

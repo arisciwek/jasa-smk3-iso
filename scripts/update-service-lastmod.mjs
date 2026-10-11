@@ -11,14 +11,14 @@ if (!existsSync(serviceLastmodPath)) {
 }
 
 const serviceLastmodData = JSON.parse(readFileSync(serviceLastmodPath, 'utf8'));
-const today = new Date().toISOString().slice(0, 10);
+const now = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
 let updated = false;
 
 for (const [slug, data] of Object.entries(serviceLastmodData)) {
-  if (!data.lastmod || data.lastmod < today) {
-    serviceLastmodData[slug].lastmod = today;
+  if (!data.lastmod || new Date(data.lastmod) < new Date(now)) {
+    serviceLastmodData[slug].lastmod = now;
     updated = true;
-    console.log(`Service lastmod diupdate: ${slug} -> ${today}`);
+    console.log(`Service lastmod diupdate: ${slug} -> ${now}`);
   }
 }
 

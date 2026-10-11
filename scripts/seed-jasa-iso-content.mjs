@@ -6,7 +6,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const source = fs.readFileSync(path.join(root, 'src/data/cities.ts'), 'utf8');
 const contentDir = path.join(root, 'src/data/jasa-iso');
-const lastmod = process.env.CONTENT_LASTMOD || '2026-10-09';
+const lastmod = process.env.CONTENT_LASTMOD || '2026-10-09T00:00:00Z';
 
 const cities = [...source.matchAll(/\['([^']+)', '([^']+)'\]/g)].map((match) => ({
   name: match[1],

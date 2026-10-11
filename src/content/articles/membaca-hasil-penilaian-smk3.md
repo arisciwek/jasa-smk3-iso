@@ -1,8 +1,8 @@
 ---
 title: "Cara Membaca Hasil Penilaian SMK3"
 description: "Jelaskan cara membaca temuan, tingkat pemenuhan, dan prioritas tindakan perbaikan."
-date: "2026-10-11"
-lastmod: "2026-10-11T23:08:57Z"
+date: "2026-10-11T00:00:00Z"
+lastmod: "2026-10-11T13:40:37Z"
 author: "Admin K3"
 category: "Regulasi"
 tags: ["penilaian SMK3","hasil audit SMK3"]

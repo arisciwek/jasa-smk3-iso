@@ -1,8 +1,8 @@
 ---
 title: "Memahami Peran P2K3 dalam Sistem Manajemen K3"
 description: "Jelaskan fungsi P2K3, hubungan dengan manajemen, dan contoh tanggung jawabnya di perusahaan."
-date: "2026-10-11"
-lastmod: "2026-10-11T14:42:54Z"
+date: "2026-10-11T00:00:00Z"
+lastmod: "2026-10-11T13:39:15Z"
 author: "Admin K3"
 category: "Regulasi"
 tags: ["P2K3","peran P2K3","SMK3"]

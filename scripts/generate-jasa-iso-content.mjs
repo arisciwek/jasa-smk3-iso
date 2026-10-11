@@ -102,11 +102,7 @@ if (!text || text.split(/\s+/).length < 20 || text.includes('\n')) {
   throw new Error('AI tidak menghasilkan tepat satu paragraf yang valid.');
 }
 
-const hour = String(Math.floor(Math.random() * 24)).padStart(2, '0');
-const minute = String(Math.floor(Math.random() * 60)).padStart(2, '0');
-const second = String(Math.floor(Math.random() * 60)).padStart(2, '0');
-const now = new Date().toISOString().split('T')[0] + `T${hour}:${minute}:${second}Z`;
-const today = now.slice(0, 10);
+const now = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
 const nextTopic = plan.cityTopics[(topicIndex + 1) % plan.cityTopics.length].id;
 const updated = {
   ...selected.state,

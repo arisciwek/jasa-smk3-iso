@@ -106,11 +106,7 @@ if (!newContent || newContent.split(/\s+/).length < 100 || newContent.startsWith
 const updatedContent = existingContent.trim() + '\n\n' + newContent + '\n';
 
 // Update frontmatter lastmod
-const baseDate = new Date().toISOString().split('T')[0];
-const hour = String(Math.floor(Math.random() * 24)).padStart(2, '0');
-const minute = String(Math.floor(Math.random() * 60)).padStart(2, '0');
-const second = String(Math.floor(Math.random() * 60)).padStart(2, '0');
-const now = `${baseDate}T${hour}:${minute}:${second}Z`;
+const now = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
 
 const updatedWithLastmod = updatedContent.replace(
   /lastmod:\s*"[^"]*"/,

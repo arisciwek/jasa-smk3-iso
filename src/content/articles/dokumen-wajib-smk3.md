@@ -1,8 +1,8 @@
 ---
 title: "Dokumen Wajib yang Perlu Disiapkan untuk SMK3"
 description: "Berikan peta dokumen berdasarkan fungsi, bukan sekadar daftar, dan jelaskan bukti penerapannya."
-date: "2026-10-11"
-lastmod: "2026-10-11T15:54:14Z"
+date: "2026-10-11T00:00:00Z"
+lastmod: "2026-10-11T13:39:15Z"
 author: "Admin K3"
 category: "Regulasi"
 tags: ["dokumen SMK3","persiapan SMK3"]

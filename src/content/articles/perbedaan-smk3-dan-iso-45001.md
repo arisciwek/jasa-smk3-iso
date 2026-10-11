@@ -1,8 +1,8 @@
 ---
 title: "Perbedaan SMK3 dan ISO 45001 yang Perlu Dipahami Perusahaan"
 description: "Bandingkan konteks, tujuan, struktur, dan cara integrasi tanpa menyederhanakan persyaratan hukum."
-date: "2026-10-11"
-lastmod: "2026-10-11T13:39:34Z"
+date: "2026-10-11T00:00:00Z"
+lastmod: "2026-10-11T13:39:15Z"
 author: "Admin K3"
 category: "Regulasi"
 tags: ["SMK3 dan ISO 45001","perbedaan SMK3 ISO"]
