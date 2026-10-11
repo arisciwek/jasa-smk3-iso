@@ -46,7 +46,7 @@ for (const slug of cities) {
     continue;
   }
   const dataSmk3 = JSON.parse(readFileSync(fileSmk3, 'utf8'));
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(dataSmk3.lastmod || '')) failures.push(`city/${slug}: invalid jasa-smk3 lastmod`);
+  if (!/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}Z)?$/.test(dataSmk3.lastmod || '')) failures.push(`city/${slug}: invalid jasa-smk3 lastmod`);
   if (!Array.isArray(dataSmk3.paragraphs) || dataSmk3.paragraphs.length < 3) failures.push(`city/${slug}: fewer than 3 jasa-smk3 paragraphs`);
   if ((dataSmk3.paragraphs || []).some((paragraph) => typeof paragraph.text !== 'string' || paragraph.text.trim().length < 120)) {
     failures.push(`city/${slug}: jasa-smk3 paragraph is too short`);
@@ -58,7 +58,7 @@ for (const slug of cities) {
     continue;
   }
   const dataIso = JSON.parse(readFileSync(fileIso, 'utf8'));
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(dataIso.lastmod || '')) failures.push(`city/${slug}: invalid jasa-iso lastmod`);
+  if (!/^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}:\d{2}Z)?$/.test(dataIso.lastmod || '')) failures.push(`city/${slug}: invalid jasa-iso lastmod`);
   if (!Array.isArray(dataIso.paragraphs) || dataIso.paragraphs.length < 3) failures.push(`city/${slug}: fewer than 3 jasa-iso paragraphs`);
   if ((dataIso.paragraphs || []).some((paragraph) => typeof paragraph.text !== 'string' || paragraph.text.trim().length < 120)) {
     failures.push(`city/${slug}: jasa-iso paragraph is too short`);
