@@ -91,23 +91,26 @@ const response = await fetch(`${baseUrl}/chat/completions`, {
 if (!response.ok) throw new Error(`AI API gagal: ${response.status} ${await response.text()}`);
 
 const result = await response.json();
-const text = result.choices?.[0]?.message?.content?.trim().replace(/^['"]|['"]$/g, '');
-if (!text || text.split(/\s+/).length < 20 || text.includes('\n')) {
-  throw new Error('AI tidak menghasilkan tepat satu paragraf yang valid.');
-}
+  const text = result.choices?.[0]?.message?.content?.trim().replace(/^['"]|['"]$/g, '');
+  if (!text || text.split(/\s+/).length < 20 || text.includes('\n')) {
+    throw new Error('AI tidak menghasilkan tepat satu paragraf yang valid.');
+  }
 
-const now = new Date().toISOString();
-const today = now.slice(0, 10);
-const nextTopic = plan.cityTopics[(topicIndex + 1) % plan.cityTopics.length].id;
-const updated = {
-  ...selected.state,
-  slug: selected.city.slug,
-  lastmod: now,
-  lastUpdatedTopic: topic.id,
-  nextTopic,
-  completedTopics: [...new Set([...selected.state.completedTopics, topic.id])],
-  paragraphs: [...selected.state.paragraphs, { topic: topic.id, text }],
-};
+  const hour = String(Math.floor(Math.random() * 24)).padStart(2, '0');
+  const minute = String(Math.floor(Math.random() * 60)).padStart(2, '0');
+  const second = String(Math.floor(Math.random() * 60)).padStart(2, '0');
+  const now = new Date().toISOString().split('T')[0] + `T${hour}:${minute}:${second}Z`;
+  const today = now.slice(0, 10);
+  const nextTopic = plan.cityTopics[(topicIndex + 1) % plan.cityTopics.length].id;
+  const updated = {
+    ...selected.state,
+    slug: selected.city.slug,
+    lastmod: now,
+    lastUpdatedTopic: topic.id,
+    nextTopic,
+    completedTopics: [...new Set([...selected.state.completedTopics, topic.id])],
+    paragraphs: [...selected.state.paragraphs, { topic: topic.id, text }],
+  };
 
 mkdirSync(contentDir, { recursive: true });
 writeFileSync(join(contentDir, `${selected.city.slug}.json`), `${JSON.stringify(updated, null, 2)}\n`);

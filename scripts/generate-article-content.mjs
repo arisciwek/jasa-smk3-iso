@@ -58,15 +58,19 @@ if (!response.ok) throw new Error(`AI API gagal: ${response.status} ${await resp
 
 const result = await response.json();
 const body = result.choices?.[0]?.message?.content?.trim();
-if (!body || body.split(/\s+/).length < 350 || body.startsWith('---') || body.includes('```')) {
-  throw new Error('AI tidak menghasilkan isi artikel Markdown yang valid.');
-}
+  if (!body || body.split(/\s+/).length < 350 || body.startsWith('---') || body.includes('```')) {
+    throw new Error('AI tidak menghasilkan isi artikel Markdown yang valid.');
+  }
 
-const slug = idea.slug || idea.id;
-const now = new Date().toISOString();
-const today = now.slice(0, 10);
-const wordCount = body.split(/\s+/).length;
-const readTime = `${Math.max(3, Math.ceil(wordCount / 180))} menit`;
+  const slug = idea.slug || idea.id;
+  const baseDate = new Date().toISOString().split('T')[0];
+  const hour = String(Math.floor(Math.random() * 24)).padStart(2, '0');
+  const minute = String(Math.floor(Math.random() * 60)).padStart(2, '0');
+  const second = String(Math.floor(Math.random() * 60)).padStart(2, '0');
+  const now = `${baseDate}T${hour}:${minute}:${second}Z`;
+  const today = baseDate;
+  const wordCount = body.split(/\s+/).length;
+  const readTime = `${Math.max(3, Math.ceil(wordCount / 180))} menit`;
 
 const categoryImageMap = {
   Regulasi: '/assets/images/article-regulasi.svg',
