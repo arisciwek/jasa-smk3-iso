@@ -1,9 +1,10 @@
 {
   "slug": "slawi",
-  "lastmod": "2026-10-09T00:45:18Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-11T13:48:45Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Slawi dapat diarahkan pada pemetaan aktivitas kerja dan titik keputusan yang berisiko. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Slawi adalah sebuah kota yang terletak di provinsi Jawa Tengah, Indonesia, dan menjadi bagian dari wilayah administratif yang kaya akan keragaman budaya dan geografis. Sebagai kota lokal, Slawi berperan sebagai pusat kepentingan bagi masyarakat sekitarnya, dengan posisi strategis di tengah dinamika daerah Jawa Tengah. Bagi penduduk setempat, Slawi tidak hanya sebagai titik lokasi, tetapi juga mencerminkan identitas dan keunikan dari konteks kota tersebut dalam kehidupan sehari-hari."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
