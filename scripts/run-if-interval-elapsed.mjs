@@ -23,6 +23,17 @@ const intervals = {
 
 const effectiveInterval = intervals[workflowType] || intervalHours;
 
+const minGaps = {
+  'article-create': 48,
+  'article-update': 24,
+  'jasa-smk3-create': 48,
+  'jasa-smk3-update': 24,
+  'jasa-iso-create': 48,
+  'jasa-iso-update': 24,
+};
+
+const minGap = minGaps[workflowType] || effectiveInterval;
+
 function loadState() {
   if (existsSync(stateFile)) {
     return JSON.parse(readFileSync(stateFile, 'utf8'));
@@ -61,6 +72,20 @@ function runGenerator() {
   }
 }
 
+function calculateProbability(hoursSince) {
+  if (hoursSince < minGap) {
+    return 0;
+  } else if (hoursSince < minGap + 24) {
+    return 10;
+  } else if (hoursSince < minGap + 48) {
+    return 25;
+  } else if (hoursSince < minGap + 72) {
+    return 50;
+  } else {
+    return 90;
+  }
+}
+
 function main() {
   const state = loadState();
   const lastRun = state[workflowType];
@@ -68,11 +93,27 @@ function main() {
 
   if (lastRun) {
     const elapsedHours = (now - new Date(lastRun)) / (1000 * 60 * 60);
-    if (elapsedHours < effectiveInterval) {
-      const remaining = (effectiveInterval - elapsedHours).toFixed(1);
-      console.log(`Interval not elapsed for ${workflowType}. Last run: ${lastRun} (${elapsedHours.toFixed(1)}h ago). Need ${remaining}h more. Skipping.`);
+
+    if (elapsedHours < minGap) {
+      const remaining = (minGap - elapsedHours).toFixed(1);
+      console.log(`Minimum gap not met for ${workflowType}. Last run: ${lastRun} (${elapsedHours.toFixed(1)}h ago). Need ${remaining}h more. Skipping.`);
       process.exit(0);
     }
+
+    const probability = calculateProbability(elapsedHours);
+    const random = Math.floor(Math.random() * 100);
+
+    console.log(`📊 ${workflowType}: ${elapsedHours.toFixed(1)}h since last run`);
+    console.log(`🎲 Probability: ${probability}% | Random roll: ${random}`);
+
+    if (random >= probability) {
+      console.log(`⏭️  MISS! (${random} >= ${probability}) - Skipping this check`);
+      process.exit(0);
+    }
+
+    console.log(`✅ HIT! (${random} < ${probability}) - Proceeding with update`);
+  } else {
+    console.log(`📅 ${workflowType}: Never run before. Proceeding with first run.`);
   }
 
   console.log(`Interval elapsed for ${workflowType}. Last run: ${lastRun || 'never'}. Running generator...`);
@@ -85,7 +126,6 @@ function main() {
     saveState(state);
     console.log(`Updated last-run for ${workflowType}: ${timestamp}`);
 
-    // Commit state change
     try {
       execSync('git config user.name "smk3-iso-content-bot"', { stdio: 'ignore', cwd: root });
       execSync('git config user.email "smk3-iso-content-bot@users.noreply.github.com"', { stdio: 'ignore', cwd: root });

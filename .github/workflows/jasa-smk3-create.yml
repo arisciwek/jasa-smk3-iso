@@ -2,7 +2,19 @@ name: Jasa SMK3 Create
 
 on:
   schedule:
-    - cron: '0 1 * */2 *'
+    - cron: '0 1 * * *'
+    - cron: '0 2 * * *'
+    - cron: '0 3 * * *'
+    - cron: '0 4 * * *'
+    - cron: '0 5 * * *'
+    - cron: '0 6 * * *'
+    - cron: '0 7 * * *'
+    - cron: '0 8 * * *'
+    - cron: '0 9 * * *'
+    - cron: '0 10 * * *'
+    - cron: '0 11 * * *'
+    - cron: '0 12 * * *'
+    - cron: '0 13 * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -24,11 +36,6 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - name: Random delay (0-12h)
-        run: |
-          DELAY=$((RANDOM % 300))
-          echo "Sleeping $DELAY seconds (TEST MODE)"
-          sleep $DELAY
       - name: Run if interval elapsed
         env:
           WORKFLOW_TYPE: jasa-smk3-create
