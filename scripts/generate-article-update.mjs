@@ -77,7 +77,7 @@ Aturan editorial:
 - keluarkan hanya isi tambahan Markdown (subjudul + paragraf).
 `.trim();
 
-const response = await fetch(`${baseUrlClean}`, {
+const response = await fetch(`${baseUrlClean}/chat/completions`, {
   method: 'POST',
   headers: {
     authorization: `Bearer ${apiKey}`,
