@@ -42,9 +42,13 @@ jobs:
           INTERVAL_HOURS: 48
           TRIGGER_TYPE: ${{ github.event_name }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
-          AI_BASE_URL: $https://freellmapi.ciptamasjaya.co.id/v1
-          AI_MODEL: $auto
-        run: node scripts/run-if-interval-elapsed.mjs
+          AI_BASE_URL: https://freellmapi.ciptamasjaya.co.id/v1
+          AI_MODEL: auto
+        run: |
+          echo "AI_API_KEY set: [[ -n \"$AI_API_KEY\" ]]"
+          echo "AI_BASE_URL set: [[ -n \"$AI_BASE_URL\" ]]"
+          echo "AI_MODEL set: [[ -n \"$AI_MODEL\" ]]"
+          node scripts/run-if-interval-elapsed.mjs
       - name: Commit and push
         if: always()
         run: |
