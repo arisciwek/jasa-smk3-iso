@@ -39,8 +39,8 @@ const stateFor = (city) => files.get(city.slug)?.data || {
 const candidates = cityRows
   .map((city, index) => ({ city, index, state: stateFor(city) }))
   .sort((a, b) => {
-    const dateA = a.state.lastmod || '0000-00-00';
-    const dateB = b.state.lastmod || '0000-00-00';
+    const dateA = a.state.lastmod || '1970-01-01T00:00:00Z';
+    const dateB = b.state.lastmod || '1970-01-01T00:00:00Z';
     return dateA.localeCompare(dateB) || a.index - b.index;
   });
 
