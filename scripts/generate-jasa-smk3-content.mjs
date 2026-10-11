@@ -78,7 +78,7 @@ Aturan ketat:
 - jangan mengulang kalimat atau ide dari paragraf lama.
 `.trim();
 
-const response = await fetch(`${baseUrlClean}/chat/completions`, {
+const response = await fetch(`${baseUrlClean}`, {
   method: 'POST',
   headers: {
     authorization: `Bearer ${apiKey}`,

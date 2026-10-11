@@ -61,7 +61,7 @@ Aturan ketat:
 - jika fakta tidak cukup untuk membuat klaim spesifik, gunakan bahasa yang hati-hati dan umum.
 `.trim();
 
-const response = await fetch(`${baseUrlClean}/chat/completions`, {
+const response = await fetch(`${baseUrlClean}`, {
   method: 'POST',
   headers: {
     authorization: `Bearer ${apiKey}`,

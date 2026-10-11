@@ -44,7 +44,7 @@ Aturan editorial:
 - keluarkan hanya isi artikel Markdown.
 `.trim();
 
-const response = await fetch(`${baseUrlClean}/chat/completions`, {
+const response = await fetch(`${baseUrlClean}`, {
   method: 'POST',
   headers: {
     authorization: `Bearer ${apiKey}`,
