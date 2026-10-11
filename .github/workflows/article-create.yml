@@ -42,5 +42,3 @@ jobs:
           INTERVAL_HOURS: 48
           TRIGGER_TYPE: ${{ github.event_name }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
-          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
-          AI_MODEL: ${{ vars.AI_MODEL }}
