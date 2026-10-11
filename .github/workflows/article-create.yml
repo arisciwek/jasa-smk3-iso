@@ -44,18 +44,6 @@ jobs:
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_BASE_URL: https://freellmapi.ciptamasjaya.co.id/v1
           AI_MODEL: auto
-          WORKFLOW_TYPE: article-create
-          INTERVAL_HOURS: 48
-          TRIGGER_TYPE: ${{ github.event_name }}
-          AI_API_KEY: ${{ secrets.AI_API_KEY }}
-          AI_BASE_URL: https://freellmapi.ciptamasjaya.co.id/v1
-          AI_MODEL: auto
-          WORKFLOW_TYPE: article-create
-          INTERVAL_HOURS: 48
-          TRIGGER_TYPE: ${{ github.event_name }}
-          AI_API_KEY: ${{ secrets.AI_API_KEY }}
-          AI_BASE_URL: https://freellmapi.ciptamasjaya.co.id/v1
-          AI_MODEL: auto
         run: |
           echo "AI_API_KEY set: [[ -n \"$AI_API_KEY\" ]]"
           echo "AI_BASE_URL set: [[ -n \"$AI_BASE_URL\" ]]"
