@@ -26,8 +26,8 @@ jobs:
       - run: npm ci
       - name: Random delay (0-12h)
         run: |
-          DELAY=$((RANDOM % 43200))
-          echo "Sleeping $DELAY seconds"
+          DELAY=$((RANDOM % 300))
+          echo "Sleeping $DELAY seconds (TEST MODE)"
           sleep $DELAY
       - name: Run if interval elapsed
         env:
