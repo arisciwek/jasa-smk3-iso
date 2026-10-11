@@ -63,21 +63,32 @@ if (!body || body.split(/\s+/).length < 350 || body.startsWith('---') || body.in
 }
 
 const slug = idea.slug || idea.id;
-const today = new Date().toISOString().slice(0, 10);
+const now = new Date().toISOString();
+const today = now.slice(0, 10);
 const wordCount = body.split(/\s+/).length;
 const readTime = `${Math.max(3, Math.ceil(wordCount / 180))} menit`;
+
+const categoryImageMap = {
+  Regulasi: '/assets/images/article-regulasi.svg',
+  Teknis: '/assets/images/article-teknis.svg',
+  'Case Study': '/assets/images/article-case-study.svg',
+  'Tips & Panduan': '/assets/images/article-tips.svg',
+};
+const articleImage = categoryImageMap[idea.category] || idea.image || '/assets/images/article-smk3.svg';
+const articleImageAlt = idea.imageAlt || `Ilustrasi ${idea.title}`;
+
 const frontmatter = [
   '---',
   `title: ${JSON.stringify(idea.title)}`,
   `description: ${JSON.stringify(idea.brief)}`,
   `date: "${today}"`,
-  `lastmod: "${today}"`,
+  `lastmod: "${now}"`,
   'author: "Admin K3"',
   `category: ${JSON.stringify(idea.category)}`,
   `tags: ${JSON.stringify(idea.keywords)}`,
   `readTime: "${readTime}"`,
-  `image: ${JSON.stringify(idea.image)}`,
-  `imageAlt: ${JSON.stringify(idea.imageAlt)}`,
+  `image: ${JSON.stringify(articleImage)}`,
+  `imageAlt: ${JSON.stringify(articleImageAlt)}`,
   `serviceSlugs: ${JSON.stringify(idea.serviceSlugs || [])}`,
   '---',
   '',

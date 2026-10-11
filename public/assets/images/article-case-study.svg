@@ -1,0 +1,9 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="360" fill="#0d0e10"/>
+  <path d="M200 100h240v160H200z" rx="8" stroke="#10b981" stroke-width="3" fill="none"/>
+  <path d="M260 130h120M260 170h120M260 210h80M260 250h60" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="320" cy="80" r="12" stroke="#10b981" stroke-width="3" fill="none"/>
+  <path d="M320 72v-8M320 88v8M312 80h8M328 80h8" stroke="#10b981" stroke-width="2" stroke-linecap="round"/>
+  <text x="320" y="310" font-family="Geist, sans-serif" font-size="18" font-weight="600" fill="#f7f8f8" text-anchor="middle">STUDI KASUS IMPLEMENTASI</text>
+  <text x="320" y="335" font-family="Geist, sans-serif" font-size="13" fill="#8a8f98" text-anchor="middle">Masalah implementasi dan cara membacanya</text>
+</svg>

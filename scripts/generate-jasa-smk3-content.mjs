@@ -96,12 +96,13 @@ if (!text || text.split(/\s+/).length < 20 || text.includes('\n')) {
   throw new Error('AI tidak menghasilkan tepat satu paragraf yang valid.');
 }
 
-const today = new Date().toISOString().slice(0, 10);
+const now = new Date().toISOString();
+const today = now.slice(0, 10);
 const nextTopic = plan.cityTopics[(topicIndex + 1) % plan.cityTopics.length].id;
 const updated = {
   ...selected.state,
   slug: selected.city.slug,
-  lastmod: today,
+  lastmod: now,
   lastUpdatedTopic: topic.id,
   nextTopic,
   completedTopics: [...new Set([...selected.state.completedTopics, topic.id])],

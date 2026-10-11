@@ -8,7 +8,7 @@ const title = "SMK3 & ISO 45001 Indonesia — Konsultan K3 Terpercaya";
 const description = "Layanan konsultasi, pendampingan sertifikasi SMK3 PP 50/2012 dan ISO 45001:2018 resmi Kemenaker RI & KAN.";
 const articles = await getCollection('articles');
 const latestArticles = articles
-  .sort((a, b) => (b.data.lastmod || b.data.date).localeCompare(a.data.lastmod || a.data.date))
+  .sort((a, b) => new Date(b.data.lastmod || b.data.date).getTime() - new Date(a.data.lastmod || a.data.date).getTime())
   .slice(0, 4);
 const latestLastmod = latestArticles[0] ? (latestArticles[0].data.lastmod || latestArticles[0].data.date) : undefined;
 ---

@@ -1,0 +1,11 @@
+<svg width="640" height="360" viewBox="0 0 640 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="640" height="360" fill="#0d0e10"/>
+  <circle cx="320" cy="160" r="70" stroke="#10b981" stroke-width="3" fill="none"/>
+  <path d="M320 110v30M320 210v-10M305 160h30M335 160h-10" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
+  <path d="M250 250Q320 220 390 250" stroke="#10b981" stroke-width="3" fill="none"/>
+  <circle cx="280" cy="140" r="4" fill="#10b981"/>
+  <circle cx="360" cy="140" r="4" fill="#10b981"/>
+  <circle cx="320" cy="185" r="4" fill="#10b981"/>
+  <text x="320" y="310" font-family="Geist, sans-serif" font-size="18" font-weight="600" fill="#f7f8f8" text-anchor="middle">TIPS DAN PANDUAN K3</text>
+  <text x="320" y="335" font-family="Geist, sans-serif" font-size="13" fill="#8a8f98" text-anchor="middle">Praktik terbaik dan panduan praktis</text>
+</svg>

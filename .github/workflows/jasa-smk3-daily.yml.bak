@@ -1,0 +1,123 @@
+name: Daily content queue
+
+on:
+  schedule:
+    # Orchestrator memeriksa window 08.00–20.00 WIB; script memilih satu slot pseudo-acak per hari.
+    - cron: '3 1-13 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-content-queue
+  cancel-in-progress: false
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      tasks: ${{ steps.decide.outputs.tasks }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - id: decide
+        run: node scripts/decide-content.mjs
+
+  create-article:
+    needs: prepare
+    if: needs.prepare.outputs.tasks == '1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Generate one planned article
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+        run: node scripts/generate-article-content.mjs
+      - name: Upload article result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: create-article-result
+          path: automation-output/
+          if-no-files-found: ignore
+
+  update-city:
+    needs: prepare
+    if: needs.prepare.outputs.tasks == '1'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Update one city paragraph
+        env:
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: ${{ vars.AI_BASE_URL }}
+          AI_MODEL: ${{ vars.AI_MODEL }}
+        run: node scripts/generate-jasa-smk3-content.mjs
+      - name: Upload city result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: update-city-result
+          path: automation-output/
+          if-no-files-found: ignore
+
+  publish:
+    needs: [prepare, create-article, update-city]
+    if: always() && needs.prepare.outputs.tasks == '1' && (needs.create-article.result == 'success' || needs.update-city.result == 'success')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download article result
+        if: needs.create-article.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: create-article-result
+          path: automation-input/create
+        continue-on-error: true
+      - name: Download city result
+        if: needs.update-city.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: update-city-result
+          path: automation-input/update
+        continue-on-error: true
+      - name: Merge results
+        run: |
+          cp -a automation-input/create/. . 2>/dev/null || true
+          cp -a automation-input/update/. . 2>/dev/null || true
+          rm -rf automation-input automation-output
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build verification
+        run: npm run build
+      - name: Commit and push once
+        run: |
+          git config user.name "smk3-iso-content-bot"
+          git config user.email "smk3-iso-content-bot@users.noreply.github.com"
+          git add content-plan.json src/content/articles src/data/jasa-smk3
+          if git diff --cached --quiet; then
+            echo "Tidak ada perubahan untuk di-commit."
+            exit 0
+          fi
+          git commit -m "content: daily article and city update"
+          git push
