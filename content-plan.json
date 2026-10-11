@@ -113,14 +113,16 @@
       "type": "create",
       "title": "Cara Membaca Hasil Penilaian SMK3",
       "category": "Regulasi",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi membaca hasil penilaian dan kepatuhan SMK3",
       "keywords": [
         "penilaian SMK3",
         "hasil audit SMK3"
       ],
-      "brief": "Jelaskan cara membaca temuan, tingkat pemenuhan, dan prioritas tindakan perbaikan."
+      "brief": "Jelaskan cara membaca temuan, tingkat pemenuhan, dan prioritas tindakan perbaikan.",
+      "publishedAt": "2026-10-11",
+      "slug": "membaca-hasil-penilaian-smk3"
     },
     {
       "id": "perbedaan-smk3-dan-iso-45001",
