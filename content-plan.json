@@ -97,14 +97,16 @@
       "type": "create",
       "title": "Dokumen Wajib yang Perlu Disiapkan untuk SMK3",
       "category": "Regulasi",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi dokumen persiapan penerapan SMK3",
       "keywords": [
         "dokumen SMK3",
         "persiapan SMK3"
       ],
-      "brief": "Berikan peta dokumen berdasarkan fungsi, bukan sekadar daftar, dan jelaskan bukti penerapannya."
+      "brief": "Berikan peta dokumen berdasarkan fungsi, bukan sekadar daftar, dan jelaskan bukti penerapannya.",
+      "publishedAt": "2026-10-11",
+      "slug": "dokumen-wajib-smk3"
     },
     {
       "id": "membaca-hasil-penilaian-smk3",
