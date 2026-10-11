@@ -80,7 +80,7 @@
       "type": "create",
       "title": "Memahami Peran P2K3 dalam Sistem Manajemen K3",
       "category": "Regulasi",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-regulasi.svg",
       "imageAlt": "Ilustrasi peran P2K3 dalam pengelolaan keselamatan kerja",
       "keywords": [
@@ -88,7 +88,9 @@
         "peran P2K3",
         "SMK3"
       ],
-      "brief": "Jelaskan fungsi P2K3, hubungan dengan manajemen, dan contoh tanggung jawabnya di perusahaan."
+      "brief": "Jelaskan fungsi P2K3, hubungan dengan manajemen, dan contoh tanggung jawabnya di perusahaan.",
+      "publishedAt": "2026-10-11",
+      "slug": "memahami-peran-p2k3"
     },
     {
       "id": "dokumen-wajib-smk3",

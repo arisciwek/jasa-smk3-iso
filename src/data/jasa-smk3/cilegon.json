@@ -1,9 +1,10 @@
 {
   "slug": "cilegon",
-  "lastmod": "2026-10-09T00:41:32Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-11T16:52:40Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Cilegon dapat diarahkan pada pemeriksaan hasil inspeksi, pelaporan bahaya, dan tindak lanjutnya. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Cilegon terletak di ujung barat Pulau Jawa, menepati posisi strategis di selat Sunda yang memisahkan Jawa dan Sumatra. Sebagai bagian dari provinsi Banten, kota ini dikenal sebagai pelabuhan penting yang mendukung aktivitas perdagangan dan perikanan wilayah pesisir. Masyarakat Cilegon mencerminkan campuran budaya Sunda, Betawi, dan etnis migrant yang datang untuk bekerja di sektor pelabuhan dan industri terkait. Dengan suasana kota yang masih menajamkan nuansa tradisional maupun perkembangan infrastruktur modern, Cilegon menjadi pintu gerbang yang menghubungkan dua benua sambil mempertahankan identitas lokalnya."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }

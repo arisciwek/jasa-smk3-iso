@@ -1,9 +1,10 @@
 {
   "slug": "jakarta-selatan",
-  "lastmod": "2026-10-09T00:27:22Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-11T11:27:09Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Jakarta Selatan dapat diarahkan pada kesiapan konsultasi onsite, akses lokasi, dan penanggung jawab lapangan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Jakarta Selatan merupakan salah satu kota administratif yang berada dalam wilayah khusus Daerah Khusus Ibukota Jakarta, bagian dari wilayah metropolitan Jakarta & Sekitarnya yang meliputi lima kota administratif dan satu kabupaten. Wilayah ini dikenal dengan kombinasi perkembangan perkukuhan perkotaan dan area hijau seperti Taman Mini Indonesia Indah serta berbagai kompleks perkantoran dan pendidikan yang tersebar di seluruh kecamatannya. Sebagai pusat aktivitas administratif dan sosial, Jakarta Selatan menampung komunitas yang beragam dari berbagai latar belakang budaya dan pekerjaan, mencerminkan dinamika kota ibu kota Indonesia yang terus beradaptasi terhadap perubahan urbanistik."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
