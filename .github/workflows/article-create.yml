@@ -40,6 +40,7 @@ jobs:
         env:
           WORKFLOW_TYPE: article-create
           INTERVAL_HOURS: 48
+          TRIGGER_TYPE: ${{ github.event_name }}
         run: node scripts/run-if-interval-elapsed.mjs
       - name: Commit and push
         if: always()
@@ -59,7 +60,6 @@ jobs:
           # Get the created article title from automation-output or src
           # Since generator creates the file, we can check src/content/articles/ for new files
           # But easier: the generator writes to automation-output/src/content/articles/
-          # Let's check what's in automation-output from the previous step
           # Actually, the generator already ran and updated the files, so we can just get the title from the generated file
           
           # Find the most recently created/modified article file in src/content/articles/

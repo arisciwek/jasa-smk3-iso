@@ -91,32 +91,39 @@ function main() {
   const lastRun = state[workflowType];
   const now = new Date();
 
-  if (lastRun) {
-    const elapsedHours = (now - new Date(lastRun)) / (1000 * 60 * 60);
+  const triggerType = process.env.TRIGGER_TYPE || '';
+  const isManual = triggerType === 'workflow_dispatch';
 
-    if (elapsedHours < minGap) {
-      const remaining = (minGap - elapsedHours).toFixed(1);
-      console.log(`Minimum gap not met for ${workflowType}. Last run: ${lastRun} (${elapsedHours.toFixed(1)}h ago). Need ${remaining}h more. Skipping.`);
-      process.exit(0);
+  if (!isManual) {
+    if (lastRun) {
+      const elapsedHours = (now - new Date(lastRun)) / (1000 * 60 * 60);
+
+      if (elapsedHours < minGap) {
+        const remaining = (minGap - elapsedHours).toFixed(1);
+        console.log(`Minimum gap not met for ${workflowType}. Last run: ${lastRun} (${elapsedHours.toFixed(1)}h ago). Need ${remaining}h more. Skipping.`);
+        process.exit(0);
+      }
+
+      const probability = calculateProbability(elapsedHours);
+      const random = Math.floor(Math.random() * 100);
+
+      console.log(`📊 ${workflowType}: ${elapsedHours.toFixed(1)}h since last run`);
+      console.log(`🎲 Probability: ${probability}% | Random roll: ${random}`);
+
+      if (random >= probability) {
+        console.log(`⏭️  MISS! (${random} >= ${probability}) - Skipping this check`);
+        process.exit(0);
+      }
+
+      console.log(`✅ HIT! (${random} < ${probability}) - Proceeding with update`);
+    } else {
+      console.log(`📅 ${workflowType}: Never run before. Proceeding with first run.`);
     }
-
-    const probability = calculateProbability(elapsedHours);
-    const random = Math.floor(Math.random() * 100);
-
-    console.log(`📊 ${workflowType}: ${elapsedHours.toFixed(1)}h since last run`);
-    console.log(`🎲 Probability: ${probability}% | Random roll: ${random}`);
-
-    if (random >= probability) {
-      console.log(`⏭️  MISS! (${random} >= ${probability}) - Skipping this check`);
-      process.exit(0);
-    }
-
-    console.log(`✅ HIT! (${random} < ${probability}) - Proceeding with update`);
   } else {
-    console.log(`📅 ${workflowType}: Never run before. Proceeding with first run.`);
+    console.log(`🚀 Manual trigger detected (workflow_dispatch) – skipping interval and probability checks`);
   }
 
-  console.log(`Interval elapsed for ${workflowType}. Last run: ${lastRun || 'never'}. Running generator...`);
+  console.log(`Running generator for ${workflowType}...`);
 
   const success = runGenerator();
 

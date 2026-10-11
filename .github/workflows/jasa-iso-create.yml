@@ -40,6 +40,7 @@ jobs:
         env:
           WORKFLOW_TYPE: jasa-iso-create
           INTERVAL_HOURS: 48
+          TRIGGER_TYPE: ${{ github.event_name }}
         run: node scripts/run-if-interval-elapsed.mjs
       - name: Commit and push
         if: always()
