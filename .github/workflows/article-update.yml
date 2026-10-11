@@ -52,7 +52,7 @@ jobs:
           git config user.email "smk3-iso-content-bot@users.noreply.github.com"
           
           # Stage relevant files
-          git add src/content/articles/ content-plan.json automation-state/last-run.json
+          git add src/content/articles/ content-plan.json automation-state/last-run.json src/data/service-lastmod.json
           
           # Check if there are changes
           if git diff --cached --quiet; then

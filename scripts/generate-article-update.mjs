@@ -123,6 +123,34 @@ writeFileSync(articlePath, updatedWithLastmod);
 oldestArticle.lastmod = now;
 writeFileSync(planPath, `${JSON.stringify(plan, null, 2)}\n`);
 
+// Keep related service lastmod >= this article's lastmod so SEO validation passes
+const serviceSlugsMatch = existingContent.match(/serviceSlugs:\s*\[([^\]]*)\]/);
+let serviceSlugs = [];
+if (serviceSlugsMatch) {
+  try {
+    serviceSlugs = JSON.parse(`[${serviceSlugsMatch[1]}]`);
+  } catch {
+    serviceSlugs = [];
+  }
+}
+if (serviceSlugs.length > 0) {
+  const serviceLastmodPath = join(root, 'src/data/service-lastmod.json');
+  if (existsSync(serviceLastmodPath)) {
+    const serviceLastmodData = JSON.parse(readFileSync(serviceLastmodPath, 'utf8'));
+    let updated = false;
+    for (const serviceSlug of serviceSlugs) {
+      if (serviceLastmodData[serviceSlug] && new Date(serviceLastmodData[serviceSlug].lastmod) < new Date(now)) {
+        serviceLastmodData[serviceSlug].lastmod = now;
+        updated = true;
+      }
+    }
+    if (updated) {
+      writeFileSync(serviceLastmodPath, `${JSON.stringify(serviceLastmodData, null, 2)}\n`);
+      console.log(`Service lastmod disinkronkan: ${serviceSlugs.join(', ')}`);
+    }
+  }
+}
+
 // Copy to automation-output
 mkdirSync(join(root, 'automation-output', 'src/content/articles'), { recursive: true });
 copyFileSync(planPath, join(root, 'automation-output', 'content-plan.json'));

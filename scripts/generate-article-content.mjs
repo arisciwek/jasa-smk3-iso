@@ -124,8 +124,8 @@ copyFileSync(
       const serviceLastmodData = JSON.parse(readFileSync(serviceLastmodPath, 'utf8'));
       let updated = false;
       for (const serviceSlug of idea.serviceSlugs) {
-        if (serviceLastmodData[serviceSlug] && serviceLastmodData[serviceSlug].lastmod < today) {
-          serviceLastmodData[serviceSlug].lastmod = today;
+        if (serviceLastmodData[serviceSlug] && new Date(serviceLastmodData[serviceSlug].lastmod) < new Date(now)) {
+          serviceLastmodData[serviceSlug].lastmod = now;
           updated = true;
         }
       }
