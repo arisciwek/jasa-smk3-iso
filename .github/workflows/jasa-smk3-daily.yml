@@ -18,6 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       tasks: ${{ steps.decide.outputs.tasks }}
+      worker: ${{ steps.decide.outputs.worker }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,7 +29,7 @@ jobs:
 
   article-worker:
     needs: prepare
-    if: needs.prepare.outputs.tasks == '1'
+    if: needs.prepare.outputs.tasks == '1' && needs.prepare.outputs.worker == 'article'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -53,7 +54,7 @@ jobs:
 
   jasa-smk3-worker:
     needs: prepare
-    if: needs.prepare.outputs.tasks == '1'
+    if: needs.prepare.outputs.tasks == '1' && needs.prepare.outputs.worker == 'jasa-smk3'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -78,7 +79,7 @@ jobs:
 
   jasa-iso-worker:
     needs: prepare
-    if: needs.prepare.outputs.tasks == '1'
+    if: needs.prepare.outputs.tasks == '1' && needs.prepare.outputs.worker == 'jasa-iso'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

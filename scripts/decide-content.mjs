@@ -25,9 +25,17 @@ const inScheduleSlot = isManual || hour === targetHour;
 
 if (!inScheduleSlot) {
   output('tasks', '0');
+  output('worker', 'none');
   output('reason', `waiting-${targetHour}:00-wib`);
-  process.exit(0);
+  process.exit(0)
 }
 
+// Pilih worker: article, jasa-smk3, atau jasa-iso
+// Menggunakan hash deterministik agar hari yang sama selalu memilih worker yang sama
+const workerTypes = ['article', 'jasa-smk3', 'jasa-iso'];
+const selectedWorker = workerTypes[hash(date) % workerTypes.length];
+
 output('tasks', '1');
+output('worker', selectedWorker);
 output('reason', isManual ? 'manual' : `scheduled-${targetHour}:00-wib`);
+console.log(`Selected worker: ${selectedWorker}`);
