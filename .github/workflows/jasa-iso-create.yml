@@ -1,0 +1,43 @@
+name: Jasa ISO Create
+
+on:
+  schedule:
+    - cron: '0 1 * */2 *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: jasa-iso-create
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Random delay (0-12h)
+        run: |
+          DELAY=$((RANDOM % 43200))
+          echo "Sleeping $DELAY seconds"
+          sleep $DELAY
+      - name: Run if interval elapsed
+        env:
+          WORKFLOW_TYPE: jasa-iso-create
+          INTERVAL_HOURS: 48
+        run: node scripts/run-if-interval-elapsed.mjs
+      - name: Upload artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: jasa-iso-create-result
+          path: automation-output/
+          if-no-files-found: ignore
