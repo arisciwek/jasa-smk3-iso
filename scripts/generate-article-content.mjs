@@ -6,8 +6,14 @@ const planPath = join(root, 'content-plan.json');
 const plan = JSON.parse(readFileSync(planPath, 'utf8'));
 const idea = plan.articleIdeas.find((item) => item.status === 'planned');
 const apiKey = process.env.AI_API_KEY;
-const baseUrl = (process.env.AI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
-const model = process.env.AI_MODEL || 'gpt-4o-mini';
+if (!apiKey) throw new Error('AI_API_KEY belum tersedia.');
+
+const baseUrl = process.env.AI_BASE_URL;
+if (!baseUrl) throw new Error('AI_BASE_URL belum tersedia.');
+const baseUrlClean = baseUrl.replace(/\/$/, '');
+
+const model = process.env.AI_MODEL;
+if (!model) throw new Error('AI_MODEL belum tersedia.');
 
 mkdirSync(join(root, 'automation-output'), { recursive: true });
 
@@ -38,7 +44,7 @@ Aturan editorial:
 - keluarkan hanya isi artikel Markdown.
 `.trim();
 
-const response = await fetch(`${baseUrl}/chat/completions`, {
+const response = await fetch(`${baseUrlClean}/chat/completions`, {
   method: 'POST',
   headers: {
     authorization: `Bearer ${apiKey}`,

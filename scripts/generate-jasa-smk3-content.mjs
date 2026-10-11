@@ -6,8 +6,14 @@ const plan = JSON.parse(readFileSync(join(root, 'content-plan.json'), 'utf8'));
 const citiesSource = readFileSync(join(root, 'src/data/cities.ts'), 'utf8');
 const contentDir = join(root, 'src/data/jasa-smk3');
 const apiKey = process.env.AI_API_KEY;
-const baseUrl = (process.env.AI_BASE_URL || 'https://api.openai.com/v1').replace(/\/$/, '');
-const model = process.env.AI_MODEL || 'gpt-4o-mini';
+if (!apiKey) throw new Error('AI_API_KEY belum tersedia.');
+
+const baseUrl = process.env.AI_BASE_URL;
+if (!baseUrl) throw new Error('AI_BASE_URL belum tersedia.');
+const baseUrlClean = baseUrl.replace(/\/$/, '');
+
+const model = process.env.AI_MODEL;
+if (!model) throw new Error('AI_MODEL belum tersedia.');
 
 if (!apiKey) throw new Error('AI_API_KEY belum tersedia.');
 
@@ -72,7 +78,7 @@ Aturan ketat:
 - jangan mengulang kalimat atau ide dari paragraf lama.
 `.trim();
 
-const response = await fetch(`${baseUrl}/chat/completions`, {
+const response = await fetch(`${baseUrlClean}/chat/completions`, {
   method: 'POST',
   headers: {
     authorization: `Bearer ${apiKey}`,
