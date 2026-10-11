@@ -48,6 +48,12 @@ jobs:
           INTERVAL_HOURS: 48
           TRIGGER_TYPE: ${{ github.event_name }}
           AI_API_KEY: ${{ secrets.AI_API_KEY }}
+          AI_BASE_URL: https://freellmapi.ciptamasjaya.co.id/v1
+          AI_MODEL: auto
+          WORKFLOW_TYPE: jasa-smk3-create
+          INTERVAL_HOURS: 48
+          TRIGGER_TYPE: ${{ github.event_name }}
+          AI_API_KEY: ${{ secrets.AI_API_KEY }}
           AI_BASE_URL: ${{ vars.AI_BASE_URL }}
           AI_MODEL: ${{ vars.AI_MODEL }}
         run: node scripts/run-if-interval-elapsed.mjs
