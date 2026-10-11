@@ -1,9 +1,10 @@
 {
   "slug": "bogor",
-  "lastmod": "2026-10-09T00:50:24Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-11T13:50:28Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Bogor dapat diarahkan pada pengendalian proses, pemantauan, dan tindakan koreksi. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Bogor dikenal sebagai Kota Hujan karena curah hujan yang tinggi sepanjang tahun, Bogor memiliki udara sejuk yang menjadi ciri khasnya. Sebagai kota penyangga Jakarta, Bogor menawarkan perpaduan antara nuansa perkotaan dan pedesaan dengan keberadaan Kebun Raya Bogor yang bersejarah. Suasana hijau dan topografi perbukitan menjadikan Bogor tujuan populer bagi warga Jakarta dan sekitarnya untuk melepas penat. Karakteristik geografis dan iklim ini membentuk gaya hidup masyarakat lokal yang unik, menjadikan Bogor memiliki daya tarik tersendiri di kawasan metropolitan."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
