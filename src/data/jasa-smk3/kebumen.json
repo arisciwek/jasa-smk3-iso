@@ -1,9 +1,10 @@
 {
   "slug": "kebumen",
-  "lastmod": "2026-10-09T00:58:13Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-13T15:52:57Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Kebumen dapat diarahkan pada kesiapan audit internal dan cara memastikan temuan memiliki pemilik. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Kebumen merupakan salah satu kabupaten di wilayah Jawa Tengah yang memiliki karakteristik geografis beragam, mulai dari kawasan pesisir selatan hingga area perbukitan. Posisi wilayah ini menjadikannya titik strategis bagi berbagai aktivitas ekonomi dan operasional organisasi di sekitarnya. Pemahaman terhadap kondisi lokal di Kebumen sangat penting untuk memastikan bahwa setiap koordinasi lapangan dan implementasi program kerja dapat berjalan selaras dengan lingkungan fisik serta sosial masyarakat setempat. Hal ini membantu organisasi dalam menyesuaikan pendekatan operasional agar lebih efektif dan relevan dengan situasi nyata di wilayah tersebut."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
