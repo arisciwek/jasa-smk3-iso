@@ -1,9 +1,10 @@
 {
   "slug": "depok",
-  "lastmod": "2026-10-09T01:23:38Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-14T06:02:00Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Depok dapat diarahkan pada koordinasi dengan pemasok, kontraktor, dan pihak terkait lainnya. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Kota Depok merupakan wilayah administratif yang terletak di Provinsi Jawa Barat dan menjadi bagian dari kawasan Jakarta & Sekitarnya. Posisi geografisnya yang strategis menjadikan kota ini sebagai area penyangga utama bagi ibu kota, sehingga memiliki dinamika aktivitas ekonomi dan sosial yang terintegrasi dengan wilayah metropolitan. Karakteristik wilayah ini mencakup perpaduan antara kawasan pemukiman, pusat pendidikan, dan berbagai sektor usaha yang berkembang mengikuti pertumbuhan urbanisasi di sekitarnya. Kondisi tersebut menciptakan lingkungan bisnis yang dinamis bagi berbagai organisasi yang beroperasi di wilayah ini."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
