@@ -1,9 +1,10 @@
 {
   "slug": "cianjur",
-  "lastmod": "2026-10-09T01:24:41Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-15T11:18:58Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Cianjur dapat diarahkan pada keterlibatan pekerja dan komunikasi dalam sistem manajemen. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Cianjur merupakan salah satu wilayah administratif di Provinsi Jawa Barat yang memiliki karakteristik geografis beragam. Sebagai daerah yang menghubungkan beberapa pusat kegiatan ekonomi di Jawa Barat, wilayah ini memiliki potensi pengembangan organisasi yang terus tumbuh. Kondisi lokal yang khas menjadikan setiap entitas di Cianjur memiliki pendekatan manajemen yang berbeda-beda dalam mengelola operasionalnya. Pemahaman terhadap konteks wilayah ini penting untuk memastikan bahwa setiap implementasi sistem manajemen dapat berjalan selaras dengan budaya kerja dan lingkungan sosial masyarakat setempat."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
