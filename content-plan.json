@@ -165,14 +165,16 @@
       "type": "create",
       "title": "Cara Menyusun HIRADC yang Dipakai di Lapangan",
       "category": "Teknis",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi penyusunan HIRADC untuk pekerjaan lapangan",
       "keywords": [
         "cara menyusun HIRADC",
         "identifikasi bahaya"
       ],
-      "brief": "Tunjukkan alur dari aktivitas kerja, bahaya, risiko, pengendalian, sampai verifikasi lapangan."
+      "brief": "Tunjukkan alur dari aktivitas kerja, bahaya, risiko, pengendalian, sampai verifikasi lapangan.",
+      "publishedAt": "2026-10-15T17:05:14Z",
+      "slug": "cara-menyusun-hiradc"
     },
     {
       "id": "jsa-dan-hiradc",

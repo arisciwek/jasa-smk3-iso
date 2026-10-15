@@ -1,39 +1,67 @@
 ---
 title: "Cara Menyusun HIRADC yang Dipakai di Lapangan"
 description: "Tunjukkan alur dari aktivitas kerja, bahaya, risiko, pengendalian, sampai verifikasi lapangan."
-date: "2026-09-10T17:15:59Z"
-lastmod: "2026-09-10T17:15:59Z"
-author: "Tim Konsultan K3"
+date: "2026-10-15T17:05:14Z"
+lastmod: "2026-10-15T17:05:14Z"
+author: "Admin K3"
 category: "Teknis"
-tags: ["hiradc", "identifikasi-bahaya"]
-readTime: "7 menit"
-image: "/assets/images/article-hiradc.svg"
+tags: ["cara menyusun HIRADC","identifikasi bahaya"]
+readTime: "4 menit"
+image: "/assets/images/article-teknis.svg"
 imageAlt: "Ilustrasi penyusunan HIRADC untuk pekerjaan lapangan"
-serviceSlugs: ["smk3"]
+serviceSlugs: []
 ---
+### Cara Menyusun HIRADC yang Dipakai di Lapangan
 
-HIRADC yang dibuat hanya untuk memenuhi dokumen tidak akan digunakan oleh pekerja. HIRADC yang efektif adalah dokumen yang dibaca dan dipakai dalam keputusan sehari-hari. Untuk itu, penyusunan HIRADC perlu mengikuti alur yang benar-benar mencerminkan cara kerja.
+Banyak dokumen HIRADC (*Hazard Identification, Risk Assessment, and Determining Control*) hanya berakhir menjadi tumpukan kertas di lemari arsip atau sekadar syarat audit. Masalah utamanya adalah dokumen tersebut sering disusun di balik meja kantor tanpa melibatkan orang yang benar-benar melakukan pekerjaan di lapangan.
 
-## Mulai dari Aktivitas yang Benar-Benar Dilakukan
+Agar HIRADC menjadi alat kontrol yang efektif, dokumen ini harus mencerminkan realitas kerja. Berikut adalah langkah-langkah konkret untuk menyusun HIRADC yang aplikatif dan dapat dijalankan oleh pekerja.
 
-HIRADC sebaiknya dimulai dari pekerjaan yang benar-benar dilakukan, bukan dari template. Catat urutan aktivitas, orang yang terlibat, alat yang digunakan, dan kondisi yang dapat berubah selama pekerjaan berlangsung. Jangan mulai dari daftar bahaya yang umum; mulai dari apa yang terjadi di lapangan hari itu.
+#### 1. Membedah Aktivitas Kerja Menjadi Langkah Kecil
+Kesalahan umum dalam identifikasi bahaya adalah menuliskan aktivitas terlalu umum. Misalnya, menulis "Mengelas Pipa" sebagai satu aktivitas. Hal ini membuat bahaya yang spesifik sering terlewat.
 
-Aktivitas yang dipilih sebaiknya mencakup pekerjaan dengan risiko tinggi atau pekerjaan yang baru saja mengalami perubahan. Pekerjaan yang sudah berjalan lama dan tidak ada perubahan biasanya mempunyai HIRADC yang sudah ada dan dapat diperbarui, bukan dibuat dari nol.
+Cara yang benar adalah memecah pekerjaan menjadi urutan langkah kerja (*job steps*). Contoh untuk aktivitas mengelas pipa:
+1. Mempersiapkan area kerja dan peralatan.
+2. Memindahkan tabung gas ke titik pengelasan.
+3. Melakukan proses pengelasan.
+4. Membersihkan sisa terak las (*slag*).
+5. Merapikan kembali peralatan.
 
-## Identifikasi Bahaya Secara Spesifik
+Dengan membagi aktivitas menjadi langkah-langkah kecil, Anda bisa melihat bahaya yang berbeda di setiap tahapannya. Bahaya saat memindahkan tabung (terguling/terbentur) tentu berbeda dengan bahaya saat proses pengelasan (asap las/percikan api).
 
-Bahaya adalah sesuatu yang dapat menyebabkan cedera, penyakit akibat kerja, atau kerusakan. Identifikasi bahaya sebaiknya dilakukan bersama pekerja yang menjalankan aktivitas tersebut. Mereka tahu mana yang berbahaya dan mana yang tidak.
+#### 2. Identifikasi Bahaya dan Penentuan Risiko
+Setelah langkah kerja terurai, langkah selanjutnya adalah identifikasi bahaya. Bahaya adalah segala sesuatu yang berpotensi menyebabkan cedera atau kerusakan.
 
-Gunakan pertanyaan sederhana: apa yang dapat menyebabkan cedera? Siapa yang dapat terdampak? Kapan risikonya paling tinggi? Pengendalian apa yang sudah ada? Apa yang masih perlu diperbaiki? Pertanyaan-pertanyaan ini membantu mengidentifikasi bahaya secara spesifik, bukan hanya mengulang daftar bahaya umum.
+Dalam tahap ini, jangan hanya mengandalkan imajinasi. Lakukan *walkthrough* di lapangan dan diskusikan dengan operator atau teknisi. Tanyakan, "Apa hal terburuk yang bisa terjadi saat Anda melakukan langkah ini?"
 
-## Penilaian Risiko dan Pengendalian
+Setelah bahaya ditemukan, tentukan risikonya. Risiko adalah kombinasi dari seberapa besar kemungkinan (*likelihood*) kejadian tersebut terjadi dan seberapa parah (*severity*) dampak yang ditimbulkan. 
 
-Risiko adalah kemungkinan bahaya tersebut terjadi beserta dampaknya. Penilaian risiko tidak membutuhkan rumus yang rumit. Gunakan pendekatan sederhana: kemungkinan tinggi dan dampak berat berarti risiko tinggi, dan perlu pengendalian segera.
+Misalnya, pada langkah "Memindahkan tabung gas", bahayanya adalah "Tabung terjatuh". Risikonya bisa berupa cedera kaki atau kebocoran gas. Anda kemudian memberikan skor berdasarkan matriks risiko yang berlaku di perusahaan untuk menentukan apakah risiko tersebut masuk kategori rendah, sedang, atau tinggi.
 
-Pengendalian adalah tindakan yang mengurangi risiko. Hierarki pengendalian membantu memilih pengendalian yang efektif. Eliminasi adalah yang terbaik, kemudian substitusi, rekayasa, administratif, dan APD. Gunakan hierarki ini untuk memilih pengendalian, bukan hanya menambahkan APD ke daftar.
+#### 3. Menentukan Pengendalian dengan Hierarki Kontrol
+Setelah mengetahui tingkat risiko, Anda harus menentukan langkah pengendalian. Jangan langsung melompat ke Alat Pelindung Diri (APD), karena APD adalah pertahanan terakhir dan paling lemah. Gunakan hierarki kontrol berikut:
 
-## Verifikasi di Lapangan
+*   **Eliminasi:** Menghilangkan sumber bahaya sepenuhnya (misal: mengganti bahan kimia berbahaya dengan yang tidak berbahaya).
+*   **Substitusi:** Mengganti alat atau proses dengan yang lebih aman.
+*   **Rekayasa Teknik:** Memodifikasi alat atau area kerja (misal: memasang *guarding* pada mesin atau memasang sistem ventilasi).
+*   **Administrasi:** Membuat SOP, memberikan pelatihan, atau mengatur rotasi kerja.
+*   **APD:** Menggunakan helm, sepatu safety, masker, atau kacamata pelindung.
 
-HIRADC yang sudah selesai perlu diverifikasi di lapangan. Baca HIRADC bersama pekerja yang menjalankan aktivitas tersebut. Apakah bahaya yang tercatat benar-benar ada? Apakah pengendalian yang direncanakan sudah ada? Apakah ada bahaya yang tidak tercatat?
+Contoh konkret: Untuk bahaya "Asap Las", pengendalian administrasi berupa pengaturan waktu kerja tidaklah cukup. Anda memerlukan rekayasa teknik berupa *local exhaust ventilation* (penghisap asap) dan APD berupa masker respirator.
 
-Verifikasi ini sebaiknya dilakukan ketika pekerja benar-benar menjalankan aktivitas, bukan hanya ketika dokumen dibaca. Dengan begitu, HIRADC mencerminkan realitas, bukan teori. Perbarui HIRADC ketika ada perubahan proses, peralatan, atau kondisi kerja.
+#### 4. Verifikasi dan Implementasi di Lapangan
+HIRADC bukan dokumen statis. Setelah disusun, dokumen ini harus diverifikasi di lapangan untuk memastikan pengendalian yang ditulis benar-benar bisa diterapkan.
+
+Lakukan langkah verifikasi berikut:
+*   **Sosialisasi:** Jelaskan isi HIRADC kepada pekerja yang bersangkutan. Pastikan mereka paham bahaya apa yang mengintai dan apa yang harus mereka lakukan untuk menghindarinya.
+*   **Observasi:** Pantau apakah pengendalian yang direncanakan (misal: penggunaan *safety harness*) benar-benar dilakukan saat bekerja di ketinggian.
+*   **Umpan Balik:** Tanyakan kepada pekerja apakah ada pengendalian yang justru menghambat pekerjaan atau tidak efektif. Jika ada, segera revisi dokumen HIRADC tersebut.
+
+#### 5. Peninjauan Berkala
+HIRADC harus diperbarui jika terjadi perubahan dalam proses kerja, seperti:
+*   Adanya mesin atau peralatan baru.
+*   Perubahan prosedur kerja.
+*   Terjadinya kecelakaan kerja atau *near-miss* (hampir celaka).
+*   Adanya temuan dari audit internal maupun eksternal.
+
+Dengan mengikuti alur dari pembedahan aktivitas hingga verifikasi lapangan, HIRADC tidak lagi menjadi sekadar formalitas administratif, melainkan menjadi panduan keselamatan yang nyata bagi setiap pekerja di lapangan.
