@@ -1,9 +1,10 @@
 {
   "slug": "kendal",
-  "lastmod": "2026-10-09T01:04:09Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-17T05:30:34Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Kendal dapat diarahkan pada pengendalian pekerjaan rutin, nonrutin, dan perubahan kondisi operasi. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Kabupaten Kendal merupakan salah satu wilayah administratif di Provinsi Jawa Tengah yang memiliki posisi strategis dalam mendukung aktivitas ekonomi daerah. Sebagai bagian dari koridor utama di pesisir utara, wilayah ini menjadi titik penting bagi berbagai sektor usaha yang berkembang di sekitarnya. Karakteristik geografis dan letaknya yang terhubung dengan pusat-pusat kegiatan di Jawa Tengah menjadikan Kendal sebagai area yang dinamis bagi pertumbuhan organisasi dan perusahaan lokal dalam mengelola operasional mereka secara efektif dan terstruktur."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
