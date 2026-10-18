@@ -1,9 +1,10 @@
 {
   "slug": "purwodadi",
-  "lastmod": "2026-10-09T01:55:37Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-18T14:30:26Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Purwodadi dapat diarahkan pada keterlibatan pekerja dan komunikasi dalam sistem manajemen. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Purwodadi merupakan salah satu kota di wilayah Jawa Tengah yang berfungsi sebagai pusat administrasi dan pelayanan bagi masyarakat di sekitarnya. Sebagai bagian dari provinsi yang dikenal dengan keberagaman ekonomi dan sosial, kota ini memiliki dinamika organisasi yang beragam. Konteks geografis dan administratifnya menjadi pertimbangan penting dalam menyesuaikan pendekatan layanan sertifikasi ISO agar sesuai dengan kebutuhan dan kondisi organisasi lokal yang bervariasi."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
