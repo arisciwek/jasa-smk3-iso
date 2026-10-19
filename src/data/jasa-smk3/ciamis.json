@@ -1,9 +1,10 @@
 {
   "slug": "ciamis",
-  "lastmod": "2026-10-09T01:20:32Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-19T19:14:38Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Ciamis dapat diarahkan pada kesiapan konsultasi onsite, akses lokasi, dan penanggung jawab lapangan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Ciamis merupakan wilayah administratif di Provinsi Jawa Barat yang memiliki karakteristik geografis beragam. Sebagai bagian dari wilayah Priangan Timur, daerah ini menjadi titik penghubung penting bagi aktivitas ekonomi dan mobilitas masyarakat di sekitarnya. Kondisi lingkungan dan tata ruang di Ciamis memberikan pengaruh terhadap pola operasional berbagai organisasi yang beraktivitas di sana. Pemahaman terhadap konteks lokal ini menjadi dasar penting dalam menyesuaikan pendekatan layanan agar relevan dengan situasi lapangan dan kebutuhan spesifik entitas yang berada di wilayah tersebut."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
