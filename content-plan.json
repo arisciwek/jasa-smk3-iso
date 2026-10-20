@@ -182,7 +182,7 @@
       "type": "create",
       "title": "JSA dan HIRADC: Kapan Menggunakan Masing-Masing",
       "category": "Teknis",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi perbandingan JSA dan HIRADC",
       "keywords": [
@@ -190,7 +190,9 @@
         "HIRADC",
         "analisis risiko kerja"
       ],
-      "brief": "Jelaskan perbedaan ruang lingkup, tingkat detail, dan hubungan JSA dengan penilaian risiko."
+      "brief": "Jelaskan perbedaan ruang lingkup, tingkat detail, dan hubungan JSA dengan penilaian risiko.",
+      "publishedAt": "2026-10-20T06:04:45Z",
+      "slug": "jsa-dan-hiradc"
     },
     {
       "id": "hierarchy-of-controls-contoh",
