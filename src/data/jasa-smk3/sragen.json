@@ -1,9 +1,10 @@
 {
   "slug": "sragen",
-  "lastmod": "2026-10-09T01:26:29Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-21T05:55:45Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Sragen dapat diarahkan pada pembagian tanggung jawab antara manajemen, pengawas, dan pekerja. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Sragen, yang terletak di wilayah timur Jawa Tengah, berfungsi sebagai pusat administratif sekaligus titik pertemuan antara lahan pertanian subur dan jaringan transportasi kereta api yang menghubungkan kota‑kota sekitarnya, termasuk Solo. Wilayah ini dikenal dengan kegiatan pertanian, terutama padi, serta tradisi budaya Jawa yang kental, tercermin dalam perayaan lokal dan kuliner khas. Letak geografisnya yang berada di dataran rendah serta kedekatannya dengan sungai-sungai utama menjadikannya area yang strategis bagi mobilitas penduduk dan distribusi hasil produksi, sekaligus memberikan latar belakang sosial‑ekonomi yang relevan bagi organisasi yang beroperasi di sini."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
