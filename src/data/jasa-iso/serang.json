@@ -1,9 +1,10 @@
 {
   "slug": "serang",
-  "lastmod": "2026-10-09T02:01:33Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-21T17:05:10Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Serang dapat diarahkan pada kesiapan konsultasi onsite, akses lokasi, dan penanggung jawab lapangan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Serang, sebagai ibu kota Provinsi Banten, terletak di ujung barat Pulau Jawa dan berbatasan langsung dengan Selat Sunda, menjadikannya titik persimpangan penting antara Jawa dan Sumatra. Kota ini dikenal dengan warisan sejarahnya, termasuk situs‑situs kolonial Belanda dan keraton tradisional, serta ragam budaya Betawi‑Banten yang masih hidup dalam festival dan kuliner lokal. Dengan populasi yang terus bertumbuh, Serang menyediakan fasilitas pendidikan, kesehatan, dan transportasi yang mendukung aktivitas warga serta memperkuat peranannya sebagai pusat administrasi dan layanan publik di wilayah tersebut."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
