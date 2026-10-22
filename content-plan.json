@@ -199,14 +199,16 @@
       "type": "create",
       "title": "Contoh Penerapan Hierarki Pengendalian Risiko",
       "category": "Teknis",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi hierarki pengendalian risiko di tempat kerja",
       "keywords": [
         "hierarki pengendalian risiko",
         "pengendalian bahaya"
       ],
-      "brief": "Gunakan satu skenario kerja untuk menunjukkan eliminasi, substitusi, rekayasa, administratif, dan APD."
+      "brief": "Gunakan satu skenario kerja untuk menunjukkan eliminasi, substitusi, rekayasa, administratif, dan APD.",
+      "publishedAt": "2026-10-22T17:14:34Z",
+      "slug": "hierarchy-of-controls-contoh"
     },
     {
       "id": "inspeksi-k3-efektif",
