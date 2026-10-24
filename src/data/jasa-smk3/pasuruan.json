@@ -1,9 +1,10 @@
 {
   "slug": "pasuruan",
-  "lastmod": "2026-10-09T01:33:49Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-24T10:47:59Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Pasuruan dapat diarahkan pada pemetaan aktivitas kerja dan titik keputusan yang berisiko. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Kota Pasuruan merupakan salah satu wilayah administratif di Jawa Timur yang memiliki posisi strategis dalam konstelasi geografis provinsi tersebut. Sebagai kota yang berkembang di jalur penghubung utama antarwilayah, Pasuruan memiliki karakteristik lingkungan yang beragam, mulai dari area perkotaan hingga wilayah penyangga. Kondisi lokal ini memberikan pengaruh terhadap dinamika operasional berbagai organisasi yang beraktivitas di dalamnya. Pemahaman terhadap konteks wilayah Jawa Timur, khususnya di area Pasuruan, menjadi landasan penting dalam menyesuaikan pendekatan layanan agar relevan dengan situasi dan kebutuhan spesifik di lapangan."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
