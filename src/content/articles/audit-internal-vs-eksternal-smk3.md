@@ -2,7 +2,7 @@
 title: "Perbedaan Audit Internal dan Audit Eksternal SMK3"
 description: "Jelaskan tujuan, pelaksana, bukti, dan waktu pelaksanaan kedua jenis audit secara praktis."
 date: "2026-10-10T18:10:57Z"
-lastmod: "2026-10-11T13:42:15Z"
+lastmod: "2026-10-24T14:17:23Z"
 author: "Admin K3"
 category: "Regulasi"
 tags: ["audit internal SMK3","audit eksternal SMK3"]
@@ -62,3 +62,11 @@ Salah satu perbedaan utama antara audit internal dan audit eksternal terletak pa
 
 ## Laporan dan Tindak Lanjut
 Laporan hasil audit internal biasanya ditujukan kepada manajemen tingkat atas dan digunakan sebagai alat bantu pengambilan keputusan dalam rangka perbaikan sistem manajemen. Tindak lanjut dari audit internal sering kali mencakup rekomendasi yang dapat diimplementasikan secara bertahap oleh departemen terkait. Sementara itu, laporan audit eksternal sering kali ditujukan kepada pemangku kepentingan eksternal, seperti regulator atau investor, dan memiliki struktur yang lebih formal. Hasil audit eksternal dapat menjadi dasar untuk sertifikasi atau penilaian kepatuhan, sehingga memerlukan proses verifikasi yang lebih ketat.
+
+### Peran dan Tanggung Jawab Tim Audit Internal
+
+Tim audit internal SMK3 berfungsi sebagai mata internal organisasi yang terus memantau kepatuhan terhadap kebijakan keselamatan dan kesehatan kerja. Anggota tim biasanya berasal dari berbagai departemen, sehingga mereka memiliki pemahaman mendalam tentang proses operasional sehari‑hari. Tugas utama mereka meliputi identifikasi potensi bahaya, penilaian efektivitas kontrol yang sudah diterapkan, serta penyusunan rekomendasi perbaikan yang bersifat praktis dan dapat langsung diimplementasikan. Karena audit internal dilakukan secara berkala dan berkesinambungan, tim ini dapat menanggapi perubahan kondisi kerja dengan cepat, sehingga membantu menciptakan budaya keselamatan yang proaktif di seluruh tingkat organisasi.
+
+### Kriteria Pemilihan Auditor Eksternal dalam SMK3
+
+Pemilihan auditor eksternal harus didasarkan pada beberapa kriteria utama yang menjamin objektivitas dan kompetensi. Pertama, auditor harus memiliki pengalaman yang relevan dalam bidang K3 dan pemahaman yang baik tentang standar SMK3 yang berlaku. Kedua, independensi menjadi faktor penting; auditor tidak boleh memiliki hubungan kerja atau kepentingan finansial dengan organisasi yang diaudit, sehingga hasil evaluasi dapat dipercaya. Ketiga, kemampuan komunikasi yang baik diperlukan agar temuan audit dapat disampaikan secara jelas dan konstruktif kepada manajemen. Dengan memperhatikan kriteria tersebut, organisasi dapat memastikan bahwa audit eksternal memberikan perspektif yang objektif serta nilai tambah bagi peningkatan sistem K3 secara keseluruhan.
