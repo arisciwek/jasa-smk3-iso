@@ -215,14 +215,16 @@
       "type": "create",
       "title": "Membuat Inspeksi K3 Lebih Efektif",
       "category": "Teknis",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi inspeksi keselamatan kerja yang terstruktur",
       "keywords": [
         "inspeksi K3",
         "checklist keselamatan kerja"
       ],
-      "brief": "Bahas tujuan inspeksi, kualitas checklist, pencatatan temuan, dan tindak lanjut yang terukur."
+      "brief": "Bahas tujuan inspeksi, kualitas checklist, pencatatan temuan, dan tindak lanjut yang terukur.",
+      "publishedAt": "2026-10-25T11:39:39Z",
+      "slug": "inspeksi-k3-efektif"
     },
     {
       "id": "lockout-tagout-dasar",
