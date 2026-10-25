@@ -1,9 +1,10 @@
 {
   "slug": "lebak",
-  "lastmod": "2026-10-09T02:05:35Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-25T05:56:36Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Lebak dapat diarahkan pada keterhubungan antara dokumen sistem, pelatihan, dan praktik lapangan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Kabupaten Lebak merupakan salah satu wilayah administratif di Provinsi Banten yang memiliki karakteristik geografis beragam. Sebagai daerah yang luas, wilayah ini mencakup berbagai sektor kegiatan ekonomi yang mendukung pertumbuhan lokal. Pemahaman terhadap kondisi lingkungan dan tata kelola wilayah di Lebak menjadi penting bagi organisasi dalam menyesuaikan operasional mereka. Hal ini memastikan bahwa setiap implementasi sistem manajemen dapat berjalan selaras dengan konteks sosial dan infrastruktur yang ada di wilayah Banten tersebut."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
