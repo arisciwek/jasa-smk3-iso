@@ -1,9 +1,10 @@
 {
   "slug": "slawi",
-  "lastmod": "2026-10-09T02:07:43Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-27T13:07:50Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Slawi dapat diarahkan pada pemetaan proses, risiko, dan peluang organisasi. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Slawi merupakan pusat pemerintahan sekaligus wilayah strategis di Kabupaten Tegal, Jawa Tengah. Sebagai kota yang berkembang di jalur penghubung antarwilayah, Slawi memiliki karakteristik lokal yang mendukung berbagai aktivitas ekonomi dan administratif. Posisi geografisnya yang berada di Jawa Tengah menjadikan kota ini sebagai titik temu bagi berbagai pelaku usaha dan organisasi yang membutuhkan akses layanan profesional. Pemahaman terhadap dinamika lokal di Slawi sangat penting untuk memastikan koordinasi dan implementasi program kerja dapat berjalan selaras dengan kondisi lingkungan setempat."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
