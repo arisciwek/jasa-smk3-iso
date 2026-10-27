@@ -1,9 +1,10 @@
 {
   "slug": "tasikmalaya",
-  "lastmod": "2026-10-09T02:10:59Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-27T13:08:12Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Tasikmalaya dapat diarahkan pada keterhubungan antara HIRADC, prosedur kerja, pelatihan, dan pengawasan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Kota Tasikmalaya merupakan salah satu pusat kegiatan ekonomi dan administrasi penting di wilayah Jawa Barat. Sebagai kota yang berkembang, daerah ini memiliki karakteristik wilayah yang beragam dengan berbagai sektor usaha yang mendukung pertumbuhan lokal. Keberadaan infrastruktur pendukung di Tasikmalaya memudahkan akses koordinasi bagi berbagai organisasi dalam menjalankan operasional harian. Pemahaman terhadap dinamika wilayah ini menjadi penting agar setiap layanan pendampingan dapat disesuaikan dengan kondisi lingkungan kerja yang ada di lapangan secara tepat dan efisien."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
