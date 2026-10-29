@@ -11,7 +11,7 @@ image: "/assets/images/article-teknis.svg"
 imageAlt: "Ilustrasi hierarki pengendalian risiko di tempat kerja"
 serviceSlugs: []
 ---
-# Contoh Penerapan Hierarki Pengendalian Risiko
+## Contoh Penerapan Hierarki Pengendalian Risiko
 
 Setiap pekerjaan memiliki potensi bahaya yang berbeda. Tanpa pendekatan sistematis, risiko kecelakaan bisa meningkat drastis. Hierarki pengendalian risiko memberikan kerangka berpikir yang jelas bagi para pekerja dan pengambil keputusan di lapangan. Mulai dari langkah paling efektif hingga paling terakhir, setiap tingkatan punya peran tersendiri dalam melindungi pekerja dari potensi bahaya di lingkungan kerja.
 
