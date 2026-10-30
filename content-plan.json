@@ -232,7 +232,7 @@
       "type": "create",
       "title": "LOTO untuk Mengendalikan Energi Berbahaya",
       "category": "Teknis",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi prosedur lockout tagout untuk energi berbahaya",
       "keywords": [
@@ -240,7 +240,9 @@
         "lockout tagout",
         "energi berbahaya"
       ],
-      "brief": "Jelaskan tujuan LOTO, tahapan umum, otorisasi, dan verifikasi sebelum pekerjaan dimulai."
+      "brief": "Jelaskan tujuan LOTO, tahapan umum, otorisasi, dan verifikasi sebelum pekerjaan dimulai.",
+      "publishedAt": "2026-10-30T14:16:55Z",
+      "slug": "lockout-tagout-dasar"
     },
     {
       "id": "program-tanggap-darurat",
