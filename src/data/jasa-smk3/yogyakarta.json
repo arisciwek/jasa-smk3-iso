@@ -1,9 +1,10 @@
 {
   "slug": "yogyakarta",
-  "lastmod": "2026-10-09T02:16:42Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-10-30T06:59:23Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Yogyakarta dapat diarahkan pada pemeriksaan hasil inspeksi, pelaporan bahaya, dan tindak lanjutnya. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Yogyakarta, sebagai ibu kota dari wilayah DI Yogyakarta, merupakan pusat kegiatan administrasi, budaya, dan ekonomi yang dinamis. Wilayah ini memiliki karakteristik unik dengan perpaduan berbagai sektor usaha, mulai dari sektor pariwisata, jasa, hingga institusi pendidikan dan perkantoran. Berbagai organisasi dan pelaku usaha yang beroperasi di kota ini memerlukan pendekatan penyesuaian layanan yang sesuai dengan kondisi lingkungan perkotaan serta mobilitas lokal yang tinggi. Keberadaan entitas yang beragam di Yogyakarta menuntut adanya pemahaman yang baik terhadap lanskap wilayah setempat agar setiap bentuk koordinasi dan perencanaan program kerja dapat terlaksana secara efektif dan efisien bagi seluruh pihak yang terlibat."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
