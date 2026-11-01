@@ -1,9 +1,10 @@
 {
   "slug": "rembang",
-  "lastmod": "2026-10-09T02:08:09Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-01T14:58:05Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Rembang dapat diarahkan pada pemetaan proses, risiko, dan peluang organisasi. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Sebagai bagian dari wilayah administratif Jawa Tengah, Rembang memiliki posisi geografis yang strategis di pesisir utara Pulau Jawa. Karakteristik wilayahnya yang berbatasan langsung dengan Laut Jawa memberikan pengaruh pada dinamika ekonomi dan aktivitas masyarakat setempat. Kota ini menjadi titik penting dalam jalur transportasi darat yang menghubungkan berbagai daerah di Jawa Tengah dan Jawa Timur. Kondisi lingkungan dan letak geografis tersebut membentuk pola kegiatan usaha yang khas bagi masyarakat di wilayah Rembang, sehingga pemahaman terhadap konteks lokal menjadi dasar yang relevan dalam mendukung berbagai kebutuhan layanan profesional di daerah ini."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
