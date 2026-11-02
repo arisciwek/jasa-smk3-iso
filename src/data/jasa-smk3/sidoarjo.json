@@ -1,9 +1,10 @@
 {
   "slug": "sidoarjo",
-  "lastmod": "2026-10-09T02:33:10Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-02T07:35:46Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Sidoarjo dapat diarahkan pada keterhubungan antara HIRADC, prosedur kerja, pelatihan, dan pengawasan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Sidoarjo merupakan wilayah di Jawa Timur yang berbatasan dengan Surabaya, sehingga pola aktivitas, mobilitas, dan kebutuhan layanan dapat berbeda dari satu area ke area lain. Pembaca lokal sebaiknya mempertimbangkan kondisi geografis, akses transportasi, dan karakter kawasan tempat kegiatan berlangsung saat menilai informasi yang relevan. Karena tiap lokasi memiliki dinamika tersendiri, penyesuaian pendekatan perlu didasarkan pada pengamatan langsung dan data yang tersedia, bukan asumsi umum tentang kota."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
