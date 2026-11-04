@@ -1,9 +1,10 @@
 {
   "slug": "purwokerto",
-  "lastmod": "2026-10-09T02:53:19Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-04T07:27:46Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Purwokerto dapat diarahkan pada kesiapan konsultasi onsite, akses lokasi, dan penanggung jawab lapangan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Sebagai pusat kegiatan ekonomi dan pendidikan di wilayah Jawa Tengah bagian barat, Purwokerto berfungsi sebagai titik temu penting bagi berbagai aktivitas bisnis dan layanan jasa. Letaknya yang strategis di kaki Gunung Slamet menjadikan kota ini memiliki dinamika operasional yang beragam, mulai dari sektor perdagangan hingga penyedia jasa pendukung lainnya. Memahami karakteristik wilayah ini membantu dalam menyesuaikan pendekatan layanan agar selaras dengan ritme kerja dan kebutuhan spesifik organisasi yang beroperasi di kawasan tersebut."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
