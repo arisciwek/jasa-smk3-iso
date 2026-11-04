@@ -249,14 +249,16 @@
       "type": "create",
       "title": "Menyusun Program Tanggap Darurat yang Realistis",
       "category": "Teknis",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-teknis.svg",
       "imageAlt": "Ilustrasi rencana tanggap darurat di tempat kerja",
       "keywords": [
         "tanggap darurat",
         "rencana kedaruratan K3"
       ],
-      "brief": "Jelaskan skenario, peran, sarana, komunikasi, latihan, dan evaluasi program tanggap darurat."
+      "brief": "Jelaskan skenario, peran, sarana, komunikasi, latihan, dan evaluasi program tanggap darurat.",
+      "publishedAt": "2026-11-04T07:31:28Z",
+      "slug": "program-tanggap-darurat"
     },
     {
       "id": "temuan-audit-berulang",
