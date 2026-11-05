@@ -1,9 +1,10 @@
 {
   "slug": "probolinggo",
-  "lastmod": "2026-10-09T03:01:23Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-05T07:52:52Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Probolinggo dapat diarahkan pada kesiapan dokumen sistem, rekaman, dan bukti penerapan yang sudah tersedia. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Probolinggo, yang terletak di pesisir timur Jawa, merupakan salah satu kota terpenting di Jawa Timur dengan jaringan perhubungan yang berkembang, pasar tradisional yang colourful, serta keberanian budaya lokal yang kuat, menjadikannya titik balik penting bagi perikanan, pertanian, dan pariwisata kota ini juga memiliki akses mudah ke jalur utama yang menghubungkan wilayah timur dan barat, serta menempati posisi strategis di kawasan yang kaya hasil pertanian seperti tebu dan jagung, sehingga mendukung keberlanjutan ekonomi lokal."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
