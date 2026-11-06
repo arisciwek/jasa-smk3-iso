@@ -2,7 +2,7 @@
 title: "Cara Menyusun HIRADC yang Dipakai di Lapangan"
 description: "Tunjukkan alur dari aktivitas kerja, bahaya, risiko, pengendalian, sampai verifikasi lapangan."
 date: "2026-10-15T17:05:14Z"
-lastmod: "2026-10-15T17:05:14Z"
+lastmod: "2026-11-06T07:42:51Z"
 author: "Admin K3"
 category: "Teknis"
 tags: ["cara menyusun HIRADC","identifikasi bahaya"]
@@ -65,3 +65,11 @@ HIRADC harus diperbarui jika terjadi perubahan dalam proses kerja, seperti:
 *   Adanya temuan dari audit internal maupun eksternal.
 
 Dengan mengikuti alur dari pembedahan aktivitas hingga verifikasi lapangan, HIRADC tidak lagi menjadi sekadar formalitas administratif, melainkan menjadi panduan keselamatan yang nyata bagi setiap pekerja di lapangan.
+
+### Peran Langsung Pekerja dalam Identifikasi Bahaya di Lapangan
+
+Di tingkat pelaksanaan, identifikasi bahaya tidak dapat dilakukan secara menyeluruh hanya oleh tim K3 pusat atau manajemen. Mereka yang benar-benar memahami risiko harian adalah pekerja sendiri yang secara langsung menangani peralatan dan proses kerja. Karena itu, menyusun HIRADC yang efektif memerlukan pendekatan partisipatif. Ajarkan kepada pejabat atau supervisor lapangan untuk tidak hanya mendistribusikan dokumen HIRADC, tetapi juga memfasilitasi diskusi kelompok kecil (toolbox talk) guna menggali potensi bahaya yang mungkin terlewatkan dalam analisis teoritis. Contohnya, posisi kerja yang tidak ergonomis, kebisingan lokal, atau risiko kejatuhan material yang terjadi hanya pada saat pengerjaan tertentu. Catatan dari lapangan ini kemudian disatukan untuk memperkaya matriks risiko yang ada.
+
+### Menjaga Dinamisitas HIRADC agar Tidak Ketinggalan Zaman
+
+Salah satu kesalahan umum dalam penerapan HIRADC di lapangan adalah memperlakukannya sebagai dokumen statis yang hanya perlu disusun sekali dan kemudian disimpan lemari besi. Kondisi lapangan selalu berubah, baik karena adopsi teknologi baru, perubahan alur kerja, maupun modifikasi peralatan. Untuk itu, dokumen perlu diatur agar dapat diperbarui secara berkala. Tetapkan titik pemicu (trigger) untuk evaluasi ulang, misalnya ketika ada mesin baru yang datang, atau ketika terjadi hampir kejadian (near miss). Dengan sistem pembaruan ini, identifikasi bahaya selalu mencerminkan realitas terkini, bukan kondisi masa lalu. Praktisi K3 lapangan perlu membangun budaya di mana setiap perubahan kecil dianggap sebagai sinyal untuk mereview kembali bagian HIRADC yang relevan.
