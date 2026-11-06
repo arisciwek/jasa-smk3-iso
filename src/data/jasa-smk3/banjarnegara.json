@@ -1,9 +1,10 @@
 {
   "slug": "banjarnegara",
-  "lastmod": "2026-10-09T03:03:56Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-06T07:52:10Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Banjarnegara dapat diarahkan pada pemeriksaan hasil inspeksi, pelaporan bahaya, dan tindak lanjutnya. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Banjarnegara adalah sebuah kota yang terletak di wilayah Jawa Tengah, sebuah provinsi dengan keanekaragaman budaya dan geografi yang khas. Sebagai bagian dari region ini, kota ini memiliki identitas lokal yang terbentuk dari interaksi antara masyarakat, lingkungan alam, dan dinamika perkotaan yang ada di Jawa Tengah. Konteks lokasi Banjarnegara relevan untuk dipahami oleh penduduk setempat maupun pihak yang berkepentingan, karena memberikan gambaran umum tentang latar belakang daerah yang menjadi basis kegiatan ekonomi dan sosial, tanpa spesifikasi industri atau fakta teknis lainnya."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
