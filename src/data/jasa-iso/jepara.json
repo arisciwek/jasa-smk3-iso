@@ -1,9 +1,10 @@
 {
   "slug": "jepara",
-  "lastmod": "2026-10-09T03:15:59Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-07T13:54:52Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Jepara dapat diarahkan pada kesiapan komunikasi dan koordinasi tim lintas fungsi. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Jepara, sebuah kota yang terletak di pinggir Pantai Jawa Tengah, memiliki warisan budaya yang kaya dan ikatan erat dengan tradisi maritim serta pertanian lahan sawah, sekaligus menjadi pusat administrasi daerah dengan infrastruktur transportasi yang meliputi jalur darat dan pelabuhan kecil, sehingga masyarakat lokal menikmati akses mudah ke layanan publik dan ekonomi, kota ini memiliki populasi yang beragam, akses ke pendidikan dan layanan kesehatan yang cukup, serta terhubung dengan jaringan transportasi utama di wilayah Jawa Tengah."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
