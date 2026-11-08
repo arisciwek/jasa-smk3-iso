@@ -1,9 +1,10 @@
 {
   "slug": "tangerang",
-  "lastmod": "2026-10-09T03:32:03Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-08T15:00:18Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Tangerang dapat diarahkan pada evaluasi kepatuhan, audit internal, dan tindakan perbaikan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Sebagai bagian dari wilayah Jakarta & Sekitarnya, Tangerang memiliki posisi strategis yang mendukung berbagai aktivitas operasional dan hubungan antarwilayah. Karakteristik kawasan yang dinamis menuntut organisasi di Tangerang untuk mengelola koordinasi internal serta komunikasi lapangan secara efisien. Kebutuhan layanan lokal di kota ini umumnya dipengaruhi oleh mobilitas tim, kemudahan akses ke area sekitar, dan kesiapan infrastruktur pendukung di tingkat daerah. Dengan memahami konteks Tangerang dalam lingkup metropolitan, entitas bisnis dapat menyesuaikan pola kerja, jadwal kegiatan, serta interaksi operasional agar selaras dengan ritme kawasan dan kebutuhan pemangku kepentingan setempat."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
