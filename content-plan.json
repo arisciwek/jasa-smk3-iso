@@ -266,14 +266,16 @@
       "type": "create",
       "title": "Mengapa Temuan Audit K3 Terus Berulang",
       "category": "Case Study",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi analisis temuan audit K3 yang berulang",
       "keywords": [
         "temuan audit K3",
         "tindakan korektif"
       ],
-      "brief": "Gunakan studi kasus anonim untuk membedakan koreksi, akar masalah, dan tindakan korektif."
+      "brief": "Gunakan studi kasus anonim untuk membedakan koreksi, akar masalah, dan tindakan korektif.",
+      "publishedAt": "2026-11-08T15:16:59Z",
+      "slug": "temuan-audit-berulang"
     },
     {
       "id": "dokumen-tidak-dipakai",
