@@ -1,9 +1,10 @@
 {
   "slug": "tegal",
-  "lastmod": "2026-10-09T03:08:20Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-10T16:58:40Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Tegal dapat diarahkan pada pengukuran kemajuan penerapan agar rencana kerja dapat diperiksa kembali. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Tegal merupakan kota yang terletak di wilayah timur Jawa Tengah, tepatnya di pesisir Laut Jawa, dengan latar belakang sejarah industri tekstil serta agrikultur yang kuat, serta fungsi sebagai pusat perdagangan dan logistik bagi wilayah sekitarnya, menjadi jalur utama transportasi darat dan laut yang menghubungkan kota-kota besar di Jawa, dan memiliki populasi yang terus berkembang, menjadikannya salah satu kota dengan pertumbuhan demografis yang signifikan di Jawa Tengah."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
