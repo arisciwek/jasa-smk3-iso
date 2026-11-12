@@ -1,9 +1,10 @@
 {
   "slug": "bekasi",
-  "lastmod": "2026-10-09T03:35:16Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-12T17:31:16Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Bekasi dapat diarahkan pada penyusunan indikator kinerja dan pelaporan manajemen. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Bekasi, yang termasuk dalam wilayah Jakarta & Sekitarnya, merupakan kota yang berorientasi pada pembangunan permukiman dan industri modern, dengan populasi yang terus meningkat dan infrastruktur transportasi yang berkembang, menjadi salah satu daerah perkotaan yang dinamis di pesisir Jawa Barat, kota ini memiliki akses mudah ke jalur utama seperti Jalan Tol Cikarang dan dekat dengan Bandara Internasional Soekarno‑Hatta, sehingga memungkinkan konektivitas yang kuat bagi aktivitas residen dan bisnis."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
