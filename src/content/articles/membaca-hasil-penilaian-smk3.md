@@ -2,7 +2,7 @@
 title: "Cara Membaca Hasil Penilaian SMK3"
 description: "Jelaskan cara membaca temuan, tingkat pemenuhan, dan prioritas tindakan perbaikan."
 date: "2026-10-11T00:00:00Z"
-lastmod: "2026-10-21T11:17:32Z"
+lastmod: "2026-11-12T16:44:41Z"
 author: "Admin K3"
 category: "Regulasi"
 tags: ["penilaian SMK3","hasil audit SMK3"]
@@ -45,3 +45,9 @@ Setelah hasil penilaian SMK3 tersedia, langkah pertama yang perlu dilakukan adal
 ### Langkah Tindak Lanjut Berdasarkan Temuan Audit
 
 Setelah mengidentifikasi titik lemah dan kuat, selanjutnya adalah menyusun rencana aksi yang konkret. Rencana ini sebaiknya mencakup tujuan yang spesifik, penanggung jawab, serta jadwal pelaksanaan. Misalnya, jika audit menemukan kurangnya penggunaan alat pelindung diri di area produksi, langkah tindak lanjut dapat berupa pengadaan alat tambahan, pelatihan ulang bagi pekerja, dan peninjauan kembali prosedur inspeksi harian. Penting juga untuk menetapkan mekanisme pemantauan berkala, sehingga progres perbaikan dapat dievaluasi secara berkelanjutan. Dokumentasikan semua keputusan dalam format yang mudah diakses, sehingga seluruh tim dapat melihat perkembangan dan menyesuaikan tindakan bila diperlukan. Dengan pendekatan yang terstruktur, hasil penilaian SMK3 tidak hanya menjadi laporan akhir, melainkan dasar bagi peningkatan berkelanjutan dalam budaya keselamatan kerja.
+
+### Mengerti Kriteria Penilaian  
+Hasil penilaian SMK3 tidak hanya menampilkan angka, melainkan juga mengindikasikan seberapa besar kemajuan peserta terhadap standar kompetensi yang telah ditetapkan. Setiap kriteria mencakup aspek pengetahuan, keterampilan, dan sikap yang relevan dengan bidang studi. Untuk memahami arti dari setiap nilai, perhatikan penjelasan yang disertakan dalam laporan, seperti rubrik penilaian atau kriteria minimal yang harus terpenuhi. Dengan demikian, Anda dapat melihat apakah peserta telah mencapai harapan kompetensi atau masih membutuhkan pemeliharaan.
+
+### Tips Memahami Laporan Hasil  
+Laporan hasil audit SMK3 biasanya disusun dalam format tabel atau grafik, yang memudahkan analisis. Fokuslah pada trend nilai di tiap sesi atau modul, bukan sekadar skor akhir. Bandingkan hasil dengan target yang telah ditetapkan sebelumnya untuk menilai kemajuan relatif. Jika terdapat deviasi signifikan, telusuri faktor‑faktor pendukung seperti kesulitan materi, motivasi, atau dukungan dari fasilitas pembelajaran. Selanjutnya, gunakan temuan tersebut untuk merancang intervensi yang tepat, seperti pembelajaran tambahan atau konsultasi, sehingga hasil penilaian dapat meningkatkan kualitas pendidikan secara keseluruhan.
