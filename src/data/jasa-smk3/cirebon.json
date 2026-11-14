@@ -1,9 +1,10 @@
 {
   "slug": "cirebon",
-  "lastmod": "2026-10-09T03:27:03Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-14T14:58:08Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Cirebon dapat diarahkan pada koordinasi perusahaan dengan kontraktor atau pihak lain di lokasi kerja. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Cirebon adalah kota yang terletak di wilayah Jawa Barat, Indonesia, dan memiliki karakteristik lokal yang unik. Kota ini terkenal dengan sejarahnya sebagai kerajaan maritim yang penting, meninggalkan warisan budaya yang kaya. Masyarakat Cirebon dikenal dengan kebiasaan yang mencampurkan berbagai pengaruh, seperti dari budaya Sunda, Jawa, dan Tionghoa, yang terlihat dalam kehidupan sehari-hari. Keanekaragaman budaya ini menciptakan lingkungan yang dinamis dan beragam, yang menjadi ciri khas kota Cirebon. Selain itu, posisi geografis Cirebon yang strategis di pesisir utara Jawa Barat juga berperan dalam perkembangan ekonomi dan sosial kota."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
