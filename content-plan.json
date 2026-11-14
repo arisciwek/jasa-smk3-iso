@@ -283,14 +283,16 @@
       "type": "create",
       "title": "Ketika Dokumen K3 Ada tetapi Tidak Dipakai",
       "category": "Case Study",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi kesenjangan antara dokumen K3 dan praktik kerja",
       "keywords": [
         "implementasi dokumen K3",
         "budaya keselamatan"
       ],
-      "brief": "Analisis penyebab dokumen tidak digunakan dan perubahan kecil yang membuatnya relevan bagi pekerja."
+      "brief": "Analisis penyebab dokumen tidak digunakan dan perubahan kecil yang membuatnya relevan bagi pekerja.",
+      "publishedAt": "2026-11-14T07:38:32Z",
+      "slug": "dokumen-tidak-dipakai"
     },
     {
       "id": "komunikasi-perubahan-proses",
