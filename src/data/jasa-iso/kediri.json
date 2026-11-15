@@ -1,9 +1,10 @@
 {
   "slug": "kediri",
-  "lastmod": "2026-10-09T03:36:29Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-15T07:47:22Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Kediri dapat diarahkan pada kesiapan persiapan audit sertifikasi eksternal. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Kediri adalah kota yang terletak di provinsi Jawa Timur, Indonesia. Provinsi Jawa Timur sendiri adalah bagian dari pulau Jawa, yang merupakan pusat ekonomi dan budaya di Indonesia. Kediri, sebagai kota di Jawa Timur, kemungkinan besar memiliki ciri-ciri yang sama dengan kota-kota lain di wilayah tersebut, seperti perkembangan urban dan keragaman masyarakat. Namun, tanpa informasi spesifik, kita dapat mengatakan bahwa Kediri berkontribusi pada keanekaragaman yang ada di Jawa Timur. Bagi pembaca lokal, memahami konteks kota ini dapat memberikan wawasan tentang lingkup wilayah di mana layanan tersebut beroperasi. Kediri, dengan posisinya di Jawa Timur, juga kemungkinan besar terhubung dengan kota-kota lain melalui jaringan transportasi dan komunikasi, yang mempermudah interaksi antar daerah."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
