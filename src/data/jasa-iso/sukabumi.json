@@ -1,9 +1,10 @@
 {
   "slug": "sukabumi",
-  "lastmod": "2026-10-09T04:13:20Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-18T08:27:17Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Sukabumi dapat diarahkan pada pemetaan proses, risiko, dan peluang organisasi. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Kondisi geografis Sukabumi sebagai kota yang terletak di wilayah Jawa Barat memberikan pengaruh langsung terhadap dinamika mobilitas dan aksesibilitas layanan di daerah tersebut. Topografi yang beragam serta keberadaan jalur transportasi utama menjadi faktor pertimbangan praktis dalam menentukan metode pendampingan, baik secara onsite maupun jarak jauh. Pemahaman akan karakteristik lokal ini membantu organisasi menyesuaikan jadwal dan logistik kerja mereka dengan realitas di lapangan, sehingga koordinasi antar tim dapat berjalan efektif tanpa terhalang oleh kendala geografis. Pendekatan yang mempertimbangkan kekhasan wilayah ini memastikan bahwa proses penyusunan dokumen dan persiapan audit tetap relevan dengan kondisi nyata operasional organisasi di lingkungan Sukabumi, Jawa Barat."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
