@@ -1,9 +1,10 @@
 {
   "slug": "jakarta-barat",
-  "lastmod": "2026-10-09T04:05:26Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-18T08:26:56Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Jakarta Barat dapat diarahkan pada pemetaan aktivitas kerja dan titik keputusan yang berisiko. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Jakarta Barat merupakan salah satu wilayah administratif utama di Jakarta & Sekitarnya yang memiliki peran strategis dalam mendukung dinamika ekonomi ibu kota. Sebagai kawasan yang menghubungkan berbagai titik penting di Jakarta, wilayah ini menjadi pusat aktivitas bagi beragam jenis organisasi dan entitas bisnis. Karakteristik wilayahnya yang padat dan terintegrasi dengan infrastruktur kota menjadikannya area yang sangat dinamis bagi operasional perusahaan. Memahami konteks geografis dan keterhubungan Jakarta Barat dengan wilayah sekitarnya sangat penting untuk memastikan koordinasi layanan berjalan efektif sesuai dengan kondisi lapangan yang ada di kawasan tersebut."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
