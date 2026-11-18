@@ -300,14 +300,16 @@
       "type": "create",
       "title": "Studi Kasus Komunikasi Perubahan Proses Kerja",
       "category": "Case Study",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi komunikasi perubahan proses kerja yang aman",
       "keywords": [
         "manajemen perubahan K3",
         "komunikasi risiko"
       ],
-      "brief": "Tunjukkan risiko ketika perubahan proses tidak dikomunikasikan dan bagaimana menutup celahnya."
+      "brief": "Tunjukkan risiko ketika perubahan proses tidak dikomunikasikan dan bagaimana menutup celahnya.",
+      "publishedAt": "2026-11-18T08:35:28Z",
+      "slug": "komunikasi-perubahan-proses"
     },
     {
       "id": "kontraktor-tidak-terintegrasi",
