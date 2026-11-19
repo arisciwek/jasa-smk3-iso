@@ -1,9 +1,10 @@
 {
   "slug": "banyuwangi",
-  "lastmod": "2026-10-09T04:14:42Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-19T18:10:33Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Banyuwangi dapat diarahkan pada keterlibatan pekerja dan komunikasi dalam sistem manajemen. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Terletak di ujung paling timur Pulau Jawa, Banyuwangi merupakan wilayah di Jawa Timur yang memiliki posisi strategis sebagai gerbang utama menuju Bali. Kota ini dikenal dengan kekayaan alamnya yang beragam, mulai dari kawasan pegunungan hingga pesisir pantai, yang membentuk identitas lokal yang kuat. Keberagaman budaya dan potensi sumber daya alam di wilayah ini menciptakan dinamika ekonomi yang khas bagi masyarakat setempat. Memahami karakteristik geografis dan sosial Banyuwangi sangat penting untuk menyesuaikan pendekatan layanan agar selaras dengan kondisi nyata di lapangan bagi organisasi yang beroperasi di kawasan ini."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
