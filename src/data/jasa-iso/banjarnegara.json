@@ -1,9 +1,10 @@
 {
   "slug": "banjarnegara",
-  "lastmod": "2026-10-09T04:19:31Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-23T08:55:03Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Banjarnegara dapat diarahkan pada evaluasi kepatuhan, audit internal, dan tindakan perbaikan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Banjarnegara merupakan kabupaten yang terletak di Provinsi Jawa Tengah dengan dinamika pemerintahan dan pelayanan publik yang beroperasi secara terpusat di ibukota kabupaten. Konteks geografis dan administratif ini memengaruhi pola mobilitas serta jangkauan akses layanan bagi berbagai organisasi di wilayah setempat. Fokus pada karakteristik lokal menekankan pentingnya pemahaman atas kondisi tata kelola dan keterjangkauan sarana pendukung di Banjarnegara. Pendekatan ini memastikan bahwa setiap interaksi atau diskusi terkait layanan dapat disesuaikan dengan realitas lapangan setempat, tanpa membuat asumsi tentang profil industri spesifik yang tidak memiliki data pendukung kuat. Kesesuaian dengan konteks administratif Jawa Tengah menjadi landasan utama untuk membangun komunikasi yang relevan bagi pihak-pihak terkait di Banjarnegara."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
