@@ -317,14 +317,16 @@
       "type": "create",
       "title": "Studi Kasus Kontraktor yang Tidak Terintegrasi dengan Sistem K3",
       "category": "Case Study",
-      "status": "planned",
+      "status": "published",
       "image": "/assets/images/icon-case-study.svg",
       "imageAlt": "Ilustrasi koordinasi keselamatan kerja antara perusahaan dan kontraktor",
       "keywords": [
         "K3 kontraktor",
         "manajemen kontraktor"
       ],
-      "brief": "Bahas masalah umum koordinasi, induksi, izin kerja, dan evaluasi kinerja kontraktor."
+      "brief": "Bahas masalah umum koordinasi, induksi, izin kerja, dan evaluasi kinerja kontraktor.",
+      "publishedAt": "2026-11-24T10:59:09Z",
+      "slug": "kontraktor-tidak-terintegrasi"
     },
     {
       "id": "pelaporan-near-miss",
