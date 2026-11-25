@@ -1,9 +1,10 @@
 {
   "slug": "klaten",
-  "lastmod": "2026-10-09T04:25:37Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-25T09:45:11Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-iso"
+    "baseline-jasa-iso",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja sertifikasi untuk organisasi di Klaten dapat diarahkan pada kesiapan konsultasi onsite, akses lokasi, dan penanggung jawab lapangan. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif sebelum audit sertifikasi eksternal dilaksanakan."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Klaten merupakan wilayah di Jawa Tengah yang memiliki posisi strategis karena terletak di antara dua pusat kegiatan ekonomi besar, yaitu Yogyakarta dan Surakarta. Karakteristik wilayah ini mencakup perpaduan antara sektor pertanian yang produktif serta keberadaan berbagai potensi sumber daya alam yang menjadi ciri khas daerah setempat. Kondisi geografisnya yang berada di jalur utama penghubung antar kota besar menjadikan Klaten sebagai area yang dinamis bagi perkembangan berbagai unit usaha. Pemahaman terhadap konteks lokal ini penting untuk memastikan bahwa setiap layanan pendampingan dapat menyesuaikan diri dengan dinamika operasional dan lingkungan sosial ekonomi yang ada di wilayah Klaten."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
