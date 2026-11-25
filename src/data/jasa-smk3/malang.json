@@ -1,9 +1,10 @@
 {
   "slug": "malang",
-  "lastmod": "2026-10-09T04:37:07Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-25T09:45:38Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Malang dapat diarahkan pada kesiapan audit internal dan cara memastikan temuan memiliki pemilik. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Malang dikenal sebagai kota pendidikan dan destinasi wisata favorit di Jawa Timur. Suhu udaranya yang sejuk menjadikannya tempat yang nyaman untuk belajar dan bekerja. Secara historis, Malang memiliki banyak peninggalan kolonial yang masih terawat. Masyarakatnya yang heterogen, terdiri dari berbagai latar belakang, menciptakan dinamika sosial yang unik. Karakteristik ini menjadikan Malang sebagai kota yang dinamis dan terus berkembang, dengan potensi di berbagai sektor."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
