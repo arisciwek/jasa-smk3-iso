@@ -1,9 +1,10 @@
 {
   "slug": "probolinggo",
-  "lastmod": "2026-10-09T04:41:36Z",
-  "nextTopic": "editorial-review",
+  "lastmod": "2026-11-28T08:50:28Z",
+  "nextTopic": "sektor-usaha-lokal",
   "completedTopics": [
-    "baseline-jasa-smk3"
+    "baseline-jasa-smk3",
+    "karakteristik-lokal"
   ],
   "paragraphs": [
     {
@@ -17,6 +18,11 @@
     {
       "topic": "rencana-tindak-lanjut",
       "text": "Rencana kerja untuk organisasi di Probolinggo dapat diarahkan pada kesiapan dokumen, rekaman, dan bukti penerapan yang sudah tersedia. Hasil awal perlu diterjemahkan menjadi prioritas, penanggung jawab, batas waktu, dan bukti penerapan sehingga pendampingan onsite maupun jarak jauh dapat ditinjau secara objektif."
+    },
+    {
+      "topic": "karakteristik-lokal",
+      "text": "Sebagai kota pelabuhan di pesisir utara Jawa Timur, Probolinggo memiliki posisi strategis yang menghubungkan berbagai jalur distribusi di wilayah tersebut. Karakteristik wilayahnya yang mencakup area pesisir hingga kaki pegunungan menciptakan dinamika aktivitas ekonomi yang beragam bagi masyarakat setempat. Kondisi geografis ini menjadikan Probolinggo sebagai titik transit penting bagi arus barang dan jasa di Jawa Timur. Memahami konteks lokal ini membantu dalam menyesuaikan pendekatan layanan agar selaras dengan karakteristik lingkungan dan pola operasional yang ada di wilayah Probolinggo secara umum."
     }
-  ]
+  ],
+  "lastUpdatedTopic": "karakteristik-lokal"
 }
